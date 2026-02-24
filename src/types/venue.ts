@@ -17,6 +17,7 @@ export interface Venue {
   brandingCapabilities: BrandingCapability[];
   features: string[];
   imageUrl: string;
+  districtActivationEligible: boolean;
   floorPlanUrl?: string;
   notes?: string;
 }

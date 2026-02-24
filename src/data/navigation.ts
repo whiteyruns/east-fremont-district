@@ -1,9 +1,9 @@
 export const navItems = [
   { label: "District", href: "/district" },
-  { label: "Inventory", href: "/inventory" },
   { label: "Activations", href: "/activation-frameworks" },
-  { label: "Branding", href: "/branding" },
+  { label: "Inventory", href: "/inventory" },
   { label: "Production", href: "/production" },
+  { label: "Branding", href: "/branding" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Inquire", href: "/inquire" },
 ];

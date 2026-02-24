@@ -19,7 +19,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "East Fremont District",
   description:
-    "A vibrant destination for retail, dining, and entertainment. Explore premier venues, activations, and branding opportunities in East Fremont.",
+    "A fully privatized, multi-venue urban event district designed for large-scale corporate activations and convention programming in Downtown Las Vegas.",
 };
 
 export default function RootLayout({

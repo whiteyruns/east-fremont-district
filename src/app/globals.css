@@ -82,7 +82,7 @@ select:focus {
 
 /* Monospace Font - Tabular Numbers */
 .font-mono {
-  @apply font-feature-settings-["tnum"];
+  font-feature-settings: "tnum";
   font-variant-numeric: tabular-nums;
 }
 

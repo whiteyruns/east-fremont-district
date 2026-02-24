@@ -16,7 +16,7 @@ export default function SiteFooter() {
               EAST FREMONT DISTRICT
             </h3>
             <p className="text-[#9B978F] text-sm leading-relaxed">
-              A vibrant destination for retail, dining, and entertainment in the heart of the city. We showcase premier venues, activations, and branding opportunities.
+              A fully privatized, multi-venue urban event district designed for large-scale corporate activations and convention programming in Downtown Las Vegas.
             </p>
           </div>
 
