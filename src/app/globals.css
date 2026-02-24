@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Background Colors */
+  --bg-primary: #0f1115;
+  --bg-secondary: #1a1d23;
+  --bg-tertiary: #24272e;
+  --bg-hero: #0a0c0f;
+
+  /* Text Colors */
+  --text-primary: #f0ede8;
+  --text-secondary: #9b978f;
+  --text-tertiary: #6b6760;
+
+  /* Accent Colors */
+  --accent-primary: #c49a6c;
+  --accent-hover: #d4aa7c;
+
+  /* Border Colors */
+  --border-default: #2a2d33;
+  --border-hover: #3a3d43;
+
+  /* Legacy variables for compatibility */
+  --background: #0f1115;
+  --foreground: #f0ede8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+* {
+  @apply border-[#2a2d33];
+}
+
+body {
+  @apply bg-[#0f1115] text-[#f0ede8];
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#0f1115];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#2a2d33] rounded hover:bg-[#3a3d43];
+}
+
+/* Selection Color */
+::selection {
+  @apply bg-[#c49a6c]/30 text-[#f0ede8];
+}
+
+/* Focus Ring for Accessibility */
+:focus-visible {
+  @apply outline-none ring-2 ring-[#c49a6c] ring-offset-2 ring-offset-[#0f1115];
+}
+
+/* Form Inputs - Dark Color Scheme */
+input,
+textarea,
+select {
+  color-scheme: dark;
+  @apply bg-[#1a1d23] border-[#2a2d33] text-[#f0ede8] placeholder-[#6b6760];
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  @apply border-[#c49a6c] ring-1 ring-[#c49a6c]/20;
+}
+
+/* Monospace Font - Tabular Numbers */
+.font-mono {
+  @apply font-feature-settings-["tnum"];
+  font-variant-numeric: tabular-nums;
+}
+
+/* Text Balance Utility */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

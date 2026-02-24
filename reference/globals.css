@@ -1,0 +1,91 @@
+/* src/styles/globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0F1115;
+  --bg-secondary: #1A1D23;
+  --bg-tertiary: #24272E;
+  --bg-hero: #0A0C0F;
+
+  --text-primary: #F0EDE8;
+  --text-secondary: #9B978F;
+  --text-tertiary: #6B6760;
+  --text-disabled: #4A4740;
+
+  --accent-primary: #C49A6C;
+  --accent-hover: #D4AA7C;
+  --accent-muted: #8B7355;
+
+  --border-default: #2A2D33;
+  --border-hover: #3A3D43;
+  --border-accent: #C49A6C;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(196, 154, 108, 0.3);
+  color: var(--text-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Form elements — normalize dark theme inputs */
+select,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+  color-scheme: dark;
+}
+
+/* Tabular numbers for metrics */
+.font-mono {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}

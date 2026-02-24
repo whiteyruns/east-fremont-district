@@ -1,0 +1,133 @@
+import { BrandingZone } from "@/types/branding";
+
+export const brandingZones: BrandingZone[] = [
+  {
+    id: "branding-001",
+    name: "Street-Level Wraps",
+    type: "street",
+    description:
+      "High-visibility window and storefront wraps along the main activation corridor. Perfect for eye-catching graphics and brand messaging that engages foot traffic throughout the district.",
+    dimensions: "500+ linear feet of wrappable surfaces",
+    visibility: "street-level",
+    availability: "event-only",
+    imageUrl: "/images/branding/street-level-wraps.jpg",
+    specs: [
+      "Premium vinyl wrap material",
+      "UV-resistant printing",
+      "Custom cutouts available",
+      "Installation and removal included",
+    ],
+  },
+  {
+    id: "branding-002",
+    name: "Building Wraps",
+    type: "building",
+    description:
+      "Large-scale exterior building wraps on primary district structures. Creates dramatic brand presence visible from multiple blocks, ideal for major brand activations and product launches.",
+    dimensions: "Up to 15,000 sq ft per building",
+    visibility: "mixed",
+    availability: "event-only",
+    imageUrl: "/images/branding/building-wraps.jpg",
+    specs: [
+      "High-quality outdoor vinyl",
+      "Professional installation",
+      "Weather-resistant materials",
+      "Multi-story capability",
+      "Quick removal without damage",
+    ],
+  },
+  {
+    id: "branding-003",
+    name: "Rooftop Branding",
+    type: "rooftop",
+    description:
+      "Aerial branding opportunities on available rooftop spaces. Maximum visibility for drone photography, aerial views, and nighttime presence with LED installations.",
+    dimensions: "2,000-3,500 sq ft per rooftop",
+    visibility: "aerial",
+    availability: "event-only",
+    imageUrl: "/images/branding/rooftop-branding.jpg",
+    specs: [
+      "Structural assessment included",
+      "LED lighting integration available",
+      "Weather-resistant construction",
+      "Safe installation protocols",
+      " 360-degree visibility",
+    ],
+  },
+  {
+    id: "branding-004",
+    name: "Stage Naming Rights",
+    type: "stage",
+    description:
+      "Premier naming rights for event stages and performance areas. Associates brand with entertainment, music, and memorable experiences throughout the activation.",
+    dimensions: "Multiple stage opportunities",
+    visibility: "interior",
+    availability: "event-only",
+    imageUrl: "/images/branding/stage-naming.jpg",
+    specs: [
+      "Stage backdrop branding",
+      "MC announcements of sponsor",
+      "Digital signage integration",
+      "Logo placement on all materials",
+      "Photo opportunity areas",
+    ],
+  },
+  {
+    id: "branding-005",
+    name: "Digital Signage Network",
+    type: "digital",
+    description:
+      "Integration with district-wide digital displays and screens. Real-time brand messaging that reaches attendees throughout their experience and can adapt dynamically.",
+    dimensions: "12+ display locations across district",
+    visibility: "mixed",
+    availability: "year-round",
+    imageUrl: "/images/branding/digital-signage.jpg",
+    specs: [
+      "High-resolution LED screens",
+      "Dynamic content capability",
+      "Real-time scheduling",
+      "Weather-responsive displays",
+      "Integration with event tech",
+      "Analytics and engagement tracking",
+    ],
+  },
+  {
+    id: "branding-006",
+    name: "Venue Co-Branding",
+    type: "experiential",
+    description:
+      "Strategic co-branding partnerships within individual venues. Create branded spaces, lounges, and experiential areas that reinforce brand identity throughout the activation.",
+    dimensions: "Customizable per venue",
+    visibility: "interior",
+    availability: "event-only",
+    imageUrl: "/images/branding/venue-cobranding.jpg",
+    specs: [
+      "Custom lounge design",
+      "Branded furniture and decor",
+      "Logo and messaging integration",
+      "Premium amenities",
+      "Exclusive guest experience",
+      "Photo and social opportunities",
+    ],
+  },
+  {
+    id: "branding-007",
+    name: "Beverage Program Integration",
+    type: "experiential",
+    description:
+      "Exclusive beverage sponsorship with branded cocktails, bars, and experiences. Creates memorable brand associations tied to premium hospitality and entertainment.",
+    dimensions: "Up to 10+ branded bar stations",
+    visibility: "interior",
+    availability: "event-only",
+    imageUrl: "/images/branding/beverage-program.jpg",
+    specs: [
+      "Custom branded cocktails",
+      "Premium spirit inclusion",
+      "Glassware branding",
+      "Bartender uniform branding",
+      "Digital menu integration",
+      "Promotional give-aways",
+      "Brand narrative storytelling",
+    ],
+  },
+];
