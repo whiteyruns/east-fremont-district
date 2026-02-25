@@ -54,10 +54,28 @@ export default function SiteFooter() {
         </div>
 
         {/* Copyright Line */}
-        <div className="border-t border-[#2A2D33] pt-8">
-          <p className="text-[#6B6760] text-sm text-center">
+        <div className="border-t border-[#2A2D33] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-[#6B6760] text-sm">
             © {currentYear} East Fremont District. All rights reserved.
           </p>
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 text-[#6B6760] text-xs">
+              <Link href="/privacy" className="hover:text-[#9B978F] transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="hover:text-[#9B978F] transition-colors">
+                Terms &amp; Conditions
+              </Link>
+            </div>
+            <a
+              href="https://www.cornerbarmgmt.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#6B6760] text-xs hover:text-[#9B978F] transition-colors"
+            >
+              Powered by Corner Bar Management
+            </a>
+          </div>
         </div>
       </div>
     </footer>

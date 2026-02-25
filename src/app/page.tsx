@@ -14,7 +14,7 @@ export default async function Home() {
   return (
     <>
       <HeroVideo />
-      <DistrictMetrics />
+      <DistrictMetrics venues={venues} />
       <ActivationPreview />
       <SearchTheDistrict venues={venues} />
       <CaseStudyPreview />
