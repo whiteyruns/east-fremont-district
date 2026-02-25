@@ -2,7 +2,7 @@ import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
-import MetricCard from "@/components/ui/MetricCard";
+
 
 // ============================================================================
 // PAGE HEADER SECTION
@@ -48,7 +48,7 @@ function FootprintOverview() {
               </p>
 
               <p>
-                The district's concentrated geography eliminates traditional venue isolation, enabling seamless guest flow, integrated production infrastructure, and coordinated branding across the entire property. Single-operator management ensures consistency, simplifies logistics, and creates operational efficiencies impossible in fragmented venue environments.
+                The district&apos;s concentrated geography eliminates traditional venue isolation, enabling seamless guest flow, integrated production infrastructure, and coordinated branding across the entire property. Single-operator management ensures consistency, simplifies logistics, and creates operational efficiencies impossible in fragmented venue environments.
               </p>
 
               <p>

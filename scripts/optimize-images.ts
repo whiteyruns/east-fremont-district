@@ -1,23 +1,23 @@
 /**
- * Optimize public images: convert JPG → WebP at quality 82, keep 1920px max width.
- * Originals backed up to .jpg.bak
+ * Optimize public images: convert JPG/PNG → WebP at quality 82, keep 1920px max width.
+ * Removes originals after conversion.
  *
  * Usage: npx tsx scripts/optimize-images.ts
  */
 
 import sharp from "sharp";
-import { readdirSync, statSync, renameSync } from "fs";
-import { join, extname } from "path";
+import { readdirSync, statSync, unlinkSync } from "fs";
+import { join } from "path";
 
 const imagesDir = join(__dirname, "..", "public", "images");
 
-function collectJpgs(dir: string): string[] {
+function collectImages(dir: string): string[] {
   const results: string[] = [];
   for (const entry of readdirSync(dir)) {
     const full = join(dir, entry);
     if (statSync(full).isDirectory()) {
-      results.push(...collectJpgs(full));
-    } else if (/\.jpe?g$/i.test(entry) && !entry.endsWith(".bak")) {
+      results.push(...collectImages(full));
+    } else if (/\.(jpe?g|png)$/i.test(entry)) {
       results.push(full);
     }
   }
@@ -25,17 +25,17 @@ function collectJpgs(dir: string): string[] {
 }
 
 async function optimize() {
-  const jpgs = collectJpgs(imagesDir);
-  console.log(`Found ${jpgs.length} JPGs to optimize\n`);
+  const images = collectImages(imagesDir);
+  console.log(`Found ${images.length} images to optimize\n`);
 
   let totalBefore = 0;
   let totalAfter = 0;
 
-  for (const src of jpgs) {
+  for (const src of images) {
     const before = statSync(src).size;
     totalBefore += before;
 
-    const webpPath = src.replace(/\.jpe?g$/i, ".webp");
+    const webpPath = src.replace(/\.(jpe?g|png)$/i, ".webp");
 
     await sharp(src)
       .resize({ width: 1920, withoutEnlargement: true })
@@ -44,6 +44,9 @@ async function optimize() {
 
     const after = statSync(webpPath).size;
     totalAfter += after;
+
+    // Remove original
+    unlinkSync(src);
 
     const savings = ((1 - after / before) * 100).toFixed(0);
     const rel = src.replace(imagesDir + "/", "");

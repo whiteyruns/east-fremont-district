@@ -45,7 +45,7 @@ export default function SiteFooter() {
               Get in Touch
             </h4>
             <p className="text-[#9B978F] text-sm leading-relaxed">
-              Ready to explore opportunities with East Fremont District? We'd love to hear from you.
+              Ready to explore opportunities with East Fremont District? We&apos;d love to hear from you.
             </p>
             <Button variant="primary" href="/inquire" className="w-full">
               Submit Inquiry

@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
@@ -225,7 +224,7 @@ function TestimonialSection({ caseStudy }: { caseStudy: CaseStudy }) {
         <div className="max-w-2xl mx-auto text-center">
           <blockquote className="mb-6">
             <p className="text-[#F0EDE8] text-xl lg:text-2xl leading-relaxed mb-6">
-              "{caseStudy.testimonial.quote}"
+              &ldquo;{caseStudy.testimonial.quote}&rdquo;
             </p>
           </blockquote>
           <div>

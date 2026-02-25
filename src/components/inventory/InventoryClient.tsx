@@ -11,7 +11,7 @@ import VenueCard from "@/components/inventory/VenueCard";
 import VenueDrawer from "@/components/inventory/VenueDrawer";
 import {
   FilterState,
-  defaultFilters,
+
   filterVenues,
   filtersFromParams,
   filtersToParams,

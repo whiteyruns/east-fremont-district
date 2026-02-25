@@ -4,25 +4,24 @@ import Image from "next/image";
 import { MapPin, Users, Maximize2, Mic2 } from "lucide-react";
 import { Venue } from "@/types/venue";
 
-/** slug → file extension for the hero image */
-const VENUE_PHOTO_EXT: Record<string, string> = {
-  "eureka": "jpg",
-  "corduroy": "jpg",
-  "le-thai": "jpg",
-  "istanbul-mediterranean": "jpg",
-  "taco-escobar": "jpg",
-  "evel-pie": "jpg",
-  "electric-mushroom": "jpg",
-  "park-on-fremont": "jpg",
-  "cheapshot": "jpg",
-  "commonwealth": "jpg",
-  "laundry-room": "webp",
-  "lucky-day": "webp",
-  "la-mona-rosa": "jpg",
-  "discopussy": "jpg",
-  "we-all-scream": "jpg",
-  "the-griffin": "jpg",
-};
+const VENUES_WITH_PHOTOS = new Set([
+  "eureka",
+  "corduroy",
+  "le-thai",
+  "istanbul-mediterranean",
+  "taco-escobar",
+  "evel-pie",
+  "electric-mushroom",
+  "park-on-fremont",
+  "cheapshot",
+  "commonwealth",
+  "laundry-room",
+  "lucky-day",
+  "la-mona-rosa",
+  "discopussy",
+  "we-all-scream",
+  "the-griffin",
+]);
 
 interface VenueCardProps {
   venue: Venue;
@@ -30,7 +29,7 @@ interface VenueCardProps {
 }
 
 export default function VenueCard({ venue, onSelect }: VenueCardProps) {
-  const photoExt = VENUE_PHOTO_EXT[venue.slug];
+  const hasPhoto = VENUES_WITH_PHOTOS.has(venue.slug);
 
   return (
     <button
@@ -39,9 +38,9 @@ export default function VenueCard({ venue, onSelect }: VenueCardProps) {
     >
       {/* Venue Photo */}
       <div className="relative aspect-[16/9] bg-[#24272E] overflow-hidden">
-        {photoExt ? (
+        {hasPhoto ? (
           <Image
-            src={`/images/venues/${venue.slug}/${venue.slug}-01.${photoExt}`}
+            src={`/images/venues/${venue.slug}/${venue.slug}-01.webp`}
             alt={venue.name}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"

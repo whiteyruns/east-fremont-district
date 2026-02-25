@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
@@ -236,8 +235,8 @@ function SponsorIntegration() {
             <div className="space-y-4 text-[#9B978F] leading-relaxed">
               <p>
                 East Fremont District sponsorships transcend traditional static placements.
-                Brands don't just attach their logo to surfaces—they become woven into the
-                district's operational fabric through multiple integration points.
+                Brands don&apos;t just attach their logo to surfaces—they become woven into the
+                district&apos;s operational fabric through multiple integration points.
               </p>
               <p>
                 This integrated approach means your brand benefits from authentic touchpoints
@@ -247,7 +246,7 @@ function SponsorIntegration() {
               </p>
               <p>
                 Every activation can include custom branding integrations that align with
-                your campaign objectives, whether you're building awareness, driving engagement,
+                your campaign objectives, whether you&apos;re building awareness, driving engagement,
                 or creating memorable brand moments.
               </p>
             </div>

@@ -138,7 +138,7 @@ function CustomCtaSection() {
               Need a Custom Scope?
             </h2>
             <p className="text-[#9B978F]">
-              Our frameworks provide powerful starting points, but we're ready
+              Our frameworks provide powerful starting points, but we&apos;re ready
               to customize any activation to meet your unique needs and
               objectives.
             </p>

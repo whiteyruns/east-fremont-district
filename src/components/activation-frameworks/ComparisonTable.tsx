@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Check, Minus, ChevronDown } from "lucide-react";
 import Container from "@/components/ui/Container";
-import { ActivationFramework, ActivationFeature } from "@/types/activation";
+import { ActivationFramework } from "@/types/activation";
 
 export default function ComparisonTable({ frameworks }: { frameworks: ActivationFramework[] }) {
   // Build union of all features grouped by category
@@ -24,7 +24,7 @@ export default function ComparisonTable({ frameworks }: { frameworks: Activation
   const toggle = (cat: string) =>
     setOpen((prev) => {
       const next = new Set(prev);
-      next.has(cat) ? next.delete(cat) : next.add(cat);
+      if (next.has(cat)) { next.delete(cat); } else { next.add(cat); }
       return next;
     });
 

@@ -5,7 +5,7 @@ import { CheckCircle } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
-import { InquirySubmission, GuestCountRange, BudgetRange } from "@/types/inquiry";
+import { GuestCountRange, BudgetRange } from "@/types/inquiry";
 
 // ============================================================================
 // PAGE HEADER SECTION

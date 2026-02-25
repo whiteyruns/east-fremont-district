@@ -3,7 +3,6 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import { Shield, Users, Lightbulb, ClipboardList } from "lucide-react";
 
 // ============================================================================
 // PAGE HEADER SECTION
@@ -52,7 +51,7 @@ function ProductionModel() {
             <p className="text-[#9B978F] text-lg leading-relaxed">
               Your event benefits from a single point of contact, unified technical
               standards, and seamless coordination across the entire district—whether
-              you're using one venue or activating the full platform.
+              you&apos;re using one venue or activating the full platform.
             </p>
           </div>
 
@@ -148,7 +147,7 @@ function StaffingOverview() {
               <p>
                 Staffing scales elastically with your event size—from intimate single-venue
                 experiences to district-wide takeovers. The same operational excellence applies
-                whether you're hosting 100 or 5,000 guests.
+                whether you&apos;re hosting 100 or 5,000 guests.
               </p>
             </div>
           </div>
