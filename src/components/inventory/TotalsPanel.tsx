@@ -2,44 +2,25 @@
 
 import { useMemo } from "react";
 import { Venue } from "@/types/venue";
-import { DistrictTotals } from "@/types/venue";
 
 export default function TotalsPanel({ venues }: { venues: Venue[] }) {
-  const totals = useMemo<DistrictTotals>(() => {
-    return venues.reduce(
-      (acc, v) => ({
-        totalVenues: acc.totalVenues + 1,
-        totalCapacity: acc.totalCapacity + v.totalCapacity,
-        totalIndoorCapacity: acc.totalIndoorCapacity + v.indoorCapacity,
-        totalOutdoorCapacity: acc.totalOutdoorCapacity + v.outdoorCapacity,
-        totalSquareFootage: acc.totalSquareFootage + v.squareFootage,
-        totalBarWells: acc.totalBarWells + v.barWells,
-        totalKitchens: acc.totalKitchens + v.kitchens,
-        totalStages: acc.totalStages + v.stages,
-      }),
-      {
-        totalVenues: 0,
-        totalCapacity: 0,
-        totalIndoorCapacity: 0,
-        totalOutdoorCapacity: 0,
-        totalSquareFootage: 0,
-        totalBarWells: 0,
-        totalKitchens: 0,
-        totalStages: 0,
-      }
-    );
+  const totals = useMemo(() => {
+    const totalCapacity = venues.reduce((sum, v) => sum + (v.capacity ?? 0), 0);
+    const totalSqFt = venues.reduce((sum, v) => sum + (v.squareFeet ?? 0), 0);
+    const rooftops = venues.filter((v) => v.hasRooftop).length;
+    const stages = venues.filter((v) => v.hasStage).length;
+    const kitchens = venues.filter((v) => v.hasKitchen).length;
+
+    return { totalCapacity, totalSqFt, rooftops, stages, kitchens };
   }, [venues]);
 
   const stats = [
+    { label: "Venues", value: venues.length.toString() },
     { label: "Total Capacity", value: totals.totalCapacity.toLocaleString() },
-    { label: "Venues", value: totals.totalVenues.toString() },
-    { label: "Bar Wells", value: totals.totalBarWells.toString() },
-    { label: "Kitchens", value: totals.totalKitchens.toString() },
-    { label: "Stages", value: totals.totalStages.toString() },
-    {
-      label: "Sq Ft",
-      value: `${(totals.totalSquareFootage / 1000).toFixed(0)}K`,
-    },
+    { label: "Sq Ft", value: `${(totals.totalSqFt / 1000).toFixed(0)}K` },
+    { label: "Rooftops", value: totals.rooftops.toString() },
+    { label: "Stages", value: totals.stages.toString() },
+    { label: "Kitchens", value: totals.kitchens.toString() },
   ];
 
   return (

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
@@ -170,6 +171,29 @@ function BrandingGrid() {
 }
 
 // ============================================================================
+// SPONSOR CANDY — BRANDING GALLERY
+// ============================================================================
+function SponsorCandy() {
+  return (
+    <section className="py-16 lg:py-24 bg-[#0F1115] border-b border-[#2A2D33]">
+      <Container>
+        <div className="space-y-12">
+          <SectionHeading
+            label="Surfaces & Integrations"
+            title="Sponsor Visibility"
+            description="Wrapped façades, branded entries, custom installs, menus, bars, and signage — every touchpoint is a branding surface."
+          />
+
+          <div className="aspect-[21/9] bg-[#1A1D23] border border-[#2A2D33] rounded-lg flex items-center justify-center">
+            <p className="text-[#6B6760] text-sm">Branding gallery — images coming soon</p>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+// ============================================================================
 // SPONSOR INTEGRATION SECTION
 // ============================================================================
 function SponsorIntegration() {
@@ -288,6 +312,7 @@ export default function BrandingPage() {
     <>
       <PageHeader />
       <BrandingGrid />
+      <SponsorCandy />
       <SponsorIntegration />
       <CTASection />
     </>

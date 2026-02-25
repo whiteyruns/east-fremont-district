@@ -20,10 +20,10 @@ export default function FilterBar({ filters, setFilters }: FilterBarProps) {
         }
         className="bg-[#24272E] border border-[#2A2D33] rounded-md px-3 py-2 text-sm text-[#F0EDE8] focus:border-[#C49A6C] focus:outline-none"
       >
-        <option value="all">All Zones</option>
-        <option value="east">East</option>
-        <option value="central">Central</option>
-        <option value="west">West</option>
+        <option value="ALL">All Zones</option>
+        <option value="EAST">East</option>
+        <option value="CENTRAL">Central</option>
+        <option value="WEST">West</option>
       </select>
 
       {/* Capacity Filter */}

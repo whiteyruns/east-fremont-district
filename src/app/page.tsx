@@ -4,14 +4,19 @@ import ActivationPreview from "@/components/homepage/ActivationPreview";
 import SearchTheDistrict from "@/components/homepage/SearchTheDistrict";
 import CaseStudyPreview from "@/components/homepage/CaseStudyPreview";
 import HomepageCTA from "@/components/homepage/HomepageCTA";
+import { getVenues } from "@/lib/airtable-venues";
 
-export default function Home() {
+export const revalidate = 60;
+
+export default async function Home() {
+  const venues = await getVenues();
+
   return (
     <>
       <HeroVideo />
       <DistrictMetrics />
       <ActivationPreview />
-      <SearchTheDistrict />
+      <SearchTheDistrict venues={venues} />
       <CaseStudyPreview />
       <HomepageCTA />
     </>

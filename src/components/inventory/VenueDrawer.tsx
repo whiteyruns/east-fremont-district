@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { X } from "lucide-react";
 import { Venue } from "@/types/venue";
 
@@ -11,6 +10,18 @@ interface VenueDrawerProps {
 
 export default function VenueDrawer({ venue, onClose }: VenueDrawerProps) {
   if (!venue) return null;
+
+  const specs = [
+    { label: "Capacity", value: venue.capacity?.toLocaleString() ?? "TBD" },
+    {
+      label: "Square Feet",
+      value: venue.squareFeet?.toLocaleString() ?? "TBD",
+    },
+    { label: "Rooftop", value: venue.hasRooftop === true ? "Yes" : venue.hasRooftop === false ? "No" : "TBD" },
+    { label: "Stage", value: venue.hasStage === true ? "Yes" : venue.hasStage === false ? "No" : "TBD" },
+    { label: "Kitchen", value: venue.hasKitchen === true ? "Yes" : venue.hasKitchen === false ? "No" : "TBD" },
+    { label: "ADA Accessible", value: venue.adaAccessible === true ? "Yes" : venue.adaAccessible === false ? "No" : "TBD" },
+  ];
 
   return (
     <>
@@ -36,16 +47,6 @@ export default function VenueDrawer({ venue, onClose }: VenueDrawerProps) {
 
         {/* Content */}
         <div className="px-6 py-6 space-y-8">
-          {/* Image */}
-          <div className="relative aspect-[16/10] bg-[#24272E] rounded-lg overflow-hidden">
-            <Image
-              src={venue.imageUrl}
-              alt={venue.name}
-              fill
-              className="object-cover"
-            />
-          </div>
-
           {/* Location */}
           <div>
             <div className="text-xs font-medium uppercase tracking-[0.15em] text-[#6B6760] mb-2">
@@ -57,54 +58,23 @@ export default function VenueDrawer({ venue, onClose }: VenueDrawerProps) {
             </span>
           </div>
 
-          {/* Capacity Breakdown */}
-          <div>
-            <div className="text-xs font-medium uppercase tracking-[0.15em] text-[#6B6760] mb-3">
-              Capacity
+          {/* Operator */}
+          {venue.operator && (
+            <div>
+              <div className="text-xs font-medium uppercase tracking-[0.15em] text-[#6B6760] mb-2">
+                Operator
+              </div>
+              <p className="text-sm text-[#F0EDE8]">{venue.operator}</p>
             </div>
-            <div className="grid grid-cols-3 gap-4">
-              <div className="p-3 bg-[#24272E] rounded-md text-center">
-                <div className="text-xl font-bold font-mono">
-                  {venue.indoorCapacity}
-                </div>
-                <div className="text-[10px] text-[#6B6760] mt-1">Indoor</div>
-              </div>
-              <div className="p-3 bg-[#24272E] rounded-md text-center">
-                <div className="text-xl font-bold font-mono">
-                  {venue.outdoorCapacity}
-                </div>
-                <div className="text-[10px] text-[#6B6760] mt-1">Outdoor</div>
-              </div>
-              <div className="p-3 bg-[#24272E] rounded-md text-center">
-                <div className="text-xl font-bold font-mono">
-                  {venue.totalCapacity}
-                </div>
-                <div className="text-[10px] text-[#6B6760] mt-1">Total</div>
-              </div>
-            </div>
-          </div>
+          )}
 
-          {/* Infrastructure Specs */}
+          {/* Specs */}
           <div>
             <div className="text-xs font-medium uppercase tracking-[0.15em] text-[#6B6760] mb-3">
-              Infrastructure
+              Specs
             </div>
             <div className="grid grid-cols-2 gap-3">
-              {[
-                {
-                  label: "Square Footage",
-                  value: venue.squareFootage.toLocaleString(),
-                },
-                { label: "Bar Wells", value: venue.barWells },
-                { label: "Kitchens", value: venue.kitchens },
-                { label: "DJ Booths", value: venue.djBooths },
-                { label: "Stages", value: venue.stages },
-                { label: "Rooftop", value: venue.rooftop ? "Yes" : "No" },
-                {
-                  label: "ADA Accessible",
-                  value: venue.adaAccessible ? "Yes" : "No",
-                },
-              ].map((spec) => (
+              {specs.map((spec) => (
                 <div
                   key={spec.label}
                   className="flex items-center justify-between py-2 border-b border-[#2A2D33]"
@@ -117,42 +87,6 @@ export default function VenueDrawer({ venue, onClose }: VenueDrawerProps) {
               ))}
             </div>
           </div>
-
-          {/* Branding Capabilities */}
-          <div>
-            <div className="text-xs font-medium uppercase tracking-[0.15em] text-[#6B6760] mb-3">
-              Branding Capabilities
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {venue.brandingCapabilities.map((cap) => (
-                <span
-                  key={cap}
-                  className="px-3 py-1 text-xs font-medium bg-[#24272E] text-[#C49A6C] border border-[#8B7355]/30 rounded-full"
-                >
-                  {cap.replace(/-/g, " ")}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Features */}
-          {venue.features.length > 0 && (
-            <div>
-              <div className="text-xs font-medium uppercase tracking-[0.15em] text-[#6B6760] mb-3">
-                Features
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {venue.features.map((feature) => (
-                  <span
-                    key={feature}
-                    className="px-3 py-1 text-xs font-medium bg-[#24272E] text-[#9B978F] rounded-full"
-                  >
-                    {feature}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
 
           {/* Notes */}
           {venue.notes && (

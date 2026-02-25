@@ -1,14 +1,18 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import { caseStudies } from "@/data/case-studies";
+import { getCaseStudies } from "@/lib/airtable-case-studies";
 import { CaseStudy } from "@/types/case-study";
+
+export const revalidate = 60;
 
 // ============================================================================
 // STATIC PARAMS GENERATION
 // ============================================================================
-export function generateStaticParams() {
+export async function generateStaticParams() {
+  const caseStudies = await getCaseStudies();
   return caseStudies.map((caseStudy) => ({
     slug: caseStudy.slug,
   }));
@@ -239,26 +243,20 @@ function TestimonialSection({ caseStudy }: { caseStudy: CaseStudy }) {
 }
 
 // ============================================================================
-// GALLERY SECTION
+// NARRATIVE GALLERY SECTION (placeholder until images are uploaded)
 // ============================================================================
-function GalleryGrid({ caseStudy }: { caseStudy: CaseStudy }) {
-  if (caseStudy.galleryImages.length === 0) return null;
-
+function NarrativeGallery() {
   return (
-    <section className="py-12 lg:py-16 bg-[#0F1115]">
+    <section className="py-16 lg:py-24 bg-[#0F1115]">
       <Container>
-        <h2 className="text-[#F0EDE8] text-3xl font-bold mb-8">
-          Event Gallery
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {caseStudy.galleryImages.map((imageUrl, index) => (
-            <div
-              key={index}
-              className="aspect-[4/3] bg-[#1A1D23] rounded-lg flex items-center justify-center border border-[#2A2D33]"
-            >
-              <p className="text-[#6B6760] text-sm">Image Placeholder</p>
-            </div>
-          ))}
+        <div className="space-y-12">
+          <h2 className="text-[#F0EDE8] text-3xl font-bold">
+            The Full Story
+          </h2>
+
+          <div className="aspect-[21/9] bg-[#1A1D23] border border-[#2A2D33] rounded-lg flex items-center justify-center">
+            <p className="text-[#6B6760] text-sm">Photo gallery — images coming soon</p>
+          </div>
         </div>
       </Container>
     </section>
@@ -297,7 +295,8 @@ interface CaseStudyPageProps {
   };
 }
 
-export default function CaseStudyPage({ params }: CaseStudyPageProps) {
+export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
+  const caseStudies = await getCaseStudies();
   const caseStudy = caseStudies.find((cs) => cs.slug === params.slug);
 
   if (!caseStudy) {
@@ -310,7 +309,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
       <MetricsCallout caseStudy={caseStudy} />
       <OperationalSummary caseStudy={caseStudy} />
       <TestimonialSection caseStudy={caseStudy} />
-      <GalleryGrid caseStudy={caseStudy} />
+      <NarrativeGallery />
       <CTASection />
     </>
   );

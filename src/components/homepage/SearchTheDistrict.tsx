@@ -5,10 +5,10 @@ import { useRouter } from "next/navigation";
 import { MapPin, Users, Maximize2 } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { venues } from "@/data/venues";
+import { Venue } from "@/types/venue";
 import { filterVenues, FilterState, defaultFilters, filtersToParams } from "@/components/inventory/filterVenues";
 
-export default function SearchTheDistrict() {
+export default function SearchTheDistrict({ venues }: { venues: Venue[] }) {
   const router = useRouter();
   const [filters, setFilters] = useState<FilterState>(defaultFilters);
   const filtered = filterVenues(venues, filters);
@@ -36,10 +36,10 @@ export default function SearchTheDistrict() {
               }
               className="bg-[#24272E] border border-[#2A2D33] rounded-md px-3 py-2 text-sm text-[#F0EDE8] focus:border-[#C49A6C] focus:outline-none"
             >
-              <option value="all">All Zones</option>
-              <option value="east">East</option>
-              <option value="central">Central</option>
-              <option value="west">West</option>
+              <option value="ALL">All Zones</option>
+              <option value="EAST">East</option>
+              <option value="CENTRAL">Central</option>
+              <option value="WEST">West</option>
             </select>
 
             <select
@@ -88,7 +88,7 @@ export default function SearchTheDistrict() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filtered.slice(0, 3).map((venue) => (
               <div
-                key={venue.id}
+                key={venue.slug}
                 className="bg-[#1A1D23] border border-[#2A2D33] rounded-lg p-5 hover:border-[#3A3D43] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/25 transition-all duration-200 ease-out cursor-pointer"
                 onClick={handleExplore}
               >
@@ -107,7 +107,7 @@ export default function SearchTheDistrict() {
                     <Users size={14} className="text-[#9B978F]" />
                     <div>
                       <div className="text-sm font-bold font-mono text-[#F0EDE8]">
-                        {venue.totalCapacity.toLocaleString()}
+                        {venue.capacity?.toLocaleString() ?? "—"}
                       </div>
                       <div className="text-[10px] text-[#6B6760]">Capacity</div>
                     </div>
@@ -116,7 +116,9 @@ export default function SearchTheDistrict() {
                     <Maximize2 size={14} className="text-[#9B978F]" />
                     <div>
                       <div className="text-sm font-bold font-mono text-[#F0EDE8]">
-                        {(venue.squareFootage / 1000).toFixed(0)}K
+                        {venue.squareFeet != null
+                          ? `${(venue.squareFeet / 1000).toFixed(0)}K`
+                          : "—"}
                       </div>
                       <div className="text-[10px] text-[#6B6760]">Sq Ft</div>
                     </div>

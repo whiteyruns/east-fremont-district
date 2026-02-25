@@ -2,7 +2,10 @@ import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
-import { caseStudies } from "@/data/case-studies";
+import { getCaseStudies } from "@/lib/airtable-case-studies";
+import { CaseStudy } from "@/types/case-study";
+
+export const revalidate = 60;
 
 // ============================================================================
 // PAGE HEADER SECTION
@@ -51,7 +54,7 @@ function ClientTypeBadge({ clientType }: { clientType: string }) {
 // ============================================================================
 // CASE STUDY CARD
 // ============================================================================
-function CaseStudyCard({ caseStudy }: { caseStudy: (typeof caseStudies)[0] }) {
+function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
   return (
     <Link href={`/case-studies/${caseStudy.slug}`}>
       <Card className="overflow-hidden hover:border-[#3A3D43] transition-colors h-full flex flex-col cursor-pointer">
@@ -107,7 +110,7 @@ function CaseStudyCard({ caseStudy }: { caseStudy: (typeof caseStudies)[0] }) {
 // ============================================================================
 // CASE STUDIES GRID SECTION
 // ============================================================================
-function CaseStudiesGrid() {
+function CaseStudiesGrid({ caseStudies }: { caseStudies: CaseStudy[] }) {
   return (
     <section className="py-12 lg:py-16 bg-[#0F1115]">
       <Container>
@@ -132,11 +135,13 @@ function CaseStudiesGrid() {
 // ============================================================================
 // MAIN PAGE COMPONENT
 // ============================================================================
-export default function CaseStudiesPage() {
+export default async function CaseStudiesPage() {
+  const caseStudies = await getCaseStudies();
+
   return (
     <>
       <PageHeader />
-      <CaseStudiesGrid />
+      <CaseStudiesGrid caseStudies={caseStudies} />
     </>
   );
 }

@@ -1,0 +1,2266 @@
+[
+  {
+    "filename": "web-2511003.jpg",
+    "score": 9,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": false,
+    "rooftop_environment": true,
+    "sponsor_branding_visible": false,
+    "caption": "Elevated night view of expansive outdoor event district featuring large illuminated Ferris wheel, multiple neon signs, dense crowd, and full venue infrastructure.",
+    "tags": [
+      "aerial-perspective",
+      "ferris-wheel",
+      "illuminated-installation",
+      "neon-district",
+      "crowd-capacity",
+      "production-scale",
+      "multi-venue-district",
+      "evening-event"
+    ]
+  },
+  {
+    "filename": "web-2511010.jpg",
+    "score": 9,
+    "crowd_scale": "large",
+    "perspective": "aerial",
+    "security_gates_visible": true,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Overhead view of outdoor event with colorful Ferris wheel centerpiece, dense crowd distribution, visible barricades, and comprehensive lighting infrastructure.",
+    "tags": [
+      "aerial-perspective",
+      "ferris-wheel-installation",
+      "crowd-density",
+      "barricades",
+      "lighting-infrastructure",
+      "event-scale",
+      "venue-layout"
+    ]
+  },
+  {
+    "filename": "web-2511012.jpg",
+    "score": 9,
+    "crowd_scale": "large",
+    "perspective": "aerial",
+    "security_gates_visible": true,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Elevated perspective of event district featuring vibrant illuminated Ferris wheel, multi-level crowd areas, neon signage, and comprehensive production setup.",
+    "tags": [
+      "elevated-view",
+      "ferris-wheel",
+      "neon-signage",
+      "crowd-zones",
+      "production-equipment",
+      "multi-venue-layout",
+      "event-infrastructure"
+    ]
+  },
+  {
+    "filename": "web-2511020.jpg",
+    "score": 9,
+    "crowd_scale": "large",
+    "perspective": "aerial",
+    "security_gates_visible": true,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Wide elevated view of outdoor event complex with large illuminated Ferris wheel centerpiece, organized crowd distribution, barricades, and full infrastructure visible.",
+    "tags": [
+      "aerial-perspective",
+      "ferris-wheel-centerpiece",
+      "barricades",
+      "crowd-organization",
+      "infrastructure-detail",
+      "production-scale",
+      "event-district"
+    ]
+  },
+  {
+    "filename": "web-2510568.jpg",
+    "score": 8,
+    "crowd_scale": "large",
+    "perspective": "aerial",
+    "security_gates_visible": true,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Aerial nighttime view of East Fremont Street district showcasing illuminated Ferris wheel and multi-venue event infrastructure against downtown Las Vegas skyline.",
+    "tags": [
+      "aerial-perspective",
+      "district-overview",
+      "ferris-wheel",
+      "nighttime-lighting",
+      "venue-infrastructure",
+      "downtown-las-vegas",
+      "event-scale",
+      "urban-district"
+    ]
+  },
+  {
+    "filename": "web-2510617.jpg",
+    "score": 8,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Wide perspective of East Fremont district showing illuminated Ferris wheel, multiple venue signage, and Cheapshot display infrastructure.",
+    "tags": [
+      "wide-perspective",
+      "ferris-wheel",
+      "multiple-venues",
+      "signage-displays",
+      "district-scale",
+      "lighting-infrastructure",
+      "event-setup"
+    ]
+  },
+  {
+    "filename": "web-2510864.jpg",
+    "score": 8,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Large-scale street event with substantial crowd, multiple branded marquees, strung lighting, and vibrant district activations.",
+    "tags": [
+      "large-crowd",
+      "street-event",
+      "branded-marquees",
+      "strung-lighting",
+      "district-activation",
+      "crowd-capacity",
+      "professional-setup",
+      "multi-venue"
+    ]
+  },
+  {
+    "filename": "web-2510873.jpg",
+    "score": 8,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Expansive evening event showcasing multiple branded venues, professional table settings, aerial lighting rigging, and substantial guest capacity.",
+    "tags": [
+      "large-scale-event",
+      "branded-venues",
+      "professional-tables",
+      "aerial-lighting",
+      "crowd-density",
+      "district-showcase",
+      "evening-event",
+      "multi-venue",
+      "infrastructure"
+    ]
+  },
+  {
+    "filename": "web-2510954.jpg",
+    "score": 8,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Wide overhead perspective of outdoor event space with extensive string lighting rig, multiple neon signs, professional staging infrastructure, and well-distributed crowd density.",
+    "tags": [
+      "aerial-perspective",
+      "lighting-rig",
+      "string-lights",
+      "neon-signage",
+      "crowd-capacity",
+      "event-staging",
+      "infrastructure",
+      "multi-venue-district"
+    ]
+  },
+  {
+    "filename": "web-2510984.jpg",
+    "score": 8,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Elevated perspective of outdoor event with large illuminated structures, dense crowd, pink-branded tables, and comprehensive production infrastructure visible.",
+    "tags": [
+      "elevated-perspective",
+      "illuminated-structures",
+      "crowd-density",
+      "branding",
+      "production-equipment",
+      "infrastructure",
+      "multi-venue-layout"
+    ]
+  },
+  {
+    "filename": "web-2511080.jpg",
+    "score": 8,
+    "crowd_scale": "medium",
+    "perspective": "aerial",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Aerial view of East Fremont Street event district with multiple branded stages, crowds, neon signage, and outdoor infrastructure showing event scale.",
+    "tags": [
+      "aerial-perspective",
+      "event-district",
+      "outdoor-staging",
+      "crowd-density",
+      "branded-signage",
+      "infrastructure",
+      "neon-displays",
+      "multi-venue",
+      "night-event",
+      "production-setup"
+    ]
+  },
+  {
+    "filename": "web-2511082.jpg",
+    "score": 8,
+    "crowd_scale": "medium",
+    "perspective": "aerial",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Overhead shot of Fremont Street district showing organized crowd flow, multiple illuminated stages, branded banners, and professional event infrastructure.",
+    "tags": [
+      "overhead-view",
+      "crowd-management",
+      "stage-infrastructure",
+      "branded-displays",
+      "outdoor-event",
+      "lighting-rigs",
+      "event-production",
+      "district-scale",
+      "professional-setup"
+    ]
+  },
+  {
+    "filename": "web-2511086.jpg",
+    "score": 8,
+    "crowd_scale": "medium",
+    "perspective": "aerial",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Wide district view featuring multiple outdoor stages with neon branding, organized crowd zones, and comprehensive event infrastructure under evening lighting.",
+    "tags": [
+      "district-overview",
+      "multiple-stages",
+      "brand-visibility",
+      "crowd-capacity",
+      "outdoor-infrastructure",
+      "professional-lighting",
+      "event-zones",
+      "production-elements"
+    ]
+  },
+  {
+    "filename": "web-2511094.jpg",
+    "score": 8,
+    "crowd_scale": "medium",
+    "perspective": "aerial",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Vertical aerial shot of East Fremont event district capturing multiple stages, crowd distribution, professional staging, and comprehensive event setup.",
+    "tags": [
+      "vertical-aerial",
+      "multi-stage-setup",
+      "crowd-distribution",
+      "professional-production",
+      "branded-elements",
+      "outdoor-infrastructure",
+      "event-scale",
+      "lighting-systems"
+    ]
+  },
+  {
+    "filename": "web-2511098.jpg",
+    "score": 8,
+    "crowd_scale": "small",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Overhead angle of district showing organized event zones, illuminated stages, crowd movement, and visible production infrastructure across the venue.",
+    "tags": [
+      "overhead-angle",
+      "event-zones",
+      "stage-lighting",
+      "crowd-flow",
+      "production-visible",
+      "outdoor-setup",
+      "district-infrastructure",
+      "professional-event"
+    ]
+  },
+  {
+    "filename": "web-2511236.jpg",
+    "score": 8,
+    "crowd_scale": "large",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Aerial perspective of Fremont Street district during evening event with visible brand signage, street lighting, and large attendee crowd.",
+    "tags": [
+      "aerial-perspective",
+      "district-scale",
+      "fremont-street",
+      "signage",
+      "street-lighting",
+      "crowd-density",
+      "multiple-venues"
+    ]
+  },
+  {
+    "filename": "web-2510838.jpg",
+    "score": 7,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Illuminated ferris wheel with colorful LED lights at event venue surrounded by attendees.",
+    "tags": [
+      "entertainment-ride",
+      "lighting-infrastructure",
+      "crowd-gathering",
+      "attraction-centerpiece",
+      "venue-scale"
+    ]
+  },
+  {
+    "filename": "web-2510841.jpg",
+    "score": 7,
+    "crowd_scale": "large",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Large-scale illuminated ferris wheel attraction with crowds and neon venue architecture.",
+    "tags": [
+      "main-attraction",
+      "entertainment-infrastructure",
+      "crowd-capacity",
+      "night-lighting",
+      "venue-centerpiece"
+    ]
+  },
+  {
+    "filename": "web-2510846.jpg",
+    "score": 7,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Evening street gathering with branded event tables and neon district signage showcasing multiple vendor venues and crowd capacity.",
+    "tags": [
+      "street-event",
+      "crowd-gathering",
+      "branded-tables",
+      "neon-signage",
+      "district-scale",
+      "evening-lighting",
+      "outdoor-venue",
+      "vendor-setup"
+    ]
+  },
+  {
+    "filename": "web-2510854.jpg",
+    "score": 7,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Outdoor event venue with branded signage, illuminated district infrastructure, and organized guest seating arrangement.",
+    "tags": [
+      "outdoor-venue",
+      "branded-signage",
+      "event-lighting",
+      "guest-seating",
+      "district-infrastructure",
+      "professional-setup"
+    ]
+  },
+  {
+    "filename": "web-2510876.jpg",
+    "score": 7,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Street-level event with professionally arranged dining tables, building-mounted lighting, and branded district venues creating structured event space.",
+    "tags": [
+      "street-event",
+      "dining-setup",
+      "mounted-lighting",
+      "branded-venues",
+      "professional-spacing",
+      "district-venues",
+      "event-infrastructure"
+    ]
+  },
+  {
+    "filename": "web-2510888.jpg",
+    "score": 7,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Evening district event with crowded street, illuminated neon venues, and multi-building signage showcasing district scale and brand activation.",
+    "tags": [
+      "street-crowd",
+      "neon-venues",
+      "building-signage",
+      "district-scale",
+      "evening-event",
+      "crowd-gathering",
+      "brand-activation",
+      "multiple-venues"
+    ]
+  },
+  {
+    "filename": "web-2510938.jpg",
+    "score": 7,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Street event showing branded burger venue with neon signage, organized seating, and district-level venue infrastructure.",
+    "tags": [
+      "branded-venue",
+      "food-service",
+      "neon-signage",
+      "street-event",
+      "organized-seating",
+      "outdoor-venue",
+      "vendor-setup",
+      "district-venue"
+    ]
+  },
+  {
+    "filename": "web-2510965.jpg",
+    "score": 7,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Crowd gathered on street with neon signage overhead, string lights, and multiple branded venue structures visible along the corridor.",
+    "tags": [
+      "street-event",
+      "neon-signage",
+      "overhead-lighting",
+      "venue-structures",
+      "crowd-engagement",
+      "branding"
+    ]
+  },
+  {
+    "filename": "web-2510990.jpg",
+    "score": 7,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Interior venue space with exposed industrial ceiling, crystal chandeliers, professional lighting design, and elegantly spaced crowd gathered around bar and lounge areas.",
+    "tags": [
+      "indoor-venue",
+      "industrial-architecture",
+      "luxury-lighting",
+      "bar-setup",
+      "event-space",
+      "professional-design",
+      "crowd-capacity"
+    ]
+  },
+  {
+    "filename": "web-2510992.jpg",
+    "score": 7,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Interior event venue with dramatic industrial exposed beam ceiling, crystal chandeliers, ambient purple lighting, and organized crowd flow through multi-level space.",
+    "tags": [
+      "indoor-venue",
+      "exposed-beams",
+      "chandelier-lighting",
+      "ambient-lighting",
+      "crowd-flow",
+      "bar-service",
+      "event-infrastructure"
+    ]
+  },
+  {
+    "filename": "web-2510999.jpg",
+    "score": 7,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Indoor venue corridor with industrial ceiling structure, hanging light fixtures, professional bar setup, and steady crowd flow through event space.",
+    "tags": [
+      "indoor-venue",
+      "industrial-design",
+      "lighting-fixtures",
+      "bar-service",
+      "crowd-flow",
+      "venue-capacity",
+      "event-layout"
+    ]
+  },
+  {
+    "filename": "web-2511025.jpg",
+    "score": 7,
+    "crowd_scale": "large",
+    "perspective": "aerial",
+    "security_gates_visible": true,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Interior rooftop venue space with industrial ceiling structure, hanging globe lights, lounge seating areas, and professional crowd gathered for evening event.",
+    "tags": [
+      "rooftop-venue",
+      "industrial-ceiling",
+      "ambient-lighting",
+      "lounge-seating",
+      "event-space",
+      "skyline-view",
+      "professional-atmosphere"
+    ]
+  },
+  {
+    "filename": "web-2511046.jpg",
+    "score": 7,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Wide shot of event district showing significant crowd, outdoor seating areas, multiple neon-lit venue structures, and comprehensive event infrastructure.",
+    "tags": [
+      "outdoor-district",
+      "crowd-gathering",
+      "seating-infrastructure",
+      "neon-venues",
+      "event-layout",
+      "capacity-demonstration"
+    ]
+  },
+  {
+    "filename": "web-2511089.jpg",
+    "score": 7,
+    "crowd_scale": "medium",
+    "perspective": "aerial",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Elevated perspective showing Fremont Street event space with organized staging, branded signage, moderate crowd density, and district-wide infrastructure.",
+    "tags": [
+      "elevated-view",
+      "staging-area",
+      "brand-signage",
+      "crowd-organization",
+      "outdoor-venue",
+      "event-infrastructure",
+      "lighting-design",
+      "district-layout"
+    ]
+  },
+  {
+    "filename": "web-2511158.jpg",
+    "score": 7,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": true,
+    "sponsor_branding_visible": false,
+    "caption": "Elevated evening view of street-level event with organized table seating, colorful furniture, multiple branded stages, crowds, and comprehensive infrastructure.",
+    "tags": [
+      "street-level-event",
+      "outdoor-seating",
+      "crowd-management",
+      "branded-stages",
+      "professional-infrastructure",
+      "event-furniture",
+      "overhead-perspective",
+      "district-scale"
+    ]
+  },
+  {
+    "filename": "web-2511233.jpg",
+    "score": 7,
+    "crowd_scale": "large",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Wide street-level district view showing Fremont Street with multiple branded signs, lighting infrastructure, and corporate event crowd.",
+    "tags": [
+      "district-scale",
+      "fremont-street",
+      "street-infrastructure",
+      "outdoor-event",
+      "multiple-venues",
+      "signage",
+      "crowd-management"
+    ]
+  },
+  {
+    "filename": "web-2511252.jpg",
+    "score": 7,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "District plaza installation with towering floral archway structures displaying professional event production and brand activation.",
+    "tags": [
+      "installation-art",
+      "floral-displays",
+      "plaza-infrastructure",
+      "brand-activation",
+      "event-design",
+      "outdoor-venue"
+    ]
+  },
+  {
+    "filename": "web-2511262.jpg",
+    "score": 7,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Large indoor warehouse-style venue with dramatic curved white lighting installations overhead and substantial conference crowd.",
+    "tags": [
+      "warehouse-venue",
+      "production-lighting",
+      "large-scale-event",
+      "crowd-density",
+      "event-infrastructure"
+    ]
+  },
+  {
+    "filename": "web-2511270.jpg",
+    "score": 7,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Engaged conference crowd with synchronized wireless devices, professional overhead lighting, and modern event production setup.",
+    "tags": [
+      "interactive-event",
+      "technology-integration",
+      "production-lighting",
+      "crowd-engagement",
+      "modern-event-tech"
+    ]
+  },
+  {
+    "filename": "web-2510610.jpg",
+    "score": 6,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": false,
+    "rooftop_environment": true,
+    "sponsor_branding_visible": true,
+    "caption": "Street-level view of Fremont Street showing Cheapshot venue signage and multiple neon venue displays.",
+    "tags": [
+      "street-view",
+      "venue-signage",
+      "fremont-street",
+      "neon-branding",
+      "nightlife",
+      "multiple-venues"
+    ]
+  },
+  {
+    "filename": "web-2510820.jpg",
+    "score": 6,
+    "crowd_scale": "large",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Event venue bar setup with dramatic overhead lighting, branded signage, and crowded attendee area.",
+    "tags": [
+      "venue-setup",
+      "bar-service",
+      "crowd-management",
+      "lighting-rig",
+      "brand-signage"
+    ]
+  },
+  {
+    "filename": "web-2510850.jpg",
+    "score": 6,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Intimate corporate dinner setup with branded venue backdrop and yellow table linens creating professional event ambiance.",
+    "tags": [
+      "corporate-dinner",
+      "branded-venue",
+      "table-setup",
+      "professional-lighting",
+      "intimate-gathering",
+      "venue-backdrop",
+      "event-seating"
+    ]
+  },
+  {
+    "filename": "web-2510890.jpg",
+    "score": 6,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Vibrant event space with elaborate floral display installation, purple accent lighting, and organized venue layout.",
+    "tags": [
+      "floral-installation",
+      "accent-lighting",
+      "venue-design",
+      "brand-activation",
+      "event-decor",
+      "professional-setup",
+      "purple-lighting"
+    ]
+  },
+  {
+    "filename": "web-2510901.jpg",
+    "score": 6,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "District event with prominent illuminated installation featuring colorful floral arrangement and brand signage.",
+    "tags": [
+      "illuminated-installation",
+      "floral-display",
+      "brand-signage",
+      "event-decor",
+      "accent-lighting",
+      "venue-design",
+      "district-event"
+    ]
+  },
+  {
+    "filename": "web-2510927.jpg",
+    "score": 6,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Organized outdoor event with branded neon venue signage, casual dining setup, and evening district atmosphere.",
+    "tags": [
+      "outdoor-venue",
+      "branded-signage",
+      "neon-branding",
+      "casual-dining",
+      "evening-event",
+      "district-venue",
+      "crowd-gathering"
+    ]
+  },
+  {
+    "filename": "web-2510931.jpg",
+    "score": 6,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Urban district event showing illuminated branded venue with food service station and organized guest area.",
+    "tags": [
+      "district-event",
+      "branded-venue",
+      "food-station",
+      "venue-lighting",
+      "organized-space",
+      "evening-setup",
+      "outdoor-event"
+    ]
+  },
+  {
+    "filename": "web-2510945.jpg",
+    "score": 6,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Evening district venue with illuminated branded signage, outdoor bar service, and organized event structure.",
+    "tags": [
+      "branded-venue",
+      "outdoor-bar",
+      "event-lighting",
+      "district-venue",
+      "organized-setup",
+      "evening-event",
+      "vendor-infrastructure",
+      "neon-branding"
+    ]
+  },
+  {
+    "filename": "web-2510952.jpg",
+    "score": 6,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Evening street event with prominent neon signage, string lighting overhead, and moderate crowd gathered around branded tables on the East Fremont corridor.",
+    "tags": [
+      "outdoor-venue",
+      "neon-signage",
+      "string-lighting",
+      "crowd-gathering",
+      "branding",
+      "evening-event",
+      "street-setup"
+    ]
+  },
+  {
+    "filename": "web-2511002.jpg",
+    "score": 6,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Interior venue space with brick architecture, modern lighting design, and sparse professional crowd gathered for corporate event.",
+    "tags": [
+      "indoor-venue",
+      "brick-architecture",
+      "modern-lighting",
+      "corporate-event",
+      "professional-atmosphere",
+      "intimate-space"
+    ]
+  },
+  {
+    "filename": "web-2511029.jpg",
+    "score": 6,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Interior venue with industrial exposed ceiling, decorative hanging lights, bar counter, and organized crowd around bar service area.",
+    "tags": [
+      "indoor-venue",
+      "exposed-structure",
+      "decorative-lighting",
+      "bar-service",
+      "crowd-management",
+      "event-infrastructure",
+      "hospitality-setup"
+    ]
+  },
+  {
+    "filename": "web-2511036.jpg",
+    "score": 6,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Interior venue space with bright ambient neon lighting, bar counter, and professional crowd in sophisticated event setting with blue accent lighting.",
+    "tags": [
+      "indoor-venue",
+      "neon-accent-lighting",
+      "bar-setup",
+      "professional-crowd",
+      "ambient-lighting",
+      "event-atmosphere",
+      "hospitality-venue"
+    ]
+  },
+  {
+    "filename": "web-2511055.jpg",
+    "score": 6,
+    "crowd_scale": "close-up",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Interior venue with illuminated bar counter featuring neon lighting accents, compact crowd area, and professional hospitality setup.",
+    "tags": [
+      "indoor-bar-venue",
+      "neon-lighting",
+      "bar-counter",
+      "hospitality-service",
+      "professional-setup",
+      "intimate-venue"
+    ]
+  },
+  {
+    "filename": "web-2511149.jpg",
+    "score": 6,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Branded TransUnion activation booth with professional display, coffee service, and upscale presentation at an outdoor event venue.",
+    "tags": [
+      "brand-activation",
+      "corporate-booth",
+      "professional-setup",
+      "coffee-service",
+      "event-signage",
+      "branded-display",
+      "hospitality",
+      "outdoor-event"
+    ]
+  },
+  {
+    "filename": "web-2511193.jpg",
+    "score": 6,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Group of conference attendees in professional attire on lit stage with visible brand displays and production equipment.",
+    "tags": [
+      "conference-event",
+      "stage-lighting",
+      "attendees",
+      "professional-attire",
+      "event-stage"
+    ]
+  },
+  {
+    "filename": "web-2511247.jpg",
+    "score": 6,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Professional digital wayfinding display showing multi-venue event activation map for district locations.",
+    "tags": [
+      "digital-signage",
+      "wayfinding",
+      "brand-visibility",
+      "event-information",
+      "production-display"
+    ]
+  },
+  {
+    "filename": "web-2511255.jpg",
+    "score": 6,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Vertical view of illuminated floral gateway arch in district plaza showing professional event staging and decorative infrastructure.",
+    "tags": [
+      "outdoor-installation",
+      "floral-arch",
+      "event-staging",
+      "professional-production",
+      "district-landmark"
+    ]
+  },
+  {
+    "filename": "web-2511259.jpg",
+    "score": 6,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Historic venue storefront with street-level crowd and specialized event infrastructure including barricading and lighting.",
+    "tags": [
+      "venue-storefront",
+      "street-event",
+      "barricade-infrastructure",
+      "crowd-control",
+      "district-venue"
+    ]
+  },
+  {
+    "filename": "web-2511265.jpg",
+    "score": 6,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Energetic indoor venue with attendees wearing event-branded wearables, professional lighting rigs, and visible brand signage.",
+    "tags": [
+      "indoor-event",
+      "branded-wearables",
+      "production-equipment",
+      "lighting-rigs",
+      "crowd-engagement",
+      "corporate-branding"
+    ]
+  },
+  {
+    "filename": "web-2511289.jpg",
+    "score": 6,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Lively attendee group wearing wireless headphones at energetic event with colored accent lighting and professional audio/visual equipment.",
+    "tags": [
+      "interactive-event",
+      "wireless-technology",
+      "professional-audio",
+      "event-production",
+      "attendee-engagement"
+    ]
+  },
+  {
+    "filename": "web-2510580.jpg",
+    "score": 5,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Ground-level street view of illuminated Ferris wheel with vintage neon signage and nightlife venue displays.",
+    "tags": [
+      "ferris-wheel",
+      "neon-signage",
+      "nightlife-aesthetic",
+      "vintage-signage",
+      "street-level",
+      "crowd-atmosphere"
+    ]
+  },
+  {
+    "filename": "web-2510633.jpg",
+    "score": 5,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Digital signage for 'Discot' event with neon venue lighting and infrastructure visible in background.",
+    "tags": [
+      "digital-signage",
+      "discot-event",
+      "inmotion-branding",
+      "neon-lighting",
+      "venue-context",
+      "menu-display"
+    ]
+  },
+  {
+    "filename": "web-2510835.jpg",
+    "score": 5,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Vibrant nighttime event district with neon signage, ferris wheel, crowds, and multi-color lighting.",
+    "tags": [
+      "district-view",
+      "venue-lighting",
+      "crowd-density",
+      "entertainment-infrastructure",
+      "nightlife-aesthetic"
+    ]
+  },
+  {
+    "filename": "web-2510902.jpg",
+    "score": 5,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Multi-tiered floral installation with purple uplighting creating dramatic event display in organized venue space.",
+    "tags": [
+      "floral-installation",
+      "uplighting",
+      "event-display",
+      "dramatic-decor",
+      "professional-lighting",
+      "venue-branding",
+      "installation-detail"
+    ]
+  },
+  {
+    "filename": "web-2510908.jpg",
+    "score": 5,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Colorful garden-style floral installation with purple ambient lighting in refined event venue setting.",
+    "tags": [
+      "floral-display",
+      "ambient-lighting",
+      "venue-decor",
+      "professional-installation",
+      "event-design",
+      "purple-accents"
+    ]
+  },
+  {
+    "filename": "web-2510957.jpg",
+    "score": 5,
+    "crowd_scale": "medium",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Close-up portrait of attendees at outdoor event with vibrant neon backdrop and branded signage visible, showing professional event atmosphere.",
+    "tags": [
+      "attendee-portrait",
+      "neon-backdrop",
+      "event-signage",
+      "professional-atmosphere",
+      "outdoor-event"
+    ]
+  },
+  {
+    "filename": "web-2510959.jpg",
+    "score": 5,
+    "crowd_scale": "medium",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Similar attendee portrait at outdoor venue with neon-lit signage and crowd in background, showcasing event atmosphere.",
+    "tags": [
+      "portrait",
+      "neon-lighting",
+      "crowd-background",
+      "event-atmosphere",
+      "outdoor-venue"
+    ]
+  },
+  {
+    "filename": "web-2511155.jpg",
+    "score": 5,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Outdoor lounge area with decorated illuminated tree, upscale seating, ambient lighting, and boutique event space setup.",
+    "tags": [
+      "outdoor-lounge",
+      "ambient-lighting",
+      "decorative-elements",
+      "upscale-seating",
+      "landscaping",
+      "event-setup",
+      "boutique-space",
+      "professional-ambiance"
+    ]
+  },
+  {
+    "filename": "web-2511164.jpg",
+    "score": 5,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Ground-level nighttime event scene with table seating, colored venue signage, neon displays, crowds, and professional outdoor staging.",
+    "tags": [
+      "ground-level-view",
+      "outdoor-seating",
+      "neon-signage",
+      "crowd-presence",
+      "colored-lighting",
+      "venue-staging",
+      "event-infrastructure"
+    ]
+  },
+  {
+    "filename": "web-2511191.jpg",
+    "score": 5,
+    "crowd_scale": "small",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Performer at stage with professional lighting, red drapes, and piano setup demonstrating theatrical event production.",
+    "tags": [
+      "stage-performance",
+      "professional-lighting",
+      "theater-drapes",
+      "performer",
+      "stage-setup"
+    ]
+  },
+  {
+    "filename": "web-2511200.jpg",
+    "score": 5,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Speaker at curved stage with dramatic lighting, attendee seating visible and sophisticated event environment.",
+    "tags": [
+      "speaker-event",
+      "stage-setup",
+      "professional-lighting",
+      "attendee-seating",
+      "venue-infrastructure"
+    ]
+  },
+  {
+    "filename": "web-2511222.jpg",
+    "score": 5,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Crowded indoor venue with lounge seating, professional lighting rigs visible overhead and decorated stage environment.",
+    "tags": [
+      "indoor-venue",
+      "production-lighting",
+      "crowd-gathering",
+      "lounge-seating",
+      "event-infrastructure"
+    ]
+  },
+  {
+    "filename": "web-2510586.jpg",
+    "score": 4,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": true,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Storefront entrance detail showing Commonwealth venue signage and window displays with minimal district context.",
+    "tags": [
+      "storefront",
+      "signage",
+      "venue-branding",
+      "entrance",
+      "tight-crop",
+      "window-display"
+    ]
+  },
+  {
+    "filename": "web-2510613.jpg",
+    "score": 4,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Nightlife-focused street view displaying red-lit venue entrance and neon signage on Fremont Street.",
+    "tags": [
+      "nightlife-aesthetic",
+      "venue-entrance",
+      "neon-lighting",
+      "red-ambiance",
+      "street-level",
+      "club-scene"
+    ]
+  },
+  {
+    "filename": "web-2510782.jpg",
+    "score": 4,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Artfully plated appetizers with red spheres and decorative picks under dramatic blue lighting.",
+    "tags": [
+      "catering",
+      "appetizers",
+      "gourmet-plating",
+      "dramatic-lighting",
+      "molecular-gastronomy"
+    ]
+  },
+  {
+    "filename": "web-2510784.jpg",
+    "score": 4,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Fine dining appetizers with red spheres and decorative elements in moody blue ambient lighting.",
+    "tags": [
+      "catering",
+      "fine-dining",
+      "gourmet-appetizers",
+      "atmospheric-lighting",
+      "plated-service"
+    ]
+  },
+  {
+    "filename": "web-2510801.jpg",
+    "score": 4,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": true,
+    "staging_visible": true,
+    "rooftop_environment": true,
+    "sponsor_branding_visible": true,
+    "caption": "Shrimp appetizers on wooden spoons arranged in white serving slate with elegant presentation.",
+    "tags": [
+      "catering",
+      "shrimp-appetizers",
+      "gourmet-service",
+      "wooden-presentation",
+      "fine-dining"
+    ]
+  },
+  {
+    "filename": "web-2510911.jpg",
+    "score": 4,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Gourmet catered appetizer with professional presentation showing sliders with garnish and serving utensils.",
+    "tags": [
+      "catering",
+      "appetizer-detail",
+      "gourmet-presentation",
+      "slider-bites",
+      "professional-service",
+      "close-up"
+    ]
+  },
+  {
+    "filename": "web-2510917.jpg",
+    "score": 4,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Professional catered salad service in stainless steel chafing dish with vibrant vegetable medley.",
+    "tags": [
+      "catering",
+      "food-service",
+      "salad-dish",
+      "professional-presentation",
+      "event-catering",
+      "serving-ware"
+    ]
+  },
+  {
+    "filename": "web-2510921.jpg",
+    "score": 4,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Elevated catering presentation featuring gourmet rice dish with vegetables in professional serving vessel.",
+    "tags": [
+      "catering",
+      "gourmet-plating",
+      "rice-dish",
+      "professional-service",
+      "event-catering",
+      "serving-ware",
+      "food-detail"
+    ]
+  },
+  {
+    "filename": "web-2511044.jpg",
+    "score": 4,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Close-up detail of gourmet food presentation on slate plate with blurred crowd and ambient lighting in background.",
+    "tags": [
+      "food-detail",
+      "catering",
+      "culinary-presentation",
+      "event-service",
+      "ambient-lighting"
+    ]
+  },
+  {
+    "filename": "web-2511104.jpg",
+    "score": 4,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Close-up of premium bar service with branded glassware, bottled spirits, and professional bartender setup in an upscale indoor event venue.",
+    "tags": [
+      "premium-bar",
+      "brand-activation",
+      "bartender-service",
+      "luxury-hospitality",
+      "spirits-display",
+      "event-catering",
+      "professional-service"
+    ]
+  },
+  {
+    "filename": "web-2511167.jpg",
+    "score": 4,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Indoor upscale lounge with theatrical lighting, draped curtains, bar service, chandelier, and intimate professional event space with seated guests.",
+    "tags": [
+      "upscale-lounge",
+      "theatrical-lighting",
+      "curtain-drapes",
+      "bar-service",
+      "chandelier-decor",
+      "intimate-seating",
+      "professional-venue",
+      "premium-event"
+    ]
+  },
+  {
+    "filename": "web-2511173.jpg",
+    "score": 4,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Indoor premium event space with blue dramatic lighting, draped red curtains, ornate floral centerpiece, seated crowd, and full-service bar.",
+    "tags": [
+      "premium-venue",
+      "dramatic-lighting",
+      "theatrical-drapes",
+      "floral-centerpiece",
+      "seated-event",
+      "bar-service",
+      "upscale-ambiance",
+      "event-space"
+    ]
+  },
+  {
+    "filename": "web-2511184.jpg",
+    "score": 4,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Intimate venue with professional colored lighting and lounge seating showing controlled event atmosphere with branded decor.",
+    "tags": [
+      "indoor-venue",
+      "professional-lighting",
+      "lounge-seating",
+      "event-production",
+      "intimate-setting"
+    ]
+  },
+  {
+    "filename": "web-2511206.jpg",
+    "score": 4,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Group of smiling attendees with conference badges in professionally lit venue with red draping and stage backdrop.",
+    "tags": [
+      "conference-attendees",
+      "professional-badges",
+      "event-lighting",
+      "venue-interior",
+      "corporate-gathering"
+    ]
+  },
+  {
+    "filename": "web-2511207.jpg",
+    "score": 4,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Animated group of corporate attendees with badges engaged in discussion under professional stage lighting.",
+    "tags": [
+      "corporate-event",
+      "attendees",
+      "conference-badges",
+      "professional-lighting",
+      "indoor-venue"
+    ]
+  },
+  {
+    "filename": "web-2510622.jpg",
+    "score": 3,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Digital menu board for Cheapshot venue displaying event offerings with minimal surrounding context.",
+    "tags": [
+      "digital-signage",
+      "menu-board",
+      "venue-branding",
+      "inmotion",
+      "tight-crop",
+      "event-promotion"
+    ]
+  },
+  {
+    "filename": "web-2510625.jpg",
+    "score": 3,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Digital menu display for Lucky Day event showing specialty cocktail offerings and dice graphics.",
+    "tags": [
+      "digital-signage",
+      "menu-display",
+      "specialty-cocktails",
+      "inmotion-branding",
+      "event-promotion",
+      "tight-crop"
+    ]
+  },
+  {
+    "filename": "web-2510628.jpg",
+    "score": 3,
+    "crowd_scale": "small",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Digital menu signage for 'We All Scream' event displaying food stations and dessert offerings.",
+    "tags": [
+      "digital-signage",
+      "event-menu",
+      "food-stations",
+      "inmotion-branding",
+      "event-promotion",
+      "tight-crop"
+    ]
+  },
+  {
+    "filename": "web-2510732.jpg",
+    "score": 3,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Catering table with white rice and multiple warming dishes under warm lighting.",
+    "tags": [
+      "catering",
+      "buffet",
+      "rice-service",
+      "food-warming",
+      "event-setup"
+    ]
+  },
+  {
+    "filename": "web-2510752.jpg",
+    "score": 3,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Seared protein and vegetable medley plated on white serving dish with professional lighting.",
+    "tags": [
+      "catering",
+      "plated-dish",
+      "food-service",
+      "event-dining",
+      "presentation"
+    ]
+  },
+  {
+    "filename": "web-2510756.jpg",
+    "score": 3,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Gourmet appetizer with crispy noodles and red garnish on dark slate presentation.",
+    "tags": [
+      "catering",
+      "appetizer",
+      "plated-service",
+      "gourmet",
+      "food-presentation"
+    ]
+  },
+  {
+    "filename": "web-2510767.jpg",
+    "score": 3,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Multiple individually plated appetizers with crispy noodles displayed in slate service.",
+    "tags": [
+      "catering",
+      "appetizers",
+      "plated-service",
+      "gourmet-plating",
+      "food-presentation"
+    ]
+  },
+  {
+    "filename": "web-2510773.jpg",
+    "score": 3,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Fresh green salad with croutons and dressing served on white plate with ambient lighting.",
+    "tags": [
+      "catering",
+      "salad",
+      "plated-service",
+      "fresh-ingredients",
+      "event-dining"
+    ]
+  },
+  {
+    "filename": "web-2510881.jpg",
+    "score": 3,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Close-up detail shot of glow-stick beverages with neon lighting effects - focuses on nightlife beverage elements.",
+    "tags": [
+      "beverage-detail",
+      "nightlife-elements",
+      "glow-drinks",
+      "nightclub-vibes",
+      "close-up"
+    ]
+  },
+  {
+    "filename": "web-2511064.jpg",
+    "score": 3,
+    "crowd_scale": "medium",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Indoor nightclub scene with vibrant neon lighting, bar service, and mixed crowd enjoying entertainment at an upscale venue.",
+    "tags": [
+      "nightlife",
+      "neon-lighting",
+      "bar-service",
+      "indoor-venue",
+      "event-entertainment",
+      "crowd-gathering",
+      "colored-ambiance",
+      "hospitality"
+    ]
+  },
+  {
+    "filename": "web-2511117.jpg",
+    "score": 3,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "DJ performance with professional audio equipment, headphones, mixing console, and blue LED stage lighting in an indoor entertainment setup.",
+    "tags": [
+      "DJ-performance",
+      "audio-equipment",
+      "production-setup",
+      "entertainment",
+      "lighting-rig",
+      "professional-mixer",
+      "stage-performance",
+      "nightlife"
+    ]
+  },
+  {
+    "filename": "web-2511176.jpg",
+    "score": 3,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Intimate indoor event venue with jewel-tone lighting, draped curtains, small crowd seating, bar counter, and professional hospitality setup.",
+    "tags": [
+      "intimate-venue",
+      "jewel-tone-lighting",
+      "interior-design",
+      "seated-guests",
+      "bar-counter",
+      "event-hospitality",
+      "upscale-interior"
+    ]
+  },
+  {
+    "filename": "web-2511178.jpg",
+    "score": 3,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Indoor upscale lounge with purple and blue theatrical lighting, bar service, draped walls, intimate seating, and professional event atmosphere.",
+    "tags": [
+      "upscale-lounge",
+      "theatrical-lighting",
+      "bar-service",
+      "draped-interior",
+      "intimate-seating",
+      "event-ambiance",
+      "luxury-venue",
+      "hospitality"
+    ]
+  },
+  {
+    "filename": "web-2511180.jpg",
+    "score": 3,
+    "crowd_scale": "small",
+    "perspective": "ground",
+    "security_gates_visible": false,
+    "staging_visible": true,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Premium indoor event space with saturated colored lighting, bar setup, draped architectural elements, and professional hospitality service for attendees.",
+    "tags": [
+      "premium-event-space",
+      "colored-lighting",
+      "bar-service",
+      "architectural-design",
+      "hospitality",
+      "upscale-venue",
+      "professional-setup"
+    ]
+  },
+  {
+    "filename": "web-2510592.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Close-up detail of catered appetizers in serving trays with professional plating.",
+    "tags": [
+      "catering",
+      "food-service",
+      "appetizers",
+      "event-food",
+      "tight-crop",
+      "plating"
+    ]
+  },
+  {
+    "filename": "web-2510596.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Event service staff presenting plated appetizers during corporate catering service.",
+    "tags": [
+      "food-service",
+      "catering-staff",
+      "appetizers",
+      "event-service",
+      "plating",
+      "tight-crop"
+    ]
+  },
+  {
+    "filename": "web-2510690.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Gourmet taco presentation on a sleek metal tray with seasoned protein and fresh garnish.",
+    "tags": [
+      "catering",
+      "food-service",
+      "appetizers",
+      "event-hospitality",
+      "mexican-cuisine"
+    ]
+  },
+  {
+    "filename": "web-2510696.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Artfully plated tacos with sour cream and vegetable toppings displayed for event catering.",
+    "tags": [
+      "catering",
+      "food-presentation",
+      "appetizers",
+      "event-dining",
+      "mexican-food"
+    ]
+  },
+  {
+    "filename": "web-2510703.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Sliced grilled steak with herb garnish served on a metal catering tray.",
+    "tags": [
+      "catering",
+      "grilled-meat",
+      "food-service",
+      "event-dining",
+      "protein"
+    ]
+  },
+  {
+    "filename": "web-2510711.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Creamy dip or spread garnished with herbs displayed in a catering pan.",
+    "tags": [
+      "catering",
+      "dips",
+      "appetizers",
+      "food-presentation",
+      "event-service"
+    ]
+  },
+  {
+    "filename": "web-2510720.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Spiced carrot sticks with herb seasoning in a catering tray, ready for event service.",
+    "tags": [
+      "catering",
+      "vegetables",
+      "appetizers",
+      "side-dishes",
+      "food-service"
+    ]
+  },
+  {
+    "filename": "web-2510721.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Golden fried carrot and potato sticks garnished with fresh herbs in catering display.",
+    "tags": [
+      "catering",
+      "fried-vegetables",
+      "appetizers",
+      "food-presentation",
+      "event-dining"
+    ]
+  },
+  {
+    "filename": "web-2510738.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Pasta dish with corn kernels and protein in a dark warming pan for event service.",
+    "tags": [
+      "catering",
+      "pasta",
+      "food-service",
+      "warming-pans",
+      "event-dining"
+    ]
+  },
+  {
+    "filename": "web-2510743.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Creamy pasta with vegetables served in warming pan with ambient event lighting.",
+    "tags": [
+      "catering",
+      "pasta-dish",
+      "food-service",
+      "event-dining",
+      "warm-lighting"
+    ]
+  },
+  {
+    "filename": "web-2510883.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Neon-lit glowing drinks with party lighting effects in low-light environment - emphasizes nightlife atmosphere.",
+    "tags": [
+      "glowing-beverages",
+      "party-lighting",
+      "nightlife-vibes",
+      "neon-details",
+      "close-up",
+      "alcohol-service"
+    ]
+  },
+  {
+    "filename": "web-2511124.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "DJ booth with professional audio controller, headphones, LED lighting array, and performance setup in a darkened venue environment.",
+    "tags": [
+      "DJ-booth",
+      "audio-controller",
+      "professional-equipment",
+      "stage-lighting",
+      "performance-setup",
+      "nightlife",
+      "entertainment-venue"
+    ]
+  },
+  {
+    "filename": "web-2511146.jpg",
+    "score": 2,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Macro shot of illuminated cotton candy with neon purple and blue lighting effects at an event concession stand.",
+    "tags": [
+      "food-service",
+      "cotton-candy",
+      "neon-lighting",
+      "event-concession",
+      "close-up",
+      "colored-ambiance",
+      "treat-display"
+    ]
+  },
+  {
+    "filename": "web-2510639.jpg",
+    "score": 1,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": true,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": true,
+    "caption": "Close-up detail of seasoned ground meat dish in catering chafing pan.",
+    "tags": [
+      "food-detail",
+      "catering",
+      "chafing-pan",
+      "meat-dish",
+      "tight-crop",
+      "food-service"
+    ]
+  },
+  {
+    "filename": "web-2510645.jpg",
+    "score": 1,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Close-up of golden onion rings served in professional catering chafing pan.",
+    "tags": [
+      "food-detail",
+      "onion-rings",
+      "catering",
+      "chafing-pan",
+      "fried-food",
+      "tight-crop"
+    ]
+  },
+  {
+    "filename": "web-2510654.jpg",
+    "score": 1,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Detailed shot of seasoned meat and vegetable mixture in catering service pan.",
+    "tags": [
+      "food-detail",
+      "catering",
+      "chafing-pan",
+      "meat-dish",
+      "food-service",
+      "tight-crop"
+    ]
+  },
+  {
+    "filename": "web-2510658.jpg",
+    "score": 1,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Close-up of crispy fried chicken pieces in catering chafing pan with serving utensils.",
+    "tags": [
+      "food-detail",
+      "fried-chicken",
+      "catering",
+      "chafing-pan",
+      "food-service",
+      "tight-crop"
+    ]
+  },
+  {
+    "filename": "web-2510663.jpg",
+    "score": 1,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Detailed view of breaded and seasoned fried chicken pieces in professional catering service.",
+    "tags": [
+      "food-detail",
+      "fried-chicken",
+      "catering",
+      "chafing-pan",
+      "food-service",
+      "tight-crop"
+    ]
+  },
+  {
+    "filename": "web-2510667.jpg",
+    "score": 1,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Close-up of golden fried chicken wings and appetizers in catering chafing pan.",
+    "tags": [
+      "food-detail",
+      "fried-chicken",
+      "appetizers",
+      "catering",
+      "chafing-pan",
+      "tight-crop"
+    ]
+  },
+  {
+    "filename": "web-2510677.jpg",
+    "score": 1,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Overhead view of prepared tacos with meat and green garnish on catering tray.",
+    "tags": [
+      "food-detail",
+      "tacos",
+      "catering",
+      "food-service",
+      "plating",
+      "tight-crop"
+    ]
+  },
+  {
+    "filename": "web-2510685.jpg",
+    "score": 1,
+    "crowd_scale": "none",
+    "perspective": "close",
+    "security_gates_visible": false,
+    "staging_visible": false,
+    "rooftop_environment": false,
+    "sponsor_branding_visible": false,
+    "caption": "Close-up detail of tacos arranged on service tray with minimal event context.",
+    "tags": [
+      "food-detail",
+      "tacos",
+      "catering",
+      "food-service",
+      "tight-crop",
+      "event-catering"
+    ]
+  }
+]

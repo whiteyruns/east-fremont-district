@@ -1,0 +1,803 @@
+{
+  "generated": "2026-02-25T01:40:08.879Z",
+  "totalPhotos": 117,
+  "heroCandidates": [
+    {
+      "filename": "web-2511010.jpg",
+      "score": 9,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Overhead view of outdoor event with colorful Ferris wheel centerpiece, dense crowd distribution, visible barricades, and comprehensive lighting infrastructure.",
+      "tags": [
+        "aerial-perspective",
+        "ferris-wheel-installation",
+        "crowd-density",
+        "barricades",
+        "lighting-infrastructure",
+        "event-scale",
+        "venue-layout"
+      ],
+      "computed_score": 16
+    },
+    {
+      "filename": "web-2511012.jpg",
+      "score": 9,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Elevated perspective of event district featuring vibrant illuminated Ferris wheel, multi-level crowd areas, neon signage, and comprehensive production setup.",
+      "tags": [
+        "elevated-view",
+        "ferris-wheel",
+        "neon-signage",
+        "crowd-zones",
+        "production-equipment",
+        "multi-venue-layout",
+        "event-infrastructure"
+      ],
+      "computed_score": 16
+    },
+    {
+      "filename": "web-2511020.jpg",
+      "score": 9,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Wide elevated view of outdoor event complex with large illuminated Ferris wheel centerpiece, organized crowd distribution, barricades, and full infrastructure visible.",
+      "tags": [
+        "aerial-perspective",
+        "ferris-wheel-centerpiece",
+        "barricades",
+        "crowd-organization",
+        "infrastructure-detail",
+        "production-scale",
+        "event-district"
+      ],
+      "computed_score": 16
+    },
+    {
+      "filename": "web-2510568.jpg",
+      "score": 8,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": true,
+      "caption": "Aerial nighttime view of East Fremont Street district showcasing illuminated Ferris wheel and multi-venue event infrastructure against downtown Las Vegas skyline.",
+      "tags": [
+        "aerial-perspective",
+        "district-overview",
+        "ferris-wheel",
+        "nighttime-lighting",
+        "venue-infrastructure",
+        "downtown-las-vegas",
+        "event-scale",
+        "urban-district"
+      ],
+      "computed_score": 16
+    },
+    {
+      "filename": "web-2511025.jpg",
+      "score": 7,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Interior rooftop venue space with industrial ceiling structure, hanging globe lights, lounge seating areas, and professional crowd gathered for evening event.",
+      "tags": [
+        "rooftop-venue",
+        "industrial-ceiling",
+        "ambient-lighting",
+        "lounge-seating",
+        "event-space",
+        "skyline-view",
+        "professional-atmosphere"
+      ],
+      "computed_score": 14
+    }
+  ],
+  "districtImages": [
+    {
+      "filename": "web-2511010.jpg",
+      "score": 9,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Overhead view of outdoor event with colorful Ferris wheel centerpiece, dense crowd distribution, visible barricades, and comprehensive lighting infrastructure.",
+      "tags": [
+        "aerial-perspective",
+        "ferris-wheel-installation",
+        "crowd-density",
+        "barricades",
+        "lighting-infrastructure",
+        "event-scale",
+        "venue-layout"
+      ],
+      "computed_score": 20
+    },
+    {
+      "filename": "web-2511012.jpg",
+      "score": 9,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Elevated perspective of event district featuring vibrant illuminated Ferris wheel, multi-level crowd areas, neon signage, and comprehensive production setup.",
+      "tags": [
+        "elevated-view",
+        "ferris-wheel",
+        "neon-signage",
+        "crowd-zones",
+        "production-equipment",
+        "multi-venue-layout",
+        "event-infrastructure"
+      ],
+      "computed_score": 20
+    },
+    {
+      "filename": "web-2511020.jpg",
+      "score": 9,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Wide elevated view of outdoor event complex with large illuminated Ferris wheel centerpiece, organized crowd distribution, barricades, and full infrastructure visible.",
+      "tags": [
+        "aerial-perspective",
+        "ferris-wheel-centerpiece",
+        "barricades",
+        "crowd-organization",
+        "infrastructure-detail",
+        "production-scale",
+        "event-district"
+      ],
+      "computed_score": 20
+    },
+    {
+      "filename": "web-2510568.jpg",
+      "score": 8,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": true,
+      "caption": "Aerial nighttime view of East Fremont Street district showcasing illuminated Ferris wheel and multi-venue event infrastructure against downtown Las Vegas skyline.",
+      "tags": [
+        "aerial-perspective",
+        "district-overview",
+        "ferris-wheel",
+        "nighttime-lighting",
+        "venue-infrastructure",
+        "downtown-las-vegas",
+        "event-scale",
+        "urban-district"
+      ],
+      "computed_score": 19
+    },
+    {
+      "filename": "web-2511025.jpg",
+      "score": 7,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Interior rooftop venue space with industrial ceiling structure, hanging globe lights, lounge seating areas, and professional crowd gathered for evening event.",
+      "tags": [
+        "rooftop-venue",
+        "industrial-ceiling",
+        "ambient-lighting",
+        "lounge-seating",
+        "event-space",
+        "skyline-view",
+        "professional-atmosphere"
+      ],
+      "computed_score": 18
+    }
+  ],
+  "productionImages": [
+    {
+      "filename": "web-2511010.jpg",
+      "score": 9,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Overhead view of outdoor event with colorful Ferris wheel centerpiece, dense crowd distribution, visible barricades, and comprehensive lighting infrastructure.",
+      "tags": [
+        "aerial-perspective",
+        "ferris-wheel-installation",
+        "crowd-density",
+        "barricades",
+        "lighting-infrastructure",
+        "event-scale",
+        "venue-layout"
+      ],
+      "computed_score": 20
+    },
+    {
+      "filename": "web-2511012.jpg",
+      "score": 9,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Elevated perspective of event district featuring vibrant illuminated Ferris wheel, multi-level crowd areas, neon signage, and comprehensive production setup.",
+      "tags": [
+        "elevated-view",
+        "ferris-wheel",
+        "neon-signage",
+        "crowd-zones",
+        "production-equipment",
+        "multi-venue-layout",
+        "event-infrastructure"
+      ],
+      "computed_score": 20
+    },
+    {
+      "filename": "web-2511020.jpg",
+      "score": 9,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Wide elevated view of outdoor event complex with large illuminated Ferris wheel centerpiece, organized crowd distribution, barricades, and full infrastructure visible.",
+      "tags": [
+        "aerial-perspective",
+        "ferris-wheel-centerpiece",
+        "barricades",
+        "crowd-organization",
+        "infrastructure-detail",
+        "production-scale",
+        "event-district"
+      ],
+      "computed_score": 20
+    },
+    {
+      "filename": "web-2510568.jpg",
+      "score": 8,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": true,
+      "caption": "Aerial nighttime view of East Fremont Street district showcasing illuminated Ferris wheel and multi-venue event infrastructure against downtown Las Vegas skyline.",
+      "tags": [
+        "aerial-perspective",
+        "district-overview",
+        "ferris-wheel",
+        "nighttime-lighting",
+        "venue-infrastructure",
+        "downtown-las-vegas",
+        "event-scale",
+        "urban-district"
+      ],
+      "computed_score": 18
+    },
+    {
+      "filename": "web-2510841.jpg",
+      "score": 7,
+      "crowd_scale": "large",
+      "perspective": "ground",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Large-scale illuminated ferris wheel attraction with crowds and neon venue architecture.",
+      "tags": [
+        "main-attraction",
+        "entertainment-infrastructure",
+        "crowd-capacity",
+        "night-lighting",
+        "venue-centerpiece"
+      ],
+      "computed_score": 18
+    },
+    {
+      "filename": "web-2511025.jpg",
+      "score": 7,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Interior rooftop venue space with industrial ceiling structure, hanging globe lights, lounge seating areas, and professional crowd gathered for evening event.",
+      "tags": [
+        "rooftop-venue",
+        "industrial-ceiling",
+        "ambient-lighting",
+        "lounge-seating",
+        "event-space",
+        "skyline-view",
+        "professional-atmosphere"
+      ],
+      "computed_score": 18
+    },
+    {
+      "filename": "web-2510617.jpg",
+      "score": 8,
+      "crowd_scale": "medium",
+      "perspective": "ground",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": true,
+      "caption": "Wide perspective of East Fremont district showing illuminated Ferris wheel, multiple venue signage, and Cheapshot display infrastructure.",
+      "tags": [
+        "wide-perspective",
+        "ferris-wheel",
+        "multiple-venues",
+        "signage-displays",
+        "district-scale",
+        "lighting-infrastructure",
+        "event-setup"
+      ],
+      "computed_score": 17
+    },
+    {
+      "filename": "web-2510838.jpg",
+      "score": 7,
+      "crowd_scale": "medium",
+      "perspective": "ground",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": false,
+      "caption": "Illuminated ferris wheel with colorful LED lights at event venue surrounded by attendees.",
+      "tags": [
+        "entertainment-ride",
+        "lighting-infrastructure",
+        "crowd-gathering",
+        "attraction-centerpiece",
+        "venue-scale"
+      ],
+      "computed_score": 17
+    }
+  ],
+  "brandingImages": [
+    {
+      "filename": "web-2510568.jpg",
+      "score": 8,
+      "crowd_scale": "large",
+      "perspective": "aerial",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": true,
+      "caption": "Aerial nighttime view of East Fremont Street district showcasing illuminated Ferris wheel and multi-venue event infrastructure against downtown Las Vegas skyline.",
+      "tags": [
+        "aerial-perspective",
+        "district-overview",
+        "ferris-wheel",
+        "nighttime-lighting",
+        "venue-infrastructure",
+        "downtown-las-vegas",
+        "event-scale",
+        "urban-district"
+      ],
+      "computed_score": 14
+    },
+    {
+      "filename": "web-2510617.jpg",
+      "score": 8,
+      "crowd_scale": "medium",
+      "perspective": "ground",
+      "security_gates_visible": true,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": true,
+      "caption": "Wide perspective of East Fremont district showing illuminated Ferris wheel, multiple venue signage, and Cheapshot display infrastructure.",
+      "tags": [
+        "wide-perspective",
+        "ferris-wheel",
+        "multiple-venues",
+        "signage-displays",
+        "district-scale",
+        "lighting-infrastructure",
+        "event-setup"
+      ],
+      "computed_score": 14
+    },
+    {
+      "filename": "web-2510864.jpg",
+      "score": 8,
+      "crowd_scale": "medium",
+      "perspective": "ground",
+      "security_gates_visible": true,
+      "staging_visible": false,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": true,
+      "caption": "Large-scale street event with substantial crowd, multiple branded marquees, strung lighting, and vibrant district activations.",
+      "tags": [
+        "large-crowd",
+        "street-event",
+        "branded-marquees",
+        "strung-lighting",
+        "district-activation",
+        "crowd-capacity",
+        "professional-setup",
+        "multi-venue"
+      ],
+      "computed_score": 14
+    },
+    {
+      "filename": "web-2510954.jpg",
+      "score": 8,
+      "crowd_scale": "medium",
+      "perspective": "ground",
+      "security_gates_visible": false,
+      "staging_visible": false,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": true,
+      "caption": "Wide overhead perspective of outdoor event space with extensive string lighting rig, multiple neon signs, professional staging infrastructure, and well-distributed crowd density.",
+      "tags": [
+        "aerial-perspective",
+        "lighting-rig",
+        "string-lights",
+        "neon-signage",
+        "crowd-capacity",
+        "event-staging",
+        "infrastructure",
+        "multi-venue-district"
+      ],
+      "computed_score": 14
+    },
+    {
+      "filename": "web-2510984.jpg",
+      "score": 8,
+      "crowd_scale": "medium",
+      "perspective": "ground",
+      "security_gates_visible": false,
+      "staging_visible": false,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": true,
+      "caption": "Elevated perspective of outdoor event with large illuminated structures, dense crowd, pink-branded tables, and comprehensive production infrastructure visible.",
+      "tags": [
+        "elevated-perspective",
+        "illuminated-structures",
+        "crowd-density",
+        "branding",
+        "production-equipment",
+        "infrastructure",
+        "multi-venue-layout"
+      ],
+      "computed_score": 14
+    },
+    {
+      "filename": "web-2511080.jpg",
+      "score": 8,
+      "crowd_scale": "medium",
+      "perspective": "aerial",
+      "security_gates_visible": false,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": true,
+      "caption": "Aerial view of East Fremont Street event district with multiple branded stages, crowds, neon signage, and outdoor infrastructure showing event scale.",
+      "tags": [
+        "aerial-perspective",
+        "event-district",
+        "outdoor-staging",
+        "crowd-density",
+        "branded-signage",
+        "infrastructure",
+        "neon-displays",
+        "multi-venue",
+        "night-event",
+        "production-setup"
+      ],
+      "computed_score": 14
+    },
+    {
+      "filename": "web-2511082.jpg",
+      "score": 8,
+      "crowd_scale": "medium",
+      "perspective": "aerial",
+      "security_gates_visible": false,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": true,
+      "caption": "Overhead shot of Fremont Street district showing organized crowd flow, multiple illuminated stages, branded banners, and professional event infrastructure.",
+      "tags": [
+        "overhead-view",
+        "crowd-management",
+        "stage-infrastructure",
+        "branded-displays",
+        "outdoor-event",
+        "lighting-rigs",
+        "event-production",
+        "district-scale",
+        "professional-setup"
+      ],
+      "computed_score": 14
+    },
+    {
+      "filename": "web-2511086.jpg",
+      "score": 8,
+      "crowd_scale": "medium",
+      "perspective": "aerial",
+      "security_gates_visible": false,
+      "staging_visible": true,
+      "rooftop_environment": false,
+      "sponsor_branding_visible": true,
+      "caption": "Wide district view featuring multiple outdoor stages with neon branding, organized crowd zones, and comprehensive event infrastructure under evening lighting.",
+      "tags": [
+        "district-overview",
+        "multiple-stages",
+        "brand-visibility",
+        "crowd-capacity",
+        "outdoor-infrastructure",
+        "professional-lighting",
+        "event-zones",
+        "production-elements"
+      ],
+      "computed_score": 14
+    }
+  ],
+  "caseStudyImages": {
+    "arrival": [
+      {
+        "filename": "web-2511003.jpg",
+        "score": 9,
+        "crowd_scale": "medium",
+        "perspective": "ground",
+        "security_gates_visible": true,
+        "staging_visible": false,
+        "rooftop_environment": true,
+        "sponsor_branding_visible": false,
+        "caption": "Elevated night view of expansive outdoor event district featuring large illuminated Ferris wheel, multiple neon signs, dense crowd, and full venue infrastructure.",
+        "tags": [
+          "aerial-perspective",
+          "ferris-wheel",
+          "illuminated-installation",
+          "neon-district",
+          "crowd-capacity",
+          "production-scale",
+          "multi-venue-district",
+          "evening-event"
+        ]
+      },
+      {
+        "filename": "web-2511010.jpg",
+        "score": 9,
+        "crowd_scale": "large",
+        "perspective": "aerial",
+        "security_gates_visible": true,
+        "staging_visible": true,
+        "rooftop_environment": false,
+        "sponsor_branding_visible": false,
+        "caption": "Overhead view of outdoor event with colorful Ferris wheel centerpiece, dense crowd distribution, visible barricades, and comprehensive lighting infrastructure.",
+        "tags": [
+          "aerial-perspective",
+          "ferris-wheel-installation",
+          "crowd-density",
+          "barricades",
+          "lighting-infrastructure",
+          "event-scale",
+          "venue-layout"
+        ]
+      }
+    ],
+    "bigMoment": [
+      {
+        "filename": "web-2511010.jpg",
+        "score": 9,
+        "crowd_scale": "large",
+        "perspective": "aerial",
+        "security_gates_visible": true,
+        "staging_visible": true,
+        "rooftop_environment": false,
+        "sponsor_branding_visible": false,
+        "caption": "Overhead view of outdoor event with colorful Ferris wheel centerpiece, dense crowd distribution, visible barricades, and comprehensive lighting infrastructure.",
+        "tags": [
+          "aerial-perspective",
+          "ferris-wheel-installation",
+          "crowd-density",
+          "barricades",
+          "lighting-infrastructure",
+          "event-scale",
+          "venue-layout"
+        ]
+      },
+      {
+        "filename": "web-2511012.jpg",
+        "score": 9,
+        "crowd_scale": "large",
+        "perspective": "aerial",
+        "security_gates_visible": true,
+        "staging_visible": true,
+        "rooftop_environment": false,
+        "sponsor_branding_visible": false,
+        "caption": "Elevated perspective of event district featuring vibrant illuminated Ferris wheel, multi-level crowd areas, neon signage, and comprehensive production setup.",
+        "tags": [
+          "elevated-view",
+          "ferris-wheel",
+          "neon-signage",
+          "crowd-zones",
+          "production-equipment",
+          "multi-venue-layout",
+          "event-infrastructure"
+        ]
+      }
+    ],
+    "branding": [
+      {
+        "filename": "web-2510568.jpg",
+        "score": 8,
+        "crowd_scale": "large",
+        "perspective": "aerial",
+        "security_gates_visible": true,
+        "staging_visible": true,
+        "rooftop_environment": false,
+        "sponsor_branding_visible": true,
+        "caption": "Aerial nighttime view of East Fremont Street district showcasing illuminated Ferris wheel and multi-venue event infrastructure against downtown Las Vegas skyline.",
+        "tags": [
+          "aerial-perspective",
+          "district-overview",
+          "ferris-wheel",
+          "nighttime-lighting",
+          "venue-infrastructure",
+          "downtown-las-vegas",
+          "event-scale",
+          "urban-district"
+        ]
+      },
+      {
+        "filename": "web-2510617.jpg",
+        "score": 8,
+        "crowd_scale": "medium",
+        "perspective": "ground",
+        "security_gates_visible": true,
+        "staging_visible": true,
+        "rooftop_environment": false,
+        "sponsor_branding_visible": true,
+        "caption": "Wide perspective of East Fremont district showing illuminated Ferris wheel, multiple venue signage, and Cheapshot display infrastructure.",
+        "tags": [
+          "wide-perspective",
+          "ferris-wheel",
+          "multiple-venues",
+          "signage-displays",
+          "district-scale",
+          "lighting-infrastructure",
+          "event-setup"
+        ]
+      },
+      {
+        "filename": "web-2510864.jpg",
+        "score": 8,
+        "crowd_scale": "medium",
+        "perspective": "ground",
+        "security_gates_visible": true,
+        "staging_visible": false,
+        "rooftop_environment": false,
+        "sponsor_branding_visible": true,
+        "caption": "Large-scale street event with substantial crowd, multiple branded marquees, strung lighting, and vibrant district activations.",
+        "tags": [
+          "large-crowd",
+          "street-event",
+          "branded-marquees",
+          "strung-lighting",
+          "district-activation",
+          "crowd-capacity",
+          "professional-setup",
+          "multi-venue"
+        ]
+      }
+    ],
+    "rooftop": [
+      {
+        "filename": "web-2511003.jpg",
+        "score": 9,
+        "crowd_scale": "medium",
+        "perspective": "ground",
+        "security_gates_visible": true,
+        "staging_visible": false,
+        "rooftop_environment": true,
+        "sponsor_branding_visible": false,
+        "caption": "Elevated night view of expansive outdoor event district featuring large illuminated Ferris wheel, multiple neon signs, dense crowd, and full venue infrastructure.",
+        "tags": [
+          "aerial-perspective",
+          "ferris-wheel",
+          "illuminated-installation",
+          "neon-district",
+          "crowd-capacity",
+          "production-scale",
+          "multi-venue-district",
+          "evening-event"
+        ]
+      },
+      {
+        "filename": "web-2511158.jpg",
+        "score": 7,
+        "crowd_scale": "small",
+        "perspective": "ground",
+        "security_gates_visible": false,
+        "staging_visible": false,
+        "rooftop_environment": true,
+        "sponsor_branding_visible": false,
+        "caption": "Elevated evening view of street-level event with organized table seating, colorful furniture, multiple branded stages, crowds, and comprehensive infrastructure.",
+        "tags": [
+          "street-level-event",
+          "outdoor-seating",
+          "crowd-management",
+          "branded-stages",
+          "professional-infrastructure",
+          "event-furniture",
+          "overhead-perspective",
+          "district-scale"
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "filename": "web-2511098.jpg",
+        "score": 8,
+        "crowd_scale": "small",
+        "perspective": "close",
+        "security_gates_visible": false,
+        "staging_visible": false,
+        "rooftop_environment": false,
+        "sponsor_branding_visible": false,
+        "caption": "Overhead angle of district showing organized event zones, illuminated stages, crowd movement, and visible production infrastructure across the venue.",
+        "tags": [
+          "overhead-angle",
+          "event-zones",
+          "stage-lighting",
+          "crowd-flow",
+          "production-visible",
+          "outdoor-setup",
+          "district-infrastructure",
+          "professional-event"
+        ]
+      },
+      {
+        "filename": "web-2510854.jpg",
+        "score": 7,
+        "crowd_scale": "small",
+        "perspective": "ground",
+        "security_gates_visible": false,
+        "staging_visible": false,
+        "rooftop_environment": false,
+        "sponsor_branding_visible": true,
+        "caption": "Outdoor event venue with branded signage, illuminated district infrastructure, and organized guest seating arrangement.",
+        "tags": [
+          "outdoor-venue",
+          "branded-signage",
+          "event-lighting",
+          "guest-seating",
+          "district-infrastructure",
+          "professional-setup"
+        ]
+      }
+    ]
+  }
+}

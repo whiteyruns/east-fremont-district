@@ -1,10 +1,12 @@
-import { Check, Minus } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import { activationFrameworks } from "@/data/activations";
-import { ActivationFramework, ActivationFeature } from "@/types/activation";
+import ComparisonTable from "@/components/activation-frameworks/ComparisonTable";
+import { getActivationFrameworks } from "@/lib/airtable-activations";
+import { ActivationFramework } from "@/types/activation";
+
+export const revalidate = 60;
 
 // ============================================================================
 // PAGE HEADER SECTION
@@ -122,174 +124,6 @@ function FrameworkCard({
   );
 }
 
-// ============================================================================
-// COMPARISON TABLE
-// ============================================================================
-function ComparisonTable() {
-  // Group features by category
-  const featuresByCategory = new Map<string, ActivationFeature[]>();
-
-  activationFrameworks[0].includedFeatures.forEach((feature) => {
-    if (!featuresByCategory.has(feature.category)) {
-      featuresByCategory.set(feature.category, []);
-    }
-    featuresByCategory.get(feature.category)!.push(feature);
-  });
-
-  // Get unique features for each tier
-  const getCategoryFeatures = (
-    tier: "core" | "expanded" | "full-takeover"
-  ): Map<string, ActivationFeature[]> => {
-    const result = new Map<string, ActivationFeature[]>();
-    const framework = activationFrameworks.find((f) => f.tier === tier);
-
-    if (framework) {
-      framework.includedFeatures.forEach((feature) => {
-        if (!result.has(feature.category)) {
-          result.set(feature.category, []);
-        }
-        result.get(feature.category)!.push(feature);
-      });
-    }
-
-    return result;
-  };
-
-  const coreFeatures = getCategoryFeatures("core");
-  const expandedFeatures = getCategoryFeatures("expanded");
-  const fullFeatures = getCategoryFeatures("full-takeover");
-
-  // Get all unique features across all tiers
-  const allFeatures = new Map<string, Set<string>>();
-  [coreFeatures, expandedFeatures, fullFeatures].forEach((featureMap) => {
-    featureMap.forEach((features, category) => {
-      if (!allFeatures.has(category)) {
-        allFeatures.set(category, new Set());
-      }
-      features.forEach((f) => {
-        allFeatures.get(category)!.add(f.feature);
-      });
-    });
-  });
-
-  const categories = Array.from(allFeatures.keys()).sort();
-
-  const isFeatureIncluded = (
-    tier: "core" | "expanded" | "full-takeover",
-    feature: string
-  ): boolean => {
-    const framework = activationFrameworks.find((f) => f.tier === tier);
-    if (!framework) return false;
-    const found = framework.includedFeatures.find((f) => f.feature === feature);
-    return found ? found.included : false;
-  };
-
-  return (
-    <section className="py-24 bg-[#0A0C0F]">
-      <Container>
-        <div className="space-y-8">
-          <h2 className="text-[#F0EDE8] text-3xl lg:text-4xl font-bold">
-            Feature Comparison
-          </h2>
-
-          {/* Table Wrapper */}
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              {/* Table Header */}
-              <thead>
-                <tr className="border-b border-[#2A2D33]">
-                  <th className="text-left py-4 px-6 text-[#F0EDE8] font-bold">
-                    Feature
-                  </th>
-                  <th className="text-center py-4 px-6 text-[#F0EDE8] font-bold">
-                    Core
-                  </th>
-                  <th className="text-center py-4 px-6 text-[#F0EDE8] font-bold">
-                    Expanded
-                  </th>
-                  <th className="text-center py-4 px-6 text-[#F0EDE8] font-bold">
-                    Full Takeover
-                  </th>
-                </tr>
-              </thead>
-
-              {/* Table Body */}
-              {categories.map((category) => {
-                  const categoryFeatures: string[] = Array.from(
-                    allFeatures.get(category) || new Set<string>()
-                  ).sort();
-
-                  return (
-                    <tbody key={category}>
-                      {/* Category Header Row */}
-                      <tr className="bg-[#1A1D23] border-y border-[#2A2D33]">
-                        <td colSpan={4} className="py-3 px-6">
-                          <p className="text-[#C49A6C] text-xs font-bold uppercase tracking-widest">
-                            {category}
-                          </p>
-                        </td>
-                      </tr>
-
-                      {/* Feature Rows */}
-                      {categoryFeatures.map((feature, featureIndex) => (
-                        <tr
-                          key={`${category}-${featureIndex}`}
-                          className="border-b border-[#2A2D33] hover:bg-[#1A1D23] transition-colors"
-                        >
-                          <td className="py-4 px-6 text-[#9B978F] text-sm">
-                            {feature}
-                          </td>
-                          <td className="text-center py-4 px-6">
-                            {isFeatureIncluded("core", feature) ? (
-                              <Check
-                                size={20}
-                                className="text-[#C49A6C] mx-auto"
-                              />
-                            ) : (
-                              <Minus
-                                size={20}
-                                className="text-[#6B6760] mx-auto"
-                              />
-                            )}
-                          </td>
-                          <td className="text-center py-4 px-6">
-                            {isFeatureIncluded("expanded", feature) ? (
-                              <Check
-                                size={20}
-                                className="text-[#C49A6C] mx-auto"
-                              />
-                            ) : (
-                              <Minus
-                                size={20}
-                                className="text-[#6B6760] mx-auto"
-                              />
-                            )}
-                          </td>
-                          <td className="text-center py-4 px-6">
-                            {isFeatureIncluded("full-takeover", feature) ? (
-                              <Check
-                                size={20}
-                                className="text-[#C49A6C] mx-auto"
-                              />
-                            ) : (
-                              <Minus
-                                size={20}
-                                className="text-[#6B6760] mx-auto"
-                              />
-                            )}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  );
-                })}
-            </table>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
 
 // ============================================================================
 // CUSTOM CTA SECTION
@@ -321,7 +155,9 @@ function CustomCtaSection() {
 // ============================================================================
 // PAGE EXPORT
 // ============================================================================
-export default function ActivationFrameworksPage() {
+export default async function ActivationFrameworksPage() {
+  const activationFrameworks = await getActivationFrameworks();
+
   return (
     <>
       <PageHeader />
@@ -338,7 +174,7 @@ export default function ActivationFrameworksPage() {
       </section>
 
       {/* Comparison Table */}
-      <ComparisonTable />
+      <ComparisonTable frameworks={activationFrameworks} />
 
       {/* Custom CTA Section */}
       <CustomCtaSection />

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
@@ -65,6 +66,35 @@ function ProductionModel() {
                 <p className="text-[#F0EDE8] font-medium">{benefit}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+// ============================================================================
+// OPS & CONTROL — PRODUCTION GALLERY
+// ============================================================================
+function OpsControl() {
+  return (
+    <section className="py-16 lg:py-24 bg-[#0A0C0F] border-b border-[#2A2D33]">
+      <Container>
+        <div className="space-y-12">
+          <SectionHeading
+            label="Ops & Control"
+            title="Production in Practice"
+            description="Stage builds, lighting rigs, security perimeters, sound operations, and staff coordination — the infrastructure behind every seamless activation."
+          />
+
+          <div className="relative aspect-[21/9] bg-[#1A1D23] border border-[#2A2D33] rounded-lg overflow-hidden">
+            <Image
+              src="/images/production/street-build-01.webp"
+              alt="Street-level production build and infrastructure"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0C0F]/70 to-transparent" />
           </div>
         </div>
       </Container>
@@ -352,6 +382,7 @@ export default function ProductionPage() {
     <>
       <PageHeader />
       <ProductionModel />
+      <OpsControl />
       <StaffingOverview />
       <SecurityModel />
       <CityCoordination />

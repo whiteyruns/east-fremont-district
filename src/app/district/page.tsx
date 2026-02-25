@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
@@ -98,6 +99,64 @@ function DistrictMap() {
             <p className="text-[#9B978F]">
               Interactive Component
             </p>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+// ============================================================================
+// INFRASTRUCTURE PROOF SECTION
+// ============================================================================
+const districtImages = [
+  { src: "/images/district/district-main.webp", alt: "Aerial view of East Fremont District infrastructure", featured: true },
+  { src: "/images/district/district-crowd-01.webp", alt: "District crowd density and staging infrastructure" },
+  { src: "/images/district/district-layout-01.webp", alt: "Venue storefront with event infrastructure" },
+  { src: "/images/district/district-night-01.webp", alt: "District night activation" },
+];
+
+function InfrastructureProof() {
+  return (
+    <section className="py-24 bg-[#0F1115] border-b border-[#2A2D33]">
+      <Container>
+        <div className="space-y-12">
+          <SectionHeading
+            label="Infrastructure Proof"
+            title="Control & Footprint"
+            description="Security perimeters, staging infrastructure, and crowd management across the district — evidence of operational scale."
+          />
+
+          {/* Photo Grid — featured + supporting */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Featured */}
+            <div className="relative aspect-[16/10] bg-[#1A1D23] border border-[#2A2D33] rounded-lg overflow-hidden">
+              <Image
+                src={districtImages[0].src}
+                alt={districtImages[0].alt}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0C0F]/70 to-transparent" />
+            </div>
+
+            {/* Supporting Grid */}
+            <div className="grid grid-cols-2 gap-6">
+              {districtImages.slice(1).map((img) => (
+                <div
+                  key={img.src}
+                  className="relative aspect-[4/3] bg-[#1A1D23] border border-[#2A2D33] rounded-lg overflow-hidden"
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0C0F]/60 to-transparent" />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Container>
@@ -294,6 +353,7 @@ export default function DistrictPage() {
       <PageHeader />
       <FootprintOverview />
       <DistrictMap />
+      <InfrastructureProof />
       <InfrastructureBullets />
       <ScalabilitySection />
       <OperatingModel />
