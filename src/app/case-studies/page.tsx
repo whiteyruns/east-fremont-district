@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
@@ -56,11 +57,22 @@ function ClientTypeBadge({ clientType }: { clientType: string }) {
 // ============================================================================
 function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
   return (
-    <Link href={`/case-studies/${caseStudy.slug}`}>
+    <Link href={`/case-studies/${caseStudy.slug}`} className="group">
       <Card className="overflow-hidden hover:border-[#3A3D43] transition-colors h-full flex flex-col cursor-pointer">
-        {/* Image Placeholder */}
-        <div className="aspect-[16/10] bg-[#1A1D23] flex items-center justify-center">
-          <p className="text-[#6B6760] text-sm">Image Placeholder</p>
+        {/* Hero Image */}
+        <div className="aspect-[16/10] bg-[#1A1D23] relative overflow-hidden">
+          {caseStudy.heroImageUrl ? (
+            <Image
+              src={caseStudy.heroImageUrl}
+              alt={caseStudy.title}
+              fill
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <p className="text-[#6B6760] text-sm">Image Placeholder</p>
+            </div>
+          )}
         </div>
 
         {/* Content */}

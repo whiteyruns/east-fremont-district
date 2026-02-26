@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
@@ -71,9 +72,21 @@ function ScopeTag({ scope }: { scope: string }) {
 function HeroSection({ caseStudy }: { caseStudy: CaseStudy }) {
   return (
     <section className="relative h-[60vh] bg-[#1A1D23] flex items-center justify-center">
-      {/* Image Placeholder */}
-      <div className="absolute inset-0 bg-[#1A1D23] flex items-center justify-center">
-        <p className="text-[#6B6760] text-sm">Image Placeholder</p>
+      {/* Hero Image */}
+      <div className="absolute inset-0 bg-[#1A1D23]">
+        {caseStudy.heroImageUrl ? (
+          <Image
+            src={caseStudy.heroImageUrl}
+            alt={caseStudy.title}
+            fill
+            className="object-cover"
+            priority
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <p className="text-[#6B6760] text-sm">Image Placeholder</p>
+          </div>
+        )}
       </div>
 
       {/* Gradient Overlay */}
