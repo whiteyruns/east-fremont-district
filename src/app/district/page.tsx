@@ -2,19 +2,25 @@ import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
+import { getVenues } from "@/lib/airtable-venues";
+import { Venue } from "@/types/venue";
 
+export const dynamic = "force-dynamic";
 
 // ============================================================================
 // PAGE HEADER SECTION
 // ============================================================================
-function PageHeader() {
+function PageHeader({ venues }: { venues: Venue[] }) {
+  const totalSqFt = venues.reduce((sum, v) => sum + (v.squareFeet ?? 0), 0);
+  const formattedSqFt = totalSqFt.toLocaleString();
+
   return (
     <section className="py-16 bg-[#0F1115]">
       <Container>
         <SectionHeading
           label="Infrastructure"
           title="The District"
-          description="A unified 42,500 square foot footprint spanning three city blocks of privatized East Fremont real estate. Five premium venues, one operating platform."
+          description={`A unified ${formattedSqFt} square foot footprint spanning one city block of privatized East Fremont real estate. ${venues.length} premium venues, one operating platform.`}
         />
       </Container>
     </section>
@@ -24,12 +30,15 @@ function PageHeader() {
 // ============================================================================
 // FOOTPRINT OVERVIEW SECTION
 // ============================================================================
-function FootprintOverview() {
+function FootprintOverview({ venues }: { venues: Venue[] }) {
+  const totalCapacity = venues.reduce((sum, v) => sum + (v.capacity ?? 0), 0);
+  const totalSqFt = venues.reduce((sum, v) => sum + (v.squareFeet ?? 0), 0);
+
   const stats = [
-    { value: "3", label: "City Blocks" },
-    { value: "5", label: "Venues" },
-    { value: "42,500", label: "Sq Ft" },
-    { value: "3,550+", label: "Total Capacity" },
+    { value: "1", label: "City Block" },
+    { value: venues.length.toString(), label: "Venues" },
+    { value: (totalSqFt / 1000).toFixed(0) + "K", label: "Sq Ft" },
+    { value: totalCapacity.toLocaleString() + "+", label: "Total Capacity" },
   ];
 
   return (
@@ -347,11 +356,13 @@ function OperatingModel() {
 // ============================================================================
 // PAGE EXPORT
 // ============================================================================
-export default function DistrictPage() {
+export default async function DistrictPage() {
+  const venues = await getVenues();
+
   return (
     <>
-      <PageHeader />
-      <FootprintOverview />
+      <PageHeader venues={venues} />
+      <FootprintOverview venues={venues} />
       <DistrictMap />
       <InfrastructureProof />
       <InfrastructureBullets />
