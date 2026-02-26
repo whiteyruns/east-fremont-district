@@ -27,7 +27,7 @@ export const brandingZones: BrandingZone[] = [
     dimensions: "Up to 15,000 sq ft per building",
     visibility: "mixed",
     availability: "event-only",
-    imageUrl: "/images/branding/building-wraps.jpg",
+    imageUrl: "/images/branding/facade-wraps/building-wrap-01.webp",
     specs: [
       "High-quality outdoor vinyl",
       "Professional installation",
@@ -81,7 +81,7 @@ export const brandingZones: BrandingZone[] = [
     dimensions: "12+ display locations across district",
     visibility: "mixed",
     availability: "year-round",
-    imageUrl: "/images/branding/digital-signage.jpg",
+    imageUrl: "/images/branding/signage/digital-signage-01.webp",
     specs: [
       "High-resolution LED screens",
       "Dynamic content capability",
@@ -119,7 +119,7 @@ export const brandingZones: BrandingZone[] = [
     dimensions: "Up to 10+ branded bar stations",
     visibility: "interior",
     availability: "event-only",
-    imageUrl: "/images/branding/beverage-program.jpg",
+    imageUrl: "/images/branding/sponsor-bars/beverage-program-01.webp",
     specs: [
       "Custom branded cocktails",
       "Premium spirit inclusion",

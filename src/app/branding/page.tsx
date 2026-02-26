@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
@@ -93,9 +94,20 @@ function AvailabilityBadge({ availability }: { availability: string }) {
 function BrandingCard({ zone }: { zone: (typeof brandingZones)[0] }) {
   return (
     <Card className="overflow-hidden hover:border-[#3A3D43] transition-colors h-full flex flex-col">
-      {/* Image Placeholder */}
-      <div className="aspect-[16/10] bg-[#24272E] flex items-center justify-center">
-        <p className="text-[#6B6760] text-sm">Image Placeholder</p>
+      {/* Zone Image */}
+      <div className="aspect-[16/10] bg-[#24272E] relative overflow-hidden">
+        {zone.imageUrl.endsWith(".webp") ? (
+          <Image
+            src={zone.imageUrl}
+            alt={zone.name}
+            fill
+            className="object-cover"
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <p className="text-[#6B6760] text-sm">Image Coming Soon</p>
+          </div>
+        )}
       </div>
 
       {/* Content */}
@@ -183,8 +195,22 @@ function SponsorCandy() {
             description="Wrapped façades, branded entries, custom installs, menus, bars, and signage — every touchpoint is a branding surface."
           />
 
-          <div className="aspect-[21/9] bg-[#1A1D23] border border-[#2A2D33] rounded-lg flex items-center justify-center">
-            <p className="text-[#6B6760] text-sm">Branding gallery — images coming soon</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              { src: "/images/branding/facade-wraps/building-wrap-01.webp", alt: "Building facade wrap branding" },
+              { src: "/images/branding/signage/digital-signage-01.webp", alt: "Digital signage network" },
+              { src: "/images/branding/sponsor-bars/beverage-program-01.webp", alt: "Branded beverage program" },
+            ].map((img) => (
+              <div key={img.src} className="relative aspect-[4/3] bg-[#1A1D23] border border-[#2A2D33] rounded-lg overflow-hidden">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0C0F]/60 to-transparent" />
+              </div>
+            ))}
           </div>
         </div>
       </Container>
