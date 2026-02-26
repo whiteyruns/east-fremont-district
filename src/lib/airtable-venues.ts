@@ -13,9 +13,7 @@ export async function getVenues(): Promise<Venue[]> {
   if (!isAirtableConfigured || !base) return staticVenues;
 
   try {
-    const records = await base("Venues")
-      .select({ view: "Grid view" })
-      .all();
+    const records = await base("Venues").select().all();
 
     return records.map((r) => ({
       slug: (r.get("slug") as string) ?? "",

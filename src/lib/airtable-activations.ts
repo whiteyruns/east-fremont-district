@@ -35,9 +35,7 @@ export async function getActivationFrameworks(): Promise<
       .all();
 
     // Fetch all features
-    const featRecords = await base("Activation Features")
-      .select({ view: "Grid view" })
-      .all();
+    const featRecords = await base("Activation Features").select().all();
 
     // Group features by linked framework record id
     const featsByFw = new Map<string, ActivationFeature[]>();

@@ -29,9 +29,7 @@ export async function getCaseStudies(): Promise<CaseStudy[]> {
       .all();
 
     // Fetch all results
-    const resRecords = await base("Case Study Results")
-      .select({ view: "Grid view" })
-      .all();
+    const resRecords = await base("Case Study Results").select().all();
 
     // Group results by linked case study id
     const resultsByCs = new Map<string, CaseStudyResult[]>();
