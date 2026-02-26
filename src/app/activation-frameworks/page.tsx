@@ -6,7 +6,7 @@ import ComparisonTable from "@/components/activation-frameworks/ComparisonTable"
 import { getActivationFrameworks } from "@/lib/airtable-activations";
 import { ActivationFramework } from "@/types/activation";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 // ============================================================================
 // PAGE HEADER SECTION

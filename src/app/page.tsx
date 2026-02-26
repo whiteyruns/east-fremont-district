@@ -6,7 +6,7 @@ import CaseStudyPreview from "@/components/homepage/CaseStudyPreview";
 import HomepageCTA from "@/components/homepage/HomepageCTA";
 import { getVenues } from "@/lib/airtable-venues";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const venues = await getVenues();

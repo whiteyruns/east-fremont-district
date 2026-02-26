@@ -5,7 +5,7 @@ import Button from "@/components/ui/Button";
 import { getCaseStudies } from "@/lib/airtable-case-studies";
 import { CaseStudy } from "@/types/case-study";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 // ============================================================================
 // STATIC PARAMS GENERATION

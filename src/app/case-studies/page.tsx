@@ -5,7 +5,7 @@ import Card from "@/components/ui/Card";
 import { getCaseStudies } from "@/lib/airtable-case-studies";
 import { CaseStudy } from "@/types/case-study";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
 
 // ============================================================================
 // PAGE HEADER SECTION
