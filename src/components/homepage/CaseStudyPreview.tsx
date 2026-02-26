@@ -1,13 +1,19 @@
+import Image from "next/image";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
-import { caseStudies } from "@/data/case-studies";
 import Link from "next/link";
+import { CaseStudy } from "@/types/case-study";
 
-export default function CaseStudyPreview() {
+export default function CaseStudyPreview({
+  caseStudies,
+}: {
+  caseStudies: CaseStudy[];
+}) {
   // Use the first case study as featured
   const featured = caseStudies[0];
+  if (!featured) return null;
 
   return (
     <section className="py-24 bg-[#0F1115]">
@@ -21,17 +27,28 @@ export default function CaseStudyPreview() {
 
           {/* Featured Case Study */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
-            {/* Left: Image Placeholder */}
+            {/* Left: Hero Image */}
             <div>
-              <div className="aspect-[16/10] bg-[#1A1D23] border border-[#2A2D33] rounded-lg flex items-center justify-center">
-                <div className="text-center space-y-4 p-8">
-                  <p className="text-[#9B978F] text-lg">
-                    Case Study Hero Image
-                  </p>
-                  <p className="text-[#6B6760] text-sm">
-                    {featured.title}
-                  </p>
-                </div>
+              <div className="aspect-[16/10] bg-[#1A1D23] border border-[#2A2D33] rounded-lg overflow-hidden relative">
+                {featured.heroImageUrl ? (
+                  <Image
+                    src={featured.heroImageUrl}
+                    alt={featured.title}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="text-center space-y-4 p-8">
+                      <p className="text-[#9B978F] text-lg">
+                        Case Study Hero Image
+                      </p>
+                      <p className="text-[#6B6760] text-sm">
+                        {featured.title}
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 

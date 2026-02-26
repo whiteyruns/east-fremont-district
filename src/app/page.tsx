@@ -5,11 +5,15 @@ import SearchTheDistrict from "@/components/homepage/SearchTheDistrict";
 import CaseStudyPreview from "@/components/homepage/CaseStudyPreview";
 import HomepageCTA from "@/components/homepage/HomepageCTA";
 import { getVenues } from "@/lib/airtable-venues";
+import { getCaseStudies } from "@/lib/airtable-case-studies";
 
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const venues = await getVenues();
+  const [venues, caseStudies] = await Promise.all([
+    getVenues(),
+    getCaseStudies(),
+  ]);
 
   return (
     <>
@@ -17,7 +21,7 @@ export default async function Home() {
       <DistrictMetrics venues={venues} />
       <ActivationPreview />
       <SearchTheDistrict venues={venues} />
-      <CaseStudyPreview />
+      <CaseStudyPreview caseStudies={caseStudies} />
       <HomepageCTA />
     </>
   );
