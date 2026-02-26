@@ -21,7 +21,7 @@ import { caseStudies as staticCaseStudies } from "@/data/case-studies";
  *   caseStudy (linked record to Case Studies)
  */
 export async function getCaseStudies(): Promise<CaseStudy[]> {
-  if (!isAirtableConfigured) return staticCaseStudies;
+  if (!isAirtableConfigured || !base) return staticCaseStudies;
 
   try {
     const csRecords = await base("Case Studies")

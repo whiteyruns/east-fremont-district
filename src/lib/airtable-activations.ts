@@ -26,7 +26,7 @@ import { activationFrameworks as staticFrameworks } from "@/data/activations";
 export async function getActivationFrameworks(): Promise<
   ActivationFramework[]
 > {
-  if (!isAirtableConfigured) return staticFrameworks;
+  if (!isAirtableConfigured || !base) return staticFrameworks;
 
   try {
     // Fetch frameworks

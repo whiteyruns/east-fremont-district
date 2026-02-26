@@ -10,7 +10,7 @@ import { venues as staticVenues } from "@/data/venues";
  *         hasRooftop, hasStage, hasKitchen, adaAccessible, notes
  */
 export async function getVenues(): Promise<Venue[]> {
-  if (!isAirtableConfigured) return staticVenues;
+  if (!isAirtableConfigured || !base) return staticVenues;
 
   try {
     const records = await base("Venues")
