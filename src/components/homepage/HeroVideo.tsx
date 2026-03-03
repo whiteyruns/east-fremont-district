@@ -1,19 +1,21 @@
 'use client';
 
-import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 export default function HeroVideo() {
   return (
     <section className="relative w-full h-screen overflow-hidden bg-[#0A0C0F]">
-      {/* Background */}
-      <Image
-        src="/images/homepage/hero-main.webp"
-        alt="East Fremont District"
-        fill
-        priority
-        className="absolute inset-0 object-cover"
-      />
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/images/homepage/hero-main.webp"
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/video/hero-drone.mp4" type="video/mp4" />
+      </video>
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#0A0C0F]/40 via-[#0A0C0F]/20 to-[#0A0C0F]/60" />
