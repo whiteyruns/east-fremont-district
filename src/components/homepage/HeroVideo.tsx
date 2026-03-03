@@ -35,7 +35,7 @@ export default function HeroVideo() {
 
           {/* Description */}
           <p className="text-[#9B978F] text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
-            Three integrated city blocks. Five premium venues. One unified operating platform for brands and event producers.
+            One city block. 16 premium venues. One unified operating platform for brands and event producers.
           </p>
 
           {/* CTAs */}

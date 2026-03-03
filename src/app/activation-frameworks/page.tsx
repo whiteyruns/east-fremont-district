@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
@@ -6,6 +7,7 @@ import ComparisonTable from "@/components/activation-frameworks/ComparisonTable"
 import { getActivationFrameworks } from "@/lib/airtable-activations";
 import { ActivationFramework } from "@/types/activation";
 
+export const metadata: Metadata = { title: "Activation Frameworks" };
 export const dynamic = "force-dynamic";
 
 // ============================================================================

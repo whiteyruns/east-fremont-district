@@ -53,9 +53,6 @@ export default function VenueDrawer({ venue, onClose }: VenueDrawerProps) {
               Location
             </div>
             <p className="text-sm text-[#F0EDE8]">{venue.address}</p>
-            <span className="inline-block mt-1 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider bg-[#24272E] text-[#C49A6C] rounded">
-              {venue.zone} zone
-            </span>
           </div>
 
           {/* Operator */}

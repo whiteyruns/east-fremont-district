@@ -8,7 +8,7 @@ const infrastructureItems = [
     icon: Building2,
     title: "Venue Infrastructure",
     description:
-      "Five strategically positioned premium venues with flexible configurations, rooftop access, and integrated technical capabilities.",
+      "16 strategically positioned premium venues with flexible configurations, rooftop access, and integrated technical capabilities.",
   },
   {
     icon: Mic2,

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+import StructuredData from "@/components/layout/StructuredData";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -16,10 +17,55 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://eastfremontdistrict.com";
+
 export const metadata: Metadata = {
-  title: "East Fremont District",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "East Fremont District",
+    template: "%s | East Fremont District",
+  },
   description:
     "A fully privatized, multi-venue urban event district designed for large-scale corporate activations and convention programming in Downtown Las Vegas.",
+  keywords: [
+    "East Fremont District",
+    "Las Vegas event venue",
+    "corporate activations",
+    "convention programming",
+    "Downtown Las Vegas",
+    "multi-venue events",
+    "brand activations",
+    "Corner Bar Management",
+  ],
+  authors: [{ name: "Corner Bar Management", url: "https://www.cornerbarmgmt.com" }],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: "East Fremont District",
+    title: "East Fremont District — Urban Event Infrastructure",
+    description:
+      "16 premium venues on one city block in Downtown Las Vegas. A unified operating platform for large-scale corporate activations and convention programming.",
+    images: [
+      {
+        url: "/images/og/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "East Fremont District — Downtown Las Vegas",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "East Fremont District — Urban Event Infrastructure",
+    description:
+      "16 premium venues on one city block in Downtown Las Vegas. A unified operating platform for brands and event producers.",
+    images: ["/images/og/og-default.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -29,6 +75,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <StructuredData />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0F1115] text-[#F0EDE8]`}
       >

@@ -1,11 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Metadata } from "next";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import { getCaseStudies } from "@/lib/airtable-case-studies";
 import { CaseStudy } from "@/types/case-study";
 
+export const metadata: Metadata = { title: "Case Studies" };
 export const dynamic = "force-dynamic";
 
 // ============================================================================

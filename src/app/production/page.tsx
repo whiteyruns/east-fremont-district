@@ -1,8 +1,11 @@
 import Image from "next/image";
+import { Metadata } from "next";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
+
+export const metadata: Metadata = { title: "Unified Production" };
 
 // ============================================================================
 // PAGE HEADER SECTION
@@ -44,7 +47,7 @@ function ProductionModel() {
               East Fremont District operates under unified production management.
               Rather than coordinating multiple independent venue operators with
               different standards, technical capabilities, and vendor relationships,
-              all five venues operate through a single production team. This eliminates
+              all district venues operate through a single production team. This eliminates
               vendor coordination headaches, ensures consistent technical quality, and
               dramatically simplifies event execution.
             </p>
@@ -75,6 +78,13 @@ function ProductionModel() {
 // ============================================================================
 // OPS & CONTROL — PRODUCTION GALLERY
 // ============================================================================
+const productionImages = [
+  { src: "/images/production/street-build-01.webp", alt: "Street-level production build and infrastructure", label: "Street Build" },
+  { src: "/images/district/district-main.webp", alt: "Aerial view of district infrastructure and staging", label: "District Aerial" },
+  { src: "/images/district/district-crowd-01.webp", alt: "Crowd management and staging infrastructure", label: "Crowd Management" },
+  { src: "/images/district/district-night-01.webp", alt: "Night activation lighting and production", label: "Night Production" },
+];
+
 function OpsControl() {
   return (
     <section className="py-16 lg:py-24 bg-[#0A0C0F] border-b border-[#2A2D33]">
@@ -86,14 +96,36 @@ function OpsControl() {
             description="Stage builds, lighting rigs, security perimeters, sound operations, and staff coordination — the infrastructure behind every seamless activation."
           />
 
+          {/* Main Hero Image */}
           <div className="relative aspect-[21/9] bg-[#1A1D23] border border-[#2A2D33] rounded-lg overflow-hidden">
             <Image
-              src="/images/production/street-build-01.webp"
-              alt="Street-level production build and infrastructure"
+              src={productionImages[0].src}
+              alt={productionImages[0].alt}
               fill
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0A0C0F]/70 to-transparent" />
+          </div>
+
+          {/* Supporting Gallery Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {productionImages.slice(1).map((img) => (
+              <div
+                key={img.src}
+                className="relative aspect-[4/3] bg-[#1A1D23] border border-[#2A2D33] rounded-lg overflow-hidden group"
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0C0F]/70 to-transparent" />
+                <span className="absolute bottom-3 left-3 text-[#F0EDE8] text-xs font-semibold tracking-wide uppercase">
+                  {img.label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </Container>

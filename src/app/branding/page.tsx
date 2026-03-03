@@ -1,9 +1,12 @@
 import Image from "next/image";
+import { Metadata } from "next";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import { brandingZones } from "@/data/branding-zones";
+
+export const metadata: Metadata = { title: "Branding Opportunities" };
 
 // ============================================================================
 // PAGE HEADER SECTION

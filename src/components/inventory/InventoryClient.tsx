@@ -49,7 +49,7 @@ export default function InventoryClient({ venues }: { venues: Venue[] }) {
           <SectionHeading
             label="Infrastructure"
             title="Venue Inventory"
-            description="Searchable database of all district venue infrastructure. Filter by zone, capacity, and features."
+            description="Searchable database of all district venue infrastructure. Filter by capacity and features."
           />
         </Container>
       </section>

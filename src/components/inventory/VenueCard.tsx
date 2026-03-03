@@ -54,9 +54,6 @@ export default function VenueCard({ venue, onSelect }: VenueCardProps) {
       </div>
 
       <div className="p-5">
-        <span className="inline-block px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider bg-[#24272E] text-[#6B6760] rounded mb-2">
-          {venue.zone} zone
-        </span>
         <h3 className="text-lg font-semibold mb-1">{venue.name}</h3>
         {venue.operator && (
           <p className="text-xs text-[#6B6760] mb-1">

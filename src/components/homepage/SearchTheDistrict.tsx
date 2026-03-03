@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import { MapPin, Users, Maximize2 } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -24,24 +25,11 @@ export default function SearchTheDistrict({ venues }: { venues: Venue[] }) {
           <SectionHeading
             label="Search the District"
             title="Find Your Venue"
-            description="Filter by zone, capacity, and features to identify the right infrastructure for your activation."
+            description="Filter by capacity and features to identify the right infrastructure for your activation."
           />
 
           {/* Inline Filters */}
           <div className="flex flex-wrap items-center gap-3 p-4 bg-[#14161B] border border-[#2A2D33] ring-1 ring-[#2A2D33]/50 rounded-lg shadow-lg shadow-black/20">
-            <select
-              value={filters.zone}
-              onChange={(e) =>
-                setFilters({ ...filters, zone: e.target.value as FilterState["zone"] })
-              }
-              className="bg-[#24272E] border border-[#2A2D33] rounded-md px-3 py-2 text-sm text-[#F0EDE8] focus:border-[#C49A6C] focus:outline-none"
-            >
-              <option value="ALL">All Zones</option>
-              <option value="EAST">East</option>
-              <option value="CENTRAL">Central</option>
-              <option value="WEST">West</option>
-            </select>
-
             <select
               value={filters.capacity}
               onChange={(e) =>
@@ -89,38 +77,49 @@ export default function SearchTheDistrict({ venues }: { venues: Venue[] }) {
             {filtered.slice(0, 3).map((venue) => (
               <div
                 key={venue.slug}
-                className="bg-[#1A1D23] border border-[#2A2D33] rounded-lg p-5 hover:border-[#3A3D43] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/25 transition-all duration-200 ease-out cursor-pointer"
+                className="bg-[#1A1D23] border border-[#2A2D33] rounded-lg overflow-hidden hover:border-[#3A3D43] hover:-translate-y-1 hover:shadow-lg hover:shadow-black/25 transition-all duration-200 ease-out cursor-pointer group"
                 onClick={handleExplore}
               >
-                <span className="inline-block px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider bg-[#24272E] text-[#6B6760] rounded mb-2">
-                  {venue.zone} zone
-                </span>
-                <h3 className="text-[#F0EDE8] font-semibold text-lg mb-1">
-                  {venue.name}
-                </h3>
-                <div className="flex items-center gap-1.5 text-xs text-[#6B6760] mb-4">
-                  <MapPin size={12} />
-                  {venue.address}
+                {/* Venue Photo */}
+                <div className="relative aspect-[16/10] bg-[#14161B] overflow-hidden">
+                  <Image
+                    src={`/images/venues/${venue.slug}/${venue.slug}-01.webp`}
+                    alt={venue.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A0C0F]/60 to-transparent" />
                 </div>
-                <div className="grid grid-cols-2 gap-3 pt-3 border-t border-[#2A2D33]">
-                  <div className="flex items-center gap-2">
-                    <Users size={14} className="text-[#9B978F]" />
-                    <div>
-                      <div className="text-sm font-bold font-mono text-[#F0EDE8]">
-                        {venue.capacity?.toLocaleString() ?? "—"}
-                      </div>
-                      <div className="text-[10px] text-[#6B6760]">Capacity</div>
-                    </div>
+
+                <div className="p-5">
+                  <h3 className="text-[#F0EDE8] font-semibold text-lg mb-1">
+                    {venue.name}
+                  </h3>
+                  <div className="flex items-center gap-1.5 text-xs text-[#6B6760] mb-4">
+                    <MapPin size={12} />
+                    {venue.address}
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Maximize2 size={14} className="text-[#9B978F]" />
-                    <div>
-                      <div className="text-sm font-bold font-mono text-[#F0EDE8]">
-                        {venue.squareFeet != null
-                          ? `${(venue.squareFeet / 1000).toFixed(0)}K`
-                          : "—"}
+                  <div className="grid grid-cols-2 gap-3 pt-3 border-t border-[#2A2D33]">
+                    <div className="flex items-center gap-2">
+                      <Users size={14} className="text-[#9B978F]" />
+                      <div>
+                        <div className="text-sm font-bold font-mono text-[#F0EDE8]">
+                          {venue.capacity?.toLocaleString() ?? "—"}
+                        </div>
+                        <div className="text-[10px] text-[#6B6760]">Capacity</div>
                       </div>
-                      <div className="text-[10px] text-[#6B6760]">Sq Ft</div>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Maximize2 size={14} className="text-[#9B978F]" />
+                      <div>
+                        <div className="text-sm font-bold font-mono text-[#F0EDE8]">
+                          {venue.squareFeet != null
+                            ? `${(venue.squareFeet / 1000).toFixed(0)}K`
+                            : "—"}
+                        </div>
+                        <div className="text-[10px] text-[#6B6760]">Sq Ft</div>
+                      </div>
                     </div>
                   </div>
                 </div>

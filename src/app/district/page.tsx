@@ -1,10 +1,13 @@
 import Image from "next/image";
+import { Metadata } from "next";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
+import InteractiveDistrictMap from "@/components/district/DistrictMap";
 import { getVenues } from "@/lib/airtable-venues";
 import { Venue } from "@/types/venue";
 
+export const metadata: Metadata = { title: "The District" };
 export const dynamic = "force-dynamic";
 
 // ============================================================================
@@ -53,7 +56,7 @@ function FootprintOverview({ venues }: { venues: Venue[] }) {
 
             <div className="space-y-4 text-[#9B978F] leading-relaxed">
               <p>
-                East Fremont District occupies a strategically consolidated footprint spanning three contiguous city blocks between Las Vegas Boulevard and 8th Street. This privatized urban real estate provides the rare opportunity to operate multiple premium venues as a unified activation platform.
+                East Fremont District occupies a strategically consolidated footprint along East Fremont Street between Las Vegas Boulevard and 8th Street. This privatized urban real estate provides the rare opportunity to operate multiple premium venues as a unified activation platform.
               </p>
 
               <p>
@@ -96,19 +99,24 @@ function FootprintOverview({ venues }: { venues: Venue[] }) {
 // ============================================================================
 // DISTRICT MAP PLACEHOLDER
 // ============================================================================
-function DistrictMap() {
+function DistrictMapSection() {
   return (
     <section className="py-24 bg-[#0F1115]">
       <Container>
-        <div className="aspect-[21/9] bg-[#1A1D23] border border-[#2A2D33] rounded-lg flex items-center justify-center">
-          <div className="text-center space-y-3">
-            <p className="text-[#F0EDE8] text-xl font-semibold">
-              District Map
+        <div className="space-y-8">
+          <div className="space-y-3">
+            <p className="text-[#C49A6C] text-xs font-semibold tracking-widest uppercase">
+              Location
             </p>
-            <p className="text-[#9B978F]">
-              Interactive Component
+            <h2 className="text-[#F0EDE8] text-3xl font-bold">
+              District Map
+            </h2>
+            <p className="text-[#9B978F] max-w-2xl">
+              506 to 525 East Fremont Street — one consolidated city block of premium venue infrastructure in the heart of Downtown Las Vegas. Hover to explore.
             </p>
           </div>
+
+          <InteractiveDistrictMap />
         </div>
       </Container>
     </section>
@@ -181,10 +189,10 @@ function InfrastructureBullets() {
     {
       title: "Physical Infrastructure",
       items: [
-        "Five premium venues",
-        "Multiple stages with acoustic design",
+        "16 premium venues across the district",
+        "Multiple stages with concert-grade sound",
         "Full-service bar and kitchen facilities",
-        "Rooftop event spaces",
+        "Rooftop event spaces with panoramic views",
         "Loading docks and service areas",
       ],
     },
@@ -363,7 +371,7 @@ export default async function DistrictPage() {
     <>
       <PageHeader venues={venues} />
       <FootprintOverview venues={venues} />
-      <DistrictMap />
+      <DistrictMapSection />
       <InfrastructureProof />
       <InfrastructureBullets />
       <ScalabilitySection />

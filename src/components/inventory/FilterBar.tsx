@@ -12,20 +12,6 @@ export default function FilterBar({ filters, setFilters }: FilterBarProps) {
 
   return (
     <div className="flex flex-wrap items-center gap-3 mb-10 p-4 bg-[#14161B] border border-[#2A2D33] ring-1 ring-[#2A2D33]/50 rounded-lg shadow-lg shadow-black/20">
-      {/* Zone Filter */}
-      <select
-        value={filters.zone}
-        onChange={(e) =>
-          setFilters({ ...filters, zone: e.target.value as FilterState["zone"] })
-        }
-        className="bg-[#24272E] border border-[#2A2D33] rounded-md px-3 py-2 text-sm text-[#F0EDE8] focus:border-[#C49A6C] focus:outline-none"
-      >
-        <option value="ALL">All Zones</option>
-        <option value="EAST">East</option>
-        <option value="CENTRAL">Central</option>
-        <option value="WEST">West</option>
-      </select>
-
       {/* Capacity Filter */}
       <select
         value={filters.capacity}
