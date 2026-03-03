@@ -10,7 +10,7 @@ export const brandingZones: BrandingZone[] = [
     dimensions: "500+ linear feet of wrappable surfaces",
     visibility: "street-level",
     availability: "event-only",
-    imageUrl: "",
+    imageUrl: "/images/branding/street-level-wraps.webp",
     specs: [
       "Premium vinyl wrap material",
       "UV-resistant printing",
@@ -45,7 +45,7 @@ export const brandingZones: BrandingZone[] = [
     dimensions: "2,000-3,500 sq ft per rooftop",
     visibility: "aerial",
     availability: "event-only",
-    imageUrl: "",
+    imageUrl: "/images/branding/rooftop-branding.webp",
     specs: [
       "Structural assessment included",
       "LED lighting integration available",
@@ -63,7 +63,7 @@ export const brandingZones: BrandingZone[] = [
     dimensions: "Multiple stage opportunities",
     visibility: "interior",
     availability: "event-only",
-    imageUrl: "",
+    imageUrl: "/images/branding/stage-naming.webp",
     specs: [
       "Stage backdrop branding",
       "MC announcements of sponsor",
@@ -100,7 +100,7 @@ export const brandingZones: BrandingZone[] = [
     dimensions: "Customizable per venue",
     visibility: "interior",
     availability: "event-only",
-    imageUrl: "",
+    imageUrl: "/images/branding/venue-cobranding.webp",
     specs: [
       "Custom lounge design",
       "Branded furniture and decor",
