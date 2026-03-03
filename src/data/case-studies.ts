@@ -53,14 +53,8 @@ export const caseStudies: CaseStudy[] = [
         context: "Confirmed for following year's event",
       },
     ],
-    heroImageUrl: "/images/case-studies/global-tech-hero.jpg",
-    galleryImages: [
-      "/images/case-studies/global-tech-1.jpg",
-      "/images/case-studies/global-tech-2.jpg",
-      "/images/case-studies/global-tech-3.jpg",
-      "/images/case-studies/global-tech-4.jpg",
-      "/images/case-studies/global-tech-5.jpg",
-    ],
+    heroImageUrl: "",
+    galleryImages: [],
     testimonial: {
       quote:
         "East Fremont District transformed our conference into an unforgettable experience. The flexibility and scale of the venues, combined with the seamless coordination, set a new standard for tech industry events.",
@@ -122,13 +116,8 @@ export const caseStudies: CaseStudy[] = [
         context: "Video content generated 89% share rate",
       },
     ],
-    heroImageUrl: "/images/case-studies/automotive-launch-hero.jpg",
-    galleryImages: [
-      "/images/case-studies/automotive-launch-1.jpg",
-      "/images/case-studies/automotive-launch-2.jpg",
-      "/images/case-studies/automotive-launch-3.jpg",
-      "/images/case-studies/automotive-launch-4.jpg",
-    ],
+    heroImageUrl: "",
+    galleryImages: [],
     testimonial: {
       quote:
         "The team at East Fremont District executed our product launch with precision and creativity. The multi-venue approach created multiple touchpoints for media and influencers, amplifying our message across the district and generating unprecedented buzz.",
