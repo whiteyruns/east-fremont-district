@@ -255,9 +255,11 @@ function TestimonialSection({ caseStudy }: { caseStudy: CaseStudy }) {
 }
 
 // ============================================================================
-// NARRATIVE GALLERY SECTION (placeholder until images are uploaded)
+// NARRATIVE GALLERY SECTION
 // ============================================================================
-function NarrativeGallery() {
+function NarrativeGallery({ caseStudy }: { caseStudy: CaseStudy }) {
+  if (!caseStudy.galleryImages || caseStudy.galleryImages.length === 0) return null;
+
   return (
     <section className="py-16 lg:py-24 bg-[#0F1115]">
       <Container>
@@ -266,8 +268,22 @@ function NarrativeGallery() {
             The Full Story
           </h2>
 
-          <div className="aspect-[21/9] bg-[#1A1D23] border border-[#2A2D33] rounded-lg flex items-center justify-center">
-            <p className="text-[#6B6760] text-sm">Photo gallery — images coming soon</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {caseStudy.galleryImages.map((src, i) => (
+              <div
+                key={src}
+                className={`relative bg-[#1A1D23] border border-[#2A2D33] rounded-lg overflow-hidden ${
+                  i === 0 ? "md:col-span-2 aspect-[16/9]" : "aspect-[4/3]"
+                }`}
+              >
+                <Image
+                  src={src}
+                  alt={`${caseStudy.title} — photo ${i + 1}`}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </Container>
@@ -321,7 +337,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
       <MetricsCallout caseStudy={caseStudy} />
       <OperationalSummary caseStudy={caseStudy} />
       <TestimonialSection caseStudy={caseStudy} />
-      <NarrativeGallery />
+      <NarrativeGallery caseStudy={caseStudy} />
       <CTASection />
     </>
   );
