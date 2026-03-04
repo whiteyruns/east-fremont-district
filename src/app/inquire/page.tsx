@@ -93,7 +93,6 @@ function InquiryForm() {
     organizationName: "",
     contactName: "",
     email: "",
-    phone: "",
     eventType: "corporate" as const,
     estimatedGuestCount: "500-1000" as GuestCountRange,
     preferredDateStart: "",
@@ -196,35 +195,19 @@ function InquiryForm() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label className="block text-[#9B978F] text-sm font-semibold mb-2">
-              Email
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
-              className="w-full bg-[#24272E] border border-[#2A2D33] rounded-md px-4 py-3 text-sm text-[#F0EDE8] placeholder-[#6B6760] focus:outline-none focus:border-[#C49A6C] transition-colors"
-              placeholder="your@email.com"
-            />
-          </div>
-          <div>
-            <label className="block text-[#9B978F] text-sm font-semibold mb-2">
-              Phone
-            </label>
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleInputChange}
-              required
-              className="w-full bg-[#24272E] border border-[#2A2D33] rounded-md px-4 py-3 text-sm text-[#F0EDE8] placeholder-[#6B6760] focus:outline-none focus:border-[#C49A6C] transition-colors"
-              placeholder="+1 (555) 000-0000"
-            />
-          </div>
+        <div>
+          <label className="block text-[#9B978F] text-sm font-semibold mb-2">
+            Email
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            className="w-full bg-[#24272E] border border-[#2A2D33] rounded-md px-4 py-3 text-sm text-[#F0EDE8] placeholder-[#6B6760] focus:outline-none focus:border-[#C49A6C] transition-colors"
+            placeholder="your@email.com"
+          />
         </div>
       </fieldset>
 
