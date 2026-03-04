@@ -2,6 +2,73 @@ import { CaseStudy } from "@/types/case-study";
 
 export const caseStudies: CaseStudy[] = [
   {
+    id: "case-study-ftb-2025",
+    slug: "feed-the-block-2025",
+    title: "Feed the Block — Wynn Nightlife x Corner Bar Management",
+    clientType: "brand-activation",
+    clientName: "Wynn Nightlife / ForestHouse",
+    date: "2025 Season",
+    guestCount: 32000,
+    activationScope: ["full-takeover", "street-activation", "stage-program", "multi-venue"],
+    infrastructureUsed: [
+      "Full East Fremont street closure and activation",
+      "Concert-grade main stage with world-class sound and lighting",
+      "Multi-venue integration across the district",
+      "Professional security perimeter and crowd management",
+      "Mobile location analytics and audience tracking",
+      "RSVP and credential management systems",
+    ],
+    customElements: [
+      "Headline performances by Gryffin, Major Lazer, and Diplo",
+      "Free, open-to-the-public Thursday evening format",
+      "Immersive street-festival atmosphere with 15,000+ capacity",
+      "Wynn Nightlife production and artist booking",
+      "Creator and influencer amplification program",
+      "LVCVA collaborative content and @Vegas social integration",
+      "Full broadcast media coordination (FOX, NBC, CBS)",
+    ],
+    results: [
+      {
+        metric: "Total Attendance",
+        value: "32,000+",
+        context: "Across three headline events, with individual nights drawing 9,700–15,000+",
+      },
+      {
+        metric: "Casino Crossover",
+        value: "10,000+",
+        context: "Unique casino visits per event tracked via mobile location analytics",
+      },
+      {
+        metric: "Social Impressions",
+        value: "8M+",
+        context: "Annually across Instagram, TikTok, and partner channels",
+      },
+      {
+        metric: "Audience Growth",
+        value: "123%",
+        context: "Increase in followers year-over-year with 30,861 total signups",
+      },
+    ],
+    heroImageUrl: "/images/case-studies/feed-the-block/feed-the-block-01.webp",
+    galleryImages: [
+      "/images/case-studies/feed-the-block/gallery/gallery-01.webp",
+      "/images/case-studies/feed-the-block/gallery/gallery-02.webp",
+      "/images/case-studies/feed-the-block/gallery/gallery-03.webp",
+      "/images/case-studies/feed-the-block/gallery/gallery-04.webp",
+      "/images/case-studies/feed-the-block/gallery/gallery-05.webp",
+      "/images/case-studies/feed-the-block/gallery/gallery-06.webp",
+      "/images/case-studies/feed-the-block/gallery/gallery-07.webp",
+    ],
+    testimonial: {
+      quote:
+        "Feed the Block proved that East Fremont can deliver world-class entertainment at a scale that drives real economic impact — 32,000 attendees, national media coverage, and measurable casino crossover. This is the blueprint for activating Downtown Las Vegas.",
+      attribution: "Corner Bar Management",
+      role: "Feed the Block 2025 Season",
+    },
+    summary:
+      "Feed the Block is the large-scale, free cultural event series that launched East Fremont District as a destination. Produced in partnership with Wynn Las Vegas Nightlife (ForestHouse) and Corner Bar Management, the 2025 season featured three headline events — Gryffin, Major Lazer, and Diplo — transforming Fremont East into a high-energy cultural destination on Thursday evenings. With 32,000+ total attendees, 10,000+ casino crossover visits per event, nearly 8 million social impressions, and broadcast coverage across FOX, NBC, and CBS, the series demonstrated the district's capacity for city-scale cultural programming and directly catalyzed the creation of the East Fremont District platform.",
+  },
+  {
     id: "case-study-tu-2026",
     slug: "transunion-ces-2026",
     title: "TransUnion — CES 2026 Activation",
@@ -66,63 +133,5 @@ export const caseStudies: CaseStudy[] = [
     },
     summary:
       "TransUnion leveraged East Fremont District's multi-venue infrastructure for a three-day CES 2026 brand activation, combining district-wide building wraps, street-level experiences, rooftop networking receptions, and live entertainment. The unified operating platform enabled seamless coordination across all touchpoints, delivering a premium brand environment for 2,500+ executives and industry professionals.",
-  },
-  {
-    id: "case-study-001",
-    slug: "global-tech-conference-offsite-activation",
-    title: "Global Tech Conference — Offsite Activation",
-    clientType: "convention",
-    date: "October 2023",
-    guestCount: 4200,
-    activationScope: ["full-takeover", "multi-venue", "rooftop", "stage-program"],
-    infrastructureUsed: [
-      "All district venues",
-      "Rooftop installations",
-      "Street-level activation zones",
-      "Multiple stages with concert-grade sound",
-      "Professional lighting and projection",
-      "Live streaming broadcast",
-    ],
-    customElements: [
-      "Interactive tech demo stations",
-      "Networking lounges by company",
-      "AI-powered wayfinding",
-      "Drone light show",
-      "Live music performances",
-      "Virtual reality experiences",
-      "Custom food and beverage stations",
-    ],
-    results: [
-      {
-        metric: "Attendee Satisfaction",
-        value: "94%",
-        context: "Of 4,200 guests rated experience as excellent",
-      },
-      {
-        metric: "Social Media Reach",
-        value: "2.3M impressions",
-        context: "Across all platforms during event week",
-      },
-      {
-        metric: "Media Coverage",
-        value: "47 publications",
-        context: "Earned media value of $1.2M+",
-      },
-      {
-        metric: "Return Attendance",
-        value: "87%",
-        context: "Confirmed for following year's event",
-      },
-    ],
-    heroImageUrl: "/images/district/district-crowd-01.webp",
-    galleryImages: [],
-    testimonial: {
-      quote:
-        "East Fremont District transformed our conference into an unforgettable experience. The flexibility and scale of the venues, combined with the seamless coordination, set a new standard for tech industry events.",
-      attribution: "Sarah Chen",
-      role: "VP of Events, Global Tech Summit",
-    },
-    summary:
-      "The Global Tech Conference utilized the full East Fremont District infrastructure to host a 4,200-person offsite activation featuring multiple stages, interactive experiences, and cutting-edge technology integration. The full-takeover approach allowed for comprehensive branding, seamless guest flow across venues, and creation of memorable networking moments that resulted in record-breaking satisfaction scores and media coverage.",
   },
 ];
