@@ -1,4 +1,5 @@
 export const navItems = [
+  { label: "Home", href: "/dashboard" },
   { label: "District", href: "/district" },
   { label: "Activations", href: "/activation-frameworks" },
   { label: "Inventory", href: "/inventory" },
