@@ -112,7 +112,7 @@ function DistrictMapSection() {
               District Map
             </h2>
             <p className="text-[#9B978F] max-w-2xl">
-              506 to 525 East Fremont Street — one consolidated city block of premium venue infrastructure in the heart of Downtown Las Vegas. Hover to explore.
+              506–525 East Fremont Street & 100 S 6th Street — one consolidated city block of premium venue infrastructure in the heart of Downtown Las Vegas. Hover to explore.
             </p>
           </div>
 
@@ -127,10 +127,10 @@ function DistrictMapSection() {
 // INFRASTRUCTURE PROOF SECTION
 // ============================================================================
 const districtImages = [
-  { src: "/images/district/district-main.webp", alt: "Aerial view of East Fremont District infrastructure", featured: true },
-  { src: "/images/district/district-crowd-01.webp", alt: "District crowd density and staging infrastructure" },
-  { src: "/images/district/district-layout-01.webp", alt: "Venue storefront with event infrastructure" },
-  { src: "/images/district/district-night-01.webp", alt: "District night activation" },
+  { src: "/images/district/district-ftb-hero.webp", alt: "Feed the Block — 15,000+ crowd on East Fremont Street", featured: true },
+  { src: "/images/district/district-ftb-crowd.webp", alt: "Capacity crowd filling East Fremont during Feed the Block" },
+  { src: "/images/district/district-ftb-stage.webp", alt: "Concert-grade stage production on East Fremont" },
+  { src: "/images/district/district-ftb-confetti.webp", alt: "Feed the Block finale with confetti and full crowd" },
 ];
 
 function InfrastructureProof() {

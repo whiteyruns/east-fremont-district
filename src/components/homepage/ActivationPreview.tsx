@@ -3,6 +3,13 @@ import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 import { activationFrameworks } from "@/data/activations";
+import { Building2, Layers, Crown } from "lucide-react";
+
+const tierIcons: Record<string, { icon: React.ElementType; label: string }> = {
+  core: { icon: Building2, label: "Single Venue" },
+  expanded: { icon: Layers, label: "Multi-Venue" },
+  signature: { icon: Crown, label: "Full Takeover" },
+};
 
 export default function ActivationPreview() {
   return (
@@ -16,13 +23,27 @@ export default function ActivationPreview() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {activationFrameworks.map((framework) => (
+            {activationFrameworks.map((framework) => {
+              const tierInfo = tierIcons[framework.tier] || tierIcons.core;
+              const TierIcon = tierInfo.icon;
+
+              return (
               <Card
                 key={framework.id}
                 className="p-8 space-y-6 flex flex-col justify-between"
               >
                 {/* Content */}
                 <div className="space-y-4">
+                  {/* Tier Icon + Label */}
+                  <div className="flex items-center gap-3 pb-2">
+                    <div className="w-12 h-12 rounded-lg bg-[#C49A6C]/10 flex items-center justify-center">
+                      <TierIcon className="w-6 h-6 text-[#C49A6C]" />
+                    </div>
+                    <span className="text-[#6B6760] text-xs font-semibold tracking-wider uppercase">
+                      {tierInfo.label}
+                    </span>
+                  </div>
+
                   {/* Tier Name */}
                   <h3 className="text-[#F0EDE8] text-2xl font-bold">
                     {framework.name}
@@ -59,7 +80,8 @@ export default function ActivationPreview() {
                   Learn More
                 </Button>
               </Card>
-            ))}
+              );
+            })}
           </div>
 
           {/* Full CTA */}

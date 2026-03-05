@@ -111,7 +111,7 @@ export const venues: Venue[] = [
   {
     slug: "electric-mushroom",
     name: "Electric Mushroom",
-    operator: "Corner Bar Mgmt",
+    operator: "Independent",
     address: "518 E Fremont St, Las Vegas, NV 89101",
     zone: "CENTRAL",
     capacity: null,
