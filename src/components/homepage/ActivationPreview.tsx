@@ -8,7 +8,7 @@ import { Building2, Layers, Crown } from "lucide-react";
 const tierIcons: Record<string, { icon: React.ElementType; label: string }> = {
   core: { icon: Building2, label: "Single Venue" },
   expanded: { icon: Layers, label: "Multi-Venue" },
-  signature: { icon: Crown, label: "Full Takeover" },
+  "full-takeover": { icon: Crown, label: "All Venues" },
 };
 
 export default function ActivationPreview() {

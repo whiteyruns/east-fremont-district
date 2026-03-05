@@ -1,8 +1,17 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import {
+  Wine, ShieldCheck, Mic2, ClipboardList, LucideIcon,
+  Check, ChevronRight, Diamond,
+  Shield, Flame, Landmark, HeartPulse,
+  DoorOpen, ScanFace, Users2,
+  TrafficCone, Siren, Route,
+  LogIn, AlertTriangle, Handshake,
+} from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = { title: "Unified Production" };
@@ -61,12 +70,14 @@ function ProductionModel() {
           {/* Key Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8 border-t border-[#2A2D33]">
             {keyBenefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-10 h-10 bg-[#C49A6C]/10 rounded-lg mb-3">
-                  <span className="text-[#C49A6C] font-bold text-lg">✓</span>
+              <ScrollReveal key={index} delay={index * 100}>
+                <div className="text-center">
+                  <div className="inline-flex items-center justify-center w-10 h-10 bg-[#C49A6C]/10 rounded-lg mb-3">
+                    <Check className="w-5 h-5 text-[#C49A6C]" />
+                  </div>
+                  <p className="text-[#F0EDE8] font-medium">{benefit}</p>
                 </div>
-                <p className="text-[#F0EDE8] font-medium">{benefit}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -87,14 +98,16 @@ const productionImages = [
 
 function OpsControl() {
   return (
-    <section className="py-16 lg:py-24 bg-[#0A0C0F] border-b border-[#2A2D33]">
+    <section className="py-16 lg:py-24 bg-[#0A0C0F] border-b border-[#2A2D33] section-accent">
       <Container>
         <div className="space-y-12">
-          <SectionHeading
-            label="Ops & Control"
-            title="Production in Practice"
-            description="Stage builds, lighting rigs, security perimeters, sound operations, and staff coordination — the infrastructure behind every seamless activation."
-          />
+          <ScrollReveal>
+            <SectionHeading
+              label="Ops & Control"
+              title="Production in Practice"
+              description="Stage builds, lighting rigs, security perimeters, sound operations, and staff coordination — the infrastructure behind every seamless activation."
+            />
+          </ScrollReveal>
 
           {/* Main Hero Image */}
           <div className="relative aspect-[21/9] bg-[#1A1D23] border border-[#2A2D33] rounded-lg overflow-hidden">
@@ -137,25 +150,25 @@ function OpsControl() {
 // STAFFING OVERVIEW SECTION
 // ============================================================================
 function StaffingOverview() {
-  const staffingRoles = [
+  const staffingRoles: { title: string; icon: LucideIcon; description: string }[] = [
     {
       title: "Bar Staff",
-      icon: "🍸",
+      icon: Wine,
       description: "Scales with event size. Premium bartending and service standards across all venues.",
     },
     {
       title: "Security",
-      icon: "🛡️",
+      icon: ShieldCheck,
       description: "Tiered deployment from venue-level doorstaff to district-wide perimeter control.",
     },
     {
       title: "Production Crew",
-      icon: "🎤",
+      icon: Mic2,
       description: "Unified sound, lighting, and stage management across all activation areas.",
     },
     {
       title: "Event Management",
-      icon: "📋",
+      icon: ClipboardList,
       description: "Dedicated event managers ensure day-of execution aligns with your objectives.",
     },
   ];
@@ -188,7 +201,7 @@ function StaffingOverview() {
           <div className="grid grid-cols-2 gap-4">
             {staffingRoles.map((role, index) => (
               <Card key={index} className="p-4 h-full">
-                <div className="text-3xl mb-3">{role.icon}</div>
+                <role.icon className="w-6 h-6 text-[#C49A6C] mb-3" />
                 <h3 className="text-[#F0EDE8] font-bold text-sm mb-2">
                   {role.title}
                 </h3>
@@ -208,62 +221,70 @@ function StaffingOverview() {
 // SECURITY MODEL SECTION
 // ============================================================================
 function SecurityModel() {
-  const securityLayers = [
+  const securityLayers: { title: string; icon: LucideIcon; items: { icon: LucideIcon; text: string }[] }[] = [
     {
       title: "Venue Perimeter",
+      icon: Shield,
       items: [
-        "Professional doorstaff at each venue",
-        "ID verification and credential checking",
-        "Capacity management and flow control",
+        { icon: DoorOpen, text: "Professional doorstaff at each venue" },
+        { icon: ScanFace, text: "ID verification and credential checking" },
+        { icon: Users2, text: "Capacity management and flow control" },
       ],
     },
     {
       title: "Street-Level",
+      icon: TrafficCone,
       items: [
-        "Crowd management and barrier deployment",
-        "Street-level activation security",
-        "Patron flow optimization between venues",
+        { icon: Siren, text: "Crowd management and barrier deployment" },
+        { icon: ShieldCheck, text: "Street-level activation security" },
+        { icon: Route, text: "Patron flow optimization between venues" },
       ],
     },
     {
       title: "District Perimeter",
+      icon: ShieldCheck,
       items: [
-        "Entry and exit point control",
-        "Emergency route management",
-        "Perimeter coordination with city services",
+        { icon: LogIn, text: "Entry and exit point control" },
+        { icon: AlertTriangle, text: "Emergency route management" },
+        { icon: Handshake, text: "Perimeter coordination with city services" },
       ],
     },
   ];
 
   return (
-    <section className="py-12 lg:py-16 bg-[#0F1115]">
+    <section className="py-12 lg:py-16 bg-[#0F1115] section-accent">
       <Container>
-        <div className="mb-12">
-          <h2 className="text-[#F0EDE8] text-3xl lg:text-4xl font-bold mb-4">
-            Security & Credentialing
-          </h2>
-          <p className="text-[#9B978F] text-lg">
-            Multi-layer perimeter security ensures guest safety while optimizing flow
-            and experience quality. Credential systems integrate across all venues for
-            seamless access management.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="mb-12">
+            <h2 className="text-[#F0EDE8] text-3xl lg:text-4xl font-bold mb-4">
+              Security & Credentialing
+            </h2>
+            <p className="text-[#9B978F] text-lg">
+              Multi-layer perimeter security ensures guest safety while optimizing flow
+              and experience quality. Credential systems integrate across all venues for
+              seamless access management.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {securityLayers.map((layer, index) => (
-            <Card key={index} className="p-6">
-              <h3 className="text-[#C49A6C] font-bold text-sm uppercase mb-4">
-                {layer.title}
-              </h3>
-              <ul className="space-y-2">
-                {layer.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="text-[#9B978F] text-sm flex gap-2">
-                    <span className="text-[#C49A6C] flex-shrink-0">→</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </Card>
+            <ScrollReveal key={index} delay={index * 150}>
+              <Card className="p-6 h-full">
+                <layer.icon className="w-5 h-5 text-[#C49A6C] mb-3" />
+                <h3 className="text-[#C49A6C] font-bold text-sm uppercase mb-4">
+                  {layer.title}
+                </h3>
+                <ul className="space-y-3">
+                  {layer.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="text-[#9B978F] text-sm flex items-start gap-2">
+                      <item.icon className="w-3.5 h-3.5 text-[#C49A6C] flex-shrink-0 mt-0.5" />
+                      <span>{item.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            </ScrollReveal>
           ))}
         </div>
       </Container>
@@ -275,44 +296,53 @@ function SecurityModel() {
 // CITY COORDINATION SECTION
 // ============================================================================
 function CityCoordination() {
-  const coordinationAreas = [
+  const coordinationAreas: { title: string; icon: LucideIcon; description: string }[] = [
     {
       title: "Metro Police",
+      icon: Shield,
       description: "Pre-established traffic control and public safety coordination protocols.",
     },
     {
       title: "Fire Marshal",
+      icon: Flame,
       description: "Life safety compliance, capacity verification, and emergency access routes.",
     },
     {
       title: "City of Las Vegas",
+      icon: Landmark,
       description: "Street closure permits, public right-of-way management, and logistics coordination.",
     },
     {
       title: "Health District",
+      icon: HeartPulse,
       description: "Food service compliance, sanitation standards, and health permits.",
     },
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-[#0A0C0F]">
+    <section className="py-16 lg:py-24 bg-[#0A0C0F] section-accent">
       <Container>
-        <div className="mb-12">
-          <h2 className="text-[#F0EDE8] text-3xl lg:text-4xl font-bold mb-4">
-            City Coordination
-          </h2>
-          <p className="text-[#9B978F] text-lg">
-            Pre-established relationships with key city agencies streamline permitting
-            and ensure seamless coordination for events of any scale.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="mb-12">
+            <h2 className="text-[#F0EDE8] text-3xl lg:text-4xl font-bold mb-4">
+              City Coordination
+            </h2>
+            <p className="text-[#9B978F] text-lg">
+              Pre-established relationships with key city agencies streamline permitting
+              and ensure seamless coordination for events of any scale.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {coordinationAreas.map((area, index) => (
-            <Card key={index} className="p-6">
-              <h3 className="text-[#F0EDE8] font-bold mb-3">{area.title}</h3>
-              <p className="text-[#9B978F] text-sm">{area.description}</p>
-            </Card>
+            <ScrollReveal key={index} delay={index * 120}>
+              <Card className="p-6 h-full">
+                <area.icon className="w-6 h-6 text-[#C49A6C] mb-4" />
+                <h3 className="text-[#F0EDE8] font-bold mb-3">{area.title}</h3>
+                <p className="text-[#9B978F] text-sm">{area.description}</p>
+              </Card>
+            </ScrollReveal>
           ))}
         </div>
       </Container>
@@ -346,34 +376,36 @@ function VendorIntegration() {
   ];
 
   return (
-    <section className="py-12 lg:py-16 bg-[#0F1115]">
+    <section className="py-12 lg:py-16 bg-[#0F1115] section-accent">
       <Container>
-        <div className="mb-12">
-          <h2 className="text-[#F0EDE8] text-3xl lg:text-4xl font-bold mb-4">
-            Vendor Integration
-          </h2>
-          <p className="text-[#9B978F] text-lg">
-            We maintain a vetted network of preferred vendors and streamlined processes
-            for external vendor onboarding. This flexibility lets you bring your partners
-            while maintaining our operational standards.
-          </p>
-        </div>
+        <ScrollReveal>
+          <div className="mb-12">
+            <h2 className="text-[#F0EDE8] text-3xl lg:text-4xl font-bold mb-4">
+              Vendor Integration
+            </h2>
+            <p className="text-[#9B978F] text-lg">
+              We maintain a vetted network of preferred vendors and streamlined processes
+              for external vendor onboarding. This flexibility lets you bring your partners
+              while maintaining our operational standards.
+            </p>
+          </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {vendorCategories.map((category, index) => (
-            <div key={index}>
+            <ScrollReveal key={index} delay={index * 150}>
               <h3 className="text-[#C49A6C] font-bold text-sm uppercase mb-4">
                 {category.title}
               </h3>
               <ul className="space-y-3">
                 {category.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="text-[#9B978F] text-sm flex gap-2">
-                    <span className="text-[#C49A6C] flex-shrink-0">◆</span>
+                  <li key={itemIndex} className="text-[#9B978F] text-sm flex items-start gap-2">
+                    <ChevronRight className="w-3.5 h-3.5 text-[#C49A6C] flex-shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </Container>

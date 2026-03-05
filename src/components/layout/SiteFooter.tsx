@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Mail } from "lucide-react";
 import { navItems } from "@/data/navigation";
 import Button from "@/components/ui/Button";
 
@@ -79,16 +79,7 @@ export default function SiteFooter() {
                   Las Vegas, NV 89101
                 </p>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone size={16} className="text-[#C49A6C] flex-shrink-0" />
-                <a
-                  href="tel:+17028440032"
-                  className="text-[#9B978F] text-sm hover:text-[#C49A6C] transition-colors"
-                >
-                  (702) 844-0032
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
+<div className="flex items-center gap-3">
                 <Mail size={16} className="text-[#C49A6C] flex-shrink-0" />
                 <a
                   href="mailto:events@eastfremontdistrict.com"

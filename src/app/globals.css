@@ -92,3 +92,50 @@ select:focus {
     text-wrap: balance;
   }
 }
+
+/* ── CTA Shimmer Effect ── */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  background-size: 200% auto;
+  background-image: linear-gradient(
+    90deg,
+    #C49A6C 0%,
+    #C49A6C 40%,
+    #E8C99B 50%,
+    #C49A6C 60%,
+    #C49A6C 100%
+  );
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* ── Section Gold Accent Divider ── */
+.section-accent {
+  position: relative;
+}
+
+.section-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C49A6C, transparent);
+}
+
+/* ── Scalability Tier Glow ── */
+@keyframes tier-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(196, 154, 108, 0.05); }
+  50% { box-shadow: 0 0 30px rgba(196, 154, 108, 0.15); }
+}
+
+.tier-glow {
+  animation: tier-glow 3s ease-in-out infinite;
+}

@@ -25,7 +25,7 @@ export default function Button({
 
   const variantClasses = {
     primary:
-      "bg-[#C49A6C] text-[#0F1115] hover:bg-[#D4AA7C] disabled:opacity-50 disabled:cursor-not-allowed",
+      "btn-shimmer text-[#0F1115] hover:bg-[#D4AA7C] disabled:opacity-50 disabled:cursor-not-allowed",
     secondary:
       "border border-[#2A2D33] text-[#F0EDE8] hover:border-[#3A3D43] transition-colors disabled:opacity-50 disabled:cursor-not-allowed",
     ghost:
