@@ -11,7 +11,6 @@ export default function StructuredData() {
     url: siteUrl,
     logo: `${siteUrl}/images/og/og-default.jpg`,
     image: `${siteUrl}/images/og/og-default.jpg`,
-    telephone: "+1-702-844-0032",
     email: "events@eastfremontdistrict.com",
     address: {
       "@type": "PostalAddress",

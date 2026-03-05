@@ -75,9 +75,6 @@ export default function LandingPage() {
             >
               events@eastfremontdistrict.com
             </a>
-            <a href="tel:+17028440032" className="hover:text-[#9B978F] transition-colors">
-              (702) 844-0032
-            </a>
           </div>
         </div>
       </footer>
