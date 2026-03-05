@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 import {
   Wine, ShieldCheck, Mic2, ClipboardList, LucideIcon,
-  Check, ChevronRight, Diamond,
+  Check, ChevronRight,
   Shield, Flame, Landmark, HeartPulse,
   DoorOpen, ScanFace, Users2,
   TrafficCone, Siren, Route,
