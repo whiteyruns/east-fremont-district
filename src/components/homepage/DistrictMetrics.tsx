@@ -4,7 +4,6 @@ import CountUp from "@/components/ui/CountUp";
 import { Venue } from "@/types/venue";
 
 export default function DistrictMetrics({ venues }: { venues: Venue[] }) {
-  const totalCapacity = venues.reduce((sum, v) => sum + (v.capacity ?? 0), 0);
   const totalSqFt = venues.reduce((sum, v) => sum + (v.squareFeet ?? 0), 0);
 
   const metrics = [

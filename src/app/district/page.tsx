@@ -41,7 +41,6 @@ function PageHeader({ venues }: { venues: Venue[] }) {
 // FOOTPRINT OVERVIEW SECTION
 // ============================================================================
 function FootprintOverview({ venues }: { venues: Venue[] }) {
-  const totalCapacity = venues.reduce((sum, v) => sum + (v.capacity ?? 0), 0);
   const totalSqFt = venues.reduce((sum, v) => sum + (v.squareFeet ?? 0), 0);
 
   return (
