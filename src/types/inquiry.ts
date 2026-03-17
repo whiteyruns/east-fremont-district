@@ -2,7 +2,6 @@ export interface InquirySubmission {
   organizationName: string;
   contactName: string;
   email: string;
-  phone: string;
   eventType: "corporate" | "convention" | "brand-activation" | "private" | "other";
   estimatedGuestCount: GuestCountRange;
   preferredDateStart: string;

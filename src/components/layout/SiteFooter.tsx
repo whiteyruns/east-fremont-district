@@ -82,10 +82,10 @@ export default function SiteFooter() {
 <div className="flex items-center gap-3">
                 <Mail size={16} className="text-[#C49A6C] flex-shrink-0" />
                 <a
-                  href="mailto:events@eastfremontdistrict.com"
+                  href="mailto:events@cornerbarmgmt.com"
                   className="text-[#9B978F] text-sm hover:text-[#C49A6C] transition-colors"
                 >
-                  events@eastfremontdistrict.com
+                  events@cornerbarmgmt.com
                 </a>
               </div>
             </div>
