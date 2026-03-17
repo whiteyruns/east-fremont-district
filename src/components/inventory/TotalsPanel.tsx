@@ -16,7 +16,7 @@ export default function TotalsPanel({ venues }: { venues: Venue[] }) {
 
   const stats = [
     { label: "Venues", value: venues.length.toString() },
-    { label: "Total Capacity", value: totals.totalCapacity.toLocaleString() },
+    { label: "Total Capacity", value: "10,000+" },
     { label: "Sq Ft", value: `${(totals.totalSqFt / 1000).toFixed(0)}K` },
     { label: "Rooftops", value: totals.rooftops.toString() },
     { label: "Stages", value: totals.stages.toString() },

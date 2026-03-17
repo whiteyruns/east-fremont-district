@@ -104,16 +104,6 @@ export const caseStudies: CaseStudy[] = [
         value: "4.1M",
         context: "Combined on-site, social media, and press coverage",
       },
-      {
-        metric: "Executive Meetings",
-        value: "340+",
-        context: "Scheduled B2B meetings during the activation",
-      },
-      {
-        metric: "Media Mentions",
-        value: "28",
-        context: "Publications covering the activation",
-      },
     ],
     heroImageUrl: "/images/case-studies/transunion-2026/transunion-01.webp",
     galleryImages: [
