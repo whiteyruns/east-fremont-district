@@ -61,7 +61,7 @@ export default function VenueCard({ venue, onSelect }: VenueCardProps) {
           </p>
         )}
         <p className="text-[10px] font-medium uppercase tracking-wider text-[#C49A6C] mb-2">
-          Part of East Fremont District Master Plan
+          Part of the F.E.E.D. Master Plan
         </p>
         <div className="flex items-center gap-1.5 text-xs text-[#6B6760] mb-4">
           <MapPin size={12} />

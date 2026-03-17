@@ -53,7 +53,7 @@ function ProductionModel() {
 
           <div className="prose prose-invert max-w-none mb-8">
             <p className="text-[#9B978F] text-lg leading-relaxed mb-6">
-              East Fremont District operates under unified production management.
+              The Fremont East Entertainment District operates under unified production management.
               Rather than coordinating multiple independent venue operators with
               different standards, technical capabilities, and vendor relationships,
               all district venues operate through a single production team. This eliminates
@@ -298,7 +298,7 @@ function SecurityModel() {
 function CityCoordination() {
   const coordinationAreas: { title: string; icon: LucideIcon; description: string }[] = [
     {
-      title: "Metro Police",
+      title: "LVMPD",
       icon: Shield,
       description: "Pre-established traffic control and public safety coordination protocols.",
     },

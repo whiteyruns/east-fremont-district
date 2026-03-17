@@ -30,7 +30,7 @@ function PageHeader({ venues }: { venues: Venue[] }) {
         <SectionHeading
           label="Infrastructure"
           title="The District"
-          description={`A unified ${formattedSqFt} square foot footprint spanning one city block of privatized East Fremont real estate. ${venues.length} premium venues, one operating platform.`}
+          description={`A unified ${formattedSqFt} square foot footprint spanning one city block of privatized Fremont East real estate. ${venues.length} premium venues, one operating platform.`}
         />
       </Container>
     </section>
@@ -56,7 +56,7 @@ function FootprintOverview({ venues }: { venues: Venue[] }) {
 
             <div className="space-y-4 text-[#9B978F] leading-relaxed">
               <p>
-                East Fremont District occupies a strategically consolidated footprint along East Fremont Street between Las Vegas Boulevard and 8th Street. This privatized urban real estate provides the rare opportunity to operate multiple premium venues as a unified activation platform.
+                The Fremont East Entertainment District occupies a vibrant 6-block, pedestrian-friendly footprint between Las Vegas Blvd and 8th Street. This privatized entertainment district provides the rare opportunity to operate multiple premium venues as a unified activation platform.
               </p>
 
               <p>
@@ -95,7 +95,7 @@ function FootprintOverview({ venues }: { venues: Venue[] }) {
                 </div>
                 <div>
                   <p className="text-[#F0EDE8] font-mono text-3xl font-bold">
-                    <CountUp end={totalCapacity} duration={2000} suffix="+" />
+                    <CountUp end={10} duration={2000} suffix="K+" />
                   </p>
                   <p className="text-[#9B978F] text-sm mt-1">Total Capacity</p>
                 </div>
@@ -226,7 +226,7 @@ function InfrastructureBullets() {
       items: [
         { icon: Construction, text: "Street closure management" },
         { icon: Flame, text: "Fire marshal approvals" },
-        { icon: BadgeCheck, text: "Metro police coordination" },
+        { icon: BadgeCheck, text: "LVMPD coordination" },
         { icon: FileCheck, text: "City permits and licensing" },
         { icon: Scale, text: "Single-operator unified compliance" },
       ],
@@ -315,7 +315,7 @@ function ScalabilitySection() {
                 Scalable by Design
               </h2>
               <p className="text-[#9B978F] leading-relaxed">
-                East Fremont District infrastructure scales seamlessly from single-venue activations to full district takeovers. One team, one platform — any scope.
+                F.E.E.D. infrastructure scales seamlessly from single-venue activations to full district takeovers. One team, one platform — any scope.
               </p>
             </div>
           </ScrollReveal>
@@ -391,7 +391,7 @@ function OperatingModel() {
               </h2>
 
               <p className="text-[#9B978F] text-lg leading-relaxed max-w-3xl">
-                Single-operator management of the entire East Fremont District creates structural advantages impossible in fragmented venue environments. One team, one production strategy, one security perimeter, one unified permitting process.
+                Single-operator management of the entire Fremont East Entertainment District creates structural advantages impossible in fragmented venue environments. One team, one production strategy, one security perimeter, one unified permitting process.
               </p>
             </div>
           </ScrollReveal>

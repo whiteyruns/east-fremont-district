@@ -98,7 +98,7 @@
       "venue-infrastructure",
       "downtown-las-vegas",
       "event-scale",
-      "urban-district"
+      "entertainment-district"
     ]
   },
   {
@@ -110,7 +110,7 @@
     "staging_visible": true,
     "rooftop_environment": false,
     "sponsor_branding_visible": true,
-    "caption": "Wide perspective of East Fremont district showing illuminated Ferris wheel, multiple venue signage, and Cheapshot display infrastructure.",
+    "caption": "Wide perspective of Fremont East Entertainment District showing illuminated Ferris wheel, multiple venue signage, and Cheapshot display infrastructure.",
     "tags": [
       "wide-perspective",
       "ferris-wheel",
@@ -832,7 +832,7 @@
     "staging_visible": false,
     "rooftop_environment": false,
     "sponsor_branding_visible": false,
-    "caption": "Urban district event showing illuminated branded venue with food service station and organized guest area.",
+    "caption": "Entertainment district event showing illuminated branded venue with food service station and organized guest area.",
     "tags": [
       "district-event",
       "branded-venue",

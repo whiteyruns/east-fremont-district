@@ -11,7 +11,7 @@ function PageHeader() {
         <SectionHeading
           label="Legal"
           title="Terms &amp; Conditions"
-          description="Please read these terms carefully before using the East Fremont District website. By accessing or using this site, you agree to be bound by these terms."
+          description="Please read these terms carefully before using the F.E.E.D. website. By accessing or using this site, you agree to be bound by these terms."
         />
       </Container>
     </section>
@@ -34,7 +34,7 @@ function TermsContent() {
             </h2>
             <div className="space-y-4 text-[#9B978F] text-sm leading-relaxed">
               <p>
-                By accessing and using the East Fremont District website
+                By accessing and using the F.E.E.D. website
                 (&ldquo;Site&rdquo;), operated by Corner Bar Management, you accept and
                 agree to be bound by these Terms &amp; Conditions
                 (&ldquo;Terms&rdquo;). If you do not agree to these Terms, you should
@@ -95,7 +95,7 @@ function TermsContent() {
               <p>
                 All content on the Site, including but not limited to text, graphics,
                 logos, images, photographs, videos, design elements, and software, is the
-                property of East Fremont District, Corner Bar Management, or their
+                property of F.E.E.D., Corner Bar Management, or their
                 respective licensors and is protected by United States and international
                 copyright, trademark, and other intellectual property laws.
               </p>
@@ -103,10 +103,10 @@ function TermsContent() {
                 You may not reproduce, distribute, modify, create derivative works from,
                 publicly display, publicly perform, republish, download, store, or
                 transmit any content from the Site without the prior written consent of
-                East Fremont District, except as permitted by applicable law.
+                F.E.E.D., except as permitted by applicable law.
               </p>
               <p>
-                The East Fremont District name, logo, and all related names, logos,
+                The F.E.E.D. name, logo, and all related names, logos,
                 product and service names, designs, and slogans are trademarks of Corner
                 Bar Management or its affiliates. You may not use such marks without prior
                 written permission.
@@ -132,11 +132,11 @@ function TermsContent() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#C49A6C] flex-shrink-0">•</span>
-                  <span>Submission of an inquiry does not create any binding agreement, contract, or obligation on the part of East Fremont District or Corner Bar Management</span>
+                  <span>Submission of an inquiry does not create any binding agreement, contract, or obligation on the part of F.E.E.D. or Corner Bar Management</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#C49A6C] flex-shrink-0">•</span>
-                  <span>East Fremont District reserves the right to respond to or decline any inquiry at its sole discretion</span>
+                  <span>F.E.E.D. reserves the right to respond to or decline any inquiry at its sole discretion</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#C49A6C] flex-shrink-0">•</span>
@@ -160,7 +160,7 @@ function TermsContent() {
             </h2>
             <div className="space-y-4 text-[#9B978F] text-sm leading-relaxed">
               <p>
-                To the fullest extent permitted by applicable law, East Fremont District,
+                To the fullest extent permitted by applicable law, F.E.E.D.,
                 Corner Bar Management, and their respective officers, directors,
                 employees, agents, and affiliates shall not be liable for any indirect,
                 incidental, special, consequential, or punitive damages, including but not
@@ -201,7 +201,7 @@ function TermsContent() {
             </h2>
             <div className="space-y-4 text-[#9B978F] text-sm leading-relaxed">
               <p>
-                You agree to defend, indemnify, and hold harmless East Fremont District,
+                You agree to defend, indemnify, and hold harmless F.E.E.D.,
                 Corner Bar Management, and their respective officers, directors,
                 employees, agents, and affiliates from and against any and all claims,
                 damages, obligations, losses, liabilities, costs, or expenses (including
@@ -248,7 +248,7 @@ function TermsContent() {
             </h2>
             <div className="space-y-4 text-[#9B978F] text-sm leading-relaxed">
               <p>
-                East Fremont District reserves the right to modify or replace these Terms
+                F.E.E.D. reserves the right to modify or replace these Terms
                 at any time at our sole discretion. If a revision is material, we will
                 make reasonable efforts to provide notice prior to any new terms taking
                 effect, such as updating the &ldquo;Last Updated&rdquo; date at the
@@ -273,7 +273,7 @@ function TermsContent() {
                 contact us at:
               </p>
               <div className="bg-[#1A1D23] border border-[#2A2D33] rounded-lg p-6 space-y-2">
-                <p className="text-[#F0EDE8] font-semibold">East Fremont District</p>
+                <p className="text-[#F0EDE8] font-semibold">F.E.E.D.</p>
                 <p>Operated by Corner Bar Management</p>
                 <p>Las Vegas, NV</p>
                 <p>

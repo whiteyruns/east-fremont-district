@@ -30,7 +30,7 @@ export default function HeroVideo() {
 
           {/* Headline */}
           <h1 className="text-[#F0EDE8] text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-            Urban Event Infrastructure
+            Entertainment District
           </h1>
 
           {/* Description */}

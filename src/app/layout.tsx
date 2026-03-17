@@ -22,13 +22,14 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://eastfremontdistrict
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "East Fremont District",
-    template: "%s | East Fremont District",
+    default: "F.E.E.D. — Fremont East Entertainment District",
+    template: "%s | F.E.E.D.",
   },
   description:
-    "A fully privatized, multi-venue urban event district designed for large-scale corporate activations and convention programming in Downtown Las Vegas.",
+    "The Fremont East Entertainment District is a vibrant 6-block, pedestrian-friendly downtown Las Vegas hub located between Las Vegas Blvd and 8th Street. 16 premium venues, one unified operating platform.",
   keywords: [
-    "East Fremont District",
+    "F.E.E.D.",
+    "Fremont East Entertainment District",
     "Las Vegas event venue",
     "corporate activations",
     "convention programming",
@@ -42,8 +43,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    siteName: "East Fremont District",
-    title: "East Fremont District — Urban Event Infrastructure",
+    siteName: "F.E.E.D.",
+    title: "F.E.E.D. — Entertainment District Infrastructure",
     description:
       "16 premium venues on one city block in Downtown Las Vegas. A unified operating platform for large-scale corporate activations and convention programming.",
     images: [
@@ -51,13 +52,13 @@ export const metadata: Metadata = {
         url: "/images/og/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: "East Fremont District — Downtown Las Vegas",
+        alt: "F.E.E.D. — Fremont East Entertainment District, Downtown Las Vegas",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "East Fremont District — Urban Event Infrastructure",
+    title: "F.E.E.D. — Entertainment District Infrastructure",
     description:
       "16 premium venues on one city block in Downtown Las Vegas. A unified operating platform for brands and event producers.",
     images: ["/images/og/og-default.jpg"],

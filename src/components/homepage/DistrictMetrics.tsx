@@ -8,7 +8,7 @@ export default function DistrictMetrics({ venues }: { venues: Venue[] }) {
   const totalSqFt = venues.reduce((sum, v) => sum + (v.squareFeet ?? 0), 0);
 
   const metrics = [
-    { end: totalCapacity, suffix: "+", label: "Total Capacity", duration: 2000 },
+    { end: 10, suffix: "K+", label: "Total Capacity", duration: 2000 },
     { end: venues.length, suffix: "", label: "Venues", duration: 1200 },
     { end: Math.round(totalSqFt / 1000), suffix: "K", label: "Sq Ft", duration: 1600 },
     { end: 1, suffix: "", label: "City Block", duration: 800 },

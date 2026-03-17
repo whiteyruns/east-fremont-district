@@ -11,7 +11,7 @@ export default function HomepageCTA() {
           </h2>
 
           <p className="text-[#9B978F] text-lg leading-relaxed max-w-2xl mx-auto">
-            Connect with our team to explore how East Fremont District infrastructure can bring your vision to life.
+            Connect with our team to explore how F.E.E.D. infrastructure can bring your vision to life.
           </p>
 
           <Button variant="primary" href="/inquire">

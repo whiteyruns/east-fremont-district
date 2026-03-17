@@ -83,7 +83,7 @@
         "venue-infrastructure",
         "downtown-las-vegas",
         "event-scale",
-        "urban-district"
+        "entertainment-district"
       ],
       "computed_score": 16
     },
@@ -191,7 +191,7 @@
         "venue-infrastructure",
         "downtown-las-vegas",
         "event-scale",
-        "urban-district"
+        "entertainment-district"
       ],
       "computed_score": 19
     },
@@ -299,7 +299,7 @@
         "venue-infrastructure",
         "downtown-las-vegas",
         "event-scale",
-        "urban-district"
+        "entertainment-district"
       ],
       "computed_score": 18
     },
@@ -403,7 +403,7 @@
         "venue-infrastructure",
         "downtown-las-vegas",
         "event-scale",
-        "urban-district"
+        "entertainment-district"
       ],
       "computed_score": 14
     },
@@ -668,7 +668,7 @@
           "venue-infrastructure",
           "downtown-las-vegas",
           "event-scale",
-          "urban-district"
+          "entertainment-district"
         ]
       },
       {

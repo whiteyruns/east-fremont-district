@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "East Fremont District",
-    short_name: "EFD",
+    name: "F.E.E.D. — Fremont East Entertainment District",
+    short_name: "F.E.E.D.",
     description:
-      "A fully privatized, multi-venue urban event district in Downtown Las Vegas.",
+      "A vibrant 6-block, pedestrian-friendly downtown Las Vegas entertainment district located between Las Vegas Blvd and 8th Street.",
     start_url: "/",
     display: "standalone",
     background_color: "#0F1115",

@@ -303,7 +303,7 @@ function CTASection() {
             Build Your Case Study
           </h2>
           <p className="text-[#9B978F] text-lg mb-8">
-            Ready to create your own unforgettable event at East Fremont District?
+            Ready to create your own unforgettable event at F.E.E.D.?
           </p>
           <Button href="/inquire" variant="primary">
             Start an Inquiry

@@ -20,7 +20,7 @@ function PageHeader() {
         <SectionHeading
           label="Proof of Execution"
           title="Case Studies"
-          description="Explore how East Fremont District has powered transformative events across the corporate, convention, and brand activation landscapes."
+          description="Explore how F.E.E.D. has powered transformative events across the corporate, convention, and brand activation landscapes."
         />
       </Container>
     </section>

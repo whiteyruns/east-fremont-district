@@ -11,7 +11,7 @@ function PageHeader() {
         <SectionHeading
           label="Legal"
           title="Privacy Policy"
-          description="Your privacy matters to us. This policy explains how East Fremont District collects, uses, and protects your information."
+          description="Your privacy matters to us. This policy explains how F.E.E.D. collects, uses, and protects your information."
         />
       </Container>
     </section>
@@ -34,7 +34,7 @@ function PrivacyContent() {
             </h2>
             <div className="space-y-4 text-[#9B978F] text-sm leading-relaxed">
               <p>
-                East Fremont District, operated by Corner Bar Management, collects limited
+                F.E.E.D. (Fremont East Entertainment District), operated by Corner Bar Management, collects limited
                 information to respond to inquiries and improve our website experience. We
                 do not operate user accounts or process payments through this website.
               </p>
@@ -205,7 +205,7 @@ function PrivacyContent() {
                 practices, please contact us at:
               </p>
               <div className="bg-[#1A1D23] border border-[#2A2D33] rounded-lg p-6 space-y-2">
-                <p className="text-[#F0EDE8] font-semibold">East Fremont District</p>
+                <p className="text-[#F0EDE8] font-semibold">F.E.E.D.</p>
                 <p>Operated by Corner Bar Management</p>
                 <p>Las Vegas, NV</p>
                 <p>

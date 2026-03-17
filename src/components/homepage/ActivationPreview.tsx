@@ -54,16 +54,6 @@ export default function ActivationPreview() {
                     {framework.positioningLine}
                   </p>
 
-                  {/* Starting Range */}
-                  <div className="space-y-1 pt-2">
-                    <p className="text-[#9B978F] text-sm font-semibold">
-                      Starting Range
-                    </p>
-                    <p className="text-[#F0EDE8] font-mono text-lg font-bold">
-                      {framework.startingRange}
-                    </p>
-                  </div>
-
                   {/* Guest Count */}
                   <div className="space-y-1">
                     <p className="text-[#9B978F] text-sm font-semibold">

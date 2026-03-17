@@ -66,7 +66,7 @@ export const caseStudies: CaseStudy[] = [
       role: "Feed the Block 2025 Season",
     },
     summary:
-      "Feed the Block is the large-scale, free cultural event series that launched East Fremont District as a destination. Produced in partnership with Wynn Las Vegas Nightlife (ForestHouse) and Corner Bar Management, the 2025 season featured three headline events — Gryffin, Major Lazer, and Diplo — transforming Fremont East into a high-energy cultural destination on Thursday evenings. With 32,000+ total attendees, 10,000+ casino crossover visits per event, nearly 8 million social impressions, and broadcast coverage across FOX, NBC, and CBS, the series demonstrated the district's capacity for city-scale cultural programming and directly catalyzed the creation of the East Fremont District platform.",
+      "Feed the Block is the large-scale, free cultural event series that launched F.E.E.D. as a destination. Produced in partnership with Wynn Las Vegas Nightlife (ForestHouse) and Corner Bar Management, the 2025 season featured three headline events — Gryffin, Major Lazer, and Diplo — transforming Fremont East into a high-energy cultural destination on Thursday evenings. With 32,000+ total attendees, 10,000+ casino crossover visits per event, nearly 8 million social impressions, and broadcast coverage across FOX, NBC, and CBS, the series demonstrated the district's capacity for city-scale cultural programming and directly catalyzed the creation of the F.E.E.D. platform.",
   },
   {
     id: "case-study-tu-2026",
@@ -127,11 +127,11 @@ export const caseStudies: CaseStudy[] = [
     ],
     testimonial: {
       quote:
-        "East Fremont District gave us the ability to create an immersive brand experience at a scale that simply isn't possible with a traditional venue rental. The single-operator model meant we had one team handling everything from permitting to production.",
+        "F.E.E.D. gave us the ability to create an immersive brand experience at a scale that simply isn't possible with a traditional venue rental. The single-operator model meant we had one team handling everything from permitting to production.",
       attribution: "TransUnion Events Team",
       role: "CES 2026 Activation",
     },
     summary:
-      "TransUnion leveraged East Fremont District's multi-venue infrastructure for a three-day CES 2026 brand activation, combining district-wide building wraps, street-level experiences, rooftop networking receptions, and live entertainment. The unified operating platform enabled seamless coordination across all touchpoints, delivering a premium brand environment for 2,500+ executives and industry professionals.",
+      "TransUnion leveraged F.E.E.D.'s multi-venue infrastructure for a three-day CES 2026 brand activation, combining district-wide building wraps, street-level experiences, rooftop networking receptions, and live entertainment. The unified operating platform enabled seamless coordination across all touchpoints, delivering a premium brand environment for 2,500+ executives and industry professionals.",
   },
 ];

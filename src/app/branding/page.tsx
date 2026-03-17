@@ -263,7 +263,7 @@ function SponsorIntegration() {
             </h2>
             <div className="space-y-4 text-[#9B978F] leading-relaxed">
               <p>
-                East Fremont District sponsorships transcend traditional static placements.
+                F.E.E.D. sponsorships transcend traditional static placements.
                 Brands don&apos;t just attach their logo to surfaces—they become woven into the
                 district&apos;s operational fabric through multiple integration points.
               </p>

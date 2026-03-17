@@ -15,7 +15,7 @@ export const venues: Venue[] = [
     hasStage: null,
     hasKitchen: true,
     adaAccessible: null,
-    notes: "Full-service restaurant & bar focused on craft beer and burgers at 520 E Fremont in the Fremont East district.",
+    notes: "Full-service restaurant & bar focused on craft beer and burgers at 520 E Fremont in the Fremont East Entertainment District.",
   },
 
   {

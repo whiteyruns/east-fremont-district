@@ -22,7 +22,7 @@ export default function CaseStudyPreview({
           <SectionHeading
             label="Proof of Execution"
             title="Case Studies"
-            description="Real-world activations showcasing the capabilities of East Fremont District infrastructure."
+            description="Real-world activations showcasing the capabilities of F.E.E.D. infrastructure."
           />
 
           {/* Featured Case Study */}

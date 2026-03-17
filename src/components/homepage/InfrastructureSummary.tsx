@@ -26,7 +26,7 @@ const infrastructureItems = [
     icon: FileCheck,
     title: "Permitting & Coordination",
     description:
-      "Single operator manages all street closures, fire marshal approvals, city coordination, and Metro compliance.",
+      "Single operator manages all street closures, fire marshal approvals, city coordination, and LVMPD compliance.",
   },
 ];
 

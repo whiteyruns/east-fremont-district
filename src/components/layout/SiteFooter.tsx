@@ -14,10 +14,10 @@ export default function SiteFooter() {
           {/* Column 1: Brand Description */}
           <div className="space-y-4">
             <h3 className="text-[#F0EDE8] font-bold text-lg tracking-tight">
-              EAST FREMONT DISTRICT
+              F.E.E.D.
             </h3>
             <p className="text-[#9B978F] text-sm leading-relaxed">
-              A fully privatized, multi-venue urban event district designed for large-scale corporate activations and convention programming in Downtown Las Vegas.
+              The Fremont East Entertainment District is a vibrant 6-block, pedestrian-friendly downtown Las Vegas hub located between Las Vegas Blvd and 8th Street.
             </p>
 
             {/* Social Links */}
@@ -97,7 +97,7 @@ export default function SiteFooter() {
               Get Started
             </h4>
             <p className="text-[#9B978F] text-sm leading-relaxed">
-              Ready to explore opportunities with East Fremont District? We&apos;d love to hear from you.
+              Ready to explore opportunities with F.E.E.D.? We&apos;d love to hear from you.
             </p>
             <Button variant="primary" href="/inquire" className="w-full">
               Submit Inquiry
@@ -108,7 +108,7 @@ export default function SiteFooter() {
         {/* Copyright Line */}
         <div className="border-t border-[#2A2D33] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#6B6760] text-sm">
-            &copy; {currentYear} East Fremont District. All rights reserved.
+            &copy; {currentYear} F.E.E.D.. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-4 text-[#6B6760] text-xs">
