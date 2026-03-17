@@ -2,14 +2,6 @@
 
 import Button from "@/components/ui/Button";
 
-const proofItems = [
-  "10,000+ Guests",
-  "9+ Stages & Dance Floors",
-  "27+ Bar Wells",
-  "Full Street Closure & Permitting",
-  "Turnkey Production & Operations",
-];
-
 export default function HeroVideo() {
   return (
     <>
