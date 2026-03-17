@@ -6,7 +6,16 @@ import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import { brandingZones } from "@/data/branding-zones";
 
-export const metadata: Metadata = { title: "Branding Opportunities" };
+export const metadata: Metadata = {
+  title: "Branding Opportunities",
+  description:
+    "Full-district branding capabilities — signage, digital displays, street-level wraps, and custom branded environments across East Fremont.",
+  openGraph: {
+    title: "Branding Opportunities | F.E.E.D.",
+    description:
+      "Full-district branding capabilities — signage, digital displays, street-level wraps, and custom branded environments across East Fremont.",
+  },
+};
 
 // ============================================================================
 // PAGE HEADER SECTION

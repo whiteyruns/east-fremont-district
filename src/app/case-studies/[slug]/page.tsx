@@ -1,12 +1,14 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import { getCaseStudies } from "@/lib/airtable-case-studies";
 import { CaseStudy } from "@/types/case-study";
 
-export const dynamic = "force-dynamic";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://eastfremontdistrict.com";
 
 // ============================================================================
 // STATIC PARAMS GENERATION
@@ -16,6 +18,50 @@ export async function generateStaticParams() {
   return caseStudies.map((caseStudy) => ({
     slug: caseStudy.slug,
   }));
+}
+
+// ============================================================================
+// DYNAMIC METADATA
+// ============================================================================
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const caseStudies = await getCaseStudies();
+  const caseStudy = caseStudies.find((cs) => cs.slug === params.slug);
+
+  if (!caseStudy) {
+    return { title: "Case Study Not Found" };
+  }
+
+  const description =
+    caseStudy.summary.length > 160
+      ? caseStudy.summary.slice(0, 157) + "..."
+      : caseStudy.summary;
+
+  return {
+    title: caseStudy.title,
+    description,
+    openGraph: {
+      title: `${caseStudy.title} | F.E.E.D.`,
+      description,
+      images: [
+        {
+          url: caseStudy.heroImageUrl || "/images/og/og-default.jpg",
+          width: 1200,
+          height: 630,
+          alt: caseStudy.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${caseStudy.title} | F.E.E.D.`,
+      description,
+      images: [caseStudy.heroImageUrl || "/images/og/og-default.jpg"],
+    },
+  };
 }
 
 // ============================================================================
@@ -323,6 +369,53 @@ interface CaseStudyPageProps {
   };
 }
 
+function buildEventJsonLd(caseStudy: CaseStudy) {
+  const jsonLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "BusinessEvent",
+    name: caseStudy.title,
+    description: caseStudy.summary,
+    startDate: caseStudy.date,
+    location: {
+      "@type": "EntertainmentBusiness",
+      name: "F.E.E.D. — Fremont East Entertainment District",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "East Fremont Street",
+        addressLocality: "Las Vegas",
+        addressRegion: "NV",
+        postalCode: "89101",
+        addressCountry: "US",
+      },
+    },
+    organizer: {
+      "@type": "Organization",
+      name: "Corner Bar Management",
+      url: "https://www.cornerbarmgmt.com",
+    },
+    image: caseStudy.heroImageUrl || `${siteUrl}/images/og/og-default.jpg`,
+    url: `${siteUrl}/case-studies/${caseStudy.slug}`,
+  };
+
+  if (caseStudy.guestCount) {
+    jsonLd.maximumAttendeeCapacity = caseStudy.guestCount;
+  }
+
+  if (caseStudy.testimonial) {
+    jsonLd.review = {
+      "@type": "Review",
+      reviewBody: caseStudy.testimonial.quote,
+      author: {
+        "@type": "Person",
+        name: caseStudy.testimonial.attribution,
+        jobTitle: caseStudy.testimonial.role,
+      },
+    };
+  }
+
+  return jsonLd;
+}
+
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
   const caseStudies = await getCaseStudies();
   const caseStudy = caseStudies.find((cs) => cs.slug === params.slug);
@@ -331,8 +424,14 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
     notFound();
   }
 
+  const eventJsonLd = buildEventJsonLd(caseStudy);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
+      />
       <HeroSection caseStudy={caseStudy} />
       <MetricsCallout caseStudy={caseStudy} />
       <OperationalSummary caseStudy={caseStudy} />

@@ -14,8 +14,16 @@ import InteractiveDistrictMap from "@/components/district/DistrictMap";
 import { getVenues } from "@/lib/airtable-venues";
 import { Venue } from "@/types/venue";
 
-export const metadata: Metadata = { title: "The District" };
-export const dynamic = "force-dynamic";
+export const metadata: Metadata = {
+  title: "The District",
+  description:
+    "Explore F.E.E.D.'s unified 6-block entertainment footprint — 16+ venues, one operator, full infrastructure for large-scale Las Vegas activations.",
+  openGraph: {
+    title: "The District | F.E.E.D.",
+    description:
+      "Explore F.E.E.D.'s unified 6-block entertainment footprint — 16+ venues, one operator, full infrastructure for large-scale Las Vegas activations.",
+  },
+};
 
 // ============================================================================
 // PAGE HEADER SECTION
@@ -203,7 +211,7 @@ function InfrastructureBullets() {
     {
       title: "Physical Infrastructure",
       items: [
-        { icon: Building2, text: "16 premium venues across the district" },
+        { icon: Building2, text: "16+ premium venues across the district" },
         { icon: Music, text: "Multiple stages with concert-grade sound" },
         { icon: UtensilsCrossed, text: "Full-service bar and kitchen facilities" },
         { icon: Sunset, text: "Rooftop event spaces with panoramic views" },

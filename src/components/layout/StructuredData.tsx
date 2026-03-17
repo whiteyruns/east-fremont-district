@@ -11,7 +11,7 @@ export default function StructuredData() {
     url: siteUrl,
     logo: `${siteUrl}/images/og/og-default.jpg`,
     image: `${siteUrl}/images/og/og-default.jpg`,
-    email: "events@eastfremontdistrict.com",
+    email: "events@cornerbarmgmt.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "East Fremont Street",

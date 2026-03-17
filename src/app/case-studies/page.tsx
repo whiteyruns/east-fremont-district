@@ -7,8 +7,16 @@ import Card from "@/components/ui/Card";
 import { getCaseStudies } from "@/lib/airtable-case-studies";
 import { CaseStudy } from "@/types/case-study";
 
-export const metadata: Metadata = { title: "Case Studies" };
-export const dynamic = "force-dynamic";
+export const metadata: Metadata = {
+  title: "Case Studies",
+  description:
+    "See how F.E.E.D. has powered large-scale corporate events, conventions, and brand activations in Downtown Las Vegas.",
+  openGraph: {
+    title: "Case Studies | F.E.E.D.",
+    description:
+      "See how F.E.E.D. has powered large-scale corporate events, conventions, and brand activations in Downtown Las Vegas.",
+  },
+};
 
 // ============================================================================
 // PAGE HEADER SECTION

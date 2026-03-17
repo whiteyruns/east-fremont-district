@@ -7,8 +7,16 @@ import ComparisonTable from "@/components/activation-frameworks/ComparisonTable"
 import { getActivationFrameworks } from "@/lib/airtable-activations";
 import { ActivationFramework } from "@/types/activation";
 
-export const metadata: Metadata = { title: "Activation Frameworks" };
-export const dynamic = "force-dynamic";
+export const metadata: Metadata = {
+  title: "Activation Frameworks",
+  description:
+    "Three scalable activation tiers from single-venue experiences to full district takeovers. Compare packages and start your Las Vegas event inquiry.",
+  openGraph: {
+    title: "Activation Frameworks | F.E.E.D.",
+    description:
+      "Three scalable activation tiers from single-venue experiences to full district takeovers. Compare packages and start your Las Vegas event inquiry.",
+  },
+};
 
 // ============================================================================
 // PAGE HEADER SECTION
@@ -157,11 +165,46 @@ function CustomCtaSection() {
 // ============================================================================
 // PAGE EXPORT
 // ============================================================================
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What's included in each activation tier?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "F.E.E.D. offers three tiers: Core (single-venue, intimate events), Expanded (multi-venue with street activation), and Full Takeover (district-wide transformation with 16+ venues, full branding, and dedicated production). Each tier includes venue access, production support, and branding packages scaled to scope.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What's the capacity range for F.E.E.D. events?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "F.E.E.D. accommodates events from 100 guests in a single venue up to 30,000+ across the full Fremont East Entertainment District. Capacity depends on the activation tier and venue configuration selected.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I customize an activation package?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. All three frameworks are starting points. Our team works with event planners to customize venue selection, production scope, branding packages, and logistics to match specific brand objectives and budgets. Submit an inquiry to discuss custom options.",
+      },
+    },
+  ],
+};
+
 export default async function ActivationFrameworksPage() {
   const activationFrameworks = await getActivationFrameworks();
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <PageHeader />
 
       {/* Framework Cards Section */}

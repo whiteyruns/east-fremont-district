@@ -14,7 +14,16 @@ import Card from "@/components/ui/Card";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Button from "@/components/ui/Button";
 
-export const metadata: Metadata = { title: "Unified Production" };
+export const metadata: Metadata = {
+  title: "Unified Production",
+  description:
+    "One production team managing sound, lighting, staging, and AV across all 16+ Fremont East venues. Simplified logistics, unified quality.",
+  openGraph: {
+    title: "Unified Production | F.E.E.D.",
+    description:
+      "One production team managing sound, lighting, staging, and AV across all 16+ Fremont East venues. Simplified logistics, unified quality.",
+  },
+};
 
 // ============================================================================
 // PAGE HEADER SECTION
