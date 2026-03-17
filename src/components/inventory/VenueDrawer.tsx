@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useCallback, useState } from "react";
 import { X } from "lucide-react";
 import { Venue } from "@/types/venue";
 
@@ -9,6 +10,46 @@ interface VenueDrawerProps {
 }
 
 export default function VenueDrawer({ venue, onClose }: VenueDrawerProps) {
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
+  const [visible, setVisible] = useState(false);
+
+  const handleClose = useCallback(() => {
+    setVisible(false);
+    setTimeout(() => {
+      onClose();
+      previousFocusRef.current?.focus();
+    }, 200);
+  }, [onClose]);
+
+  // Focus trap, escape key, body scroll lock
+  useEffect(() => {
+    if (!venue) return;
+
+    previousFocusRef.current = document.activeElement as HTMLElement;
+    // Trigger slide-in on next frame
+    requestAnimationFrame(() => setVisible(true));
+
+    // Lock body scroll
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    // Focus close button
+    closeButtonRef.current?.focus();
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        handleClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [venue, handleClose]);
+
   if (!venue) return null;
 
   const specs = [
@@ -27,17 +68,23 @@ export default function VenueDrawer({ venue, onClose }: VenueDrawerProps) {
     <>
       {/* Backdrop */}
       <div
-        className="fixed inset-0 z-40 bg-[#0A0C0F]/85"
-        onClick={onClose}
+        className={`fixed inset-0 z-40 bg-[#0A0C0F]/85 transition-opacity duration-200 ${visible ? "opacity-100" : "opacity-0"}`}
+        onClick={handleClose}
       />
 
       {/* Drawer */}
-      <div className="fixed top-0 right-0 z-50 h-full w-full max-w-lg bg-[#1A1D23] border-l border-[#2A2D33] overflow-y-auto">
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={venue.name}
+        className={`fixed top-0 right-0 z-50 h-full w-full max-w-lg bg-[#1A1D23] border-l border-[#2A2D33] overflow-y-auto transition-transform duration-200 ease-out ${visible ? "translate-x-0" : "translate-x-full"}`}
+      >
         {/* Header */}
         <div className="sticky top-0 bg-[#1A1D23] border-b border-[#2A2D33] px-6 py-4 flex items-center justify-between">
           <h2 className="text-xl font-semibold">{venue.name}</h2>
           <button
-            onClick={onClose}
+            ref={closeButtonRef}
+            onClick={handleClose}
             className="p-2 text-[#9B978F] hover:text-[#F0EDE8] transition-colors"
             aria-label="Close"
           >

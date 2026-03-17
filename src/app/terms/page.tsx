@@ -279,10 +279,10 @@ function TermsContent() {
                 <p>
                   Email:{" "}
                   <a
-                    href="mailto:info@eastfremontdistrict.com"
+                    href="mailto:events@cornerbarmgmt.com"
                     className="text-[#C49A6C] hover:underline"
                   >
-                    info@eastfremontdistrict.com
+                    events@cornerbarmgmt.com
                   </a>
                 </p>
               </div>

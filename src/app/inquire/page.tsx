@@ -41,7 +41,7 @@ function SegmentedSelector<T extends string>({
   columns = 3,
 }: SegmentedSelectorProps<T>) {
   return (
-    <div className={`grid grid-cols-${columns} gap-2`}>
+    <div className={`grid ${{ 2: "grid-cols-2", 3: "grid-cols-3", 4: "grid-cols-4" }[columns]} gap-2`}>
       {options.map((option) => (
         <button
           key={option.value}
@@ -376,13 +376,9 @@ function InquiryForm() {
       </fieldset>
 
       {/* Submit Button */}
-      <button
-        type="submit"
-        disabled={loading}
-        className="w-full bg-[#C49A6C] text-[#0F1115] hover:bg-[#D4AA7C] disabled:opacity-50 disabled:cursor-not-allowed px-6 py-3 font-semibold rounded-lg transition-colors"
-      >
+      <Button type="submit" variant="primary" disabled={loading} className="w-full">
         {loading ? "Submitting..." : "Submit Inquiry"}
-      </button>
+      </Button>
     </form>
   );
 }

@@ -19,7 +19,7 @@ export default function ComparisonTable({ frameworks }: { frameworks: Activation
 
   const categories = Array.from(allFeatures.keys()).sort();
 
-  const [open, setOpen] = useState<Set<string>>(new Set());
+  const [open, setOpen] = useState<Set<string>>(new Set(categories.length > 0 ? [categories[0]] : []));
 
   const toggle = (cat: string) =>
     setOpen((prev) => {

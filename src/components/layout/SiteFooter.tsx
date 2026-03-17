@@ -108,7 +108,7 @@ export default function SiteFooter() {
         {/* Copyright Line */}
         <div className="border-t border-[#2A2D33] pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#6B6760] text-sm">
-            &copy; {currentYear} F.E.E.D.. All rights reserved.
+            &copy; {currentYear} F.E.E.D. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-4 text-[#6B6760] text-xs">

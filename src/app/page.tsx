@@ -8,8 +8,6 @@ import Container from "@/components/ui/Container";
 import { getVenues } from "@/lib/airtable-venues";
 import { getCaseStudies } from "@/lib/airtable-case-studies";
 
-export const dynamic = "force-dynamic";
-
 function WhatThisIs() {
   return (
     <section className="py-20 lg:py-28 bg-[#0F1115]">

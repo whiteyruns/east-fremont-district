@@ -43,6 +43,12 @@ export default function SiteHeader() {
               {item.label}
             </Link>
           ))}
+          <Link
+            href="/inquire"
+            className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold rounded-lg btn-shimmer text-[#0F1115] hover:bg-[#D4AA7C] transition-colors"
+          >
+            Inquire
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -77,6 +83,13 @@ export default function SiteHeader() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              href="/inquire"
+              className="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-semibold rounded-lg btn-shimmer text-[#0F1115] hover:bg-[#D4AA7C] transition-colors mt-2"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Inquire
+            </Link>
           </div>
         </nav>
       )}
