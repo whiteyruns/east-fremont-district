@@ -10,7 +10,7 @@ export default function SiteFooter() {
     <footer className="border-t border-[#2A2D33] bg-[#0F1115]">
       <div className="max-w-[1280px] mx-auto px-6 lg:px-12 py-16">
         {/* Four Column Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Column 1: Brand Description */}
           <div className="space-y-4">
             <h3 className="text-[#F0EDE8] font-bold text-lg tracking-tight">

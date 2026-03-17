@@ -41,7 +41,7 @@ function SegmentedSelector<T extends string>({
   columns = 3,
 }: SegmentedSelectorProps<T>) {
   return (
-    <div className={`grid ${{ 2: "grid-cols-2", 3: "grid-cols-3", 4: "grid-cols-4" }[columns]} gap-2`}>
+    <div className={`grid grid-cols-2 ${{ 2: "sm:grid-cols-2", 3: "sm:grid-cols-3", 4: "sm:grid-cols-4" }[columns]} gap-2`}>
       {options.map((option) => (
         <button
           key={option.value}

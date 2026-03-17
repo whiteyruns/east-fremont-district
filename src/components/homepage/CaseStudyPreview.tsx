@@ -26,7 +26,7 @@ export default function CaseStudyPreview({
           />
 
           {/* Featured Case Study */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-stretch">
             {/* Left: Hero Image */}
             <div>
               <div className="aspect-[16/10] bg-[#1A1D23] border border-[#2A2D33] rounded-lg overflow-hidden relative">

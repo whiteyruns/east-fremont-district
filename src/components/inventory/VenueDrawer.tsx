@@ -77,7 +77,7 @@ export default function VenueDrawer({ venue, onClose }: VenueDrawerProps) {
         role="dialog"
         aria-modal="true"
         aria-label={venue.name}
-        className={`fixed top-0 right-0 z-50 h-full w-full max-w-lg bg-[#1A1D23] border-l border-[#2A2D33] overflow-y-auto transition-transform duration-200 ease-out ${visible ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 z-50 h-full w-full max-w-[100vw] sm:max-w-lg bg-[#1A1D23] border-l border-[#2A2D33] overflow-y-auto transition-transform duration-200 ease-out ${visible ? "translate-x-0" : "translate-x-full"}`}
       >
         {/* Header */}
         <div className="sticky top-0 bg-[#1A1D23] border-b border-[#2A2D33] px-6 py-4 flex items-center justify-between">

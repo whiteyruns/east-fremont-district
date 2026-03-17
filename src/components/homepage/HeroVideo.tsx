@@ -22,7 +22,7 @@ export default function HeroVideo() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0C0F]/40 via-[#0A0C0F]/20 to-[#0A0C0F]/60" />
 
         {/* Content */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-end pb-20 px-6 text-center">
+        <div className="relative z-10 h-full flex flex-col items-center justify-end pb-10 md:pb-20 px-6 text-center">
           <div className="space-y-6 max-w-4xl">
             {/* Headline */}
             <h1 className="text-[#F0EDE8] text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">

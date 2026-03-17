@@ -27,11 +27,11 @@ export default function DistrictMetrics({ venues }: { venues: Venue[] }) {
       <Container>
         <div className="py-12 lg:py-16 space-y-10">
           {/* Metrics Row */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8 lg:grid-cols-5">
             {items.map((item, i) => (
               <ScrollReveal key={i} delay={i * 80}>
                 <div className="text-center space-y-1">
-                  <div className="font-mono text-4xl lg:text-5xl font-bold text-[#F0EDE8] tracking-tight">
+                  <div className="font-mono text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F0EDE8] tracking-tight">
                     {item.value}
                   </div>
                   <p className="text-[#9B978F] text-xs font-medium uppercase tracking-wider">
