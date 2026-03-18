@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
-import { getCaseStudies } from "@/lib/airtable-case-studies";
+import { caseStudies } from "@/data/case-studies";
 import { CaseStudy } from "@/types/case-study";
 
 const siteUrl =
@@ -14,7 +14,6 @@ const siteUrl =
 // STATIC PARAMS GENERATION
 // ============================================================================
 export async function generateStaticParams() {
-  const caseStudies = await getCaseStudies();
   return caseStudies.map((caseStudy) => ({
     slug: caseStudy.slug,
   }));
@@ -28,7 +27,6 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const caseStudies = await getCaseStudies();
   const caseStudy = caseStudies.find((cs) => cs.slug === params.slug);
 
   if (!caseStudy) {
@@ -417,7 +415,6 @@ function buildEventJsonLd(caseStudy: CaseStudy) {
 }
 
 export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
-  const caseStudies = await getCaseStudies();
   const caseStudy = caseStudies.find((cs) => cs.slug === params.slug);
 
   if (!caseStudy) {

@@ -11,7 +11,7 @@ import Card from "@/components/ui/Card";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import CountUp from "@/components/ui/CountUp";
 import InteractiveDistrictMap from "@/components/district/DistrictMap";
-import { getVenues } from "@/lib/airtable-venues";
+import { venues } from "@/data/venues";
 import { Venue } from "@/types/venue";
 
 export const metadata: Metadata = {
@@ -427,8 +427,7 @@ function OperatingModel() {
 // ============================================================================
 // PAGE EXPORT
 // ============================================================================
-export default async function DistrictPage() {
-  const venues = await getVenues();
+export default function DistrictPage() {
 
   return (
     <>

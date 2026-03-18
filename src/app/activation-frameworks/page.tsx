@@ -4,7 +4,7 @@ import Container from "@/components/ui/Container";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import ComparisonTable from "@/components/activation-frameworks/ComparisonTable";
-import { getActivationFrameworks } from "@/lib/airtable-activations";
+import { activationFrameworks } from "@/data/activations";
 import { ActivationFramework } from "@/types/activation";
 
 export const metadata: Metadata = {
@@ -196,8 +196,7 @@ const faqJsonLd = {
   ],
 };
 
-export default async function ActivationFrameworksPage() {
-  const activationFrameworks = await getActivationFrameworks();
+export default function ActivationFrameworksPage() {
 
   return (
     <>

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
+import { getSupabase } from "@/lib/supabase";
 import { InquirySubmission } from "@/types/inquiry";
 
 function getResend() {
@@ -107,7 +108,35 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { error } = await getResend().emails.send({
+    // Persist to Supabase first — lead is never lost even if email fails
+    let dbError: string | null = null;
+    try {
+      const supabase = getSupabase();
+      const { error } = await supabase.from("inquiries").insert({
+        organization_name: body.organizationName,
+        contact_name: body.contactName,
+        email: body.email,
+        event_type: body.eventType,
+        estimated_guest_count: body.estimatedGuestCount,
+        preferred_date_start: body.preferredDateStart,
+        preferred_date_end: body.preferredDateEnd,
+        budget_range: body.budgetRange,
+        activation_scope: body.activationScope,
+        additional_notes: body.additionalNotes || null,
+        referral_source: body.referralSource || null,
+        submitted_at: body.submittedAt,
+      });
+      if (error) {
+        console.error("Supabase insert error:", error);
+        dbError = error.message;
+      }
+    } catch (err) {
+      console.error("Supabase connection error:", err);
+      dbError = err instanceof Error ? err.message : "Unknown DB error";
+    }
+
+    // Send notification email
+    const { error: emailError } = await getResend().emails.send({
       from: "F.E.E.D. Inquiries <inquiries@cornerbarmgmt.com>",
       to: "events@cornerbarmgmt.com",
       replyTo: body.email,
@@ -115,10 +144,14 @@ export async function POST(request: NextRequest) {
       html: buildEmailHtml(body),
     });
 
-    if (error) {
-      console.error("Resend error:", error);
+    if (emailError) {
+      console.error("Resend error:", emailError);
+    }
+
+    // If DB failed and email also failed, nothing was captured
+    if (dbError && emailError) {
       return NextResponse.json(
-        { error: "Failed to send inquiry. Please try again." },
+        { error: "Failed to process inquiry. Please try again." },
         { status: 500 }
       );
     }

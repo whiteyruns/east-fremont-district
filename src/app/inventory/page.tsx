@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Metadata } from "next";
-import { getVenues } from "@/lib/airtable-venues";
+import { venues } from "@/data/venues";
 import InventoryClient from "@/components/inventory/InventoryClient";
 
 export const metadata: Metadata = {
@@ -13,8 +13,7 @@ export const metadata: Metadata = {
       "Browse 16+ premium venues across the Fremont East Entertainment District — capacities, specs, rooftops, stages, and kitchens at a glance.",
   },
 };
-export default async function InventoryPage() {
-  const venues = await getVenues();
+export default function InventoryPage() {
 
   return (
     <Suspense fallback={<div className="animate-pulse py-24 text-center text-[#6B6760]">Loading venues...</div>}>

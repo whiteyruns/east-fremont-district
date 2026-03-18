@@ -1,11 +1,10 @@
 import { MetadataRoute } from "next";
-import { getCaseStudies } from "@/lib/airtable-case-studies";
+import { caseStudies } from "@/data/case-studies";
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://eastfremontdistrict.com";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const caseStudies = await getCaseStudies();
+export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date().toISOString();
 
   const staticRoutes: MetadataRoute.Sitemap = [

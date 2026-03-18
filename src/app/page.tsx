@@ -5,8 +5,8 @@ import SearchTheDistrict from "@/components/homepage/SearchTheDistrict";
 import CaseStudyPreview from "@/components/homepage/CaseStudyPreview";
 import HomepageCTA from "@/components/homepage/HomepageCTA";
 import Container from "@/components/ui/Container";
-import { getVenues } from "@/lib/airtable-venues";
-import { getCaseStudies } from "@/lib/airtable-case-studies";
+import { venues } from "@/data/venues";
+import { caseStudies } from "@/data/case-studies";
 
 function WhatThisIs() {
   return (
@@ -36,11 +36,7 @@ function WhatThisIs() {
   );
 }
 
-export default async function HomePage() {
-  const [venues, caseStudies] = await Promise.all([
-    getVenues(),
-    getCaseStudies(),
-  ]);
+export default function HomePage() {
 
   return (
     <>
