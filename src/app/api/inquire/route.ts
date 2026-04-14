@@ -130,6 +130,26 @@ export async function POST(request: NextRequest) {
         console.error("Supabase insert error:", error);
         dbError = error.message;
       }
+
+      // Also create a lead in efd_leads for pipeline tracking
+      const { error: leadError } = await supabase.from("efd_leads").insert({
+        source: "website",
+        status: "new",
+        organization_name: body.organizationName,
+        contact_name: body.contactName,
+        email: body.email,
+        event_type: body.eventType,
+        estimated_guest_count: body.estimatedGuestCount,
+        preferred_date_start: body.preferredDateStart,
+        preferred_date_end: body.preferredDateEnd,
+        budget_range: body.budgetRange,
+        activation_scope: body.activationScope,
+        additional_notes: body.additionalNotes || null,
+        referral_source: body.referralSource || null,
+      });
+      if (leadError) {
+        console.error("efd_leads insert error:", leadError);
+      }
     } catch (err) {
       console.error("Supabase connection error:", err);
       dbError = err instanceof Error ? err.message : "Unknown DB error";
