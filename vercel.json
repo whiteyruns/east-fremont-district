@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/follow-ups?secret=efd-cron-2026",
+      "schedule": "0 10 * * *"
+    }
+  ]
+}
