@@ -26,9 +26,7 @@ export default function HeroVideo() {
           <div className="space-y-6 max-w-4xl">
             {/* Headline */}
             <h1 className="text-[#F0EDE8] text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-              Rent an Entire
-              <br />
-              Entertainment District
+              Book an Entertainment District
             </h1>
 
             {/* Subheadline */}
