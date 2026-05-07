@@ -10,6 +10,8 @@ export default function SiteHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  if (pathname?.startsWith("/event/")) return null;
+
   const isActive = (href: string) => {
     if (href === "/") {
       return pathname === "/";
