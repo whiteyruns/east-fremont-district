@@ -1,10 +1,24 @@
 import type { Metadata } from "next";
 import ThrillerClient from "./ThrillerClient";
 
+const TITLE = "World's Largest Thriller Dance — Oct 26, 2026";
+const DESCRIPTION =
+  "F.E.E.D. is attempting the Guinness World Record for the largest simultaneous Thriller dance — 15,000 dancers on Fremont East, October 26, 2026.";
+
 export const metadata: Metadata = {
-  title: "World's Largest Thriller Dance — Oct 26, 2026",
-  description:
-    "F.E.E.D. is attempting the Guinness World Record for the largest simultaneous Thriller dance — 15,000 dancers on Fremont East, October 26, 2026.",
+  title: TITLE,
+  description: DESCRIPTION,
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    type: "website",
+    // opengraph-image.tsx in this folder is auto-discovered by Next.js
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
   robots: {
     index: false,
     follow: false,
