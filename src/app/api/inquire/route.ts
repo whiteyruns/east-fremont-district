@@ -158,7 +158,7 @@ export async function POST(request: NextRequest) {
     // Send notification email
     const { error: emailError } = await getResend().emails.send({
       from: "F.E.E.D. Inquiries <inquiries@cornerbarmgmt.com>",
-      to: "events@cornerbarmgmt.com",
+      to: "booktheblock@cornerbar.com",
       replyTo: body.email,
       subject: `New Inquiry: ${body.organizationName} — ${label(body.eventType)}`,
       html: buildEmailHtml(body),

@@ -35,7 +35,7 @@ function TermsContent() {
             <div className="space-y-4 text-[#9B978F] text-sm leading-relaxed">
               <p>
                 By accessing and using the F.E.E.D. website
-                (&ldquo;Site&rdquo;), operated by Corner Bar Management, you accept and
+                (&ldquo;Site&rdquo;), operated by Corner Bar, you accept and
                 agree to be bound by these Terms &amp; Conditions
                 (&ldquo;Terms&rdquo;). If you do not agree to these Terms, you should
                 not access or use the Site.
@@ -95,7 +95,7 @@ function TermsContent() {
               <p>
                 All content on the Site, including but not limited to text, graphics,
                 logos, images, photographs, videos, design elements, and software, is the
-                property of F.E.E.D., Corner Bar Management, or their
+                property of F.E.E.D., Corner Bar, or their
                 respective licensors and is protected by United States and international
                 copyright, trademark, and other intellectual property laws.
               </p>
@@ -132,7 +132,7 @@ function TermsContent() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#C49A6C] flex-shrink-0">•</span>
-                  <span>Submission of an inquiry does not create any binding agreement, contract, or obligation on the part of F.E.E.D. or Corner Bar Management</span>
+                  <span>Submission of an inquiry does not create any binding agreement, contract, or obligation on the part of F.E.E.D. or Corner Bar</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-[#C49A6C] flex-shrink-0">•</span>
@@ -161,7 +161,7 @@ function TermsContent() {
             <div className="space-y-4 text-[#9B978F] text-sm leading-relaxed">
               <p>
                 To the fullest extent permitted by applicable law, F.E.E.D.,
-                Corner Bar Management, and their respective officers, directors,
+                Corner Bar, and their respective officers, directors,
                 employees, agents, and affiliates shall not be liable for any indirect,
                 incidental, special, consequential, or punitive damages, including but not
                 limited to loss of profits, data, use, goodwill, or other intangible
@@ -202,7 +202,7 @@ function TermsContent() {
             <div className="space-y-4 text-[#9B978F] text-sm leading-relaxed">
               <p>
                 You agree to defend, indemnify, and hold harmless F.E.E.D.,
-                Corner Bar Management, and their respective officers, directors,
+                Corner Bar, and their respective officers, directors,
                 employees, agents, and affiliates from and against any and all claims,
                 damages, obligations, losses, liabilities, costs, or expenses (including
                 reasonable attorneys&apos; fees) arising from:
@@ -274,15 +274,15 @@ function TermsContent() {
               </p>
               <div className="bg-[#1A1D23] border border-[#2A2D33] rounded-lg p-6 space-y-2">
                 <p className="text-[#F0EDE8] font-semibold">F.E.E.D.</p>
-                <p>Operated by Corner Bar Management</p>
+                <p>Operated by Corner Bar</p>
                 <p>Las Vegas, NV</p>
                 <p>
                   Email:{" "}
                   <a
-                    href="mailto:events@cornerbarmgmt.com"
+                    href="mailto:booktheblock@cornerbar.com"
                     className="text-[#C49A6C] hover:underline"
                   >
-                    events@cornerbarmgmt.com
+                    booktheblock@cornerbar.com
                   </a>
                 </p>
               </div>

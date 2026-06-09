@@ -60,11 +60,11 @@ export async function POST(request: NextRequest) {
             </a>
             <p style="color: #9B978F; font-size: 13px; line-height: 1.6; margin-top: 32px;">
               Interested in a partnership? Reply to this email or reach out to
-              <a href="mailto:partnerships@feedtheblock.com" style="color: #C49A6C;">partnerships@feedtheblock.com</a>.
+              <a href="mailto:booktheblock@cornerbar.com" style="color: #C49A6C;">booktheblock@cornerbar.com</a>.
             </p>
             <hr style="border: none; border-top: 1px solid #2A2D33; margin: 24px 0;" />
             <p style="color: #6B6760; font-size: 11px;">
-              Corner Bar Management + Wynn Las Vegas<br />
+              Corner Bar + Wynn Las Vegas<br />
               East Fremont District &bull; Las Vegas
             </p>
           </div>
@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
     try {
       await getResend().emails.send({
         from: "F.E.E.D. Deck Downloads <inquiries@cornerbarmgmt.com>",
-        to: "events@cornerbarmgmt.com",
+        to: "booktheblock@cornerbar.com",
         subject: `Deck Download: ${organizationName || email}`,
         html: `
           <div style="font-family: -apple-system, sans-serif; max-width: 500px; background: #0F1115; color: #F0EDE8; padding: 24px; border-radius: 8px;">

@@ -38,8 +38,8 @@ const DAY2_HTML = `
   <hr style="border: none; border-top: 1px solid #2A2D33; margin: 24px 0;" />
   <p style="color: #6B6760; font-size: 11px;">
     Mauricio Morales — VP of Marketing and Events<br />
-    Corner Bar Management + Wynn Las Vegas<br />
-    partnerships@feedtheblock.com
+    Corner Bar + Wynn Las Vegas<br />
+    booktheblock@cornerbar.com
   </p>
 </div>
 `;
@@ -67,8 +67,8 @@ const DAY7_HTML = `
   <hr style="border: none; border-top: 1px solid #2A2D33; margin: 24px 0;" />
   <p style="color: #6B6760; font-size: 11px;">
     Mauricio Morales — VP of Marketing and Events<br />
-    Corner Bar Management + Wynn Las Vegas<br />
-    partnerships@feedtheblock.com
+    Corner Bar + Wynn Las Vegas<br />
+    booktheblock@cornerbar.com
   </p>
 </div>
 `;
@@ -121,7 +121,7 @@ export async function GET(request: NextRequest) {
         await resend.emails.send({
           from: "East Fremont District <inquiries@cornerbarmgmt.com>",
           to: lead.email,
-          replyTo: "partnerships@feedtheblock.com",
+          replyTo: "booktheblock@cornerbar.com",
           subject: DAY2_SUBJECT,
           html: DAY2_HTML,
         });
@@ -150,7 +150,7 @@ export async function GET(request: NextRequest) {
         await resend.emails.send({
           from: "East Fremont District <inquiries@cornerbarmgmt.com>",
           to: lead.email,
-          replyTo: "partnerships@feedtheblock.com",
+          replyTo: "booktheblock@cornerbar.com",
           subject: DAY7_SUBJECT,
           html: DAY7_HTML,
         });

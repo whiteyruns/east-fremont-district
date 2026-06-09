@@ -82,10 +82,10 @@ export default function SiteFooter() {
 <div className="flex items-center gap-3">
                 <Mail size={16} className="text-[#C49A6C] flex-shrink-0" />
                 <a
-                  href="mailto:events@cornerbarmgmt.com"
+                  href="mailto:booktheblock@cornerbar.com"
                   className="text-[#9B978F] text-sm hover:text-[#C49A6C] transition-colors"
                 >
-                  events@cornerbarmgmt.com
+                  booktheblock@cornerbar.com
                 </a>
               </div>
             </div>
@@ -125,7 +125,7 @@ export default function SiteFooter() {
               rel="noopener noreferrer"
               className="text-[#6B6760] text-xs hover:text-[#9B978F] transition-colors"
             >
-              Powered by Corner Bar Management
+              Powered by Corner Bar
             </a>
           </div>
         </div>

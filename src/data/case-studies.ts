@@ -4,7 +4,7 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "case-study-ftb-2025",
     slug: "feed-the-block-2025",
-    title: "Feed the Block — Wynn Nightlife x Corner Bar Management",
+    title: "Feed the Block — Wynn Nightlife x Corner Bar",
     clientType: "brand-activation",
     clientName: "Wynn Nightlife / ForestHouse",
     date: "2025 Season",
@@ -62,11 +62,11 @@ export const caseStudies: CaseStudy[] = [
     testimonial: {
       quote:
         "Feed the Block proved that East Fremont can deliver world-class entertainment at a scale that drives real economic impact — 32,000 attendees, national media coverage, and measurable casino crossover. This is the blueprint for activating Downtown Las Vegas.",
-      attribution: "Corner Bar Management",
+      attribution: "Corner Bar",
       role: "Feed the Block 2025 Season",
     },
     summary:
-      "Feed the Block is the large-scale, free cultural event series that launched F.E.E.D. as a destination. Produced in partnership with Wynn Las Vegas Nightlife (ForestHouse) and Corner Bar Management, the 2025 season featured three headline events — Gryffin, Major Lazer, and Diplo — transforming Fremont East into a high-energy cultural destination on Thursday evenings. With 32,000+ total attendees, 10,000+ casino crossover visits per event, nearly 8 million social impressions, and broadcast coverage across FOX, NBC, and CBS, the series demonstrated the district's capacity for city-scale cultural programming and directly catalyzed the creation of the F.E.E.D. platform.",
+      "Feed the Block is the large-scale, free cultural event series that launched F.E.E.D. as a destination. Produced in partnership with Wynn Las Vegas Nightlife (ForestHouse) and Corner Bar, the 2025 season featured three headline events — Gryffin, Major Lazer, and Diplo — transforming Fremont East into a high-energy cultural destination on Thursday evenings. With 32,000+ total attendees, 10,000+ casino crossover visits per event, nearly 8 million social impressions, and broadcast coverage across FOX, NBC, and CBS, the series demonstrated the district's capacity for city-scale cultural programming and directly catalyzed the creation of the F.E.E.D. platform.",
   },
   {
     id: "case-study-tu-2026",

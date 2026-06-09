@@ -34,7 +34,7 @@ function PrivacyContent() {
             </h2>
             <div className="space-y-4 text-[#9B978F] text-sm leading-relaxed">
               <p>
-                F.E.E.D. (Fremont East Entertainment District), operated by Corner Bar Management, collects limited
+                F.E.E.D. (Fremont East Entertainment District), operated by Corner Bar, collects limited
                 information to respond to inquiries and improve our website experience. We
                 do not operate user accounts or process payments through this website.
               </p>
@@ -206,15 +206,15 @@ function PrivacyContent() {
               </p>
               <div className="bg-[#1A1D23] border border-[#2A2D33] rounded-lg p-6 space-y-2">
                 <p className="text-[#F0EDE8] font-semibold">F.E.E.D.</p>
-                <p>Operated by Corner Bar Management</p>
+                <p>Operated by Corner Bar</p>
                 <p>Las Vegas, NV</p>
                 <p>
                   Email:{" "}
                   <a
-                    href="mailto:events@cornerbarmgmt.com"
+                    href="mailto:booktheblock@cornerbar.com"
                     className="text-[#C49A6C] hover:underline"
                   >
-                    events@cornerbarmgmt.com
+                    booktheblock@cornerbar.com
                   </a>
                 </p>
               </div>

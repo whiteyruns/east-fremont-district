@@ -9,10 +9,20 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { Venue } from "@/types/venue";
 import { filterVenues, FilterState, defaultFilters, filtersToParams } from "@/components/inventory/filterVenues";
 
+// Flagship venues to surface first in the "Find Your Venue" preview.
+const FEATURED_SLUGS = ["commonwealth", "park-on-fremont", "discopussy"];
+
 export default function SearchTheDistrict({ venues }: { venues: Venue[] }) {
   const router = useRouter();
   const [filters, setFilters] = useState<FilterState>(defaultFilters);
-  const filtered = filterVenues(venues, filters);
+  const filtered = [...filterVenues(venues, filters)].sort((a, b) => {
+    const ai = FEATURED_SLUGS.indexOf(a.slug);
+    const bi = FEATURED_SLUGS.indexOf(b.slug);
+    if (ai === -1 && bi === -1) return 0;
+    if (ai === -1) return 1;
+    if (bi === -1) return -1;
+    return ai - bi;
+  });
 
   const handleExplore = () => {
     router.push(`/inventory${filtersToParams(filters)}`);

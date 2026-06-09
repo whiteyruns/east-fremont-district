@@ -11,7 +11,7 @@ export default function StructuredData() {
     url: siteUrl,
     logo: `${siteUrl}/images/og/og-default.jpg`,
     image: `${siteUrl}/images/og/og-default.jpg`,
-    email: "events@cornerbarmgmt.com",
+    email: "booktheblock@cornerbar.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "East Fremont Street",
@@ -31,7 +31,7 @@ export default function StructuredData() {
     },
     parentOrganization: {
       "@type": "Organization",
-      name: "Corner Bar Management",
+      name: "Corner Bar",
       url: "https://www.cornerbarmgmt.com",
     },
     numberOfEmployees: {
@@ -54,7 +54,7 @@ export default function StructuredData() {
       "16 premium venues on one city block in Downtown Las Vegas. A unified operating platform for large-scale corporate activations.",
     publisher: {
       "@type": "Organization",
-      name: "Corner Bar Management",
+      name: "Corner Bar",
       url: "https://www.cornerbarmgmt.com",
     },
   };

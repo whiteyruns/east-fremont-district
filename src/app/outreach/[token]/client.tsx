@@ -133,7 +133,7 @@ export default function OutreachClient({ target, token }: { target: Target; toke
           </p>
           <h3 style={{ fontSize: 22, fontWeight: 800, marginBottom: 8 }}>Feed the Block 2025</h3>
           <p style={{ color: "#9B978F", fontSize: 14, lineHeight: 1.6, marginBottom: 20 }}>
-            Wynn Nightlife x Corner Bar Management. 4 events featuring Marshmello, Diplo, Major Lazer, and Gryffin.
+            Wynn Nightlife x Corner Bar. 4 events featuring Marshmello, Diplo, Major Lazer, and Gryffin.
             32,000+ attendees, 10K+ casino crossover per event, and FOX/NBC/CBS broadcast coverage.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 12 }}>
@@ -200,7 +200,7 @@ export default function OutreachClient({ target, token }: { target: Target; toke
           </a>
         </div>
         <p style={{ color: "#6B6760", fontSize: 11, marginTop: 40, textTransform: "uppercase", letterSpacing: "2px" }}>
-          Corner Bar Management + Wynn Las Vegas &bull; East Fremont District
+          Corner Bar + Wynn Las Vegas &bull; East Fremont District
         </p>
       </section>
     </div>

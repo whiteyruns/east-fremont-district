@@ -111,7 +111,7 @@ export const venues: Venue[] = [
   {
     slug: "electric-mushroom",
     name: "Electric Mushroom",
-    operator: "Corner Bar Mgmt",
+    operator: "Corner Bar",
     address: "518 E Fremont St, Las Vegas, NV 89101",
     zone: "CENTRAL",
     capacity: 200,
@@ -128,7 +128,7 @@ export const venues: Venue[] = [
   {
     slug: "park-on-fremont",
     name: "Park On Fremont",
-    operator: "Corner Bar Mgmt",
+    operator: "Corner Bar",
     address: "506 E Fremont St, Las Vegas, NV 89101",
     zone: "CENTRAL",
     capacity: 198,
@@ -143,7 +143,7 @@ export const venues: Venue[] = [
   {
     slug: "cheapshot",
     name: "Cheapshot",
-    operator: "Corner Bar Mgmt",
+    operator: "Corner Bar",
     address: "1028 Fremont St, Suite 200, Las Vegas, NV 89101",
     zone: "EAST",
     capacity: 99,
@@ -158,7 +158,7 @@ export const venues: Venue[] = [
   {
     slug: "commonwealth",
     name: "Commonwealth",
-    operator: "Corner Bar Mgmt",
+    operator: "Corner Bar",
     address: "525 E Fremont St, Las Vegas, NV 89101",
     zone: "CENTRAL",
     capacity: 300,
@@ -173,7 +173,7 @@ export const venues: Venue[] = [
   {
     slug: "laundry-room",
     name: "The Laundry Room",
-    operator: "Corner Bar Mgmt",
+    operator: "Corner Bar",
     address: "Inside Commonwealth, 525 E Fremont St, Las Vegas, NV 89101",
     zone: "CENTRAL",
     capacity: 20,
@@ -188,7 +188,7 @@ export const venues: Venue[] = [
   {
     slug: "lucky-day",
     name: "Lucky Day",
-    operator: "Corner Bar Mgmt",
+    operator: "Corner Bar",
     address: "1028 Fremont St, Suite 200, Las Vegas, NV 89101",
     zone: "EAST",
     capacity: 103,
@@ -203,7 +203,7 @@ export const venues: Venue[] = [
   {
     slug: "la-mona-rosa",
     name: "La Mona Rosa",
-    operator: "Corner Bar Mgmt",
+    operator: "Corner Bar",
     address: "100 S 6th St (corner of Fremont & 6th), Las Vegas, NV 89101",
     zone: "EAST",
     capacity: 212,
@@ -218,7 +218,7 @@ export const venues: Venue[] = [
   {
     slug: "discopussy",
     name: "Discopussy",
-    operator: "Corner Bar Mgmt",
+    operator: "Corner Bar",
     address: "512 E Fremont St (1028 Fremont St Suite 200 on some listings), Las Vegas, NV 89101",
     zone: "EAST",
     capacity: 500,
@@ -233,7 +233,7 @@ export const venues: Venue[] = [
   {
     slug: "we-all-scream",
     name: "We All Scream",
-    operator: "Corner Bar Mgmt",
+    operator: "Corner Bar",
     address: "517 E Fremont St, Las Vegas, NV 89101",
     zone: "CENTRAL",
     capacity: 1000,

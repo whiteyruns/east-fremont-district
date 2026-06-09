@@ -39,10 +39,10 @@ interface VenuePin {
 // Block: Las Vegas Blvd (~-115.1410) to 6th St (~-115.1393)
 const venuePins: VenuePin[] = [
   // ── South side (even numbers, west to east) ──
-  { slug: "park-on-fremont", name: "Park On Fremont", address: "506", capacity: 198, sqft: null, side: "south", x: 30, features: ["Kitchen", "Patio"], operator: "Corner Bar Mgmt" },
+  { slug: "park-on-fremont", name: "Park On Fremont", address: "506", capacity: 198, sqft: null, side: "south", x: 30, features: ["Kitchen", "Patio"], operator: "Corner Bar" },
   { slug: "evel-pie", name: "Evel Pie", address: "508", capacity: null, sqft: null, side: "south", x: 39, features: ["Kitchen"], operator: "Lev Group" },
-  { slug: "discopussy", name: "Discopussy", address: "512", capacity: 500, sqft: 6500, side: "south", x: 47, features: ["Stage", "6.5K sqft"], operator: "Corner Bar Mgmt" },
-  { slug: "lucky-day", name: "Lucky Day", address: "516", capacity: 103, sqft: 3000, side: "south", x: 53, features: ["LED Canopy"], operator: "Corner Bar Mgmt" },
+  { slug: "discopussy", name: "Discopussy", address: "512", capacity: 500, sqft: 6500, side: "south", x: 47, features: ["Stage", "6.5K sqft"], operator: "Corner Bar" },
+  { slug: "lucky-day", name: "Lucky Day", address: "516", capacity: 103, sqft: 3000, side: "south", x: 53, features: ["LED Canopy"], operator: "Corner Bar" },
   { slug: "electric-mushroom", name: "Electric Mushroom", address: "518", capacity: null, sqft: null, side: "south", x: 59, features: ["Stage", "Kitchen", "ADA"], operator: "Independent" },
   { slug: "eureka", name: "Eureka!", address: "520", capacity: null, sqft: null, side: "south", x: 69, features: ["Kitchen"], operator: "Eureka! Restaurant Group" },
 
@@ -51,20 +51,20 @@ const venuePins: VenuePin[] = [
   { slug: "taco-escobar", name: "Taco Escobar", address: "509", capacity: null, sqft: null, side: "north", x: 33, features: ["Kitchen"], operator: "Lev Group" },
   { slug: "the-griffin", name: "The Griffin", address: "511", capacity: 114, sqft: null, side: "north", x: 37, features: [], operator: "Independent" },
   { slug: "corduroy", name: "Corduroy", address: "515", capacity: 100, sqft: null, side: "north", x: 42, features: [], operator: "Independent" },
-  { slug: "we-all-scream", name: "We All Scream", address: "517", capacity: 1000, sqft: 10000, side: "north", x: 47, features: ["Rooftop", "Stage", "10K sqft"], operator: "Corner Bar Mgmt" },
-  { slug: "cheapshot", name: "Cheapshot", address: "519", capacity: 99, sqft: 3000, side: "north", x: 52, features: ["Stage", "Showroom"], operator: "Corner Bar Mgmt" },
+  { slug: "we-all-scream", name: "We All Scream", address: "517", capacity: 1000, sqft: 10000, side: "north", x: 47, features: ["Rooftop", "Stage", "10K sqft"], operator: "Corner Bar" },
+  { slug: "cheapshot", name: "Cheapshot", address: "519", capacity: 99, sqft: 3000, side: "north", x: 52, features: ["Stage", "Showroom"], operator: "Corner Bar" },
   { slug: "le-thai", name: "Le Thai", address: "523", capacity: null, sqft: null, side: "north", x: 57, features: ["Kitchen"], operator: "Le Thai" },
-  { slug: "commonwealth", name: "Commonwealth", address: "525", capacity: 300, sqft: 6000, side: "north", x: 69, features: ["Rooftop", "Stage", "6K sqft"], operator: "Corner Bar Mgmt" },
-  { slug: "laundry-room", name: "The Laundry Room", address: "525", capacity: null, sqft: null, side: "north", x: 69, features: ["Speakeasy"], operator: "Corner Bar Mgmt", nestedIn: "commonwealth" },
+  { slug: "commonwealth", name: "Commonwealth", address: "525", capacity: 300, sqft: 6000, side: "north", x: 69, features: ["Rooftop", "Stage", "6K sqft"], operator: "Corner Bar" },
+  { slug: "laundry-room", name: "The Laundry Room", address: "525", capacity: null, sqft: null, side: "north", x: 69, features: ["Speakeasy"], operator: "Corner Bar", nestedIn: "commonwealth" },
 
   // ── West side of 6th St spur ──
-  { slug: "la-mona-rosa", name: "La Mona Rosa", address: "100 S 6th St", capacity: null, sqft: 3500, side: "corner", x: 71, yOverride: 72, features: ["Stage", "Kitchen", "3.5K sqft"], operator: "Corner Bar Mgmt" },
+  { slug: "la-mona-rosa", name: "La Mona Rosa", address: "100 S 6th St", capacity: null, sqft: 3500, side: "corner", x: 71, yOverride: 72, features: ["Stage", "Kitchen", "3.5K sqft"], operator: "Corner Bar" },
 ];
 
 /* ── Derived stats ── */
 const totalCapacity = venuePins.reduce((s, v) => s + (v.capacity ?? 0), 0);
 const totalSqft = venuePins.reduce((s, v) => s + (v.sqft ?? 0), 0);
-const cbmCount = venuePins.filter((v) => v.operator === "Corner Bar Mgmt").length;
+const cbmCount = venuePins.filter((v) => v.operator === "Corner Bar").length;
 const maxCapacity = Math.max(...venuePins.map((v) => v.capacity ?? 0));
 
 /* ── Feature icon helper ── */
@@ -100,7 +100,7 @@ function VenueDot({
   onActivate: () => void;
   onDeactivate: () => void;
 }) {
-  const isCBM = pin.operator === "Corner Bar Mgmt";
+  const isCBM = pin.operator === "Corner Bar";
   const isNested = !!pin.nestedIn;
   const heat = capacityColor(pin.capacity);
 
@@ -315,7 +315,7 @@ export default function DistrictMap() {
       <div className="grid grid-cols-3 gap-3">
         {[
           { label: "Total Capacity", value: totalCapacity.toLocaleString(), sub: `${venuePins.length} venues` },
-          { label: "Corner Bar Mgmt", value: `${cbmCount} venues`, sub: `${Math.round((cbmCount / venuePins.length) * 100)}% of district` },
+          { label: "Corner Bar", value: `${cbmCount} venues`, sub: `${Math.round((cbmCount / venuePins.length) * 100)}% of district` },
           { label: "Total Sq Ft", value: `${(totalSqft / 1000).toFixed(0)}K+`, sub: "Indoor + outdoor" },
         ].map((stat) => (
           <div
@@ -508,7 +508,7 @@ export default function DistrictMap() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C49A6C] opacity-30" />
               <span className="relative inline-flex rounded-full h-3 w-3 bg-[#C49A6C]" />
             </span>
-            <span className="text-[11px] text-[#9B978F]">Corner Bar Mgmt</span>
+            <span className="text-[11px] text-[#9B978F]">Corner Bar</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-[#6B6760]" />
@@ -539,7 +539,7 @@ export default function DistrictMap() {
               className="h-0.5"
               style={{
                 background:
-                  activeVenue.operator === "Corner Bar Mgmt"
+                  activeVenue.operator === "Corner Bar"
                     ? "linear-gradient(90deg, #C49A6C, #8B7355)"
                     : "linear-gradient(90deg, #6B6760, #4A4740)",
               }}
@@ -558,7 +558,7 @@ export default function DistrictMap() {
                     </span>
                   </div>
                   <p className="text-[#9B978F] text-sm flex items-center gap-2">
-                    {activeVenue.operator === "Corner Bar Mgmt" && (
+                    {activeVenue.operator === "Corner Bar" && (
                       <span className="w-1.5 h-1.5 rounded-full bg-[#C49A6C] inline-block" />
                     )}
                     {activeVenue.operator}

@@ -9,7 +9,7 @@ export default function DistrictMetrics({ venues }: { venues: Venue[] }) {
   const totalSqFt = venues.reduce((sum, v) => sum + (v.squareFeet ?? 0), 0);
 
   const items = [
-    { value: <CountUp end={10} suffix="K+" duration={2000} />, label: "Guest Capacity" },
+    { value: <CountUp end={15} suffix="K+" duration={2000} />, label: "Guest Capacity" },
     { value: <CountUp end={venues.length} suffix="" duration={1200} />, label: "Venues" },
     { value: <CountUp end={9} suffix="+" duration={1000} />, label: "Stages & Dance Floors" },
     { value: <CountUp end={27} suffix="+" duration={1400} />, label: "Bar Wells" },

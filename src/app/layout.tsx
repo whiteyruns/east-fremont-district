@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     "Downtown Las Vegas",
     "multi-venue events",
     "brand activations",
-    "Corner Bar Management",
+    "Corner Bar",
   ],
-  authors: [{ name: "Corner Bar Management", url: "https://www.cornerbarmgmt.com" }],
+  authors: [{ name: "Corner Bar", url: "https://www.cornerbarmgmt.com" }],
   openGraph: {
     type: "website",
     locale: "en_US",
