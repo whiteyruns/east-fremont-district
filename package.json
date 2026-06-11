@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.35",
     "@react-three/fiber": "^8.18.0",
     "@supabase/supabase-js": "^2.99.2",
     "date-fns": "^4.1.0",
