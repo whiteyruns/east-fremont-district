@@ -9,7 +9,10 @@ const nextConfig = {
         source: "/:path*",
         headers: [
           { key: "X-Content-Type-Options", value: "nosniff" },
-          { key: "X-Frame-Options", value: "DENY" },
+          // SAMEORIGIN (not DENY) so the site can frame its own assets —
+          // e.g. the /newsletter page previews the email HTML in an iframe.
+          // Cross-origin clickjacking is still blocked.
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
           {
             key: "Referrer-Policy",
             value: "strict-origin-when-cross-origin",
