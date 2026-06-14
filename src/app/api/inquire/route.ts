@@ -155,21 +155,31 @@ export async function POST(request: NextRequest) {
       dbError = err instanceof Error ? err.message : "Unknown DB error";
     }
 
-    // Send notification email
-    const { error: emailError } = await getResend().emails.send({
-      from: "F.E.E.D. Inquiries <inquiries@cornerbarmgmt.com>",
-      to: "booktheblock@cornerbar.com",
-      replyTo: body.email,
-      subject: `New Inquiry: ${body.organizationName} — ${label(body.eventType)}`,
-      html: buildEmailHtml(body),
-    });
-
-    if (emailError) {
-      console.error("Resend error:", emailError);
+    // Send notification email (best-effort — a saved lead is never blocked
+    // by an email failure, including a missing/invalid Resend API key).
+    // Reply-To is the prospect, so hitting "Reply" reaches the lead directly.
+    let emailFailed = false;
+    try {
+      const { error: emailError } = await getResend().emails.send({
+        from: "F.E.E.D. Inquiries <booktheblock@cornerbar.com>",
+        to: "booktheblock@cornerbar.com",
+        replyTo: body.email,
+        bcc: "keith@gorunrabbit.com",
+        subject: `New Inquiry: ${body.organizationName} — ${label(body.eventType)}`,
+        html: buildEmailHtml(body),
+      });
+      if (emailError) {
+        console.error("Resend error:", emailError);
+        emailFailed = true;
+      }
+    } catch (err) {
+      console.error("Resend send failed:", err);
+      emailFailed = true;
     }
 
-    // If DB failed and email also failed, nothing was captured
-    if (dbError && emailError) {
+    // Only fail the request if BOTH persistence and notification failed —
+    // i.e. the lead was captured nowhere.
+    if (dbError && emailFailed) {
       return NextResponse.json(
         { error: "Failed to process inquiry. Please try again." },
         { status: 500 }
