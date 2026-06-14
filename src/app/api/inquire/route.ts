@@ -108,31 +108,14 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Persist to Supabase first — lead is never lost even if email fails
+    // Persist the lead to Supabase. efd_leads is the source of truth and
+    // feeds the Go Run Rabbit EFD pipeline dashboard. dbError reflects
+    // whether the lead was actually saved, so a captured lead is never
+    // reported back to the visitor as a failure.
     let dbError: string | null = null;
     try {
       const supabase = getSupabase();
-      const { error } = await supabase.from("inquiries").insert({
-        organization_name: body.organizationName,
-        contact_name: body.contactName,
-        email: body.email,
-        event_type: body.eventType,
-        estimated_guest_count: body.estimatedGuestCount,
-        preferred_date_start: body.preferredDateStart,
-        preferred_date_end: body.preferredDateEnd,
-        budget_range: body.budgetRange,
-        activation_scope: body.activationScope,
-        additional_notes: body.additionalNotes || null,
-        referral_source: body.referralSource || null,
-        submitted_at: body.submittedAt,
-      });
-      if (error) {
-        console.error("Supabase insert error:", error);
-        dbError = error.message;
-      }
-
-      // Also create a lead in efd_leads for pipeline tracking
-      const { error: leadError } = await supabase.from("efd_leads").insert({
+      const { error } = await supabase.from("efd_leads").insert({
         source: "website",
         status: "new",
         organization_name: body.organizationName,
@@ -147,8 +130,9 @@ export async function POST(request: NextRequest) {
         additional_notes: body.additionalNotes || null,
         referral_source: body.referralSource || null,
       });
-      if (leadError) {
-        console.error("efd_leads insert error:", leadError);
+      if (error) {
+        console.error("efd_leads insert error:", error);
+        dbError = error.message;
       }
     } catch (err) {
       console.error("Supabase connection error:", err);
