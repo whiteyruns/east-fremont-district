@@ -68,16 +68,12 @@ const FAQS = [
   },
 ];
 
-// Official Thrill The World routine — YouTube tutorial IDs (thrilltheworld.com/choreography)
+// Alternate full tutorials (different teachers / styles). Chips link out to
+// YouTube — all verified live + embeddable Jul 2026.
 const LESSONS = [
-  { name: "Zombie March", id: "jnoX8cX59LI" },
-  { name: "March Booty Swim", id: "EGxulu4PkCc" },
-  { name: "Shuffle Ha Slide", id: "Ao5l-n_o3gI" },
-  { name: "Hip N' Roar", id: "Kk4Lz_H2ypU" },
-  { name: "Wuz Up", id: "m3lAxOEhI7Y" },
-  { name: "Oh Snap Rock On", id: "9khADTSCM4g" },
-  { name: "Head N' Shoulders", id: "K-kI64NCH0s" },
-  { name: "Stomp", id: "OPel9YGDCGY" },
+  { name: "Gustavo Krystal — step-by-step", id: "_cxhWEp_DRI" },
+  { name: "BeBox — Show Me The Moves", id: "u55ZB2D0Ox0" },
+  { name: "pug4pres — mirrored follow-along", id: "cNkCiL5DgRY" },
 ];
 
 const SHOW_TIME = new Date("2026-10-25T19:00:00-07:00").getTime();
@@ -572,21 +568,21 @@ export default function ThrillerClient() {
                 Six minutes. <em>Learn it cold.</em>
               </h2>
               <p>
-                We&apos;re all learning the official{" "}
+                We&apos;re all learning the{" "}
                 <strong style={{ color: "var(--cream)" }}>
-                  Thrill The World
+                  original &ldquo;Thriller&rdquo; choreography
                 </strong>{" "}
-                routine — the standardized, beginner-friendly version danced at
-                Thriller record events worldwide, so 15,000 of us move as one.
-                Watch the full run-through, then drill each of the eight
-                sections until it&apos;s muscle memory.
+                — the moves everyone knows, taught step by step for total
+                beginners. Watch the full breakdown below, then drill it until
+                it&apos;s muscle memory. We&apos;ll confirm the official F.E.E.D.
+                run-through and cue sheet closer to the date.
               </p>
             </div>
 
             <div className={classes(styles.videoEmbed, styles.reveal)}>
               <iframe
-                src="https://www.youtube.com/embed/heEFEOfAn4k?rel=0"
-                title="Thrill The World — full Thriller routine (regular speed, with cueing)"
+                src="https://www.youtube.com/embed/yBYXKrBlveU?rel=0"
+                title="Michael Jackson 'Thriller' — step-by-step beginner tutorial with section breakdown (2024)"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 loading="lazy"
@@ -594,7 +590,7 @@ export default function ThrillerClient() {
             </div>
 
             <div className={classes(styles.lessonBar, styles.reveal)}>
-              <span className={styles.lessonBarLabel}>Drill it section by section</span>
+              <span className={styles.lessonBarLabel}>Prefer a different teacher? More full tutorials</span>
               <div className={styles.lessonGrid}>
                 {LESSONS.map((l, i) => (
                   <a
@@ -613,29 +609,10 @@ export default function ThrillerClient() {
               </div>
             </div>
 
-            <div className={classes(styles.videoLinks, styles.reveal)}>
-              <a
-                className={classes(styles.btn, styles.btnGhost)}
-                href="https://www.youtube.com/watch?v=D2c1TyAiDX8"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Slow-motion practice version <span className="arrow" />
-              </a>
-              <a
-                className={classes(styles.btn, styles.btnGold)}
-                href="https://thrilltheworld.com/choreography"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Full course · script · slowed music <span className="arrow" />
-              </a>
-            </div>
-
             <p className={styles.videoCredit}>
-              Tutorial by Thrill The World — a fan-run event, not affiliated
-              with Sony Music Entertainment. Original Thriller choreography by
-              Michael Peters; Thrill The World teaches a modified version.
+              Tutorials by their respective YouTube creators. Original
+              &ldquo;Thriller&rdquo; choreography (1983) by Michael Peters and
+              Michael Jackson.
             </p>
           </div>
         </section>
