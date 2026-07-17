@@ -68,6 +68,18 @@ const FAQS = [
   },
 ];
 
+// Official Thrill The World routine — YouTube tutorial IDs (thrilltheworld.com/choreography)
+const LESSONS = [
+  { name: "Zombie March", id: "jnoX8cX59LI" },
+  { name: "March Booty Swim", id: "EGxulu4PkCc" },
+  { name: "Shuffle Ha Slide", id: "Ao5l-n_o3gI" },
+  { name: "Hip N' Roar", id: "Kk4Lz_H2ypU" },
+  { name: "Wuz Up", id: "m3lAxOEhI7Y" },
+  { name: "Oh Snap Rock On", id: "9khADTSCM4g" },
+  { name: "Head N' Shoulders", id: "K-kI64NCH0s" },
+  { name: "Stomp", id: "OPel9YGDCGY" },
+];
+
 const SHOW_TIME = new Date("2026-10-25T19:00:00-07:00").getTime();
 
 function classes(...c: Array<string | false | null | undefined>): string {
@@ -314,6 +326,7 @@ export default function ThrillerClient() {
             <a href="#about">The Attempt</a>
             <a href="#details">Event</a>
             <a href="#how">How it works</a>
+            <a href="#learn">Learn the Dance</a>
             <a href="#faq">FAQ</a>
             <a href="#register" className={styles.navCta}>
               Register Free
@@ -550,37 +563,80 @@ export default function ThrillerClient() {
           </div>
         </section>
 
-        {/* VIDEO */}
-        <section className={styles.videoSection}>
+        {/* CHOREOGRAPHY / LEARN THE DANCE */}
+        <section className={styles.videoSection} id="learn">
           <div className={styles.container}>
             <div className={classes(styles.videoHead, styles.reveal)}>
-              <div className={styles.sectionEyebrow}>The Choreography</div>
+              <div className={styles.sectionEyebrow}>Learn the Dance</div>
               <h2 className={styles.sectionTitle}>
                 Six minutes. <em>Learn it cold.</em>
               </h2>
               <p>
-                The official F.E.E.D. tutorial — the full routine broken down
-                move by move. Watch it once, then watch it again with your
-                friends.
+                We&apos;re all learning the official{" "}
+                <strong style={{ color: "var(--cream)" }}>
+                  Thrill The World
+                </strong>{" "}
+                routine — the standardized, beginner-friendly version danced at
+                Thriller record events worldwide, so 15,000 of us move as one.
+                Watch the full run-through, then drill each of the eight
+                sections until it&apos;s muscle memory.
               </p>
             </div>
 
-            <div
-              className={classes(styles.videoFrame, styles.reveal)}
-              role="button"
-              aria-label="Play choreography tutorial"
-              tabIndex={0}
-            >
-              <button className={styles.videoPlay} aria-label="Play">
-                <svg viewBox="0 0 24 24">
-                  <path d="M6 4l14 8-14 8V4z" />
-                </svg>
-              </button>
-              <div className={styles.videoCaption}>
-                <span>▸</span> Official Tutorial · F.E.E.D. 2026
-              </div>
-              <div className={styles.videoTime}>06:14</div>
+            <div className={classes(styles.videoEmbed, styles.reveal)}>
+              <iframe
+                src="https://www.youtube.com/embed/heEFEOfAn4k?rel=0"
+                title="Thrill The World — full Thriller routine (regular speed, with cueing)"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+              />
             </div>
+
+            <div className={classes(styles.lessonBar, styles.reveal)}>
+              <span className={styles.lessonBarLabel}>Drill it section by section</span>
+              <div className={styles.lessonGrid}>
+                {LESSONS.map((l, i) => (
+                  <a
+                    key={l.id}
+                    className={styles.lessonChip}
+                    href={`https://www.youtube.com/watch?v=${l.id}`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className={styles.lessonNum}>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className={styles.lessonName}>{l.name}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className={classes(styles.videoLinks, styles.reveal)}>
+              <a
+                className={classes(styles.btn, styles.btnGhost)}
+                href="https://www.youtube.com/watch?v=D2c1TyAiDX8"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Slow-motion practice version <span className="arrow" />
+              </a>
+              <a
+                className={classes(styles.btn, styles.btnGold)}
+                href="https://thrilltheworld.com/choreography"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Full course · script · slowed music <span className="arrow" />
+              </a>
+            </div>
+
+            <p className={styles.videoCredit}>
+              Tutorial by Thrill The World — a fan-run event, not affiliated
+              with Sony Music Entertainment. Original Thriller choreography by
+              Michael Peters; Thrill The World teaches a modified version.
+            </p>
           </div>
         </section>
 
@@ -757,33 +813,64 @@ function RegisterSection() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [success, setSuccess] = useState<{ name: string; email: string; conf: string } | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<{
+    name: string;
+    email: string;
+    conf: string;
+    alreadyRegistered: boolean;
+  } | null>(null);
   const submitRef = useRef<HTMLButtonElement | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const shake = () => {
+    submitRef.current?.animate(
+      [
+        { transform: "translateX(0)" },
+        { transform: "translateX(-6px)" },
+        { transform: "translateX(6px)" },
+        { transform: "translateX(0)" },
+      ],
+      { duration: 300 },
+    );
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fn = firstName.trim();
     const ln = lastName.trim();
     const em = email.trim();
     if (!fn || !ln || !/^\S+@\S+\.\S+$/.test(em)) {
-      submitRef.current?.animate(
-        [
-          { transform: "translateX(0)" },
-          { transform: "translateX(-6px)" },
-          { transform: "translateX(6px)" },
-          { transform: "translateX(0)" },
-        ],
-        { duration: 300 },
-      );
+      shake();
       return;
     }
+    setError(null);
     setSubmitting(true);
-    window.setTimeout(() => {
-      const conf =
-        "FEED-" + Math.random().toString(36).substring(2, 8).toUpperCase();
-      setSuccess({ name: fn, email: em, conf });
+    try {
+      const res = await fetch("/api/thriller-register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ firstName: fn, lastName: ln, email: em }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data?.success) {
+        throw new Error(data?.error || "Registration failed. Please try again.");
+      }
+      setSuccess({
+        name: fn,
+        email: em,
+        conf: data.confirmationCode,
+        alreadyRegistered: !!data.alreadyRegistered,
+      });
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : "Registration failed. Please try again.",
+      );
+      shake();
+    } finally {
       setSubmitting(false);
-    }, 900);
+    }
   };
 
   return (
@@ -808,14 +895,31 @@ function RegisterSection() {
                   <path d="M5 12l5 5L20 7" />
                 </svg>
               </div>
-              <h3>You&apos;re on the grid, {success.name}.</h3>
+              <h3>
+                {success.alreadyRegistered
+                  ? `You're already on the grid, ${success.name}.`
+                  : `You're on the grid, ${success.name}.`}
+              </h3>
               <p>
-                Confirmation sent to{" "}
-                <strong style={{ color: "var(--cream)" }}>
-                  {success.email}
-                </strong>
-                . Watch your inbox for rehearsal locations and your assigned
-                grid square.
+                {success.alreadyRegistered ? (
+                  <>
+                    This email was already registered — you&apos;re all set. We
+                    re-sent your confirmation to{" "}
+                    <strong style={{ color: "var(--cream)" }}>
+                      {success.email}
+                    </strong>
+                    .
+                  </>
+                ) : (
+                  <>
+                    Confirmation sent to{" "}
+                    <strong style={{ color: "var(--cream)" }}>
+                      {success.email}
+                    </strong>
+                    . Watch your inbox for rehearsal locations and your assigned
+                    grid square.
+                  </>
+                )}
               </p>
               <div className="conf">Confirmation · {success.conf}</div>
             </div>
@@ -845,6 +949,18 @@ function RegisterSection() {
                 onChange={setEmail}
                 autoComplete="email"
               />
+              {error && (
+                <p
+                  role="alert"
+                  style={{
+                    color: "#F26D7D",
+                    fontSize: "13px",
+                    margin: "-4px 0 0",
+                  }}
+                >
+                  {error}
+                </p>
+              )}
               <button
                 ref={submitRef}
                 type="submit"
