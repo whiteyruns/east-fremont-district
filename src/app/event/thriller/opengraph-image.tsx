@@ -119,7 +119,7 @@ export default async function OgImage() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            padding: "56px 72px",
+            padding: "44px 72px",
             width: "100%",
             height: "100%",
           }}
@@ -196,7 +196,7 @@ export default async function OgImage() {
             <div
               style={{
                 display: "flex",
-                fontSize: 92,
+                fontSize: 84,
                 color: "#F0EDE8",
                 fontFamily: "Cormorant",
                 lineHeight: 0.95,
@@ -210,9 +210,9 @@ export default async function OgImage() {
                 display: "flex",
                 fontFamily: "Nosifer",
                 color: "#C8102E",
-                fontSize: 168,
+                fontSize: 150,
                 lineHeight: 0.9,
-                marginTop: 14,
+                marginTop: 12,
                 transform: "rotate(-2deg)",
                 textShadow:
                   "0 0 32px rgba(200,16,46,0.6), 0 6px 0 rgba(0,0,0,0.55)",
@@ -223,12 +223,12 @@ export default async function OgImage() {
             <div
               style={{
                 display: "flex",
-                fontSize: 92,
+                fontSize: 84,
                 color: "#F0EDE8",
                 fontFamily: "Cormorant",
                 lineHeight: 0.95,
                 letterSpacing: -2,
-                marginTop: 18,
+                marginTop: 12,
               }}
             >
               Dance
