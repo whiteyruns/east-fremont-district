@@ -245,14 +245,14 @@ export default function SponsorClient() {
                 F.E.E.D. impressions in Year One — the platform your brand steps
                 onto.
               </div>
-              <div className={styles.statDelta}>national broadcast built in</div>
+              <div className={styles.statDelta}>national press built in</div>
             </div>
             <div className={classes(styles.stat, styles.reveal)}>
-              <div className={styles.statLabel}>Broadcast Footprint</div>
-              <div className={styles.statValue}>FOX · NBC · CBS</div>
+              <div className={styles.statLabel}>Media Footprint</div>
+              <div className={styles.statValue}>Regional TV · National press</div>
               <div className={styles.statDetail}>
-                Prior F.E.E.D. events drew national broadcast plus local
-                headline press and viral creator content.
+                Prior F.E.E.D. events drew regional broadcast, national press
+                pickup, and viral creator content.
               </div>
             </div>
           </div>
