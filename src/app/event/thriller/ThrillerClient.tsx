@@ -48,11 +48,11 @@ function HeroMoon() {
 const FAQS = [
   {
     q: "Do I need to know how to dance?",
-    a: "Not at all. The official choreography is built for beginners — most steps are walks, claps, and the famous arm-sway. We offer 30+ free drop-in rehearsals across Las Vegas in the four weeks leading up to the event, plus a full video tutorial you can practice with at home.",
+    a: "Not at all. The official choreography is built for beginners — most steps are walks, claps, and the famous arm-sway. We'll share a full video tutorial you can practice with at home in the weeks leading up to the event.",
   },
   {
     q: "Is there a cost to participate?",
-    a: "Registration is completely free. You'll just need to show up on October 26 with a costume of your choosing — full Thriller-zombie attire is encouraged but not required. We recommend arriving by 4:00 PM to avoid the check-in rush.",
+    a: "Registration is completely free. You'll just need to show up on October 25 with a costume of your choosing — full Thriller-zombie attire is encouraged but not required. We recommend arriving by 4:00 PM to avoid the check-in rush.",
   },
   {
     q: "What counts toward the official Guinness count?",
@@ -68,7 +68,7 @@ const FAQS = [
   },
 ];
 
-const SHOW_TIME = new Date("2026-10-26T19:00:00-07:00").getTime();
+const SHOW_TIME = new Date("2026-10-25T19:00:00-07:00").getTime();
 
 function classes(...c: Array<string | false | null | undefined>): string {
   return c.filter(Boolean).join(" ");
@@ -77,7 +77,6 @@ function classes(...c: Array<string | false | null | undefined>): string {
 export default function ThrillerClient() {
   const [navScrolled, setNavScrolled] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [spotsLeft, setSpotsLeft] = useState(3418);
   const [countdown, setCountdown] = useState("— days · — hours · — min · — sec");
 
   const starCanvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -338,7 +337,7 @@ export default function ThrillerClient() {
 
           <div className={styles.heroContent}>
             <div className={styles.heroEyebrow}>
-              Oct 26, 2026 · Downtown Las Vegas
+              Oct 25, 2026 · Downtown Las Vegas
             </div>
             <h1 className={styles.heroTitle}>
               World&apos;s <span className="stroke">Largest</span>
@@ -418,7 +417,7 @@ export default function ThrillerClient() {
                   2009
                 </div>
                 <div className={styles.statDetail}>
-                  Seventeen years, untouched. October 26, 2026 — the night the
+                  Seventeen years, untouched. October 25, 2026 — the night the
                   record changes hands.
                 </div>
               </div>
@@ -456,9 +455,9 @@ export default function ThrillerClient() {
                   </svg>
                 </div>
                 <div className={styles.detailLabel}>Date</div>
-                <div className={styles.detailValue}>Monday, October 26</div>
+                <div className={styles.detailValue}>Sunday, October 25</div>
                 <div className={styles.detailSub}>
-                  2026 · The night before Halloween
+                  2026 · The Sunday before Halloween
                 </div>
               </div>
               <div className={classes(styles.detailCard, styles.reveal)}>
@@ -525,7 +524,7 @@ export default function ThrillerClient() {
                 {
                   n: "ii",
                   t: "Learn the choreography",
-                  d: "Stream the official tutorial at home, or join one of 30 free studio drop-ins across the valley.",
+                  d: "Stream the official tutorial at home and practice with your crew before the big night.",
                 },
                 {
                   n: "iii",
@@ -560,9 +559,9 @@ export default function ThrillerClient() {
                 Six minutes. <em>Learn it cold.</em>
               </h2>
               <p>
-                The official F.E.E.D. tutorial — broken down move by move by
-                lead choreographer Marina Velez. Watch it once, then watch it
-                again with your friends.
+                The official F.E.E.D. tutorial — the full routine broken down
+                move by move. Watch it once, then watch it again with your
+                friends.
               </p>
             </div>
 
@@ -586,10 +585,7 @@ export default function ThrillerClient() {
         </section>
 
         {/* REGISTRATION */}
-        <RegisterSection
-          spotsLeft={spotsLeft}
-          onSubmit={() => setSpotsLeft((n) => Math.max(0, n - 1))}
-        />
+        <RegisterSection />
 
         {/* FAQ */}
         <section className={styles.faq} id="faq">
@@ -756,13 +752,7 @@ export default function ThrillerClient() {
   );
 }
 
-function RegisterSection({
-  spotsLeft,
-  onSubmit,
-}: {
-  spotsLeft: number;
-  onSubmit: () => void;
-}) {
+function RegisterSection() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -793,7 +783,6 @@ function RegisterSection({
         "FEED-" + Math.random().toString(36).substring(2, 8).toUpperCase();
       setSuccess({ name: fn, email: em, conf });
       setSubmitting(false);
-      onSubmit();
     }, 900);
   };
 
@@ -870,8 +859,7 @@ function RegisterSection({
         </div>
 
         <div className={styles.formFoot}>
-          Spots remaining ·{" "}
-          <strong>{spotsLeft.toLocaleString()} / 15,000</strong>
+          Free registration · <strong>15,000 spots on the grid</strong>
         </div>
       </div>
     </section>

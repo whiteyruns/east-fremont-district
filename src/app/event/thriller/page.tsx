@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import ThrillerClient from "./ThrillerClient";
 
-const TITLE = "World's Largest Thriller Dance — Oct 26, 2026";
+const TITLE = "World's Largest Thriller Dance — Oct 25, 2026";
 const DESCRIPTION =
-  "F.E.E.D. is attempting the Guinness World Record for the largest simultaneous Thriller dance — 15,000 dancers on Fremont East, October 26, 2026.";
+  "F.E.E.D. is attempting the Guinness World Record for the largest simultaneous Thriller dance — 15,000 dancers on Fremont East, October 25, 2026.";
 
 export const metadata: Metadata = {
   title: TITLE,

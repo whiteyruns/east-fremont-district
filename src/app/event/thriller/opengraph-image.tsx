@@ -6,7 +6,7 @@ export const runtime = "nodejs";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt =
-  "World's Largest Thriller Dance — Oct 26, 2026 — F.E.E.D. Downtown Las Vegas";
+  "World's Largest Thriller Dance — Oct 25, 2026 — F.E.E.D. Downtown Las Vegas";
 
 // Google Fonts serves WOFF2 by default, which Satori doesn't support.
 // An old-browser UA forces the TTF response.
@@ -185,7 +185,7 @@ export default async function OgImage() {
                 background: "rgba(196,154,108,0.06)",
               }}
             >
-              OCT 26, 2026 · LAS VEGAS
+              OCT 25, 2026 · LAS VEGAS
             </div>
           </div>
 
