@@ -20,7 +20,16 @@ create table if not exists thriller_registrations (
 create index if not exists thriller_registrations_created_at_idx
   on thriller_registrations (created_at desc);
 
--- Deny-by-default: only the service_role key (used by our /api routes) can
--- read or write. anon/public get nothing. Matches the EFD RLS lockdown posture
--- (new tables must enable RLS; server routes use service_role which bypasses it).
+-- RLS on (matches the EFD lockdown posture — new tables must enable RLS).
+-- service_role (used by our /api routes) bypasses RLS entirely for reads/writes.
 alter table thriller_registrations enable row level security;
+
+-- Public signups arrive through our server-side /api/thriller-register route.
+-- Allow INSERT only, so the table works whether the route authenticates with
+-- service_role (bypasses RLS) or falls back to the anon key. Deliberately NO
+-- select/update/delete policy — reads stay locked to service_role, so
+-- registrant PII is never exposed to anon.
+create policy "thriller_registrations public insert"
+  on thriller_registrations
+  for insert to anon, authenticated
+  with check (true);
