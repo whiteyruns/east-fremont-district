@@ -632,10 +632,10 @@ export default function ThrillerClient() {
                 <p>
                   Can&apos;t find what you need? Email{" "}
                   <a
-                    href="mailto:thriller@feed-vegas.org"
+                    href="mailto:booktheblock@cornerbar.com"
                     style={{ color: "var(--gold)", textDecoration: "none" }}
                   >
-                    thriller@feed-vegas.org
+                    booktheblock@cornerbar.com
                   </a>{" "}
                   and a real human will answer within a day.
                 </p>
@@ -684,7 +684,7 @@ export default function ThrillerClient() {
         <section className={styles.sponsors}>
           <div className={styles.container}>
             <div className={styles.sponsorsLabel}>
-              Officially Adjudicated &amp; Presented With
+              Officially Adjudicated By
             </div>
             <div className={styles.sponsorsRow}>
               <div className={classes(styles.sponsor, styles.sponsorGwr)}>
@@ -699,9 +699,6 @@ export default function ThrillerClient() {
                   ™
                 </sup>
               </div>
-              <div className={styles.sponsor}>Sponsor Logo · 01</div>
-              <div className={styles.sponsor}>Sponsor Logo · 02</div>
-              <div className={styles.sponsor}>Sponsor Logo · 03</div>
             </div>
           </div>
         </section>
@@ -744,13 +741,7 @@ export default function ThrillerClient() {
                     <a href="#register">Register</a>
                   </li>
                   <li>
-                    <a href="#">Volunteer</a>
-                  </li>
-                  <li>
-                    <a href="#">Sponsor</a>
-                  </li>
-                  <li>
-                    <a href="#">Press kit</a>
+                    <a href="/event/thriller/sponsor">Sponsor</a>
                   </li>
                 </ul>
               </div>
@@ -758,16 +749,16 @@ export default function ThrillerClient() {
                 <h4>Connect</h4>
                 <ul>
                   <li>
-                    <a href="#">Instagram</a>
+                    <a
+                      href="https://www.instagram.com/cornerbarmgmt"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Instagram
+                    </a>
                   </li>
                   <li>
-                    <a href="#">TikTok</a>
-                  </li>
-                  <li>
-                    <a href="#">YouTube</a>
-                  </li>
-                  <li>
-                    <a href="mailto:thriller@feed-vegas.org">Email us</a>
+                    <a href="mailto:booktheblock@cornerbar.com">Email us</a>
                   </li>
                 </ul>
               </div>
