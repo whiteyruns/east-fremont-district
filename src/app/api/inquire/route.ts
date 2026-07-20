@@ -28,6 +28,7 @@ const LABEL_MAP: Record<string, string> = {
   corporate: "Corporate Event",
   convention: "Convention",
   "brand-activation": "Brand Activation",
+  "event-sponsorship": "Event Sponsorship",
   private: "Private Event",
   other: "Other",
 };

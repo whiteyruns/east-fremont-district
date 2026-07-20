@@ -1,8 +1,19 @@
+export const EVENT_TYPES = [
+  "corporate",
+  "convention",
+  "brand-activation",
+  "event-sponsorship",
+  "private",
+  "other",
+] as const;
+
+export type EventType = (typeof EVENT_TYPES)[number];
+
 export interface InquirySubmission {
   organizationName: string;
   contactName: string;
   email: string;
-  eventType: "corporate" | "convention" | "brand-activation" | "private" | "other";
+  eventType: EventType;
   estimatedGuestCount: GuestCountRange;
   preferredDateStart: string;
   preferredDateEnd: string;

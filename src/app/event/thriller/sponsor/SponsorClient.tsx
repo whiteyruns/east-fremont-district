@@ -7,7 +7,7 @@ function classes(...c: Array<string | false | null | undefined>): string {
   return c.filter(Boolean).join(" ");
 }
 
-const INQUIRE = "/inquire";
+const INQUIRE = "/inquire?type=event-sponsorship";
 
 const WHY = [
   {

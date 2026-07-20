@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CheckCircle } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
-import { GuestCountRange, BudgetRange } from "@/types/inquiry";
+import { GuestCountRange, BudgetRange, EventType, EVENT_TYPES } from "@/types/inquiry";
 
 // ============================================================================
 // PAGE HEADER SECTION
@@ -93,7 +93,7 @@ function InquiryForm() {
     organizationName: "",
     contactName: "",
     email: "",
-    eventType: "corporate" as const,
+    eventType: "corporate" as EventType,
     estimatedGuestCount: "500-1000" as GuestCountRange,
     preferredDateStart: "",
     preferredDateEnd: "",
@@ -102,6 +102,27 @@ function InquiryForm() {
     additionalNotes: "",
     referralSource: "",
   });
+
+  // Pre-fill from query params so CTAs can land pre-selected (e.g. the
+  // Thriller sponsor page links /inquire?type=event-sponsorship, and
+  // outreach links pass company/contact/email). Read after mount so the
+  // form still prerenders statically.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type");
+    const company = params.get("company");
+    const contact = params.get("contact");
+    const email = params.get("email");
+    setFormData((prev) => ({
+      ...prev,
+      ...(EVENT_TYPES.includes(type as EventType)
+        ? { eventType: type as EventType }
+        : {}),
+      ...(company ? { organizationName: company } : {}),
+      ...(contact ? { contactName: contact } : {}),
+      ...(email ? { email } : {}),
+    }));
+  }, []);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -233,6 +254,7 @@ function InquiryForm() {
             <option value="corporate">Corporate Event</option>
             <option value="convention">Convention</option>
             <option value="brand-activation">Brand Activation</option>
+            <option value="event-sponsorship">Event Sponsorship</option>
             <option value="private">Private Event</option>
             <option value="other">Other</option>
           </select>
