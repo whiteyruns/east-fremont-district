@@ -32,6 +32,7 @@ interactive map, and the budget snippet. Nothing else was asked for.
 src/app/event/insomniac360/
 ├── page.tsx                 # metadata + noindex; server component
 ├── opengraph-image.tsx      # 1200×630 link-preview card (Satori)
+├── VimeoHero.tsx            # hero background: Marshmello recap + poster fallback
 ├── Insomniac360Client.tsx   # page shell: hero, block info, proof, section wrappers
 ├── BlockMap.tsx             # layered map viewer + legend (client)
 ├── BudgetTable.tsx          # budget snippet (client)
@@ -42,15 +43,40 @@ public/images/insomniac360/
 ├── layer-2.png      52 KB   # ┐
 ├── layer-3.png     104 KB   # │ transparent overlays, same dimensions
 ├── layer-4.png      33 KB   # │
-└── layer-5.png       3 KB   # ┘
+├── layer-5.png       3 KB   # ┘
+└── hero-marshmello.webp  546 KB   # hero poster / fallback still
 ```
 
-804 KB total. All five plates are the same dimensions and are stacked with
+The five plates total 804 KB. They are the same dimensions and are stacked with
 `absolute inset-0`, so **any crop or resize must be applied to all five
 identically** or the overlays stop registering with the plate.
 
-Hero video reuses the existing `/video/hero-drone.mp4` and
-`/images/homepage/hero-main.webp` poster. No new video assets.
+## The hero
+
+The hero plays **"FEED THE BLOCK w/ MARSHMELLO"** — the 1-year anniversary
+recap, Fremont East, 2 April 2026. 49s, Corner Bar Management's Vimeo,
+id `1180884686`. Same clip swan-forest embeds as
+`FORESTHOUSE_VIMEO_FEED_THE_BLOCK` on its Forest House talent page.
+
+It is an **iframe, not a `<video>`**, because the recap exists only on Vimeo —
+the download endpoint isn't open to us, so there is no file to put in
+`/public`. `VimeoHero.tsx` follows the pattern swan-forest already uses.
+
+`hero-marshmello.webp` (546 KB) is the poster — a still from the same night,
+so the image→video swap doesn't jump. It renders immediately and sits
+underneath permanently.
+
+⚠️ **The poster only cross-fades away once Vimeo reports `play`/`playProgress`
+over postMessage — never on `onLoad` or a timer.** This is load-bearing. A
+blocked or slow embed still fires `onLoad` while rendering nothing, so fading
+on load blacks out the hero. Gated this way, a failed embed just leaves the
+still, which is a perfectly good hero. Don't "simplify" it back to `onLoad`.
+
+Under `prefers-reduced-motion` the iframe is never mounted at all — no video is
+fetched and there's nothing to pause.
+
+`/video/hero-drone.mp4` is **no longer used by this route**, but it is still
+the homepage hero (`src/components/homepage/HeroVideo.tsx`). Do not delete it.
 
 ---
 
@@ -316,9 +342,15 @@ correctly 404, no JS errors.
 - **No real device.** Touch emulation is not a real iPhone; momentum scrolling
   on the map's horizontal scroller in particular is worth a thirty-second
   check on actual hardware.
-- **Hero video weight.** `/video/hero-drone.mp4` is 7.5 MB and autoplays. It's
-  pre-existing and used elsewhere on the site, so this isn't new — but nobody
-  has looked at what it costs on cellular.
+- **Hero playback, automated browsers.** Keith confirmed the recap plays in an
+  ordinary browser window (2026-08-13), which is what settled it. It could not
+  be confirmed from the tooling here: every browser available to this work is
+  automation-driven, and Vimeo serves those a "couldn't verify the security of
+  your connection" interstitial instead of the video. **So don't treat a
+  still-looking hero in a headless/CDP screenshot as a regression** — check it
+  in a real window first. If it ever genuinely stops moving, look at whether
+  `eastfremontdistrict.com` is allowed under the clip's Vimeo embed privacy
+  settings. Either way the page degrades to the Marshmello still, not to black.
 
 ---
 

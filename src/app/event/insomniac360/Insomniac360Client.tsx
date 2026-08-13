@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 import BlockMap from "./BlockMap";
 import BudgetTable from "./BudgetTable";
+import VimeoHero from "./VimeoHero";
 
 const BLOCK_STATS = [
   { value: "15,000+", label: "Capacity, full street closure" },
@@ -63,26 +63,6 @@ const PILLARS = [
 ];
 
 export default function Insomniac360Client() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  /**
-   * Respect prefers-reduced-motion. Handled imperatively rather than by
-   * toggling the `autoPlay` attribute, so the server and client markup stay
-   * identical — the video simply holds on its first frame instead.
-   */
-  useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const apply = () => {
-      const v = videoRef.current;
-      if (!v) return;
-      if (mq.matches) v.pause();
-      else void v.play().catch(() => {});
-    };
-    apply();
-    mq.addEventListener("change", apply);
-    return () => mq.removeEventListener("change", apply);
-  }, []);
-
   return (
     <div className="bg-[#0F1115] text-[#F0EDE8]">
       {/* ── Minimal bar (site header is hidden on /event/* routes) ── */}
@@ -105,19 +85,9 @@ export default function Insomniac360Client() {
 
       {/* ── Hero ── */}
       <section className="relative w-full h-screen min-h-[600px] overflow-hidden bg-[#0A0C0F]">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/images/homepage/hero-main.webp"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/video/hero-drone.mp4" type="video/mp4" />
-        </video>
+        <VimeoHero />
 
-        {/* Scrim — kept light through the middle so the drone footage reads.
+        {/* Scrim — kept light through the middle so the recap footage reads.
             Type legibility comes from the text-shadow below, not from burying
             the video. Top stays darker to carry the F.E.E.D. bar. */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0C0F]/70 via-[#0A0C0F]/30 to-[#0F1115]" />
@@ -134,7 +104,7 @@ export default function Insomniac360Client() {
             On the Block
           </p>
           {/* #F0EDE8/75 rather than the usual #9B978F — this sits over the
-              brightest part of the drone footage, and the lighter scrim leaves
+              brightest part of the recap footage, and the lighter scrim leaves
               secondary grey too close to the neon behind it. */}
           <p className="text-[#F0EDE8]/75 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mt-8">
             Six rooms, a permitted street closure, and 15,000+ people in the
