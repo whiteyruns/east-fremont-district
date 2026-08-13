@@ -10,7 +10,7 @@ Next.js website for the Fremont East Entertainment District (F.E.E.D.) in Downto
 
 ### Event Details
 - **What:** World's largest Thriller dance — official Guinness World Record attempt
-- **Date:** October 25, 2026 (Sunday — moved off Monday Oct 26 for family turnout; re-confirm new date with GWR rep)
+- **Date:** **Sunday, October 25, 2026** — CONFIRMED by Keith (2026-07-20). Moved off Monday Oct 26 for family turnout. Anything still showing Oct 26 (wireframe, older deck exports) is STALE. Re-confirm the date with the GWR rep.
 - **Location:** F.E.E.D., Downtown Las Vegas
 - **Target:** 15,000 dancers (current record: 13,597, set in Mexico City, 2009)
 - **Check-in:** 4:00 PM | **Attempt:** 7:00 PM
@@ -31,7 +31,7 @@ Next.js website for the Fremont East Entertainment District (F.E.E.D.) in Downto
 
 ### Open Questions (from wireframe)
 1. Target number — is 15,000 the right goal?
-2. ~~Event date — October 25, 2026 (Sunday; moved off Monday Oct 26)~~
+2. ~~Event date — Sunday, October 25, 2026 (confirmed)~~
 3. Registration — embed form, link to Eventbrite, or just collect emails?
 4. Sponsors — any confirmed partners to feature?
 5. Route — `/thriller` or `/events/thriller`?
@@ -83,3 +83,63 @@ Keith wants to create the actual designed page in Canva using Claude Design. No 
 - 296.6M earned media impressions
 - 7 venues, 20K+ sq ft
 - Past headliners: Marshmello, Diplo, Major Lazer, Gryffin
+
+## Active Project: Insomniac 360 — On The Block (pitch page)
+
+### Route
+`/event/insomniac360` — unlisted. `/event/` is already in `robots.ts` disallow
+and absent from `sitemap.ts`; `page.tsx` also sets `robots: { index: false }`.
+`SiteHeader` and `ConditionalFooter` both bail on `/event/*`, so the page
+supplies its own minimal bar and footer.
+
+### Files
+- `src/app/event/insomniac360/page.tsx` — metadata + noindex
+- `src/app/event/insomniac360/opengraph-image.tsx` — 1200×630 link-preview card (Satori)
+- `src/app/event/insomniac360/Insomniac360Client.tsx` — hero, block info, proof, sections
+- `src/app/event/insomniac360/BlockMap.tsx` — layered map viewer + HTML legend (ported from `festival-map.html`)
+- `src/app/event/insomniac360/BudgetTable.tsx` — budget snippet, totals derived not hard-coded
+
+### Source material (from Ryan Doherty, Corner Bar, via Dropbox)
+- `Insomniac360 PRESENTATION.pdf` (5pp) — map layers, image-only, no text layer
+- `Insomniac360 PRESENTATIONonepage.pdf` — composite map + budget snippet
+- `festival-map.html` + `assets/` — base.jpg, layer-2…layer-5.png
+
+### Map assets — in place
+`public/images/insomniac360/`: `base.jpg` plus `layer-2.png`…`layer-5.png`,
+downscaled to 3200px wide, then cropped 372px off the top to remove the baked-in
+Insomniac wordmark band — now **3200×1278, 804KB total**. The legend from that
+band was rebuilt as HTML in `BlockMap.tsx`.
+
+⚠️ All five plates stack with `absolute inset-0`, so **any crop/resize must be
+applied to all five identically** or the overlays stop registering.
+
+⚠️ Untouched originals live in `assets/` at the repo root, but **`assets/` is
+gitignored** — they are not in the repo, only on the machine that built this.
+
+Layer labels were verified by inspecting each PNG, not guessed:
+layer-2 = Capacity & Access, layer-3 = Zones & Stage, layer-4 = Venues,
+layer-5 = Street Food. Array order in `BlockMap.tsx` is paint order and the
+`id` doubles as the keyboard shortcut.
+
+`composite.jpg` and its `onError` fallback branch were deleted — 979KB for a
+code path that could never execute. See `src/app/event/insomniac360/HANDOFF.md`
+for the full writeup, open questions, and the OG/robots.txt caveat.
+
+### Content decisions
+- **6 venues on this page, not 8.** Back of House is the production/artist
+  compound (described separately, not counted) and La Mona Rosa was dropped
+  2026-08-13 — it never appeared on the block map, so it's out of scope for
+  this activation. ⚠️ District Stats above says 7 venues district-wide; the 6
+  is this activation's scope and is deliberate. Don't reconcile them.
+- Positioning copy (hero subhead, block intro, all three pillars) was rewritten
+  for a **promoter** rather than a brand. Every figure in it is F.E.E.D.'s own
+  year-one data; **nothing asserts anything about Insomniac's business.** Keep
+  it that way. Wants a human read before sending.
+
+### Budget (per activation, venue buyout + fixed opex)
+- Fixed operating costs: $28,200 — fencing/road closure $10,000, permits $2,000,
+  parking lot buyouts $7,500 (Triple Bs, Park on Fremont, John E Carson, street
+  spots), Metro $7,500, medical $1,200
+- Weekday grand total: $99,700–$104,700 by month
+- Weekend grand total: $197,700–$202,700 by month
+- Production, branding, talent, F&B quoted separately
