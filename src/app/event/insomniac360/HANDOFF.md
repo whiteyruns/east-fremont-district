@@ -17,9 +17,12 @@ interactive map, and the budget snippet. Nothing else was asked for.
 | Route renders | ✅ |
 | `npx tsc --noEmit` | ✅ clean |
 | `npx eslint src/app/event/insomniac360` | ✅ clean |
-| `next build` | ✅ clean — prerenders static, 5.66 kB / 102 kB First Load JS |
+| `next build` | ✅ clean — prerenders static, 8.43 kB / 105 kB First Load JS |
 | Exercised in a real browser | ✅ desktop + mobile — see [Verified](#verified) |
-| Deployed | ❌ not committed, not pushed |
+| Deployed | ✅ live — commit `8e3e3cd`, pushed to `main` 2026-08-13 |
+
+**Live at** `https://www.eastfremontdistrict.com/event/insomniac360`
+(the apex 307-redirects to `www`).
 
 ---
 
@@ -301,9 +304,15 @@ driven in real Chrome — not a static replica.
 - No tap target under 40px
 - **Zero JS errors at any viewport**
 
+**Live (production, after deploy)** — re-checked on
+`www.eastfremontdistrict.com`, desktop and mobile: 6 venue tiles with the
+right names, 14 legend items, map frame 1184px / 960px, magnifier present on
+desktop and absent on touch, no horizontal overflow, `noindex, nofollow,
+nocache` still served, OG image 200, all five plates 200, `composite.jpg`
+correctly 404, no JS errors.
+
 ### Still not verified
 
-- **Not deployed.** Never committed, never pushed, never seen on Vercel.
 - **No real device.** Touch emulation is not a real iPhone; momentum scrolling
   on the map's horizontal scroller in particular is worth a thirty-second
   check on actual hardware.
