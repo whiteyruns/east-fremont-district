@@ -19,9 +19,9 @@ the current cornerbar.com-scoped Resend key cannot use.
 - [x] Migration 009 applied to production via the Supabase SQL editor (Oct 5) — all six columns verified in `information_schema`
 - [x] GA4 events pushed to the dataLayer: `deck_request`, `inquiry_submit`
 - [x] GTM container GTM-WZ6R39CG **Version 3 published Oct 5**: triggers `CE - deck_request` / `CE - inquiry_submit` + tags `GA4 Event - deck_request` / `GA4 Event - inquiry_submit` (G-DHKCS98H8S)
-- [ ] GA4: mark `deck_request` and `inquiry_submit` as key events once they've fired (Admin → Events) — needs the site deploy first
+- [ ] GA4: mark `deck_request` and `inquiry_submit` as key events once they've fired (Admin → Events) — site is deployed; a real deck request will fire the first one
 - [ ] Reply-to alias for direct replies — proposal: `booktheblock+lvcva@cornerbar.com` (M365 plus-addressing, no admin needed); send a test to it and confirm it lands in the booktheblock@ inbox BEFORE putting it in the handoff page
-- [ ] Commit + push (also publishes the tagged links to the handoff page Wicked Creative has)
+- [x] Committed + pushed `bb562c6` Oct 5; Vercel live ~80s later. Verified on prod: /book-the-block 200 (noindex), deck PDF 200, unsubscribe route rejects bad tokens, handoff page carries 6 tagged links, Pink Monkey on /inventory, first-touch cookie set + preserved on www (Secure, 90d)
 
 ## 2. Landing page + deck gate — built Oct 5, uncommitted
 - [x] `/book-the-block` (noindex, not in sitemap): hero, what a takeover includes, year-one numbers + TransUnion card, deck gate, find-your-window. Email CTA buttons now point here.
