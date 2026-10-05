@@ -41,7 +41,7 @@ export default function StructuredData() {
     },
     sameAs: [
       "https://www.instagram.com/cornerbarmgmt",
-      "https://www.linkedin.com/company/corner-bar-management",
+      "https://www.linkedin.com/company/corner-bar-mgmt",
     ],
   };
 

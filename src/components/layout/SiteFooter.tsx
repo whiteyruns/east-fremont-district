@@ -34,7 +34,7 @@ export default function SiteFooter() {
                 </svg>
               </a>
               <a
-                href="https://www.linkedin.com/company/corner-bar-management"
+                href="https://www.linkedin.com/company/corner-bar-mgmt"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#6B6760] hover:text-[#C49A6C] transition-colors"
