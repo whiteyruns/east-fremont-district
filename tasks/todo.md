@@ -57,6 +57,7 @@ Source: Dropbox "2026-THE-BLOCK-SE-Video-TAVI-v03.mp4" — 1080p24, 1:58, 152 MB
 - [x] Web renditions encoded (scratchpad, not in repo): 1080p ~5 Mbps 76 MB, 720p ~2.5 Mbps 39 MB, faststart
 - [x] **HOSTED on Cloudflare Stream** (Claymore And Colt account `790154fb…`, Images+Stream $0/mo + 1,000 min storage $5/mo, card ·6983, Keith ticked the terms Oct 5). Imported from the Dropbox dl=1 URL (browser upload tool caps at 10 MB). Video ID `e502c93ee815534ef86a0a86703b2c46`, customer subdomain `customer-x375kgoi6jdpeco1.cloudflarestream.com`; iframe/HLS/thumbnail all 200.
 - [x] `NEXT_PUBLIC_BLOCK_VIDEO_EMBED` set in Vercel (production + preview) and `.env.local`; embed URL carries our poster
+- [x] Pushed `9ab2b22`; verified live: /book-the-block#video renders the Stream iframe, "Thirteen venues" ×6, poster assets 200, handoff-page email carries the video link + thirteen
 - [ ] Venue count: email/deck/landing rolled to THIRTEEN (Keith, Oct 5, to match the video). Site metadata + inventory still say 16 (all operators) — separate decision
 
 ## 5. Industry outreach — trade press + planner events (added Oct 5; dates verified)
