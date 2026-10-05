@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { CheckCircle } from "lucide-react";
+import { sendGTMEvent } from "@next/third-parties/google";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
@@ -158,6 +159,8 @@ function InquiryForm() {
       }
 
       setSubmitted(true);
+      // GA4 conversion event (needs a matching Custom Event trigger in GTM).
+      sendGTMEvent({ event: "inquiry_submit", event_type: formData.eventType });
     } catch (err) {
       setError(
         err instanceof Error ? err.message : "An error occurred. Please try again."

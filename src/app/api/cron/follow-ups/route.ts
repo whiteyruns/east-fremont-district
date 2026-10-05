@@ -1,6 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 import { getSupabase } from "@/lib/supabase";
+import {
+  TOUCHES,
+  FROM,
+  REPLY_TO,
+  unsubscribeUrl,
+  firstNameOf,
+  type DripContext,
+} from "@/lib/drip";
+
+// Book the Block drip. Runs daily (vercel.json). For every deck-request lead
+// still in play, sends the one touch whose window matches the lead's age and
+// hasn't been sent yet. See src/lib/drip.ts for the schedule and copy.
 
 const CRON_SECRET = process.env.CRON_SECRET || "efd-cron-2026";
 
@@ -12,69 +24,18 @@ function getResend() {
 
 function daysBetween(dateStr: string): number {
   const created = new Date(dateStr);
-  const now = new Date();
-  return Math.floor((now.getTime() - created.getTime()) / (1000 * 60 * 60 * 24));
+  return Math.floor((Date.now() - created.getTime()) / (1000 * 60 * 60 * 24));
 }
 
-const DAY2_SUBJECT = "Did you get a chance to review the Feed the Block deck?";
-const DAY2_HTML = `
-<div style="font-family: -apple-system, sans-serif; max-width: 600px; margin: 0 auto; background: #0F1115; color: #F0EDE8; padding: 32px; border-radius: 8px;">
-  <h1 style="color: #C49A6C; font-size: 20px; margin-bottom: 16px;">Quick follow-up</h1>
-  <p style="font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
-    Just checking in — did you get a chance to look through the Feed the Block sponsorship deck we sent over?
-  </p>
-  <p style="font-size: 14px; line-height: 1.6; margin-bottom: 24px;">
-    We're heading into our busiest season with 9 events remaining in 2026. A few category exclusive
-    slots are still available, but they tend to go fast once conversations start.
-  </p>
-  <p style="font-size: 14px; line-height: 1.6; margin-bottom: 24px;">
-    If you have any questions or want to talk through what an activation could look like for your brand,
-    just reply to this email — happy to jump on a quick call.
-  </p>
-  <a href="https://eastfremontdistrict.com/FeedTheBlock-RetailSponsorship-2026.pdf"
-     style="display: inline-block; background: #C49A6C; color: #0F1115; font-weight: 700; font-size: 14px; padding: 12px 24px; text-decoration: none; border-radius: 6px;">
-    Re-download Deck
-  </a>
-  <hr style="border: none; border-top: 1px solid #2A2D33; margin: 24px 0;" />
-  <p style="color: #6B6760; font-size: 11px;">
-    Mauricio Morales — VP of Marketing and Events<br />
-    Corner Bar + Wynn Las Vegas<br />
-    booktheblock@cornerbar.com
-  </p>
-</div>
-`;
-
-const DAY7_SUBJECT = "Would you like to schedule a walkthrough of East Fremont?";
-const DAY7_HTML = `
-<div style="font-family: -apple-system, sans-serif; max-width: 600px; margin: 0 auto; background: #0F1115; color: #F0EDE8; padding: 32px; border-radius: 8px;">
-  <h1 style="color: #C49A6C; font-size: 20px; margin-bottom: 16px;">See it in person</h1>
-  <p style="font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
-    The deck gives you the numbers, but East Fremont is really something you have to experience.
-    Walking the block, seeing the venues, understanding the flow — it clicks differently in person.
-  </p>
-  <p style="font-size: 14px; line-height: 1.6; margin-bottom: 24px;">
-    If you or anyone on your team is going to be in Vegas, we'd love to do a quick 30-minute walkthrough
-    of the district. We can show you the activation zones, talk through logistics, and map out
-    what your brand's footprint could look like.
-  </p>
-  <p style="font-size: 14px; line-height: 1.6; margin-bottom: 24px;">
-    No pressure — just reply with your availability and we'll make it happen.
-  </p>
-  <a href="https://eastfremontdistrict.com/inquire"
-     style="display: inline-block; background: #C49A6C; color: #0F1115; font-weight: 700; font-size: 14px; padding: 12px 24px; text-decoration: none; border-radius: 6px;">
-    Submit an Inquiry
-  </a>
-  <hr style="border: none; border-top: 1px solid #2A2D33; margin: 24px 0;" />
-  <p style="color: #6B6760; font-size: 11px;">
-    Mauricio Morales — VP of Marketing and Events<br />
-    Corner Bar + Wynn Las Vegas<br />
-    booktheblock@cornerbar.com
-  </p>
-</div>
-`;
+type Lead = {
+  id: string;
+  email: string;
+  organization_name: string | null;
+  contact_name: string | null;
+  created_at: string;
+};
 
 export async function GET(request: NextRequest) {
-  // Verify cron secret
   const secret = request.nextUrl.searchParams.get("secret");
   if (secret !== CRON_SECRET) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -83,100 +44,111 @@ export async function GET(request: NextRequest) {
   const supabase = getSupabase();
   const resend = getResend();
 
-  // Get all deck-download leads that haven't been followed up
+  // Deck-request leads still in play: not moved along the pipeline, not
+  // unsubscribed. Anything older than the last window is ignored by the
+  // age check below, so a backlog never gets blasted.
   const { data: leads, error } = await supabase
     .from("efd_leads")
     .select("id, email, organization_name, contact_name, created_at")
     .eq("source", "deck-download")
-    .in("status", ["new", "qualified"]);
+    .in("status", ["new", "qualified"])
+    .is("unsubscribed_at", null);
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
-
   if (!leads || leads.length === 0) {
-    return NextResponse.json({ message: "No follow-ups needed", sent: 0 });
+    return NextResponse.json({ message: "No follow-ups needed", checked: 0, sent: {} });
   }
 
-  let day2Sent = 0;
-  let day7Sent = 0;
+  const sent: Record<string, number> = {};
+  let stopped = 0;
 
-  for (const lead of leads) {
+  for (const lead of leads as Lead[]) {
     const age = daysBetween(lead.created_at);
+    const touch = TOUCHES.find((t) => age >= t.minAge && age < t.maxAge);
+    if (!touch) continue;
 
-    // Check what follow-ups have already been sent
     const { data: activities } = await supabase
       .from("efd_lead_activity")
       .select("action, details")
-      .eq("lead_id", lead.id)
-      .eq("action", "email_sent");
+      .eq("lead_id", lead.id);
 
-    const sentTypes = (activities || []).map(
-      (a: { details: { type?: string } }) => a.details?.type
+    const types = new Set(
+      (activities || []).map((a: { details: { type?: string } | null }) => a.details?.type),
     );
+    if (types.has(touch.type)) continue;
+    if (types.has("drip_stopped")) continue;
 
-    // Day 2 follow-up (send between day 2-6)
-    if (age >= 2 && age < 7 && !sentTypes.includes("day2_followup")) {
-      try {
-        await resend.emails.send({
-          from: "East Fremont District <inquiries@cornerbarmgmt.com>",
-          to: lead.email,
-          replyTo: "booktheblock@cornerbar.com",
-          subject: DAY2_SUBJECT,
-          html: DAY2_HTML,
-        });
+    // Stop the drip once they've inquired — the inquiry form writes its own
+    // efd_leads row, so look for one under the same email.
+    const { data: inquiries } = await supabase
+      .from("efd_leads")
+      .select("id")
+      .eq("source", "website")
+      .ilike("email", lead.email)
+      .limit(1);
 
-        await supabase.from("efd_lead_activity").insert({
-          lead_id: lead.id,
-          action: "email_sent",
-          details: { type: "day2_followup", subject: DAY2_SUBJECT },
-        });
-
-        // Update last_contacted_at
-        await supabase
-          .from("efd_leads")
-          .update({ last_contacted_at: new Date().toISOString() })
-          .eq("id", lead.id);
-
-        day2Sent++;
-      } catch (err) {
-        console.error(`Day 2 follow-up failed for ${lead.email}:`, err);
-      }
+    if (inquiries && inquiries.length > 0) {
+      await supabase.from("efd_lead_activity").insert({
+        lead_id: lead.id,
+        action: "note_added",
+        details: { type: "drip_stopped", reason: "inquiry_submitted", inquiry_id: inquiries[0].id },
+      });
+      stopped++;
+      continue;
     }
 
-    // Day 7 follow-up (send between day 7-14)
-    if (age >= 7 && age < 14 && !sentTypes.includes("day7_followup")) {
-      try {
-        await resend.emails.send({
-          from: "East Fremont District <inquiries@cornerbarmgmt.com>",
-          to: lead.email,
-          replyTo: "booktheblock@cornerbar.com",
-          subject: DAY7_SUBJECT,
-          html: DAY7_HTML,
-        });
+    const ctx: DripContext = {
+      firstName: firstNameOf(lead.contact_name),
+      requestedOn: new Date(lead.created_at).toLocaleDateString("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+        timeZone: "America/Los_Angeles",
+      }),
+      unsubscribeUrl: unsubscribeUrl(lead.id),
+    };
 
-        await supabase.from("efd_lead_activity").insert({
-          lead_id: lead.id,
-          action: "email_sent",
-          details: { type: "day7_followup", subject: DAY7_SUBJECT },
-        });
-
-        await supabase
-          .from("efd_leads")
-          .update({ last_contacted_at: new Date().toISOString() })
-          .eq("id", lead.id);
-
-        day7Sent++;
-      } catch (err) {
-        console.error(`Day 7 follow-up failed for ${lead.email}:`, err);
+    try {
+      const { error: sendError } = await resend.emails.send({
+        from: FROM,
+        to: lead.email,
+        replyTo: REPLY_TO,
+        bcc: "keith@gorunrabbit.com",
+        subject: touch.subject,
+        html: touch.html(ctx),
+        text: touch.text(ctx),
+        headers: {
+          "List-Unsubscribe": `<${ctx.unsubscribeUrl}>, <mailto:booktheblock@cornerbar.com?subject=unsubscribe>`,
+          "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+        },
+      });
+      if (sendError) {
+        console.error(`${touch.type} failed for ${lead.email}:`, sendError);
+        continue;
       }
+
+      await supabase.from("efd_lead_activity").insert({
+        lead_id: lead.id,
+        action: "email_sent",
+        details: { type: touch.type, subject: touch.subject },
+      });
+      await supabase
+        .from("efd_leads")
+        .update({ last_contacted_at: new Date().toISOString() })
+        .eq("id", lead.id);
+
+      sent[touch.type] = (sent[touch.type] ?? 0) + 1;
+    } catch (err) {
+      console.error(`${touch.type} failed for ${lead.email}:`, err);
     }
   }
 
   return NextResponse.json({
     message: "Follow-ups processed",
     checked: leads.length,
-    day2Sent,
-    day7Sent,
+    sent,
+    stopped,
   });
 }

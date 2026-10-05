@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 export default function DeckDownload() {
   const [email, setEmail] = useState("");
@@ -27,6 +28,8 @@ export default function DeckDownload() {
       if (res.ok && data.deckUrl) {
         setStatus("success");
         setDeckUrl(data.deckUrl);
+        // GA4 conversion event (needs a matching Custom Event trigger in GTM).
+        sendGTMEvent({ event: "deck_request" });
       } else {
         setStatus("error");
       }

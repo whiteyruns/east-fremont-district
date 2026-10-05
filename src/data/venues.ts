@@ -201,8 +201,8 @@ export const venues: Venue[] = [
   },
 
   {
-    slug: "la-mona-rosa",
-    name: "La Mona Rosa",
+    slug: "pink-monkey",
+    name: "Pink Monkey",
     operator: "Corner Bar",
     address: "100 S 6th St (corner of Fremont & 6th), Las Vegas, NV 89101",
     zone: "EAST",
@@ -212,7 +212,7 @@ export const venues: Venue[] = [
     hasStage: true,
     hasKitchen: true,
     adaAccessible: null,
-    notes: "3,500-sq-ft Mexican restaurant & bar replacing La Comida; features dining room, bar, patio and a planned stage for entertainment.",
+    notes: "3,500-sq-ft bar & nightclub, formerly La Mona Rosa (Mexican restaurant & bar) — renamed/reconcepted Oct 2026 per Keith. Capacity, kitchen and stage figures carried over from the restaurant era; confirm for the club format.",
   },
 
   {

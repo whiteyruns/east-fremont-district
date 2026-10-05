@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face { font-family:'Anton'; src:url('fonts/Anton-Regular.ttf'); font-weight:400; }
+  @font-face { font-family:'BarlowC'; src:url('fonts/BarlowCondensed-Medium.ttf'); font-weight:500; }
+  @font-face { font-family:'BarlowC'; src:url('fonts/BarlowCondensed-SemiBold.ttf'); font-weight:600; }
+  @font-face { font-family:'BarlowC'; src:url('fonts/BarlowCondensed-Bold.ttf'); font-weight:700; }
+  @font-face { font-family:'Barlow'; src:url('fonts/Barlow-Regular.ttf'); font-weight:400; }
+  @font-face { font-family:'Barlow'; src:url('fonts/Barlow-Medium.ttf'); font-weight:500; }
+  @font-face { font-family:'Barlow'; src:url('fonts/Barlow-SemiBold.ttf'); font-weight:600; }
+  @font-face { font-family:'Barlow'; src:url('fonts/Barlow-Bold.ttf'); font-weight:700; }
+  @font-face { font-family:'Plex'; src:url('fonts/IBMPlexMono-Medium.ttf'); font-weight:500; }
+  @font-face { font-family:'Plex'; src:url('fonts/IBMPlexMono-SemiBold.ttf'); font-weight:600; }
+
+  :root{
+    --gold:#C49A6C;
+    --gold-b:#DBB98D;
+    --bronze:#8A6A42;
+    --cream:#F0EDE8;
+    --muted:#9B978F;
+    --ink:#0F1115;
+    --ink2:#14161B;
+    --panel:#191C22;
+    --edge:#2A2D33;
+    --white:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  @page{ size:1280px 720px; margin:0; }
+  html,body{ background:#000; }
+  body{ font-family:'Barlow',sans-serif; color:var(--cream); }
+
+  .slide{ position:relative; width:1280px; height:720px; overflow:hidden; background:var(--ink); page-break-after:always; }
+  .slide:last-child{ page-break-after:auto; }
+
+  .eyebrow{ font-family:'Plex'; font-weight:600; letter-spacing:.26em; text-transform:uppercase; font-size:12px; color:var(--gold); }
+  .eyebrow.mut{ color:var(--muted); }
+  .sec-title{ font-family:'Anton'; text-transform:uppercase; color:var(--cream); line-height:.92; }
+  strong{ color:var(--cream); font-weight:600; }
+  em{ font-style:normal; color:var(--gold); }
+
+  .footer{
+    position:absolute; left:64px; right:64px; bottom:34px;
+    display:flex; justify-content:space-between; align-items:center;
+    font-family:'Plex'; font-weight:500; letter-spacing:.2em; text-transform:uppercase;
+    font-size:11px; color:rgba(155,151,143,.6);
+    border-top:1px solid rgba(155,151,143,.16); padding-top:14px;
+  }
+  .footer .n{ color:var(--gold); }
+  .pad{ position:absolute; left:64px; top:70px; right:64px; }
+  .sec-eyebrow{ margin-bottom:18px; }
+
+  /* ============ 1 · COVER ============ */
+  .cover{ background:
+      radial-gradient(1100px 720px at 80% -12%, rgba(196,154,108,.20), transparent 58%),
+      radial-gradient(700px 600px at 8% 118%, rgba(196,154,108,.07), transparent 60%),
+      linear-gradient(135deg,#161A22 0%, #0F1115 55%, #0C0E12 100%); }
+  .cover .band{ position:absolute; top:-140px; right:-180px; width:900px; height:1120px;
+      background:linear-gradient(160deg,var(--gold) 0%, var(--bronze) 100%); transform:rotate(18deg); opacity:.08; }
+  .cover .ring{ position:absolute; border:1px solid rgba(240,237,232,.06); border-radius:50%; }
+  .cover .fmark{ position:absolute; right:74px; top:60px; font-family:'Plex'; font-weight:600; letter-spacing:.24em; font-size:12px; color:var(--gold); text-transform:uppercase; }
+  .cover-inner{ position:absolute; left:74px; top:118px; right:74px; }
+  .cover .present{ font-family:'Plex'; font-weight:600; letter-spacing:.3em; font-size:14px; color:var(--muted); text-transform:uppercase; }
+  .cover h1{ font-family:'Anton'; text-transform:uppercase; color:var(--white); font-size:150px; line-height:.84; margin:14px 0 0 -6px; }
+  .cover h1 .the{ display:block; font-size:46px; color:var(--gold); letter-spacing:.01em; margin-top:10px; }
+  .cover .sub{ margin-top:24px; font-family:'BarlowC'; font-weight:500; font-size:23px; color:var(--muted); letter-spacing:.01em; max-width:720px; line-height:1.28; }
+  .cover .metarow{ position:absolute; left:74px; right:74px; bottom:50px; display:flex; border-top:1px solid rgba(240,237,232,.14); padding-top:20px; }
+  .cover .metarow > div{ flex:1; }
+  .cover .metarow .l{ font-family:'Plex'; font-weight:600; letter-spacing:.14em; text-transform:uppercase; font-size:12px; color:var(--gold); }
+  .cover .metarow .s{ font-family:'Barlow'; font-size:14px; color:var(--muted); margin-top:5px; }
+
+  /* ============ 2 · PHOTO ============ */
+  .photo{ background:#000; }
+  .photo .bg{ position:absolute; inset:0; width:1280px; height:720px; object-fit:cover; }
+  .photo .scrim{ position:absolute; inset:0; background:
+      linear-gradient(90deg, rgba(9,11,15,.94) 0%, rgba(9,11,15,.6) 40%, rgba(9,11,15,.1) 68%, rgba(9,11,15,.4) 100%),
+      linear-gradient(0deg, rgba(9,11,15,.92) 0%, rgba(9,11,15,.1) 44%, transparent 62%); }
+  .photo .cap{ position:absolute; left:64px; right:64px; bottom:104px; }
+  .photo .cap h2{ font-family:'Anton'; text-transform:uppercase; font-size:60px; line-height:.95; color:#fff; margin-top:14px; }
+  .photo .cap h2 em{ color:var(--gold); }
+  .photo .cap .sub{ margin-top:16px; font-family:'BarlowC'; font-weight:500; font-size:21px; color:#dcd6cd; max-width:680px; }
+  .photo .footer{ color:rgba(255,255,255,.6); border-top-color:rgba(255,255,255,.16); }
+  .photo .footer .n{ color:var(--gold); }
+
+  /* ============ 3 · OPPORTUNITY ============ */
+  .opp{ background: radial-gradient(900px 700px at 92% 6%, rgba(196,154,108,.12), transparent 62%), linear-gradient(120deg,#0F1115,#14161B); }
+  .opp h2{ font-size:66px; max-width:1120px; }
+  .opp .lead{ margin-top:30px; font-size:21px; line-height:1.5; max-width:900px; color:var(--muted); }
+  .opp .pillars{ position:absolute; left:64px; right:64px; bottom:92px; display:flex; gap:22px; }
+  .opp .pillar{ flex:1; border-left:2px solid var(--gold); padding:4px 0 4px 20px; }
+  .opp .pillar .t{ font-family:'BarlowC'; font-weight:700; text-transform:uppercase; letter-spacing:.05em; font-size:19px; color:var(--cream); }
+  .opp .pillar .d{ font-family:'Barlow'; font-size:14px; color:var(--muted); margin-top:6px; line-height:1.42; }
+
+  /* ============ 4 · CANVAS ============ */
+  .canvas{ background:linear-gradient(120deg,#0F1115,#16181E); }
+  .canvas h2{ font-size:70px; max-width:1000px; }
+  .canvas .desc{ margin-top:24px; font-size:18px; line-height:1.5; max-width:840px; color:var(--muted); }
+  .canvas .tiles{ position:absolute; left:64px; right:64px; bottom:92px; display:flex; gap:18px; }
+  .tile{ flex:1; background:linear-gradient(160deg,rgba(196,154,108,.10),rgba(25,28,34,.6)); border:1px solid rgba(196,154,108,.28); border-radius:14px; padding:24px 22px; }
+  .tile .big{ font-family:'Anton'; font-size:52px; color:var(--white); line-height:.9; }
+  .tile .lab{ font-family:'Plex'; font-weight:500; text-transform:uppercase; letter-spacing:.1em; font-size:11px; color:var(--muted); margin-top:12px; }
+
+  /* ============ 5 · BIG IDEA ============ */
+  .idea{ background: radial-gradient(1000px 800px at 20% 120%, rgba(196,154,108,.12), transparent 60%), linear-gradient(160deg,#14161B,#0C0E12); }
+  .idea .wrap{ position:absolute; left:64px; top:150px; width:590px; }
+  .idea .pre{ font-family:'Plex'; font-weight:600; letter-spacing:.26em; text-transform:uppercase; font-size:12px; color:var(--gold); }
+  .idea h2{ font-family:'Anton'; text-transform:uppercase; font-size:92px; line-height:.9; color:var(--white); margin:16px 0 0 -5px; }
+  .idea h2 em{ color:var(--gold); }
+  .idea .say{ margin-top:26px; font-size:18px; line-height:1.55; max-width:520px; color:var(--muted); }
+  .idea .say strong{ color:var(--cream); }
+  .idea .panel{ position:absolute; right:64px; top:158px; width:522px; }
+  .idea .panel .frame{ border:1px solid rgba(196,154,108,.5); border-radius:14px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,.5); }
+  .idea .panel .frame img{ display:block; width:100%; height:auto; }
+  .idea .panel .strip{ display:flex; justify-content:space-between; align-items:center; background:#1A1D23; padding:11px 16px; border-top:1px solid rgba(196,154,108,.3); }
+  .idea .panel .strip .l{ font-family:'Plex'; font-weight:600; letter-spacing:.12em; text-transform:uppercase; font-size:10px; color:var(--gold); }
+  .idea .panel .strip .r{ font-family:'Plex'; font-weight:500; letter-spacing:.12em; text-transform:uppercase; font-size:10px; color:var(--muted); }
+
+  /* ============ 6 · TAKEOVER ============ */
+  .map{ background:linear-gradient(120deg,#0F1115,#16181E); }
+  .zones{ position:absolute; left:64px; right:64px; top:214px; bottom:80px; display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:1fr; gap:14px; }
+  .zone{ position:relative; border-radius:12px; overflow:hidden; border:1px solid rgba(155,151,143,.18); }
+  .zone img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .zone .zsc{ position:absolute; inset:0; background:linear-gradient(0deg, rgba(9,11,15,.97) 0%, rgba(9,11,15,.82) 26%, rgba(9,11,15,.32) 54%, rgba(9,11,15,.1) 100%); }
+  .zone .zt{ position:absolute; left:15px; right:15px; bottom:13px; }
+  .zone .zn{ font-family:'BarlowC'; font-weight:700; text-transform:uppercase; letter-spacing:.03em; font-size:18px; color:#fff; line-height:1.02; }
+  .zone .zd{ font-family:'Barlow'; font-size:12px; color:#cfc9c0; margin-top:6px; line-height:1.32; }
+  .zone .dot{ position:absolute; top:14px; right:14px; width:7px; height:7px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 4px rgba(9,11,15,.45); }
+
+  /* ============ 7 · DAY TO NIGHT ============ */
+  .dn{ background:#0C0E12; }
+  .dn .half{ position:absolute; top:0; height:720px; width:640px; padding:74px 56px; }
+  .dn .day{ left:0; background:
+      linear-gradient(180deg, rgba(12,14,18,.82) 0%, rgba(12,14,18,.6) 42%, rgba(12,14,18,.9) 100%),
+      linear-gradient(160deg, rgba(196,154,108,.22), transparent 55%),
+      url('img/day-bg.jpg'); background-size:cover; background-position:center; }
+  .dn .night{ left:640px; background:
+      linear-gradient(180deg, rgba(9,10,13,.82) 0%, rgba(9,10,13,.58) 42%, rgba(9,10,13,.92) 100%),
+      url('img/night-bg.jpg'); background-size:cover; background-position:center; }
+  .dn .tag{ font-family:'Plex'; font-weight:600; letter-spacing:.2em; text-transform:uppercase; font-size:13px; color:var(--gold); }
+  .dn h3{ font-family:'Anton'; text-transform:uppercase; font-size:58px; line-height:.9; margin-top:12px; color:var(--white); }
+  .dn .who{ font-family:'BarlowC'; font-weight:600; font-size:19px; letter-spacing:.03em; margin-top:6px; color:var(--gold-b); }
+  .dn ul{ list-style:none; margin-top:26px; }
+  .dn li{ font-family:'Barlow'; font-size:16.5px; color:#d4cec4; padding:11px 0 11px 22px; position:relative; border-bottom:1px solid rgba(255,255,255,.1); line-height:1.35; }
+  .dn li:before{ content:''; position:absolute; left:0; top:18px; width:8px; height:8px; background:var(--gold); }
+  .dn .seam{ position:absolute; left:632px; top:0; width:16px; height:720px; background:linear-gradient(90deg,transparent,rgba(0,0,0,.5),transparent); z-index:5; }
+
+  /* ============ 8 · PLAYBOOK ============ */
+  .play{ background:linear-gradient(120deg,#0F1115,#16181E); }
+  .play .rows{ position:absolute; left:64px; right:64px; top:232px; bottom:84px; display:flex; flex-direction:column; gap:14px; }
+  .play .row{ display:flex; align-items:center; gap:26px; background:linear-gradient(120deg,rgba(30,33,40,.7),rgba(18,20,25,.4)); border:1px solid rgba(155,151,143,.14); border-radius:12px; padding:20px 26px; flex:1; }
+  .play .num{ font-family:'Anton'; font-size:50px; color:var(--gold); width:76px; flex-shrink:0; line-height:1; }
+  .play .row .t{ font-family:'BarlowC'; font-weight:700; text-transform:uppercase; letter-spacing:.03em; font-size:23px; color:var(--cream); width:320px; flex-shrink:0; line-height:1.04; }
+  .play .row .d{ font-family:'Barlow'; font-size:15px; color:var(--muted); line-height:1.4; }
+
+  /* ============ 9 · PROOF ============ */
+  .reach{ background:
+      radial-gradient(900px 700px at 88% 90%, rgba(196,154,108,.12), transparent 58%),
+      linear-gradient(180deg, rgba(15,17,21,.9) 0%, rgba(15,17,21,.72) 38%, rgba(15,17,21,.93) 100%),
+      url('img/proof-bg.jpg'); background-size:cover; background-position:center; }
+  .reach h2{ font-size:68px; max-width:900px; }
+  .reach .desc{ margin-top:20px; font-size:17px; color:var(--muted); max-width:760px; line-height:1.5; }
+  .reach .grid{ position:absolute; left:64px; right:64px; bottom:92px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  .reach .m{ border-top:2px solid var(--gold); padding-top:14px; }
+  .reach .m .v{ font-family:'Anton'; font-size:46px; color:var(--white); line-height:.9; }
+  .reach .m .k{ font-family:'Plex'; font-weight:500; text-transform:uppercase; letter-spacing:.08em; font-size:11px; color:var(--muted); margin-top:10px; line-height:1.35; }
+
+  /* ============ 10 · FRAMEWORK (tiers) ============ */
+  .fw{ background:linear-gradient(120deg,#0F1115,#16181E); }
+  .fw .tiers{ position:absolute; left:64px; right:64px; top:206px; bottom:114px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  .tcard{ background:linear-gradient(170deg,rgba(30,33,40,.8),rgba(18,20,25,.55)); border:1px solid rgba(155,151,143,.16); border-radius:16px; padding:26px 24px; display:flex; flex-direction:column; }
+  .tcard.feat{ border-color:rgba(196,154,108,.55); background:linear-gradient(170deg,rgba(196,154,108,.12),rgba(25,28,34,.6)); }
+  .tcard .tname{ font-family:'Plex'; font-weight:600; letter-spacing:.14em; text-transform:uppercase; font-size:12px; color:var(--gold); }
+  .tcard .price{ font-family:'Anton'; font-size:40px; color:var(--white); line-height:.95; margin-top:14px; }
+  .tcard .guests{ font-family:'BarlowC'; font-weight:600; font-size:16px; color:var(--gold-b); letter-spacing:.02em; margin-top:8px; text-transform:uppercase; }
+  .tcard .rule{ height:1px; background:rgba(155,151,143,.2); margin:18px 0; }
+  .tcard .desc{ font-family:'Barlow'; font-size:14.5px; color:var(--muted); line-height:1.5; }
+  .fw .note{ position:absolute; left:64px; right:64px; bottom:80px; font-family:'Barlow'; font-style:italic; font-size:13px; color:rgba(155,151,143,.7); }
+
+
+  /* ============ 13 · WINDOW 2027 ============ */
+  .win27{ background: radial-gradient(900px 700px at 10% 110%, rgba(196,154,108,.12), transparent 60%), linear-gradient(120deg,#0F1115,#16181E); }
+  .win27 h2{ font-size:60px; max-width:1000px; }
+  .win27 .lead{ margin-top:22px; font-size:17.5px; line-height:1.5; max-width:860px; color:var(--muted); }
+  .win27 .line{ position:absolute; left:64px; right:64px; top:372px; height:2px; background:linear-gradient(90deg, var(--gold) 0%, rgba(196,154,108,.25) 100%); }
+  .win27 .marks{ position:absolute; left:64px; right:64px; top:358px; display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+  .win27 .mk{ position:relative; padding-top:36px; }
+  .win27 .mk:before{ content:''; position:absolute; left:0; top:7px; width:14px; height:14px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 5px rgba(196,154,108,.18); }
+  .win27 .mk .when{ font-family:'Plex'; font-weight:600; letter-spacing:.2em; text-transform:uppercase; font-size:12px; color:var(--gold); }
+  .win27 .mk .what{ font-family:'Anton'; text-transform:uppercase; font-size:30px; color:var(--white); line-height:.95; margin-top:8px; }
+  .win27 .mk .how{ font-family:'Barlow'; font-size:14px; color:var(--muted); margin-top:8px; line-height:1.4; }
+  .win27 .note{ position:absolute; left:64px; right:64px; bottom:96px; display:flex; justify-content:space-between; align-items:flex-end; gap:40px; border-top:1px solid rgba(155,151,143,.2); padding-top:18px; }
+  .win27 .note .p{ font-family:'BarlowC'; font-weight:600; font-size:19px; color:var(--cream); max-width:660px; line-height:1.3; }
+  .win27 .note .m{ font-family:'Anton'; font-size:24px; color:var(--gold); white-space:nowrap; }
+
+  /* ============ 11 · CLOSE ============ */
+  .close{ background: radial-gradient(1200px 800px at 50% -12%, rgba(196,154,108,.22), transparent 55%), linear-gradient(180deg,#161A22,#0C0E12); }
+  .close .c{ position:absolute; left:64px; right:64px; top:150px; text-align:center; }
+  .close .pre{ font-family:'Plex'; font-weight:600; letter-spacing:.26em; text-transform:uppercase; font-size:14px; color:var(--muted); }
+  .close h2{ font-family:'Anton'; text-transform:uppercase; font-size:118px; line-height:.86; color:var(--white); margin-top:16px; }
+  .close h2 .r{ color:var(--gold); }
+  .close .win{ margin-top:26px; font-family:'BarlowC'; font-weight:600; font-size:21px; color:var(--cream); letter-spacing:.04em; text-transform:uppercase; }
+  .close .cta{ position:absolute; left:0; right:0; bottom:96px; text-align:center; }
+  .close .mail{ font-family:'Anton'; font-size:40px; color:var(--white); }
+  .close .org{ margin-top:14px; font-family:'Plex'; font-weight:500; letter-spacing:.18em; text-transform:uppercase; font-size:13px; color:var(--muted); }
+
+  /* ===== VENUES (montage) ===== */
+  .venues{ background:linear-gradient(120deg,#0F1115,#16181E); }
+  .venues .grid{ position:absolute; left:64px; right:64px; top:200px; bottom:80px; display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:1fr 1fr; gap:14px; }
+  .venues .vc{ position:relative; border-radius:12px; overflow:hidden; border:1px solid rgba(155,151,143,.16); }
+  .venues .vc img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .venues .vc .vs{ position:absolute; inset:0; background:linear-gradient(0deg, rgba(9,11,15,.94) 0%, rgba(9,11,15,.18) 52%, transparent 100%); }
+  .venues .vc .vn{ position:absolute; left:16px; right:16px; bottom:13px; }
+  .venues .vc .vn .t{ font-family:'BarlowC'; font-weight:700; text-transform:uppercase; letter-spacing:.03em; font-size:21px; color:#fff; line-height:1; }
+  .venues .vc .vn .d{ font-family:'Plex'; font-weight:500; text-transform:uppercase; letter-spacing:.07em; font-size:10px; color:var(--gold); margin-top:6px; }
+
+  /* ===== CASE STUDY ===== */
+  .case{ background:linear-gradient(120deg,#0F1115,#14161B); }
+  .case .photo2{ position:absolute; right:0; top:0; width:600px; height:720px; }
+  .case .photo2 img{ width:100%; height:100%; object-fit:cover; }
+  .case .photo2 .sc{ position:absolute; inset:0; background:
+      linear-gradient(90deg, #0F1115 0%, rgba(15,17,21,.55) 20%, transparent 46%),
+      linear-gradient(0deg, rgba(15,17,21,.75) 0%, transparent 22%); }
+  .case .txt{ position:absolute; left:64px; top:116px; width:600px; }
+  .case .pre{ font-family:'Plex'; font-weight:600; letter-spacing:.24em; text-transform:uppercase; font-size:12px; color:var(--gold); }
+  .case h2{ font-family:'Anton'; text-transform:uppercase; font-size:60px; line-height:.92; color:var(--cream); margin:16px 0 0 -4px; }
+  .case h2 em{ color:var(--gold); }
+  .case .blurb{ margin-top:22px; font-size:16.5px; line-height:1.55; color:var(--muted); max-width:520px; }
+  .case .stats{ display:flex; gap:34px; margin-top:32px; }
+  .case .stats .v{ font-family:'Anton'; font-size:44px; color:var(--white); line-height:.9; }
+  .case .stats .k{ font-family:'Plex'; font-weight:500; text-transform:uppercase; letter-spacing:.07em; font-size:11px; color:var(--muted); margin-top:8px; }
+</style>
+</head>
+<body>
+
+<!-- 1 · COVER -->
+<section class="slide cover">
+  <div class="band"></div>
+  <div class="ring" style="width:520px;height:520px;right:-120px;top:-120px;"></div>
+  <div class="ring" style="width:760px;height:760px;right:-240px;top:-240px;"></div>
+  <div class="fmark">Corner Bar · Downtown LV</div>
+  <div class="cover-inner">
+    <div class="present">F.E.E.D. Presents</div>
+    <h1>BOOK THE<br>BLOCK<span class="the">A Full-District Takeover of Fremont East</span></h1>
+    <div class="sub">Rent an entire block of Downtown Las Vegas — venues, rooftops, stages, and the street itself — as the canvas for your brand.</div>
+  </div>
+  <div class="metarow">
+    <div><div class="l">The Canvas</div><div class="s">Sixteen venues · one block</div></div>
+    <div><div class="l">The Place</div><div class="s">Fremont East · Downtown Las Vegas</div></div>
+    <div><div class="l">The Operator</div><div class="s">Corner Bar · F.E.E.D.</div></div>
+    <div><div class="l">The Season</div><div class="s">2027 · windows open now</div></div>
+  </div>
+</section>
+
+<!-- 2 · PHOTO -->
+<section class="slide photo">
+  <img class="bg" src="block-activated.jpg">
+  <div class="scrim"></div>
+  <div class="cap">
+    <div class="eyebrow">The Block, Activated</div>
+    <h2>This is what a full house<br>on Fremont East <em>looks like.</em></h2>
+    <div class="sub">Feed the Block — the district packed end to end, street closed, stage lit. Now imagine the whole block reading as your brand.</div>
+  </div>
+  <div class="footer"><div>F.E.E.D. — Book the Block</div><div class="n">02</div></div>
+</section>
+
+<!-- 3 · OPPORTUNITY -->
+<section class="slide opp">
+  <div class="pad">
+    <div class="eyebrow sec-eyebrow">The Opportunity</div>
+    <h2 class="sec-title">Most activations rent a booth.<br>You can rent <em>a block.</em></h2>
+    <p class="lead">The weeks brands fight to own — CES, F1, the big convention runs, product launches — happen in Las Vegas. F.E.E.D. is the one place you can own an entire block of Downtown for them: one operator, one contract, the whole street.</p>
+  </div>
+  <div class="pillars">
+    <div class="pillar"><div class="t">One block, one contract</div><div class="d">Multiple venues, rooftops, stages, and a permitted street closure — handled by a single accountable team.</div></div>
+    <div class="pillar"><div class="t">Built for tentpole weeks</div><div class="d">Engineered for CES, F1, convention-week takeovers, and the launches brands plan a year out.</div></div>
+    <div class="pillar"><div class="t">A Downtown destination</div><div class="d">Backed by the City of Las Vegas and the LVCVA, in the fastest-rising district in town.</div></div>
+  </div>
+  <div class="footer"><div>F.E.E.D. — Book the Block</div><div class="n">03</div></div>
+</section>
+
+<!-- 4 · CANVAS -->
+<section class="slide canvas">
+  <div class="pad">
+    <div class="eyebrow sec-eyebrow">The Canvas · F.E.E.D.</div>
+    <h2 class="sec-title">You're not renting a venue.<br>You're renting <em>a block.</em></h2>
+    <p class="desc">F.E.E.D. — the Fremont East Entertainment District — is a single block of Downtown Las Vegas you can take over end to end: sixteen venues, rooftops, stages, and the street itself, closed and handed to one brand. One operator. One contract. Production, permitting, security, and F&B all under a single accountable team.</p>
+  </div>
+  <div class="tiles">
+    <div class="tile"><div class="big">16</div><div class="lab">Venues, one contract</div></div>
+    <div class="tile"><div class="big">15,000</div><div class="lab">Capacity, full street closure</div></div>
+    <div class="tile"><div class="big">61,600</div><div class="lab">Sq ft of indoor space</div></div>
+    <div class="tile"><div class="big">1</div><div class="lab">Block. Entirely yours.</div></div>
+  </div>
+  <div class="footer"><div>F.E.E.D. — Book the Block</div><div class="n">04</div></div>
+</section>
+
+<!-- 5 · VENUES -->
+<section class="slide venues">
+  <div class="pad">
+    <div class="eyebrow sec-eyebrow">The Venues · A Selection</div>
+    <h2 class="sec-title" style="font-size:52px;">One block. <em>Many rooms.</em></h2>
+  </div>
+  <div class="grid">
+    <div class="vc"><img src="img/v1.jpg"><div class="vs"></div><div class="vn"><div class="t">Commonwealth</div><div class="d">Two-story cocktail bar &middot; rooftop</div></div></div>
+    <div class="vc"><img src="img/v2.jpg"><div class="vs"></div><div class="vn"><div class="t">We All Scream</div><div class="d">Rooftop nightclub</div></div></div>
+    <div class="vc"><img src="img/v3.jpg"><div class="vs"></div><div class="vn"><div class="t">Lucky Day</div><div class="d">Mezcal house &middot; 15,000-LED canopy</div></div></div>
+    <div class="vc"><img src="img/v4.jpg"><div class="vs"></div><div class="vn"><div class="t">Discopussy</div><div class="d">House &amp; techno club</div></div></div>
+    <div class="vc"><img src="img/v5.jpg"><div class="vs"></div><div class="vn"><div class="t">Park on Fremont</div><div class="d">Restaurant &amp; garden patios</div></div></div>
+    <div class="vc"><img src="img/v6.jpg"><div class="vs"></div><div class="vn"><div class="t">Pink Monkey</div><div class="d">Bar &amp; nightclub</div></div></div>
+  </div>
+  <div class="footer"><div>F.E.E.D. — Book the Block</div><div class="n">05</div></div>
+</section>
+
+<!-- 6 · BIG IDEA -->
+<section class="slide idea">
+  <div class="wrap">
+    <div class="pre">The Big Idea</div>
+    <h2>YOUR BRAND,<br>AT <em>CITY SCALE.</em></h2>
+    <p class="say">For your activation, the block becomes your canvas — <strong>building wraps, projection, stages, and the street itself reading end to end as one brand.</strong> Not a booth inside someone else's event. The whole block, as you.</p>
+  </div>
+  <div class="panel">
+    <div class="frame">
+      <img src="brand-canvas.jpg" alt="Building-scale brand wrap on Fremont East">
+      <div class="strip"><span class="l">Building-scale brand wrap · Fremont East</span><span class="r">F.E.E.D.</span></div>
+    </div>
+  </div>
+  <div class="footer"><div>F.E.E.D. — Book the Block</div><div class="n">06</div></div>
+</section>
+
+<!-- 6 · TAKEOVER -->
+<section class="slide map">
+  <div class="pad">
+    <div class="eyebrow sec-eyebrow">The Takeover · What We Can Build</div>
+    <h2 class="sec-title" style="font-size:52px;">Every surface can carry<br><em>your brand.</em></h2>
+  </div>
+  <div class="zones">
+    <div class="zone"><img src="img/z1.jpg"><div class="zsc"></div><span class="dot"></span><div class="zt"><div class="zn">Building Wraps</div><div class="zd">Up to 15,000 sq ft per façade — visible for blocks.</div></div></div>
+    <div class="zone"><img src="img/z2.jpg"><div class="zsc"></div><span class="dot"></span><div class="zt"><div class="zn">Street-Level Wraps</div><div class="zd">500+ linear feet of storefront and window graphics.</div></div></div>
+    <div class="zone"><img src="img/z3.jpg"><div class="zsc"></div><span class="dot"></span><div class="zt"><div class="zn">Projection Mapping</div><div class="zd">Building-scale nighttime projection across the block.</div></div></div>
+    <div class="zone"><img src="img/z4.jpg"><div class="zsc"></div><span class="dot"></span><div class="zt"><div class="zn">Rooftop &amp; Aerial</div><div class="zd">Rooftop branding built for drone shots and skyline visibility.</div></div></div>
+    <div class="zone"><img src="img/z5.jpg"><div class="zsc"></div><span class="dot"></span><div class="zt"><div class="zn">Stage Naming</div><div class="zd">Your brand on the main stage across every performance.</div></div></div>
+    <div class="zone"><img src="img/z6.jpg"><div class="zsc"></div><span class="dot"></span><div class="zt"><div class="zn">Digital Network</div><div class="zd">12+ synced LED displays running your content all week.</div></div></div>
+    <div class="zone"><img src="img/z7.jpg"><div class="zsc"></div><span class="dot"></span><div class="zt"><div class="zn">Branded Pop-Up</div><div class="zd">A branded retail, sampling, or demo footprint on the block.</div></div></div>
+    <div class="zone"><img src="img/z8.jpg"><div class="zsc"></div><span class="dot"></span><div class="zt"><div class="zn">Branded Bar Program</div><div class="zd">10+ bar stations and custom F&amp;B, block-wide.</div></div></div>
+  </div>
+  <div class="footer"><div>F.E.E.D. — Book the Block</div><div class="n">07</div></div>
+</section>
+
+<!-- 7 · DAY TO NIGHT -->
+<section class="slide dn">
+  <div class="half day">
+    <div class="tag">Daytime</div>
+    <h3>THE<br>DAY</h3>
+    <div class="who">All ages · brand experience</div>
+    <ul>
+      <li>Brand activations, sampling &amp; product demos</li>
+      <li>Family-friendly programming &amp; photo moments</li>
+      <li>Daytime sets, creator content &amp; hospitality</li>
+      <li>Convention &amp; VIP receptions across the block</li>
+    </ul>
+  </div>
+  <div class="half night">
+    <div class="tag">After Dark</div>
+    <h3>THE<br>NIGHT</h3>
+    <div class="who">21+ · concert &amp; nightlife</div>
+    <ul>
+      <li>Headliner concerts on the main stage</li>
+      <li>Multiple clubs and rooftops across the block</li>
+      <li>DJ sets and late-night programming</li>
+      <li>The district's nightlife, entirely yours</li>
+    </ul>
+  </div>
+  <div class="seam"></div>
+  <div class="footer"><div>F.E.E.D. — Book the Block</div><div class="n">08</div></div>
+</section>
+
+<!-- 8 · PLAYBOOK -->
+<section class="slide play">
+  <div class="pad">
+    <div class="eyebrow sec-eyebrow">The Playbook</div>
+    <h2 class="sec-title" style="font-size:56px;">Four ways brands<br>use <em>the block.</em></h2>
+  </div>
+  <div class="rows">
+    <div class="row"><div class="num">01</div><div class="t">Product Launch</div><div class="d">Debut a product to press, creators, and a live crowd — the block as your stage and your set, built to generate content that travels.</div></div>
+    <div class="row"><div class="num">02</div><div class="t">Concert &amp; Headliner</div><div class="d">A ticketed or free show with a national headliner. F.E.E.D. has hosted Marshmello, Diplo, Major Lazer, and Gryffin.</div></div>
+    <div class="row"><div class="num">03</div><div class="t">Convention Activation</div><div class="d">Own the off-site during CES, F1, or a major convention — the after-hours home where the real business gets done.</div></div>
+    <div class="row"><div class="num">04</div><div class="t">Experiential Pop-Up</div><div class="d">A multi-day branded world — wraps, projection, retail, and programming — designed to reach far beyond the block.</div></div>
+  </div>
+  <div class="footer"><div>F.E.E.D. — Book the Block</div><div class="n">09</div></div>
+</section>
+
+<!-- 9 · PROOF -->
+<section class="slide reach">
+  <div class="pad">
+    <div class="eyebrow sec-eyebrow">The Proof · F.E.E.D. So Far</div>
+    <h2 class="sec-title">The platform your<br>activation <em>steps onto.</em></h2>
+    <p class="desc">This isn't an empty street. F.E.E.D.'s first seasons drew city-scale crowds, national press, and headliners like Marshmello, Diplo, and Major Lazer — the audience and the machine are already here.</p>
+  </div>
+  <div class="grid">
+    <div class="m"><div class="v">32K+</div><div class="k">Attendees, Feed the Block series</div></div>
+    <div class="m"><div class="v">296.6M</div><div class="k">Earned-media impressions</div></div>
+    <div class="m"><div class="v">10K+</div><div class="k">Casino visits per event</div></div>
+    <div class="m"><div class="v">30,861</div><div class="k">Pre-registered fans</div></div>
+  </div>
+  <div class="footer"><div>F.E.E.D. — Book the Block</div><div class="n">10</div></div>
+</section>
+
+<!-- 11 · CASE STUDY -->
+<section class="slide case">
+  <div class="photo2"><img src="img/case.jpg"><div class="sc"></div></div>
+  <div class="txt">
+    <div class="pre">Case Study · CES 2026</div>
+    <h2>TransUnion took<br>the <em>district.</em></h2>
+    <p class="blurb">For CES 2026, TransUnion used F.E.E.D.'s multi-venue footprint for a three-day brand activation — district-wide building wraps, street-level experiences, rooftop receptions, and live entertainment, all run by one team.</p>
+    <div class="stats">
+      <div><div class="v">3 days</div><div class="k">CES 2026 activation</div></div>
+      <div><div class="v">2,500+</div><div class="k">Executives hosted</div></div>
+      <div><div class="v">1 team</div><div class="k">Production to permits</div></div>
+    </div>
+  </div>
+  <div class="footer"><div>F.E.E.D. — Book the Block</div><div class="n">11</div></div>
+</section>
+
+<!-- 10 · FRAMEWORK -->
+<section class="slide fw">
+  <div class="pad">
+    <div class="eyebrow sec-eyebrow">The Framework · Three Ways In</div>
+    <h2 class="sec-title" style="font-size:54px;">Scaled to your <em>ambition.</em></h2>
+  </div>
+  <div class="tiers">
+    <div class="tcard">
+      <div class="tname">District Core</div>
+      <div class="price">$25K&#8211;$75K</div>
+      <div class="guests">200 &#8211; 800 guests</div>
+      <div class="rule"></div>
+      <div class="desc">A single premier venue. A focused activation, launch, or reception with professional production and full staffing.</div>
+    </div>
+    <div class="tcard feat">
+      <div class="tname">District Expanded</div>
+      <div class="price">$75K&#8211;$250K</div>
+      <div class="guests">800 &#8211; 2,500 guests</div>
+      <div class="rule"></div>
+      <div class="desc">Multiple venues, street-level branding, and elevated production across a section of the block — a true multi-space takeover.</div>
+    </div>
+    <div class="tcard">
+      <div class="tname">Full District Takeover</div>
+      <div class="price">$250K+</div>
+      <div class="guests">2,500 &#8211; 10,000+ guests</div>
+      <div class="rule"></div>
+      <div class="desc">The whole block. Building wraps, projection, rooftops, and the street — transformed end to end as one brand.</div>
+    </div>
+  </div>
+  <div class="note">Every activation is custom-scoped. Building wraps, projection, staging, and F&amp;B programming are quoted per build.</div>
+  <div class="footer"><div>F.E.E.D. — Book the Block</div><div class="n">12</div></div>
+</section>
+
+<!-- 13 · YOUR WINDOW · 2027 -->
+<section class="slide win27">
+  <div class="pad">
+    <div class="eyebrow sec-eyebrow">Your Window · 2027</div>
+    <h2 class="sec-title">The weeks get claimed a year out.<br><em>Pick yours.</em></h2>
+    <p class="lead">Tentpole weeks like CES and F1 get claimed a year or more in advance, as conventions lock their event dates early. Tell us your window and we'll map an activation tier, footprint, and indicative budget within five business days.</p>
+  </div>
+  <div class="line"></div>
+  <div class="marks">
+    <div class="mk"><div class="when">January</div><div class="what">CES</div><div class="how">The year's biggest tech week. Off-site hospitality, launches, and executive receptions on the block.</div></div>
+    <div class="mk"><div class="when">March &#8211; June</div><div class="what">Convention season</div><div class="how">City-wide shows back to back. A standing home base for your week, steps from the Strip's traffic.</div></div>
+    <div class="mk"><div class="when">November</div><div class="what">F1 Las Vegas Grand Prix</div><div class="how">Race week on the Strip, the after-hours on Fremont East. Contracted through 2037.</div></div>
+    <div class="mk"><div class="when">Year-round</div><div class="what">Launches &amp; pop-ups</div><div class="how">Any week you need the whole block reading as your brand, with a headliner or without.</div></div>
+  </div>
+  <div class="note">
+    <div class="p">Have a 2027 week in mind? Put a hold on it now and we'll come back with the plan.</div>
+    <div class="m">booktheblock@cornerbar.com</div>
+  </div>
+  <div class="footer"><div>F.E.E.D. — Book the Block</div><div class="n">13</div></div>
+</section>
+
+<!-- 11 · CLOSE -->
+<section class="slide close">
+  <div class="c">
+    <div class="pre">Let's Talk</div>
+    <h2>BOOK THE<br><span class="r">BLOCK.</span></h2>
+    <div class="win">2027 Activation Season · Downtown Las Vegas</div>
+  </div>
+  <div class="cta">
+    <div class="mail">booktheblock@cornerbar.com</div>
+    <div class="org">eastfremontdistrict.com · Corner Bar · F.E.E.D.</div>
+  </div>
+</section>
+
+</body>
+</html>

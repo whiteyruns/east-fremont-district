@@ -17,7 +17,7 @@ const VENUES_WITH_PHOTOS = new Set([
   "commonwealth",
   "laundry-room",
   "lucky-day",
-  "la-mona-rosa",
+  "pink-monkey",
   "discopussy",
   "we-all-scream",
   "the-griffin",

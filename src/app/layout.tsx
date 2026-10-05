@@ -4,6 +4,7 @@ import "./globals.css";
 import SiteHeader from "@/components/layout/SiteHeader";
 import ConditionalFooter from "@/components/layout/ConditionalFooter";
 import StructuredData from "@/components/layout/StructuredData";
+import AttributionCapture from "@/components/layout/AttributionCapture";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 const geistSans = localFont({
@@ -86,6 +87,7 @@ export default function RootLayout({
         {process.env.NEXT_PUBLIC_GTM_ID && (
           <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
         )}
+        <AttributionCapture />
         <div className="flex flex-col min-h-screen">
           <SiteHeader />
           <main className="flex-1">

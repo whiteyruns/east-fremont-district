@@ -16,7 +16,7 @@ import {
  * Schematic district map showing venue positions along East Fremont Street.
  * South (even) on top, North (odd) on bottom.
  * Block runs from Las Vegas Blvd (west) to 6th Street (east).
- * La Mona Rosa is on 6th Street spur (west side).
+ * Pink Monkey (formerly La Mona Rosa) is on 6th Street spur (west side).
  * El Cortez shown as landmark reference.
  */
 
@@ -58,7 +58,7 @@ const venuePins: VenuePin[] = [
   { slug: "laundry-room", name: "The Laundry Room", address: "525", capacity: null, sqft: null, side: "north", x: 69, features: ["Speakeasy"], operator: "Corner Bar", nestedIn: "commonwealth" },
 
   // ── West side of 6th St spur ──
-  { slug: "la-mona-rosa", name: "La Mona Rosa", address: "100 S 6th St", capacity: null, sqft: 3500, side: "corner", x: 71, yOverride: 72, features: ["Stage", "Kitchen", "3.5K sqft"], operator: "Corner Bar" },
+  { slug: "pink-monkey", name: "Pink Monkey", address: "100 S 6th St", capacity: null, sqft: 3500, side: "corner", x: 71, yOverride: 72, features: ["Nightclub", "Stage", "3.5K sqft"], operator: "Corner Bar" },
 ];
 
 /* ── Derived stats ── */

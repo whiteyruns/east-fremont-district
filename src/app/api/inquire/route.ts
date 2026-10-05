@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import { getSupabase } from "@/lib/supabase";
+import { insertLead } from "@/lib/leads";
+import { readAttribution, describeAttribution, type Attribution } from "@/lib/attribution";
 import { InquirySubmission } from "@/types/inquiry";
 
 function getResend() {
@@ -37,7 +38,7 @@ function label(val: string) {
   return LABEL_MAP[val] || val;
 }
 
-function buildEmailHtml(body: InquirySubmission) {
+function buildEmailHtml(body: InquirySubmission, attr: Attribution | null) {
   const rows = [
     ["Organization", body.organizationName],
     ["Contact", body.contactName],
@@ -48,6 +49,7 @@ function buildEmailHtml(body: InquirySubmission) {
     ["Budget", label(body.budgetRange)],
     ["Scope", label(body.activationScope)],
     ...(body.referralSource ? [["Referral", label(body.referralSource)]] : []),
+    ...(attr ? [["Source", describeAttribution(attr)]] : []),
     ...(body.additionalNotes ? [["Notes", body.additionalNotes]] : []),
   ];
 
@@ -109,31 +111,37 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // First-touch campaign attribution (e.g. the LVCVA email), from the
+    // cookie AttributionCapture set on landing.
+    const attr = readAttribution(request);
+
     // Persist the lead to Supabase. efd_leads is the source of truth and
     // feeds the Go Run Rabbit EFD pipeline dashboard. dbError reflects
     // whether the lead was actually saved, so a captured lead is never
     // reported back to the visitor as a failure.
     let dbError: string | null = null;
     try {
-      const supabase = getSupabase();
-      const { error } = await supabase.from("efd_leads").insert({
-        source: "website",
-        status: "new",
-        organization_name: body.organizationName,
-        contact_name: body.contactName,
-        email: body.email,
-        event_type: body.eventType,
-        estimated_guest_count: body.estimatedGuestCount,
-        preferred_date_start: body.preferredDateStart,
-        preferred_date_end: body.preferredDateEnd,
-        budget_range: body.budgetRange,
-        activation_scope: body.activationScope,
-        additional_notes: body.additionalNotes || null,
-        referral_source: body.referralSource || null,
-      });
+      const { error } = await insertLead(
+        {
+          source: "website",
+          status: "new",
+          organization_name: body.organizationName,
+          contact_name: body.contactName,
+          email: body.email,
+          event_type: body.eventType,
+          estimated_guest_count: body.estimatedGuestCount,
+          preferred_date_start: body.preferredDateStart,
+          preferred_date_end: body.preferredDateEnd,
+          budget_range: body.budgetRange,
+          activation_scope: body.activationScope,
+          additional_notes: body.additionalNotes || null,
+          referral_source: body.referralSource || null,
+        },
+        attr,
+      );
       if (error) {
         console.error("efd_leads insert error:", error);
-        dbError = error.message;
+        dbError = error;
       }
     } catch (err) {
       console.error("Supabase connection error:", err);
@@ -151,7 +159,7 @@ export async function POST(request: NextRequest) {
         replyTo: body.email,
         bcc: "keith@gorunrabbit.com",
         subject: `New Inquiry: ${body.organizationName} — ${label(body.eventType)}`,
-        html: buildEmailHtml(body),
+        html: buildEmailHtml(body, attr),
       });
       if (emailError) {
         console.error("Resend error:", emailError);

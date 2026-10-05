@@ -21,7 +21,7 @@ const VENUES = [
   { name: "We All Scream", desc: "2-story nightclub with rooftop — 3,800 sq ft", capacity: 1000 },
   { name: "Park on Fremont", desc: "Restaurant & patios — 5,000 sq ft", capacity: 198 },
   { name: "Lucky Day", desc: "Tequila & mezcal house — 3,000 sq ft", capacity: 103 },
-  { name: "La Mona Rosa", desc: "Mexican restaurant & bar — 3,500 sq ft", capacity: 212 },
+  { name: "Pink Monkey", desc: "Bar & nightclub — 3,500 sq ft", capacity: 212 },
   { name: "Cheapshot", desc: "Variety showroom — 3,000 sq ft", capacity: 99 },
 ];
 
