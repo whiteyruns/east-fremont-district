@@ -46,6 +46,10 @@ the current cornerbar.com-scoped Resend key cannot use.
 - [ ] Source filter on the Go Run Rabbit EFD Pipeline dashboard (reads `efd_leads`)
 - [ ] Monthly "LVCVA-sourced leads → status" export as invoice backup
 
+## Handoff page copy REFRESHED Oct 5 (for Ryan → LVCVA)
+- [x] `/newsletter` + email HTML/txt now carry the refreshed draft: no opening quote, one-voice intro, thirteen venues, tentpole line evergreen, "Start Your Inquiry", plain-language stats, TransUnion CES block, video poster, reply address in sign-off; subject "Take over a whole block of Downtown Las Vegas"
+- [ ] Ryan can still flip: TransUnion block (out if he says so), proof numbers, subject line
+
 ## Recap sent Oct 5
 - [x] Team recap "Book the Block — where everything stands" sent via Resend from keith@gorunrabbit.com to ryan@dtlv.com, zokie@cornerbarmgmt.com, mauricio@cornerbar.com (CC keith@) — Resend id `01a10e07…`. Asks: Ryan = 4 email calls + drip signature name + LVCVA hosted-buyer ask; Ryan/Mauricio = IMEX walkthrough date/time/host.
 - [ ] Keith: share the review page + deck artifact with the three (edit access on the deck)
