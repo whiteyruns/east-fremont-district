@@ -50,6 +50,15 @@ the current cornerbar.com-scoped Resend key cannot use.
 - [x] Team recap "Book the Block — where everything stands" sent via Resend from keith@gorunrabbit.com to ryan@dtlv.com, zokie@cornerbarmgmt.com, mauricio@cornerbar.com (CC keith@) — Resend id `01a10e07…`. Asks: Ryan = 4 email calls + drip signature name + LVCVA hosted-buyer ask; Ryan/Mauricio = IMEX walkthrough date/time/host.
 - [ ] Keith: share the review page + deck artifact with the three (edit access on the deck)
 
+## Video in the LVCVA email (team request, Oct 5)
+Source: Dropbox "2026-THE-BLOCK-SE-Video-TAVI-v03.mp4" — 1080p24, 1:58, 152 MB (10 Mbps). Says "13 unique bars, restaurants & nightlife concepts" (email/deck say sixteen venues — reconcile with Ryan). Shows Pink Monkey.
+- [x] Email: poster frame with play button (`public/email-assets/feed-lvcva-video-poster.jpg`) linking to `/book-the-block?...&utm_content=video#video`; added to HTML + txt + test script; review artifact item 10 (v5)
+- [x] Landing page: `Video()` section, env-gated — `NEXT_PUBLIC_BLOCK_VIDEO_EMBED` (iframe URL) or `NEXT_PUBLIC_BLOCK_VIDEO_URL` (mp4); poster `public/images/book-the-block/video-poster.jpg`
+- [x] Web renditions encoded (scratchpad, not in repo): 1080p ~5 Mbps 76 MB, 720p ~2.5 Mbps 39 MB, faststart
+- [x] **HOSTED on Cloudflare Stream** (Claymore And Colt account `790154fb…`, Images+Stream $0/mo + 1,000 min storage $5/mo, card ·6983, Keith ticked the terms Oct 5). Imported from the Dropbox dl=1 URL (browser upload tool caps at 10 MB). Video ID `e502c93ee815534ef86a0a86703b2c46`, customer subdomain `customer-x375kgoi6jdpeco1.cloudflarestream.com`; iframe/HLS/thumbnail all 200.
+- [x] `NEXT_PUBLIC_BLOCK_VIDEO_EMBED` set in Vercel (production + preview) and `.env.local`; embed URL carries our poster
+- [ ] Venue count: email/deck/landing rolled to THIRTEEN (Keith, Oct 5, to match the video). Site metadata + inventory still say 16 (all operators) — separate decision
+
 ## 5. Industry outreach — trade press + planner events (added Oct 5; dates verified)
 Every channel gets its own tag on the same links the LVCVA send uses (`utm_source=bizbash|imex|connect|ems`, `utm_campaign=book-the-block`), so the attribution built in step 1 covers all of it with no extra code.
 - [ ] **BizBash new-venues roundup — pitch THIS MONTH.** Free. Runs March / July / November; November is next, so the window is October. Pitch F.E.E.D. as a new venue concept (Book the Block). Submission → https://www.bizbash.com/get-featured

@@ -14,7 +14,7 @@ import DeckDownload from "@/components/homepage/DeckDownload";
 export const metadata: Metadata = {
   title: "Book the Block",
   description:
-    "Take over an entire block of Downtown Las Vegas. Sixteen venues, one operator, one contract — for a night, a week, or a full convention run.",
+    "Take over an entire block of Downtown Las Vegas. Thirteen venues, one operator, one contract — for a night, a week, or a full convention run.",
   robots: {
     index: false,
     follow: false,
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Book the Block — East Fremont District",
     description:
-      "An entire block of Downtown Las Vegas. Sixteen venues, one operator, one contract.",
+      "An entire block of Downtown Las Vegas. Thirteen venues, one operator, one contract.",
     images: [{ url: "/images/og/og-default.jpg", width: 1200, height: 630 }],
   },
 };
@@ -57,7 +57,7 @@ function Hero() {
               Book the Block · Downtown Las Vegas
             </p>
             <h1 className="text-[#F0EDE8] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
-              One block. Sixteen venues.{" "}
+              One block. Thirteen venues.{" "}
               <span className="text-[#C49A6C]">One contract.</span>
             </h1>
             <p className="text-[#9B978F] text-lg leading-relaxed max-w-xl">
@@ -90,6 +90,55 @@ function Hero() {
             <p className="mt-3 text-[#6B6760] text-xs">
               Feed the Block — the district packed end to end, street closed, stage lit.
             </p>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+// The two-minute block sizzle. Email clients can't play video, so the LVCVA
+// email shows a poster that links here (#video). Renders only once the video
+// has a host: NEXT_PUBLIC_BLOCK_VIDEO_EMBED (an iframe player URL, e.g.
+// Cloudflare Stream / Vimeo / YouTube) or NEXT_PUBLIC_BLOCK_VIDEO_URL (an
+// mp4 for the native player). Changing either needs a rebuild.
+const VIDEO_EMBED = process.env.NEXT_PUBLIC_BLOCK_VIDEO_EMBED;
+const VIDEO_URL = process.env.NEXT_PUBLIC_BLOCK_VIDEO_URL;
+
+function Video() {
+  if (!VIDEO_EMBED && !VIDEO_URL) return null;
+  return (
+    <section id="video" className="py-20 lg:py-24 bg-[#0F1115] scroll-mt-20">
+      <Container>
+        <div className="max-w-4xl mx-auto space-y-6">
+          <div className="text-center space-y-3">
+            <p className="text-[#C49A6C] text-xs font-semibold tracking-widest uppercase">
+              Watch
+            </p>
+            <h2 className="text-[#F0EDE8] text-3xl lg:text-4xl font-bold tracking-tight">
+              The block in two minutes
+            </h2>
+          </div>
+          <div className="relative aspect-video rounded-lg overflow-hidden border border-[#2A2D33] bg-black">
+            {VIDEO_EMBED ? (
+              <iframe
+                src={VIDEO_EMBED}
+                title="The Block — East Fremont District"
+                className="absolute inset-0 w-full h-full"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                allowFullScreen
+              />
+            ) : (
+              <video
+                className="absolute inset-0 w-full h-full"
+                controls
+                playsInline
+                preload="metadata"
+                poster="/images/book-the-block/video-poster.jpg"
+              >
+                <source src={VIDEO_URL} type="video/mp4" />
+              </video>
+            )}
           </div>
         </div>
       </Container>
@@ -243,6 +292,7 @@ export default function BookTheBlockPage() {
   return (
     <>
       <Hero />
+      <Video />
       <Includes />
       <Proof />
       <Deck />

@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
               A full-district takeover of Fremont East
             </p>
             <p style="color: #F0EDE8; font-size: 14px; line-height: 1.6; margin-bottom: 24px;">
-              Here's the deck you requested: one block of Downtown Las Vegas, sixteen venues, one operator, one contract.
+              Here's the deck you requested: one block of Downtown Las Vegas, thirteen venues, one operator, one contract.
             </p>
             <a href="${DECK_URL}" style="display: inline-block; background: #C49A6C; color: #0F1115; font-weight: 700; font-size: 14px; padding: 14px 28px; text-decoration: none; border-radius: 6px;">
               Download Deck (PDF)

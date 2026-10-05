@@ -34,7 +34,7 @@ const HEADER_IMG_URL =
 const FROM_LINE = "Book the Block <booktheblock@cornerbar.com>";
 const SUBJECT = "Book the Block — an entire block of Downtown Las Vegas";
 const PREHEADER =
-  "An entire block of Downtown Las Vegas — 16 venues, one operator, one contract. Book it end to end.";
+  "An entire block of Downtown Las Vegas — 13 venues, one operator, one contract. Book it end to end.";
 
 const DOWNLOADS = [
   {
