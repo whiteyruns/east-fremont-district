@@ -48,6 +48,7 @@ the current cornerbar.com-scoped Resend key cannot use.
 
 ## Handoff page copy REFRESHED Oct 5 (for Ryan → LVCVA)
 - [x] `/newsletter` + email HTML/txt now carry the refreshed draft: no opening quote, one-voice intro, thirteen venues, tentpole line evergreen, "Start Your Inquiry", plain-language stats, TransUnion CES block, video poster, reply address in sign-off; subject "Take over a whole block of Downtown Las Vegas"
+- [x] Keith sent Ryan the handoff link Oct 5; Ryan drafts the note to LVCVA's team himself
 - [ ] Ryan can still flip: TransUnion block (out if he says so), proof numbers, subject line
 
 ## Recap sent Oct 5
