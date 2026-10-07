@@ -1,10 +1,10 @@
-# IMEX week block tour — invitation (draft, Oct 7 2026)
+# IMEX week block tour: invitation (draft, Oct 7 2026)
 
 Hosted by Mauricio, Corner Bar. Tue Oct 13 / Wed Oct 14 / Thu Oct 15, 9:30 AM,
 meet at Pink Monkey (100 S 6th St, Fremont & 6th). RSVP page:
 `https://www.eastfremontdistrict.com/book-the-block/imex`
 
-Send one at a time, from Mauricio (host) or Keith — never a blast. Priority 1 is
+Send one at a time, from Mauricio (host) or Keith, never a blast. Priority 1 is
 the ten Las Vegas-office people in `IMEX-2026-DMC-Contacts-Enriched.csv`
 (Hello! stand F801, Hosts Global E1117, PRA E1325); Mauricio can also stop by
 those stands in person on Tuesday. Tag each link so the RSVP shows who it came
@@ -42,7 +42,7 @@ mauricio@cornerbar.com
 
 **Short version (LinkedIn / text):**
 
-Hi {first name} — at IMEX next week? I'm hosting a 45-minute walk of a Downtown
+Hi {first name}, are you at IMEX next week? I'm hosting a 45-minute walk of a Downtown
 Las Vegas block that closes to the public for private programs: thirteen venues,
 one contract. Tue/Wed/Thu at 9:30 AM from Pink Monkey on Fremont. Reserve a
-morning: eastfremontdistrict.com/book-the-block/imex — Mauricio, Corner Bar
+morning: eastfremontdistrict.com/book-the-block/imex. Mauricio, Corner Bar

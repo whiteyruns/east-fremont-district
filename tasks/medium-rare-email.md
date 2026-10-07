@@ -19,18 +19,18 @@ theirs in the Monday report.
 
 **Subject:** You've got the block party. We've got the block.
 
-Joe, Adam —
+Joe, Adam,
 
-Quick one. You build the parties people fly in for; we own the street they'd be on.
+You build the parties people fly in for. We own the street they'd be on.
 
-Fremont East is a single Downtown Las Vegas block, thirteen venues under one operator — rooftops, clubs, a 99-seat showroom up to a 1,000-cap rooftop club — and we close the street. 15,000 people, one contract, permits and the City already in our corner. We've done it with Marshmello and Diplo headlining and TransUnion taking the whole thing for three days at CES.
+Fremont East is one block of Downtown Las Vegas with thirteen venues under one operator, from a 99-seat showroom to a 1,000-cap rooftop club, and we close the street. That puts 15,000 people on one contract with the permits and the City already handled. We've run it with Marshmello and Diplo headlining, and TransUnion took the whole block for three days at CES.
 
-What I'd like to do: put one of your properties on it. Shaq's Fun House during F1 week, a Roommates Block Party that's an actual block, Flavortown with the street as the tailgate — your show, your talent, your brands; our block, our crews, our permits. Co-produced the way you already work with your partners.
+I want to put one of your properties on it. Shaq's Fun House during F1 week, a Roommates Block Party that's an actual block, Flavortown with the street as the tailgate. You bring the show, the talent and the brands. We bring the block, the crews and the permits, and we co-produce it the same way you do with your partners.
 
 Two minutes of what it looks like from the air: eastfremontdistrict.com/book-the-block?utm_source=medium-rare&utm_medium=email&utm_campaign=book-the-block&utm_content=video#video
 The deck, no form: eastfremontdistrict.com/FEED-BookTheBlock-Deck.pdf
 
-CES is in January and F1 is back in November; both get claimed early. If any of the crew is in Vegas for F1 next month, I'll walk you down the block — twenty minutes, door to door.
+CES is in January and F1 is back in November, and both get claimed early. If any of the crew is in Vegas for F1 next month I'll walk you down the block myself. Twenty minutes door to door.
 
 Ryan
 
@@ -38,4 +38,8 @@ Ryan
 
 **Shorter (text / DM):**
 
-Joe — you've got the block party, we've got the block. Fremont East: one Downtown Vegas block, 13 venues, street closed, 15K people, one contract. Want to put Shaq's Fun House or Roommates on it for F1 or CES, co-produced? Two minutes from the air: eastfremontdistrict.com/book-the-block#video — Ryan
+Joe, you've got the block party and we've got the block. Fremont East is one Downtown Vegas block, 13 venues, street closed, 15K people, one contract. Want to put Shaq's Fun House or Roommates on it for F1 or CES, co-produced? Two minutes from the air: eastfremontdistrict.com/book-the-block#video. Ryan, Corner Bar
+
+---
+
+House rule (Keith, Oct 7): no em dashes, no "Quick one", no three-beat fragment lists, no "— Name" sign-offs. Write it like a person typing in a mail client.
