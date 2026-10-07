@@ -76,6 +76,10 @@ Alyson = F.E.E.D.'s OUTSIDE EVENT BOOKER (she placed TransUnion), NOT LVCVA (Kei
 - [ ] Planner one-sheet PDF (one page, private track) — the deck stays brand-facing
 - [ ] Inquiry form: `type=corporate` preselect — verify `/inquire` honors the query param
 
+## 8. Medium Rare (Ryan's ask, Oct 7)
+- [x] Draft at `tasks/medium-rare-email.md` — producer-to-producer note from Ryan to Joe Silberzweig + Adam (co-founders), cc Jake Brackman / Cam Markovsky / Tatum Mannion: "You've got the block party. We've got the block." Offers the block as the Vegas home for one of their properties (Shaq's Fun House, Roommates Block Party, Flavortown), co-produced; links tagged `utm_source=medium-rare`; deck linked direct (no gate). Brand track, not planner.
+- [ ] Ryan sends (his relationship). Open: F1 week walk if any of them are in town Nov 19–21.
+
 ## 7. Mauricio's asks (Oct 7 reply to the recap)
 - [x] GTM: mauricio@cornerbarmgmt.com added to the Corner Bar Management account (Keith, Oct 7; invite form prepped via Chrome, Keith ticked Publish + Invite)
 - [x] Weekly summary → FOLDED INTO the cornerbar.ai Monday report (Keith, Oct 7): `cornerbar-web/src/lib/monday-report.ts` already read `efd_leads` from the same Supabase; it now shows each lead's kind + UTM source and a "Book the Block" section (inquiries vs deck requests, by source, drip sends, unsubscribes, tour RSVPs, campaign-to-date). Goes Mon 9 AM PT from `Corner Bar Ops <hello@cornerbar.ai>` to Keith, Mauricio, Zokie, Lina, Ryan. The separate EFD `/api/cron/weekly-summary` route + schedule were REMOVED the same day (never ran).
