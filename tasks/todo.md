@@ -77,12 +77,12 @@ Alyson read the handoff page: it reads as a brand/impressions pitch and links to
 - [ ] Inquiry form: `type=corporate` preselect — verify `/inquire` honors the query param
 
 ## 7. Mauricio's asks (Oct 7 reply to the recap)
-- [ ] GTM: add mauricio@cornerbarmgmt.com as a user on GTM-WZ6R39CG (GA4 is already under cornerbarmgmt@gmail.com) — needs Keith's go, done in GTM Admin → User Management
+- [x] GTM: mauricio@cornerbarmgmt.com added to the Corner Bar Management account (Keith, Oct 7; invite form prepped via Chrome, Keith ticked Publish + Invite)
 - [x] Weekly summary: `/api/cron/weekly-summary?secret=…` built Oct 7 — past 7 days of leads (who/what/utm), inquiries vs deck requests, drip sends, unsubscribes, tour RSVPs, campaign-to-date by source + status; to booktheblock@, cc mauricio@cornerbar.com, bcc keith@. `&dry=1` returns the HTML without sending. Page views/video plays stay in GA4 (not queried).
 - [ ] Schedule it: add `{"path":"/api/cron/weekly-summary?secret=efd-cron-2026","schedule":"0 15 * * 1"}` (Mon 8 AM PT) to vercel.json once Keith has previewed the dry run — **not scheduled yet**
 - [ ] Prod has Keith's Oct 5 curl test lead (utm_source=test) — delete it or it shows in the first summary
-- [x] IMEX block tours — built Oct 7: `/book-the-block/imex` (noindex; hero, what you'll see, meeting point/when/getting here/host, RSVP form: day · name · company · title · party size · email · mobile · notes · opt-in). `POST /api/block-tour-rsvp` → `block_tour_rsvps` (migration **011, NOT YET APPLIED**), confirmation email w/ .ics attachment, team alert to booktheblock@ cc Mauricio bcc Keith with contact + opt-in + source. Details in `src/lib/block-tour.ts`. GTM event `tour_rsvp` fires but has no trigger yet.
-- [ ] Run migration 011 in the Supabase SQL editor (Keith's go)
+- [x] IMEX block tours (9:30 AM is DELIBERATE per Keith — not everyone hits the floor at open) — built Oct 7: `/book-the-block/imex` (noindex; hero, what you'll see, meeting point/when/getting here/host, RSVP form: day · name · company · title · party size · email · mobile · notes · opt-in). `POST /api/block-tour-rsvp` → `block_tour_rsvps` (migration 011, applied Oct 7), confirmation email w/ .ics attachment, team alert to booktheblock@ cc Mauricio bcc Keith with contact + opt-in + source. Details in `src/lib/block-tour.ts`. GTM event `tour_rsvp` fires but has no trigger yet.
+- [x] Migration 011 APPLIED to prod Oct 7 (SQL editor via Chrome): `block_tour_rsvps` — RLS on, insert-only policy, 17 columns
 - [ ] From Mauricio: parking guidance (`PARKING_GUIDANCE`) + mobile for the morning (`HOST.phone`) — until set, page + confirmation say details follow the day before, and every team alert flags it
 - [ ] Invitation draft → `tasks/imex-tour-invitation.md` (long + short). Mauricio/Keith send one at a time to the 10 Las Vegas DMC contacts; Mauricio can also visit stands F801 / E1117 / E1325
 - [ ] After the first real RSVP: GTM trigger + GA4 tag for `tour_rsvp` (optional)
