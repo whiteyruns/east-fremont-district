@@ -80,7 +80,7 @@ Alyson read the handoff page: it reads as a brand/impressions pitch and links to
 - [x] GTM: mauricio@cornerbarmgmt.com added to the Corner Bar Management account (Keith, Oct 7; invite form prepped via Chrome, Keith ticked Publish + Invite)
 - [x] Weekly summary: `/api/cron/weekly-summary?secret=…` built Oct 7 — past 7 days of leads (who/what/utm), inquiries vs deck requests, drip sends, unsubscribes, tour RSVPs, campaign-to-date by source + status; to booktheblock@, cc mauricio@cornerbar.com, bcc keith@. `&dry=1` returns the HTML without sending. Page views/video plays stay in GA4 (not queried).
 - [x] SCHEDULED Oct 7: vercel.json cron `0 15 * * 1` (Mondays 8 AM PT; first run Mon Oct 12)
-- [ ] Prod has Keith's Oct 5 curl test lead (utm_source=test) — delete it or it shows in the first summary
+- [x] Oct 5 curl test lead (`9b228f48…`, utm_source=test) DELETED from prod Oct 7 (scoped by id; 0 test rows remain, 0 campaign rows yet)
 - [x] IMEX block tours (9:30 AM is DELIBERATE per Keith — not everyone hits the floor at open) — built Oct 7: `/book-the-block/imex` (noindex; hero, what you'll see, meeting point/when/getting here/host, RSVP form: day · name · company · title · party size · email · mobile · notes · opt-in). `POST /api/block-tour-rsvp` → `block_tour_rsvps` (migration 011, applied Oct 7), confirmation email w/ .ics attachment, team alert to booktheblock@ cc Mauricio bcc Keith with contact + opt-in + source. Details in `src/lib/block-tour.ts`. GTM event `tour_rsvp` fires but has no trigger yet.
 - [x] Migration 011 APPLIED to prod Oct 7 (SQL editor via Chrome): `block_tour_rsvps` — RLS on, insert-only policy, 17 columns
 - [ ] From Mauricio: parking guidance (`PARKING_GUIDANCE`) + mobile for the morning (`HOST.phone`) — until set, page + confirmation say details follow the day before, and every team alert flags it
@@ -98,6 +98,12 @@ Every channel gets its own tag on the same links the LVCVA send uses (`utm_sourc
 - [ ] **Connect Spring Marketplace, Apr 21–23 2027, Wynn Las Vegas** — pre-booked one-to-one planner meetings. Decide on supplier registration.
 - [ ] **Experiential Marketing Summit, Apr 27–29 2027, MGM Grand** — 1,000+ brand/agency experiential marketers (the exact buyer). 2026 ran offsite field trips + after-hours at Vegas venues → pitch F.E.E.D. as a 2027 host venue. ⚠️ Sales contacts were in the "Sources" of Keith's research note — not in this repo; add them here.
 - [ ] April 2027 = the biggest window (two events in one week). Plan one on-block hosted moment that serves both.
+
+## Recap #2 sent Oct 7
+- [x] "Book the Block — Oct 7 recap" sent to keith@ via Resend (`01a117b3…`) for Keith to forward to Ryan/Zokie/Mauricio: two tracks, IMEX tour page, tracking + GTM + weekly summary, deck/video links, asks by person, IMEX invitation as appendix.
+
+## Build fix Oct 7 (`7b5621e`)
+- [x] Prod deploy of `4c9ffa8` failed: Thriller OG-image routes fetched fonts from Google Fonts at build time and got an HTML page back ("Unsupported OpenType signature <!DO"). Also the old loader took the FIRST url() = cyrillic-ext subset. Fonts (latin WOFF, OFL) now vendored under `public/fonts/og/` + `src/lib/og-fonts.ts`; all three OG routes (thriller, thriller/sponsor, insomniac360) read from disk. Verified with a full local build + rendered card.
 
 ## Review
 (fill in as items ship)
