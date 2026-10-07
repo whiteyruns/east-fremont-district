@@ -65,14 +65,14 @@ Source: Dropbox "2026-THE-BLOCK-SE-Video-TAVI-v03.mp4" — 1080p24, 1:58, 152 MB
 - [x] Pushed `9ab2b22`; verified live: /book-the-block#video renders the Stream iframe, "Thirteen venues" ×6, poster assets 200, handoff-page email carries the video link + thirteen
 - [ ] Venue count: email/deck/landing rolled to THIRTEEN (Keith, Oct 5, to match the video). Site metadata + inventory still say 16 (all operators) — separate decision
 
-## 6. Private-buyout track — Alyson (LVCVA) feedback, Oct 7
-Alyson read the handoff page: it reads as a brand/impressions pitch and links to a block-party site; her clients are planners who want PRIVATE events and would be put off by crowd numbers. F1/Super Bowl brand clients are the other audience. Two tracks, two one-sheets.
+## 6. Private-buyout track — Alyson's feedback, Oct 7
+Alyson = F.E.E.D.'s OUTSIDE EVENT BOOKER (she placed TransUnion), NOT LVCVA (Keith correction, Oct 7). She read the handoff page: it reads as a brand/impressions pitch and links to a block-party site; the planners she books for want PRIVATE events and would be put off by crowd numbers. F1/Super Bowl brand clients are the other audience. Two tracks, two one-sheets.
 - [x] `/book-the-block/private` (noindex) — planner page: closed-to-the-public hero + video poster, Stream player, "Your guests only" includes + program chips, 13 / 61,600 sq ft / 15,000 metrics, TransUnion as a private program (2,500 executives, no impressions), find-your-dates CTA → `/inquire?type=corporate`. No deck gate (deck is brand-oriented).
-- [x] `Video` section extracted to `src/components/book-the-block/Video.tsx`, shared by both pages
+- [x] `Video` section extracted to `src/components/book-the-block/Video.tsx`, shared by both pages. Oct 7 (Keith): private page showed the poster thumbnail in the hero AND the player below = same video twice → player now lives in the hero (`VideoPlayer id="video"`), duplicate section removed; secondary CTA → `#programs`
 - [x] LVCVA email (HTML/txt/test script) REWRITTEN for planners: subject "Your own block of Downtown Las Vegas, closed to the public"; all links → `/book-the-block/private` with the same `utm_*` tags; 32,000+/296.6M stat block REMOVED; TransUnion = "hosted 2,500 executives over three days"; bullets = private by default / one contract / room for any group / downtown. Handoff page `/newsletter` carries it.
 - [x] Brand-activation version preserved as `public/email-assets/feed-brand-activation-newsletter.{html,txt}` (for brand/agency sends, not LVCVA)
 - [x] Review artifact v7: "Update, Oct 7" banner pointing at the private version
-- [ ] Ryan replies to Alyson with the new handoff link (Keith's call on wording)
+- [ ] Ryan sends LVCVA the new handoff link; Alyson gets the private page link for her own clients
 - [ ] Planner one-sheet PDF (one page, private track) — the deck stays brand-facing
 - [ ] Inquiry form: `type=corporate` preselect — verify `/inquire` honors the query param
 

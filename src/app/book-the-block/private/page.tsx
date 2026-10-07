@@ -3,7 +3,7 @@ import Image from "next/image";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
 import MetricCard from "@/components/ui/MetricCard";
-import Video from "@/components/book-the-block/Video";
+import { VideoPlayer } from "@/components/book-the-block/Video";
 
 // Planner-facing Book the Block page: the private-buyout story. This is what
 // the LVCVA partner email links to. The brand-activation story (impressions,
@@ -80,27 +80,13 @@ function Hero() {
               <Button variant="primary" href="/inquire?type=corporate">
                 Start Your Inquiry
               </Button>
-              <Button variant="secondary" href="#video">
-                Watch the block in two minutes
+              <Button variant="secondary" href="#programs">
+                What a private program includes
               </Button>
             </div>
           </div>
           <div className="lg:col-span-5">
-            <a href="#video" className="block relative aspect-video rounded-lg overflow-hidden border border-[#2A2D33] group">
-              <Image
-                src="/images/book-the-block/video-poster.jpg"
-                alt="Aerial view of Fremont East at night"
-                fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
-                priority
-              />
-              <span className="absolute inset-0 flex items-center justify-center">
-                <span className="w-16 h-16 rounded-full border-2 border-[#C49A6C] bg-[#0F1115]/70 flex items-center justify-center group-hover:bg-[#0F1115]/90 transition-colors">
-                  <span className="ml-1 border-y-[11px] border-y-transparent border-l-[18px] border-l-[#F0EDE8]" />
-                </span>
-              </span>
-            </a>
+            <VideoPlayer id="video" />
             <p className="mt-3 text-[#6B6760] text-xs">
               Two minutes on the block, from the air to the rooftops.
             </p>
@@ -113,7 +99,7 @@ function Hero() {
 
 function Includes() {
   return (
-    <section className="py-20 lg:py-24 bg-[#1A1D23] border-y border-[#2A2D33]">
+    <section id="programs" className="py-20 lg:py-24 bg-[#1A1D23] border-y border-[#2A2D33] scroll-mt-20">
       <Container>
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-5 space-y-5">
@@ -224,7 +210,6 @@ export default function PrivateBuyoutPage() {
   return (
     <>
       <Hero />
-      <Video />
       <Includes />
       <Proof />
       <Dates />
