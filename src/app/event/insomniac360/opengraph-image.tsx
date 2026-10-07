@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { loadOgFont } from "@/lib/og-fonts";
 import fs from "fs/promises";
 import path from "path";
 
@@ -8,20 +9,6 @@ export const contentType = "image/png";
 export const alt =
   "Insomniac 360 — On The Block · A full-district takeover of Fremont East, Downtown Las Vegas";
 
-// Google Fonts serves WOFF2 by default, which Satori doesn't support.
-// An old-browser UA forces the TTF response. Same trick as the Thriller card.
-const TTF_UA =
-  "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.0.0 Safari/537.36";
-
-async function loadFont(family: string): Promise<ArrayBuffer> {
-  const cssUrl = `https://fonts.googleapis.com/css2?family=${family}`;
-  const css = await fetch(cssUrl, { headers: { "User-Agent": TTF_UA } }).then(
-    (r) => r.text(),
-  );
-  const url = css.match(/src:\s*url\(([^)]+)\)/)?.[1];
-  if (!url) throw new Error(`Font src not found for ${family}`);
-  return fetch(url).then((r) => r.arrayBuffer());
-}
 
 const IMG_DIR = "public/images/insomniac360";
 
@@ -37,9 +24,9 @@ const PLATES: [file: string, mime: string][] = [
 export default async function OgImage() {
   const [cormorant, cormorantItalic, jetbrains, ...plateBufs] =
     await Promise.all([
-      loadFont("Cormorant+Garamond:wght@600"),
-      loadFont("Cormorant+Garamond:ital,wght@1,500"),
-      loadFont("JetBrains+Mono:wght@500"),
+      loadOgFont("CormorantGaramond-SemiBold"),
+      loadOgFont("CormorantGaramond-MediumItalic"),
+      loadOgFont("JetBrainsMono-Medium"),
       ...PLATES.map(([file]) =>
         fs.readFile(path.join(process.cwd(), IMG_DIR, file)),
       ),

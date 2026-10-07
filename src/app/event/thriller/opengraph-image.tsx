@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { loadOgFont } from "@/lib/og-fonts";
 import fs from "fs/promises";
 import path from "path";
 
@@ -8,30 +9,14 @@ export const contentType = "image/png";
 export const alt =
   "World's Largest Thriller Dance — Oct 25, 2026 — F.E.E.D. Downtown Las Vegas";
 
-// Google Fonts serves WOFF2 by default, which Satori doesn't support.
-// An old-browser UA forces the TTF response.
-const TTF_UA =
-  "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/40.0.0.0 Safari/537.36";
-
-async function loadFont(family: string, text?: string): Promise<ArrayBuffer> {
-  const cssUrl = `https://fonts.googleapis.com/css2?family=${family}${
-    text ? `&text=${encodeURIComponent(text)}` : ""
-  }`;
-  const css = await fetch(cssUrl, { headers: { "User-Agent": TTF_UA } }).then(
-    (r) => r.text(),
-  );
-  const url = css.match(/src:\s*url\(([^)]+)\)/)?.[1];
-  if (!url) throw new Error(`Font src not found for ${family}`);
-  return fetch(url).then((r) => r.arrayBuffer());
-}
 
 export default async function OgImage() {
   const [nosifer, cormorant, cormorantItalic, jetbrains, zombieBuf] =
     await Promise.all([
-      loadFont("Nosifer", "THRILLER"),
-      loadFont("Cormorant+Garamond:wght@500"),
-      loadFont("Cormorant+Garamond:ital,wght@1,500"),
-      loadFont("JetBrains+Mono:wght@500"),
+      loadOgFont("Nosifer-Regular"),
+      loadOgFont("CormorantGaramond-Medium"),
+      loadOgFont("CormorantGaramond-MediumItalic"),
+      loadOgFont("JetBrainsMono-Medium"),
       fs.readFile(
         path.join(process.cwd(), "public/images/thriller/zombie_bg.png"),
       ),
