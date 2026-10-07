@@ -23,7 +23,7 @@ Joe, Adam —
 
 Quick one. You build the parties people fly in for; we own the street they'd be on.
 
-Fremont East is a single Downtown Las Vegas block, thirteen venues under one operator — rooftops, clubs, a showroom, a 99-seat theater and a 1,000-cap rooftop — and we close the street. 15,000 people, one contract, permits and the City already in our corner. We've done it with Marshmello and Diplo headlining and TransUnion taking the whole thing for three days at CES.
+Fremont East is a single Downtown Las Vegas block, thirteen venues under one operator — rooftops, clubs, a 99-seat showroom up to a 1,000-cap rooftop club — and we close the street. 15,000 people, one contract, permits and the City already in our corner. We've done it with Marshmello and Diplo headlining and TransUnion taking the whole thing for three days at CES.
 
 What I'd like to do: put one of your properties on it. Shaq's Fun House during F1 week, a Roommates Block Party that's an actual block, Flavortown with the street as the tailgate — your show, your talent, your brands; our block, our crews, our permits. Co-produced the way you already work with your partners.
 
