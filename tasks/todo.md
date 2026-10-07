@@ -78,8 +78,14 @@ Alyson read the handoff page: it reads as a brand/impressions pitch and links to
 
 ## 7. Mauricio's asks (Oct 7 reply to the recap)
 - [ ] GTM: add mauricio@cornerbarmgmt.com as a user on GTM-WZ6R39CG (GA4 is already under cornerbarmgmt@gmail.com) — needs Keith's go, done in GTM Admin → User Management
-- [ ] Weekly summary email: UTM source / deck requests / inquiries / drip sends from `efd_leads` → booktheblock@, keith@, mauricio (new cron route)
-- [ ] IMEX block tours: Tue/Wed/Thu Oct 13–15, 9:30 AM, meet at Pink Monkey, host Mauricio. Build an RSVP/opt-in page (name, company, email, phone, day) with confirmation email carrying parking guidance — **Mauricio must supply the parking info**. Invitation draft → the 10 Las Vegas DMC contacts + network leads (draft-first; Keith/Mauricio send).
+- [x] Weekly summary: `/api/cron/weekly-summary?secret=…` built Oct 7 — past 7 days of leads (who/what/utm), inquiries vs deck requests, drip sends, unsubscribes, tour RSVPs, campaign-to-date by source + status; to booktheblock@, cc mauricio@cornerbar.com, bcc keith@. `&dry=1` returns the HTML without sending. Page views/video plays stay in GA4 (not queried).
+- [ ] Schedule it: add `{"path":"/api/cron/weekly-summary?secret=efd-cron-2026","schedule":"0 15 * * 1"}` (Mon 8 AM PT) to vercel.json once Keith has previewed the dry run — **not scheduled yet**
+- [ ] Prod has Keith's Oct 5 curl test lead (utm_source=test) — delete it or it shows in the first summary
+- [x] IMEX block tours — built Oct 7: `/book-the-block/imex` (noindex; hero, what you'll see, meeting point/when/getting here/host, RSVP form: day · name · company · title · party size · email · mobile · notes · opt-in). `POST /api/block-tour-rsvp` → `block_tour_rsvps` (migration **011, NOT YET APPLIED**), confirmation email w/ .ics attachment, team alert to booktheblock@ cc Mauricio bcc Keith with contact + opt-in + source. Details in `src/lib/block-tour.ts`. GTM event `tour_rsvp` fires but has no trigger yet.
+- [ ] Run migration 011 in the Supabase SQL editor (Keith's go)
+- [ ] From Mauricio: parking guidance (`PARKING_GUIDANCE`) + mobile for the morning (`HOST.phone`) — until set, page + confirmation say details follow the day before, and every team alert flags it
+- [ ] Invitation draft → `tasks/imex-tour-invitation.md` (long + short). Mauricio/Keith send one at a time to the 10 Las Vegas DMC contacts; Mauricio can also visit stands F801 / E1117 / E1325
+- [ ] After the first real RSVP: GTM trigger + GA4 tag for `tour_rsvp` (optional)
 
 ## 5. Industry outreach — trade press + planner events (added Oct 5; dates verified)
 Every channel gets its own tag on the same links the LVCVA send uses (`utm_source=bizbash|imex|connect|ems`, `utm_campaign=book-the-block`), so the attribution built in step 1 covers all of it with no extra code.
