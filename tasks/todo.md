@@ -65,6 +65,22 @@ Source: Dropbox "2026-THE-BLOCK-SE-Video-TAVI-v03.mp4" — 1080p24, 1:58, 152 MB
 - [x] Pushed `9ab2b22`; verified live: /book-the-block#video renders the Stream iframe, "Thirteen venues" ×6, poster assets 200, handoff-page email carries the video link + thirteen
 - [ ] Venue count: email/deck/landing rolled to THIRTEEN (Keith, Oct 5, to match the video). Site metadata + inventory still say 16 (all operators) — separate decision
 
+## 6. Private-buyout track — Alyson (LVCVA) feedback, Oct 7
+Alyson read the handoff page: it reads as a brand/impressions pitch and links to a block-party site; her clients are planners who want PRIVATE events and would be put off by crowd numbers. F1/Super Bowl brand clients are the other audience. Two tracks, two one-sheets.
+- [x] `/book-the-block/private` (noindex) — planner page: closed-to-the-public hero + video poster, Stream player, "Your guests only" includes + program chips, 13 / 61,600 sq ft / 15,000 metrics, TransUnion as a private program (2,500 executives, no impressions), find-your-dates CTA → `/inquire?type=corporate`. No deck gate (deck is brand-oriented).
+- [x] `Video` section extracted to `src/components/book-the-block/Video.tsx`, shared by both pages
+- [x] LVCVA email (HTML/txt/test script) REWRITTEN for planners: subject "Your own block of Downtown Las Vegas, closed to the public"; all links → `/book-the-block/private` with the same `utm_*` tags; 32,000+/296.6M stat block REMOVED; TransUnion = "hosted 2,500 executives over three days"; bullets = private by default / one contract / room for any group / downtown. Handoff page `/newsletter` carries it.
+- [x] Brand-activation version preserved as `public/email-assets/feed-brand-activation-newsletter.{html,txt}` (for brand/agency sends, not LVCVA)
+- [x] Review artifact v7: "Update, Oct 7" banner pointing at the private version
+- [ ] Ryan replies to Alyson with the new handoff link (Keith's call on wording)
+- [ ] Planner one-sheet PDF (one page, private track) — the deck stays brand-facing
+- [ ] Inquiry form: `type=corporate` preselect — verify `/inquire` honors the query param
+
+## 7. Mauricio's asks (Oct 7 reply to the recap)
+- [ ] GTM: add mauricio@cornerbarmgmt.com as a user on GTM-WZ6R39CG (GA4 is already under cornerbarmgmt@gmail.com) — needs Keith's go, done in GTM Admin → User Management
+- [ ] Weekly summary email: UTM source / deck requests / inquiries / drip sends from `efd_leads` → booktheblock@, keith@, mauricio (new cron route)
+- [ ] IMEX block tours: Tue/Wed/Thu Oct 13–15, 9:30 AM, meet at Pink Monkey, host Mauricio. Build an RSVP/opt-in page (name, company, email, phone, day) with confirmation email carrying parking guidance — **Mauricio must supply the parking info**. Invitation draft → the 10 Las Vegas DMC contacts + network leads (draft-first; Keith/Mauricio send).
+
 ## 5. Industry outreach — trade press + planner events (added Oct 5; dates verified)
 Every channel gets its own tag on the same links the LVCVA send uses (`utm_source=bizbash|imex|connect|ems`, `utm_campaign=book-the-block`), so the attribution built in step 1 covers all of it with no extra code.
 - [ ] **BizBash new-venues roundup — pitch THIS MONTH.** Free. Runs March / July / November; November is next, so the window is October. Pitch F.E.E.D. as a new venue concept (Book the Block). Submission → https://www.bizbash.com/get-featured

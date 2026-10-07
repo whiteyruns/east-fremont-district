@@ -32,9 +32,9 @@ const HEADER_IMG_URL =
   "https://www.eastfremontdistrict.com/email-assets/feed-lvcva-header.jpg";
 
 const FROM_LINE = "Book the Block <booktheblock@cornerbar.com>";
-const SUBJECT = "Take over a whole block of Downtown Las Vegas";
+const SUBJECT = "Your own block of Downtown Las Vegas, closed to the public";
 const PREHEADER =
-  "Thirteen venues, one operator, one contract. Yours for a night or a full convention run.";
+  "Thirteen venues, one street, one contract. Private for a night, a week, or a full program.";
 
 const DOWNLOADS = [
   {
