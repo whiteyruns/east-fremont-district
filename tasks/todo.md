@@ -78,7 +78,8 @@ Alyson = F.E.E.D.'s OUTSIDE EVENT BOOKER (she placed TransUnion), NOT LVCVA (Kei
 
 ## 8. Medium Rare (Ryan's ask, Oct 7)
 - [x] Draft at `tasks/medium-rare-email.md` — producer-to-producer note from Ryan to Joe Silberzweig + Adam (co-founders), cc Jake Brackman / Cam Markovsky / Tatum Mannion: "You've got the block party. We've got the block." Offers the block as the Vegas home for one of their properties (Shaq's Fun House, Roommates Block Party, Flavortown), co-produced; links tagged `utm_source=medium-rare`; deck linked direct (no gate). Brand track, not planner.
-- [ ] Ryan sends (his relationship). Open: F1 week walk if any of them are in town Nov 19–21.
+- [x] Designed template built Oct 7: `public/email-assets/feed-medium-rare.html` + `.txt` (own header on the Feed the Block aerial — NOT the LVCVA banner, which has "Presented via the LVCVA" baked in; gallery-06 crowd shot; links `utm_source=medium-rare`; deck linked direct). Review page for Ryan: https://claude.ai/artifact/76VC149zF5nikRBAmj7hqp (Keith shares).
+- [ ] Ryan's calls: plain-text from his own inbox (recommended) vs designed version from booktheblock@ w/ reply-to him; the three properties + references; anyone in town for F1 Nov 19–21.
 
 ## 7. Mauricio's asks (Oct 7 reply to the recap)
 - [x] GTM: mauricio@cornerbarmgmt.com added to the Corner Bar Management account (Keith, Oct 7; invite form prepped via Chrome, Keith ticked Publish + Invite)
