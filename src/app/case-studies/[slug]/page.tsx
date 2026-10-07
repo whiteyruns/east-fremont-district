@@ -389,7 +389,7 @@ function buildEventJsonLd(caseStudy: CaseStudy) {
     organizer: {
       "@type": "Organization",
       name: "Corner Bar",
-      url: "https://www.cornerbarmgmt.com",
+      url: "https://www.cornerbar.com",
     },
     image: caseStudy.heroImageUrl || `${siteUrl}/images/og/og-default.jpg`,
     url: `${siteUrl}/case-studies/${caseStudy.slug}`,

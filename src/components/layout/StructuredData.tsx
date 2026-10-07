@@ -32,7 +32,7 @@ export default function StructuredData() {
     parentOrganization: {
       "@type": "Organization",
       name: "Corner Bar",
-      url: "https://www.cornerbarmgmt.com",
+      url: "https://www.cornerbar.com",
     },
     numberOfEmployees: {
       "@type": "QuantitativeValue",
@@ -55,7 +55,7 @@ export default function StructuredData() {
     publisher: {
       "@type": "Organization",
       name: "Corner Bar",
-      url: "https://www.cornerbarmgmt.com",
+      url: "https://www.cornerbar.com",
     },
   };
 

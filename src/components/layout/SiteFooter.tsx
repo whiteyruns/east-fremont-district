@@ -120,7 +120,7 @@ export default function SiteFooter() {
               </Link>
             </div>
             <a
-              href="https://www.cornerbarmgmt.com"
+              href="https://www.cornerbar.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#6B6760] text-xs hover:text-[#9B978F] transition-colors"

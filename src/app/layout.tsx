@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "brand activations",
     "Corner Bar",
   ],
-  authors: [{ name: "Corner Bar", url: "https://www.cornerbarmgmt.com" }],
+  authors: [{ name: "Corner Bar", url: "https://www.cornerbar.com" }],
   openGraph: {
     type: "website",
     locale: "en_US",

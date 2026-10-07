@@ -1,10 +1,10 @@
 # East Fremont District (F.E.E.D.) — Project Context
 
 ## Owner
-Keith (keith@gorunrabbit.com) — Corner Bar Management
+Keith (keith@gorunrabbit.com) — Corner Bar (the company dropped "Management" in 2026; site www.cornerbar.com)
 
 ## What This Is
-Next.js website for the Fremont East Entertainment District (F.E.E.D.) in Downtown Las Vegas. Produced by Corner Bar Management + Wynn Las Vegas Nightlife. Backed by City of Las Vegas and LVCVA.
+Next.js website for the Fremont East Entertainment District (F.E.E.D.) in Downtown Las Vegas. Produced by Corner Bar (formerly Corner Bar Management; Wynn Nightlife no longer a partner). Backed by City of Las Vegas and LVCVA.
 
 ## Active Project: Thriller Guinness World Record Event Page
 
