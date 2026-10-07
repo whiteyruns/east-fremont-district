@@ -98,7 +98,7 @@ Alyson = F.E.E.D.'s OUTSIDE EVENT BOOKER (she placed TransUnion), NOT LVCVA (Kei
 - [x] Oct 5 curl test lead (`9b228f48…`, utm_source=test) DELETED from prod Oct 7 (scoped by id; 0 test rows remain, 0 campaign rows yet)
 - [x] IMEX block tours (9:30 AM is DELIBERATE per Keith — not everyone hits the floor at open) — built Oct 7: `/book-the-block/imex` (noindex; hero, what you'll see, meeting point/when/getting here/host, RSVP form: day · name · company · title · party size · email · mobile · notes · opt-in). `POST /api/block-tour-rsvp` → `block_tour_rsvps` (migration 011, applied Oct 7), confirmation email w/ .ics attachment, team alert to booktheblock@ cc Mauricio bcc Keith with contact + opt-in + source. Details in `src/lib/block-tour.ts`. GTM event `tour_rsvp` fires but has no trigger yet.
 - [x] Migration 011 APPLIED to prod Oct 7 (SQL editor via Chrome): `block_tour_rsvps` — RLS on, insert-only policy, 17 columns
-- [ ] From Mauricio: parking guidance (`PARKING_GUIDANCE`) + mobile for the morning (`HOST.phone`) — until set, page + confirmation say details follow the day before, and every team alert flags it
+- [x] Parking + phone SET Oct 7 (`8f705ff`): rideshare first (drop at Fremont & 6th), then the paid Triple B's lot (Metropolis, pay by plate); day-of contact Mauricio 702-336-8486, text preferred. Open: exact lot address. Mauricio confirmed direct one-to-one emails are the plan (no blast); P1 = stand visits + email.
 - [ ] Invitation draft → `tasks/imex-tour-invitation.md` (long + short). Mauricio/Keith send one at a time to the 10 Las Vegas DMC contacts; Mauricio can also visit stands F801 / E1117 / E1325
 - [ ] After the first real RSVP: GTM trigger + GA4 tag for `tour_rsvp` (optional)
 
