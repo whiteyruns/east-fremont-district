@@ -79,7 +79,7 @@ Alyson read the handoff page: it reads as a brand/impressions pitch and links to
 ## 7. Mauricio's asks (Oct 7 reply to the recap)
 - [x] GTM: mauricio@cornerbarmgmt.com added to the Corner Bar Management account (Keith, Oct 7; invite form prepped via Chrome, Keith ticked Publish + Invite)
 - [x] Weekly summary: `/api/cron/weekly-summary?secret=…` built Oct 7 — past 7 days of leads (who/what/utm), inquiries vs deck requests, drip sends, unsubscribes, tour RSVPs, campaign-to-date by source + status; to booktheblock@, cc mauricio@cornerbar.com, bcc keith@. `&dry=1` returns the HTML without sending. Page views/video plays stay in GA4 (not queried).
-- [ ] Schedule it: add `{"path":"/api/cron/weekly-summary?secret=efd-cron-2026","schedule":"0 15 * * 1"}` (Mon 8 AM PT) to vercel.json once Keith has previewed the dry run — **not scheduled yet**
+- [x] SCHEDULED Oct 7: vercel.json cron `0 15 * * 1` (Mondays 8 AM PT; first run Mon Oct 12)
 - [ ] Prod has Keith's Oct 5 curl test lead (utm_source=test) — delete it or it shows in the first summary
 - [x] IMEX block tours (9:30 AM is DELIBERATE per Keith — not everyone hits the floor at open) — built Oct 7: `/book-the-block/imex` (noindex; hero, what you'll see, meeting point/when/getting here/host, RSVP form: day · name · company · title · party size · email · mobile · notes · opt-in). `POST /api/block-tour-rsvp` → `block_tour_rsvps` (migration 011, applied Oct 7), confirmation email w/ .ics attachment, team alert to booktheblock@ cc Mauricio bcc Keith with contact + opt-in + source. Details in `src/lib/block-tour.ts`. GTM event `tour_rsvp` fires but has no trigger yet.
 - [x] Migration 011 APPLIED to prod Oct 7 (SQL editor via Chrome): `block_tour_rsvps` — RLS on, insert-only policy, 17 columns
