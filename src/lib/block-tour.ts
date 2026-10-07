@@ -41,14 +41,13 @@ export const HOST = {
   name: "Mauricio Morales",
   org: "Corner Bar",
   email: "mauricio@cornerbar.com",
-  // Added to the confirmation once Mauricio gives a number for the morning of.
-  phone: "",
+  // Day-of contact. Mauricio prefers a text (Oct 7).
+  phone: "702-336-8486 (text is best)",
 };
 
-// Mauricio asked that every confirmation carry parking guidance. Until he
-// supplies the wording, the page and the email promise it the day before and
-// the team alert flags that it is still owed.
-export const PARKING_GUIDANCE: string | null = null;
+// Mauricio's guidance (Oct 7): push rideshare first, then the paid lot.
+export const PARKING_GUIDANCE: string | null =
+  "Rideshare is the easy way in: drop at Fremont and 6th, right at Pink Monkey. If you drive, use the paid Triple B's lot a short walk away (run by Metropolis, pay by plate).";
 
 export const PARKING_FALLBACK =
   "Parking and drop-off details will follow by email the day before your tour.";
