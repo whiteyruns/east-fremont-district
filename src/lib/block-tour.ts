@@ -47,7 +47,7 @@ export const HOST = {
 
 // Mauricio's guidance (Oct 7): push rideshare first, then the paid lot.
 export const PARKING_GUIDANCE: string | null =
-  "Rideshare is the easy way in: drop at Fremont and 6th, right at Pink Monkey. If you drive, use the paid Triple B's lot a short walk away (run by Metropolis, pay by plate).";
+  "Rideshare is the easy way in: drop at Fremont and 6th, right at Pink Monkey. If you drive, use the paid Triple B's lot at 101-155 S 6th St, a short walk up the block (run by Metropolis, pay by plate).";
 
 export const PARKING_FALLBACK =
   "Parking and drop-off details will follow by email the day before your tour.";
