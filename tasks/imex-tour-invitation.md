@@ -1,14 +1,14 @@
 # IMEX week block tour: invitation (draft, Oct 7 2026, rev 2)
 
-Hosted by Mauricio Morales, Corner Bar. Tue Oct 13 / Wed Oct 14 / Thu Oct 15, 9:30 AM,
+Hosted by Ryan Doherty, Corner Bar (Mauricio stepped back Oct 7). Tue Oct 13 / Wed Oct 14 / Thu Oct 15, 9:30 AM,
 meet at Pink Monkey (100 S 6th St, Fremont & 6th). RSVP page:
 `https://www.eastfremontdistrict.com/book-the-block/imex`
 
-**Who sends: Zokie and Ryan** (Keith, Oct 7). Mauricio hosts the walks and stays the
-day-of contact (702-336-8486, text preferred). Send one at a time from your own
+**Who sends: Zokie and Ryan** (Keith, Oct 7). Ryan hosts the walks and is the
+day-of contact. If Ryan sends, he can switch "Ryan Doherty, the founder of Corner Bar, is hosting" to "I'm hosting". Send one at a time from your own
 inbox, never a blast. Priority 1 is the ten Las Vegas-office people in
 `IMEX-2026-DMC-Contacts-Enriched.csv` (Hello! stand F801, Hosts Global E1117,
-PRA E1325); Mauricio can also stop by those stands in person on Tuesday. Tag each
+PRA E1325); a stand visit on Tuesday is worth more than the email for those ten. Tag each
 link so the RSVP shows who it came from:
 `?utm_source=imex&utm_medium=email&utm_campaign=book-the-block&utm_content=invite-<company>`
 
@@ -25,15 +25,15 @@ from the show floor: a single block of Downtown Las Vegas that closes to the
 public for one group at a time. Thirteen venues, rooftops, a showroom and the
 street itself, run by one operator under one contract.
 
-Mauricio Morales from our team is hosting a short walk each morning, Tuesday
-through Thursday at 9:30, meeting at Pink Monkey on Fremont and 6th. About 45
+Ryan Doherty, the founder of Corner Bar, is hosting a short walk each morning,
+Tuesday through Thursday at 9:30, meeting at Pink Monkey on Fremont and 6th. About 45
 minutes, and you're back at Mandalay Bay by mid-morning. Bring a colleague or a
 client if you like.
 
 Reserve a morning here:
 https://www.eastfremontdistrict.com/book-the-block/imex?utm_source=imex&utm_medium=email&utm_campaign=book-the-block&utm_content=invite-{company}
 
-If the mornings don't work, Mauricio is happy to find you at the show instead,
+If the mornings don't work, Ryan is happy to find you at the show instead,
 and the block is online at eastfremontdistrict.com/book-the-block/private.
 
 {Zokie Djordjevic | Ryan Doherty}

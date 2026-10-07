@@ -37,12 +37,14 @@ export const MEETING_POINT = {
   mapsUrl: "https://maps.google.com/?q=100+S+6th+St,+Las+Vegas,+NV+89101",
 };
 
+// Ryan took over the walkthroughs on Oct 7 (Mauricio stepped back). The RSVP
+// alert cc's HOST.email, so this also routes the alerts.
 export const HOST = {
-  name: "Mauricio Morales",
+  name: "Ryan Doherty",
   org: "Corner Bar",
-  email: "mauricio@cornerbar.com",
-  // Day-of contact. Mauricio prefers a text (Oct 7).
-  phone: "702-336-8486 (text is best)",
+  email: "ryan@dtlv.com",
+  // Day-of number: add Ryan's mobile here when he gives one.
+  phone: "",
 };
 
 // Mauricio's guidance (Oct 7): push rideshare first, then the paid lot.
