@@ -38,7 +38,7 @@ export const MEETING_POINT = {
 };
 
 export const HOST = {
-  name: "Mauricio",
+  name: "Mauricio Morales",
   org: "Corner Bar",
   email: "mauricio@cornerbar.com",
   // Added to the confirmation once Mauricio gives a number for the morning of.
