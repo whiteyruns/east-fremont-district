@@ -63,7 +63,7 @@ Source: Dropbox "2026-THE-BLOCK-SE-Video-TAVI-v03.mp4" — 1080p24, 1:58, 152 MB
 - [x] **HOSTED on Cloudflare Stream** (Claymore And Colt account `790154fb…`, Images+Stream $0/mo + 1,000 min storage $5/mo, card ·6983, Keith ticked the terms Oct 5). Imported from the Dropbox dl=1 URL (browser upload tool caps at 10 MB). Video ID `e502c93ee815534ef86a0a86703b2c46`, customer subdomain `customer-x375kgoi6jdpeco1.cloudflarestream.com`; iframe/HLS/thumbnail all 200.
 - [x] `NEXT_PUBLIC_BLOCK_VIDEO_EMBED` set in Vercel (production + preview) and `.env.local`; embed URL carries our poster
 - [x] Pushed `9ab2b22`; verified live: /book-the-block#video renders the Stream iframe, "Thirteen venues" ×6, poster assets 200, handoff-page email carries the video link + thirteen
-- [ ] Venue count: email/deck/landing rolled to THIRTEEN (Keith, Oct 5, to match the video). Site metadata + inventory still say 16 (all operators) — separate decision
+- [x] Venue count DECIDED Oct 7: the SITE keeps all 16 (every operator on the block; counters derive from `venues.ts`); Book the Block (email/deck/landing/video) says thirteen as the program claim. Don't reconcile them. Site links now point at www.cornerbar.com (`c6db193`).
 
 ## 6. Private-buyout track — Alyson's feedback, Oct 7
 Alyson = F.E.E.D.'s OUTSIDE EVENT BOOKER (she placed TransUnion), NOT LVCVA (Keith correction, Oct 7). She read the handoff page: it reads as a brand/impressions pitch and links to a block-party site; the planners she books for want PRIVATE events and would be put off by crowd numbers. F1/Super Bowl brand clients are the other audience. Two tracks, two one-sheets.
@@ -98,7 +98,7 @@ Alyson = F.E.E.D.'s OUTSIDE EVENT BOOKER (she placed TransUnion), NOT LVCVA (Kei
 - [x] Oct 5 curl test lead (`9b228f48…`, utm_source=test) DELETED from prod Oct 7 (scoped by id; 0 test rows remain, 0 campaign rows yet)
 - [x] IMEX block tours (9:30 AM is DELIBERATE per Keith — not everyone hits the floor at open) — built Oct 7: `/book-the-block/imex` (noindex; hero, what you'll see, meeting point/when/getting here/host, RSVP form: day · name · company · title · party size · email · mobile · notes · opt-in). `POST /api/block-tour-rsvp` → `block_tour_rsvps` (migration 011, applied Oct 7), confirmation email w/ .ics attachment, team alert to booktheblock@ cc Mauricio bcc Keith with contact + opt-in + source. Details in `src/lib/block-tour.ts`. GTM event `tour_rsvp` fires but has no trigger yet.
 - [x] Migration 011 APPLIED to prod Oct 7 (SQL editor via Chrome): `block_tour_rsvps` — RLS on, insert-only policy, 17 columns
-- [x] Parking + phone SET Oct 7 (`8f705ff`): rideshare first (drop at Fremont & 6th), then the paid Triple B's lot (Metropolis, pay by plate); day-of contact Mauricio 702-336-8486, text preferred. Open: exact lot address. Mauricio confirmed direct one-to-one emails are the plan (no blast); P1 = stand visits + email.
+- [x] Parking + phone SET Oct 7 (`8f705ff`): rideshare first (drop at Fremont & 6th), then the paid Triple B's lot (Metropolis, pay by plate); day-of contact Mauricio 702-336-8486, text preferred. Lot address added Oct 7: 101-155 S 6th St. Mauricio confirmed direct one-to-one emails are the plan (no blast); P1 = stand visits + email.
 - [ ] Invitation draft → `tasks/imex-tour-invitation.md` (long + short). Mauricio/Keith send one at a time to the 10 Las Vegas DMC contacts; Mauricio can also visit stands F801 / E1117 / E1325
 - [ ] After the first real RSVP: GTM trigger + GA4 tag for `tour_rsvp` (optional)
 
