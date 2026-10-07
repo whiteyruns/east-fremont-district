@@ -81,6 +81,17 @@ Alyson = F.E.E.D.'s OUTSIDE EVENT BOOKER (she placed TransUnion), NOT LVCVA (Kei
 - [x] Designed template built Oct 7: `public/email-assets/feed-medium-rare.html` + `.txt` (own header on the Feed the Block aerial — NOT the LVCVA banner, which has "Presented via the LVCVA" baked in; gallery-06 crowd shot; links `utm_source=medium-rare`; deck linked direct). Review page for Ryan: https://claude.ai/artifact/76VC149zF5nikRBAmj7hqp (Keith shares).
 - [ ] Ryan's calls: plain-text from his own inbox (recommended) vs designed version from booktheblock@ w/ reply-to him; the three properties + references; anyone in town for F1 Nov 19–21.
 
+## 9. Press (Ryan's ask, Oct 7): repository + BizBash release
+- [x] Press repository seeded in `cornerbar-web/content/press/` from Wicked Creative's two Drive folders (10 fact sheets, 2 published 2025 releases, index.json of what's still only in Drive, README with house format + agent plan). **Wicked stays out of the loop; plan is to replace them.** Media contact on new releases = Keith / Go Run Rabbit.
+- [x] Book the Block press release DRAFT for BizBash's November new-venues roundup: `content/press/releases/2026-10-book-the-block.md` + Google Doc for Ryan only (https://docs.google.com/document/d/1oW6juD2l_rdzFAKRTy9QFmIeUZcFQrRagPEhmNc4UAE/edit, unshared, Keith shares). Ryan's calls: TransUnion by name (needs client OK; fallback line), the quote, 13 venues + Pink Monkey in boilerplate, City/LVCVA heads-up, Thriller paragraph, photo link from Zokie, media contact, date (Oct 15 proposed).
+- [x] cornerbar.ai `/dashboard/press` (Releases) + `/dashboard/press/fact-sheets` behind the dashboard login: reader with Copy text / Download .docx / Google Doc or Drive link; drafts show the calls above the text (`49890e4`).
+- [ ] Later (README): drafting agent on this corpus; daily press capture → Supabase + Monday report "Press" line; media list + Resend distribution from a press@ address.
+- [ ] Catalogue the rest of the Drive: 2023, 2024, 2025 per-venue subfolders, Monthly Listings, Ryan's Oktoberfest announcement.
+
+## 10. Medium Rare handoff + Kristen (Oct 7)
+- [x] `/newsletter/medium-rare` handoff page for Ryan (preview, send details, his three calls, both downloads) `953a178`; combined email to Keith for Ryan with handoff page + review artifact + press-release doc (Resend `01a117ec…`). Keith must share the artifact + Google Doc with Ryan.
+- [x] Kristen Koss (Sr. Content Manager) wants to post the video on YouTube/LinkedIn: reply sent to Keith's inbox to forward (`01a117e9…`) with per-platform UTM links (`utm_source=youtube|linkedin&utm_medium=social`) and "use the Dropbox original, not the site stream".
+
 ## 7. Mauricio's asks (Oct 7 reply to the recap)
 - [x] GTM: mauricio@cornerbarmgmt.com added to the Corner Bar Management account (Keith, Oct 7; invite form prepped via Chrome, Keith ticked Publish + Invite)
 - [x] Weekly summary → FOLDED INTO the cornerbar.ai Monday report (Keith, Oct 7): `cornerbar-web/src/lib/monday-report.ts` already read `efd_leads` from the same Supabase; it now shows each lead's kind + UTM source and a "Book the Block" section (inquiries vs deck requests, by source, drip sends, unsubscribes, tour RSVPs, campaign-to-date). Goes Mon 9 AM PT from `Corner Bar Ops <hello@cornerbar.ai>` to Keith, Mauricio, Zokie, Lina, Ryan. The separate EFD `/api/cron/weekly-summary` route + schedule were REMOVED the same day (never ran).
